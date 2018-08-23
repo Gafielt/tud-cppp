@@ -1,5 +1,16 @@
-Exercises: cppp_exercises.pdf
-Lecture: cppp_lecture.pdf
+1. Exercises: cppp_exercises.pdf
+2. Slides: cppp_lecture.pdf
+
+## Changes on 2018-08-23
+
+### Slides
+
+* p.50: building -> hbi
+        Building.h -> Building.hpp
+
+### Exercises
+
+* Add archive containing project templates in *exercises/tools/codelite*
 
 ## Changes on 2018-08-21
 
@@ -10,7 +21,7 @@ Lecture: cppp_lecture.pdf
 
 ## Changes in December 2017
 
-## Lecture
+### Slides
 * Heavy restructuring
   * Move '[Exkurs]' slides into separate section
   * Remove outdated, non-helpful slides entirely
@@ -18,7 +29,7 @@ Lecture: cppp_lecture.pdf
 
 ## Changes in November 2017
 
-## Lecture
+### Slides
 * Remove instructions regarding old hardware
 * Move "Memory-mapped I/O" in front of "volatile"
 * Remove old "ancestry" of programming languages
@@ -27,7 +38,7 @@ Lecture: cppp_lecture.pdf
 
 ## Changes on 2017-09-21
 
-## Lecture
+## Slides
 * Insert slide 110 ("Exceptions")
 * Remove (hidden) slide 135 (Summary of memory mgmt section)
 * Bugfix on slide 222: Logical "XOR" not equivalent to '!=' if operands may have arbitrary values
@@ -42,7 +53,7 @@ Lecture: cppp_lecture.pdf
 
 ## Changes on 2017-09-20
 
-## Lecture
+## Slides
 
 * Slide 218: Fix title
 * Slide 223: Bugfixes in second and third part (0x03 -> 0x07 and b' = 0100 0000 for "Determine status of 6th bit")
@@ -65,13 +76,13 @@ Lecture: cppp_lecture.pdf
 
 ## Changes on 2017-09-18
 
-### Lecture
+### Slides
 * Minor layout improvements in OO part (slides 136-166)
 * Fix typos on slides 165 und 166
 
 ## Changes on 2017-09-15
 
-### Lecture
+### Slides
 * Bugfixes in "Call by x" slides 95 + 100-103: Use proper constructor of Floor that takes std::string and int
 * Get rid of several artefacts in PDF export ('orange blocks')
 * Add ref. to https://www.onlinegdb.com/ (Appears to more mature than cpp.sh)
@@ -86,12 +97,12 @@ Lecture: cppp_lecture.pdf
 
 ## Changes on 2017-09-14
 
-### Lecture
+### Slides
 * Bugfix on slide 30 ("Header und Implementierungs-Dateien"): The shown code is a class definition (not declaration)
 
 ## Changes on 2017-09-11
 
-### Lecture
+### Slides
 
 * Remove motivation slides for multiple inheritance (previously: slides 156-158)
 * Remove slide on multiple inheritance problems in "Template" part ("Containerproblem und Mehrfachvererbung", previously: slide 171)
@@ -112,7 +123,7 @@ Lecture: cppp_lecture.pdf
 
 ## Changes on 2017-09-06
 
-### Lecture
+### Slides
 * Bugfix: Shift operator fills with '1' with if shifted value is negative
 * Improved explanations on slide 223 ("Bitoperationen – Bytes manipulieren")
 * Bugfix on slide 223 ("Bitoperationen – Bytes manipulieren"): fix bit mask, b, b' of third example
@@ -120,7 +131,7 @@ Lecture: cppp_lecture.pdf
 
 ## Changes on 2017-09-04
 
-### Lecture
+### Slides
 * Hide slides 156-158: motivating example is not very helpful
 * Bugfix slide 162: "h.getName()" --> "h->getName()"
 * Bugfix slide 159: ":Mitarbeiter" --> ":Employee"
@@ -139,7 +150,7 @@ Lecture: cppp_lecture.pdf
 
 ## Changes on 2017-09-01
 
-### Lecture (cppp_lecture.pdf)
+### Slides (cppp_lecture.pdf)
 * Bugfix slide 104 ("Assignment-Operator (I)"):
   * operator= should have the return type "[ClassName] &" and the return value "*this"
   * Also fixed in all remaining slides
