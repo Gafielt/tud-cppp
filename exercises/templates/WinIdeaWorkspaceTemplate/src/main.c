@@ -4,8 +4,9 @@
 
 int main(){
   initBoard();
-
-  BlinkMain();
   
+  // Write your code here ...
+  BlinkMain();
+
   return 0;
 }

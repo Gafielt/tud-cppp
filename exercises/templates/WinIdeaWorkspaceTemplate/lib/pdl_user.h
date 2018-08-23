@@ -74,7 +74,7 @@
 #define PDL_PERIPHERAL_ENABLE_CANFD1            PDL_OFF
 
 // Clock
-#define PDL_PERIPHERAL_ENABLE_CLK               PDL_OFF
+#define PDL_PERIPHERAL_ENABLE_CLK               PDL_ON
 
 // CR Trimming
 #define PDL_PERIPHERAL_ENABLE_CR                PDL_OFF
@@ -119,7 +119,7 @@
 #define PDL_PERIPHERAL_ENABLE_EXINT8            PDL_OFF
 #define PDL_PERIPHERAL_ENABLE_EXINT9            PDL_OFF
 #define PDL_PERIPHERAL_ENABLE_EXINT10           PDL_OFF
-#define PDL_PERIPHERAL_ENABLE_EXINT11           PDL_OFF
+#define PDL_PERIPHERAL_ENABLE_EXINT11           PDL_ON
 #define PDL_PERIPHERAL_ENABLE_EXINT12           PDL_OFF
 #define PDL_PERIPHERAL_ENABLE_EXINT13           PDL_OFF
 #define PDL_PERIPHERAL_ENABLE_EXINT14           PDL_OFF
@@ -186,12 +186,12 @@
 #define PDL_PERIPHERAL_ENABLE_MFS0              PDL_ON
 #define PDL_PERIPHERAL_ENABLE_MFS1              PDL_OFF
 #define PDL_PERIPHERAL_ENABLE_MFS2              PDL_OFF
-#define PDL_PERIPHERAL_ENABLE_MFS3              PDL_OFF
+#define PDL_PERIPHERAL_ENABLE_MFS3              PDL_ON
 #define PDL_PERIPHERAL_ENABLE_MFS4              PDL_OFF
 #define PDL_PERIPHERAL_ENABLE_MFS5              PDL_OFF
 #define PDL_PERIPHERAL_ENABLE_MFS6              PDL_OFF
 #define PDL_PERIPHERAL_ENABLE_MFS7              PDL_OFF
-#define PDL_PERIPHERAL_ENABLE_MFS8              PDL_OFF
+#define PDL_PERIPHERAL_ENABLE_MFS8              PDL_ON
 #define PDL_PERIPHERAL_ENABLE_MFS9              PDL_OFF
 #define PDL_PERIPHERAL_ENABLE_MFS10             PDL_OFF
 #define PDL_PERIPHERAL_ENABLE_MFS11             PDL_OFF
@@ -232,7 +232,7 @@
 #define PDL_PERIPHERAL_ENABLE_PCRC              PDL_OFF
 
 // NMI
-#define PDL_PERIPHERAL_ENABLE_NMI               PDL_OFF
+#define PDL_PERIPHERAL_ENABLE_NMI               PDL_ON
 
 // Quad Decoder
 #define PDL_PERIPHERAL_ENABLE_QPRC0             PDL_OFF
@@ -256,7 +256,7 @@
 #define PDL_PERIPHERAL_ENABLE_RESET             PDL_OFF
 
 // Real Time Clock
-#define PDL_PERIPHERAL_ENABLE_RTC0              PDL_OFF
+#define PDL_PERIPHERAL_ENABLE_RTC0              PDL_ON
 
 // SD
 #define PDL_PERIPHERAL_ENABLE_SD0               PDL_OFF
@@ -604,7 +604,7 @@
 #define PDL_INTERRUPT_ENABLE_QPRC3             PDL_OFF
 
 // Real Time Clock
-#define PDL_INTERRUPT_ENABLE_RTC0              PDL_OFF
+#define PDL_INTERRUPT_ENABLE_RTC0              PDL_ON
 
 // Remote Control routines
 #define PDL_INTERRUPT_ENABLE_RC0               PDL_OFF

@@ -2,3 +2,5 @@
 /debug
 /*.slo
 /$*
+/lib/test_acceleration.c
+/lib/test_acceleration.h

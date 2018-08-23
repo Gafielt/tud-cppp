@@ -156,121 +156,94 @@
       <LinkGroup.0>
        <LinkGroupName>lib</LinkGroupName>
        <File.0>
-        <FileName>$(IRFDIR)startup_s6e2cc.s</FileName>
-        <FileOptios>
-         <AssemblerOptions>-mcpu=cortex-m4 -mthumb -g3  -o $(OUTPUTDIR)$(NOEXT).o -c $(EDNAME)</AssemblerOptions>
-        </FileOptios>
+        <FileName>$(IRFDIR)lib\delay.h</FileName>
        </File.0>
        <File.1>
-        <FileName>C:\PortableApps\Cypress\PDL\2.1.0\devices\fm4\s6e2ccxj\common\system_s6e2cc.h</FileName>
-       </File.1>
-       <File.10>
-        <FileName>$(IRFDIR)lib\lcd.c</FileName>
+        <FileName>$(IRFDIR)lib\delay.c</FileName>
         <FileOptios>
          <CompilerOptions>-x c -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME) -Wall</CompilerOptions>
         </FileOptios>
+       </File.1>
+       <File.10>
+        <FileName>$(IRFDIR)lib\registers.h</FileName>
        </File.10>
        <File.11>
-        <FileName>$(IRFDIR)lib\lcd.h</FileName>
+        <FileName>$(IRFDIR)lib\init.h</FileName>
        </File.11>
        <File.12>
-        <FileName>$(IRFDIR)lib\pins.h</FileName>
+        <FileName>$(IRFDIR)lib\init.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME) -Wall</CompilerOptions>
+        </FileOptios>
        </File.12>
        <File.13>
-        <FileName>$(IRFDIR)lib\registers.h</FileName>
+        <FileName>$(IRFDIR)lib\uart_usb.h</FileName>
        </File.13>
        <File.14>
-        <FileName>$(IRFDIR)lib\pdl_user.h</FileName>
+        <FileName>$(IRFDIR)lib\uart_multicon.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME) -Wall</CompilerOptions>
+        </FileOptios>
        </File.14>
        <File.15>
-        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\pdl.h</FileName>
+        <FileName>$(IRFDIR)lib\uart_multicon.h</FileName>
        </File.15>
        <File.16>
-        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\pdl.c</FileName>
+        <FileName>$(IRFDIR)lib\uart_usb.c</FileName>
         <FileOptios>
          <CompilerOptions>-x c -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME) -Wall</CompilerOptions>
         </FileOptios>
        </File.16>
        <File.17>
-        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\adc\adc.c</FileName>
+        <FileName>$(IRFDIR)lib\debug.c</FileName>
         <FileOptios>
          <CompilerOptions>-x c -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME) -Wall</CompilerOptions>
         </FileOptios>
        </File.17>
        <File.18>
-        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\adc\adc.h</FileName>
+        <FileName>$(IRFDIR)lib\debug.h</FileName>
        </File.18>
        <File.19>
-        <FileName>\PortableApps\Cypress\PDL\2.1.0\utilities\printf_scanf\uart_io.c</FileName>
-        <FileOptios>
-         <CompilerOptions>-x c -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME) -Wall</CompilerOptions>
-        </FileOptios>
+        <FileName>$(IRFDIR)lib\kxcjk1013.h</FileName>
        </File.19>
        <File.2>
-        <FileName>C:\PortableApps\Cypress\PDL\2.1.0\devices\fm4\s6e2ccxj\common\system_s6e2cc.c</FileName>
+        <FileName>$(IRFDIR)lib\analog.c</FileName>
         <FileOptios>
          <CompilerOptions>-x c -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME) -Wall</CompilerOptions>
         </FileOptios>
        </File.2>
        <File.20>
-        <FileName>\PortableApps\Cypress\PDL\2.1.0\utilities\printf_scanf\uart_io.h</FileName>
+        <FileName>$(IRFDIR)lib\kxcjk1013.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME) -Wall</CompilerOptions>
+        </FileOptios>
        </File.20>
-       <File.21>
-        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\dma\dma.c</FileName>
-        <FileOptios>
-         <CompilerOptions>-x c -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME) -Wall</CompilerOptions>
-        </FileOptios>
-       </File.21>
-       <File.22>
-        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\dma\dma.h</FileName>
-       </File.22>
-       <File.23>
-        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\mfs\mfs.c</FileName>
-        <FileOptios>
-         <CompilerOptions>-x c -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME) -Wall</CompilerOptions>
-        </FileOptios>
-       </File.23>
-       <File.24>
-        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\mfs\mfs.h</FileName>
-       </File.24>
-       <File.25>
-        <FileName>$(IRFDIR)lib\init.h</FileName>
-       </File.25>
-       <File.26>
-        <FileName>$(IRFDIR)lib\init.c</FileName>
-        <FileOptios>
-         <CompilerOptions>-x c -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME) -Wall</CompilerOptions>
-        </FileOptios>
-       </File.26>
        <File.3>
-        <FileName>$(IRFDIR)lib\delay.h</FileName>
+        <FileName>$(IRFDIR)lib\analog.h</FileName>
        </File.3>
        <File.4>
-        <FileName>$(IRFDIR)lib\delay.c</FileName>
+        <FileName>$(IRFDIR)lib\gfx.c</FileName>
         <FileOptios>
          <CompilerOptions>-x c -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME) -Wall</CompilerOptions>
         </FileOptios>
        </File.4>
        <File.5>
-        <FileName>$(IRFDIR)lib\analog.c</FileName>
-        <FileOptios>
-         <CompilerOptions>-x c -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME) -Wall</CompilerOptions>
-        </FileOptios>
+        <FileName>$(IRFDIR)lib\gfx.h</FileName>
        </File.5>
        <File.6>
-        <FileName>$(IRFDIR)lib\analog.h</FileName>
+        <FileName>$(IRFDIR)lib\glcdfont.h</FileName>
        </File.6>
        <File.7>
-        <FileName>$(IRFDIR)lib\gfx.c</FileName>
+        <FileName>$(IRFDIR)lib\lcd.c</FileName>
         <FileOptios>
          <CompilerOptions>-x c -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME) -Wall</CompilerOptions>
         </FileOptios>
        </File.7>
        <File.8>
-        <FileName>$(IRFDIR)lib\gfx.h</FileName>
+        <FileName>$(IRFDIR)lib\lcd.h</FileName>
        </File.8>
        <File.9>
-        <FileName>$(IRFDIR)lib\glcdfont.h</FileName>
+        <FileName>$(IRFDIR)lib\pins.h</FileName>
        </File.9>
       </LinkGroup.0>
       <LinkGroup.1>
@@ -302,6 +275,15 @@
          <CompilerOptions>-x c -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME) -Wall</CompilerOptions>
         </FileOptios>
        </File.12>
+       <File.13>
+        <FileName>$(IRFDIR)src\dht11.h</FileName>
+       </File.13>
+       <File.14>
+        <FileName>$(IRFDIR)src\dht11.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME) -Wall</CompilerOptions>
+        </FileOptios>
+       </File.14>
        <File.2>
         <FileName>$(IRFDIR)src\blink.h</FileName>
        </File.2>
@@ -377,7 +359,106 @@
        <File.6>
         <FileName>$(IRFDIR)solution\graphicstest.h</FileName>
        </File.6>
+       <File.7>
+        <FileName>$(IRFDIR)solution\dht11_s.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME) -Wall</CompilerOptions>
+        </FileOptios>
+       </File.7>
       </LinkGroup.2>
+      <LinkGroup.3>
+       <LinkGroupName>pdl</LinkGroupName>
+       <File.0>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\adc\adc.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME) -Wall</CompilerOptions>
+        </FileOptios>
+       </File.0>
+       <File.1>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\adc\adc.h</FileName>
+       </File.1>
+       <File.10>
+        <FileName>C:\PortableApps\Cypress\PDL\2.1.0\devices\fm4\s6e2ccxj\common\system_s6e2cc.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME) -Wall</CompilerOptions>
+        </FileOptios>
+       </File.10>
+       <File.11>
+        <FileName>C:\PortableApps\Cypress\PDL\2.1.0\devices\fm4\s6e2ccxj\common\system_s6e2cc.h</FileName>
+       </File.11>
+       <File.12>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\utilities\printf_scanf\uart_io.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME) -Wall</CompilerOptions>
+        </FileOptios>
+       </File.12>
+       <File.13>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\utilities\printf_scanf\uart_io.h</FileName>
+       </File.13>
+       <File.14>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\rtc\rtc.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME) -Wall</CompilerOptions>
+        </FileOptios>
+       </File.14>
+       <File.15>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\rtc\rtc.h</FileName>
+       </File.15>
+       <File.16>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\exint\exint.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME) -Wall</CompilerOptions>
+        </FileOptios>
+       </File.16>
+       <File.17>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\exint\exint.h</FileName>
+       </File.17>
+       <File.18>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\clk\clk.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME) -Wall</CompilerOptions>
+        </FileOptios>
+       </File.18>
+       <File.19>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\clk\clk.h</FileName>
+       </File.19>
+       <File.2>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\dma\dma.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME) -Wall</CompilerOptions>
+        </FileOptios>
+       </File.2>
+       <File.3>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\dma\dma.h</FileName>
+       </File.3>
+       <File.4>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\mfs\mfs.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME) -Wall</CompilerOptions>
+        </FileOptios>
+       </File.4>
+       <File.5>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\mfs\mfs.h</FileName>
+       </File.5>
+       <File.6>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\pdl.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME) -Wall</CompilerOptions>
+        </FileOptios>
+       </File.6>
+       <File.7>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\pdl.h</FileName>
+       </File.7>
+       <File.8>
+        <FileName>$(IRFDIR)lib\pdl_user.h</FileName>
+       </File.8>
+       <File.9>
+        <FileName>$(IRFDIR)startup_s6e2cc.s</FileName>
+        <FileOptios>
+         <AssemblerOptions>-mcpu=cortex-m4 -mthumb -g3  -o $(OUTPUTDIR)$(NOEXT).o -c $(EDNAME)</AssemblerOptions>
+        </FileOptios>
+       </File.9>
+      </LinkGroup.3>
       <TargetOptios>
        <AsmArgFile></AsmArgFile>
        <BuildOptions></BuildOptions>
@@ -408,121 +489,94 @@
       <LinkGroup.0>
        <LinkGroupName>lib</LinkGroupName>
        <File.0>
-        <FileName>$(IRFDIR)startup_s6e2cc.s</FileName>
-        <FileOptios>
-         <AssemblerOptions>-mcpu=cortex-m4 -mthumb -g3  -o $(OUTPUTDIR)$(NOEXT).o -c $(EDNAME)</AssemblerOptions>
-        </FileOptios>
+        <FileName>$(IRFDIR)lib\delay.h</FileName>
        </File.0>
        <File.1>
-        <FileName>C:\PortableApps\Cypress\PDL\2.1.0\devices\fm4\s6e2ccxj\common\system_s6e2cc.h</FileName>
-       </File.1>
-       <File.10>
-        <FileName>$(IRFDIR)lib\lcd.c</FileName>
+        <FileName>$(IRFDIR)lib\delay.c</FileName>
         <FileOptios>
          <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
+       </File.1>
+       <File.10>
+        <FileName>$(IRFDIR)lib\registers.h</FileName>
        </File.10>
        <File.11>
-        <FileName>$(IRFDIR)lib\lcd.h</FileName>
+        <FileName>$(IRFDIR)lib\init.h</FileName>
        </File.11>
        <File.12>
-        <FileName>$(IRFDIR)lib\pins.h</FileName>
+        <FileName>$(IRFDIR)lib\init.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
        </File.12>
        <File.13>
-        <FileName>$(IRFDIR)lib\registers.h</FileName>
+        <FileName>$(IRFDIR)lib\uart_usb.h</FileName>
        </File.13>
        <File.14>
-        <FileName>$(IRFDIR)lib\pdl_user.h</FileName>
+        <FileName>$(IRFDIR)lib\uart_multicon.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
        </File.14>
        <File.15>
-        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\pdl.h</FileName>
+        <FileName>$(IRFDIR)lib\uart_multicon.h</FileName>
        </File.15>
        <File.16>
-        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\pdl.c</FileName>
+        <FileName>$(IRFDIR)lib\uart_usb.c</FileName>
         <FileOptios>
          <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.16>
        <File.17>
-        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\adc\adc.c</FileName>
+        <FileName>$(IRFDIR)lib\debug.c</FileName>
         <FileOptios>
          <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.17>
        <File.18>
-        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\adc\adc.h</FileName>
+        <FileName>$(IRFDIR)lib\debug.h</FileName>
        </File.18>
        <File.19>
-        <FileName>\PortableApps\Cypress\PDL\2.1.0\utilities\printf_scanf\uart_io.c</FileName>
-        <FileOptios>
-         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
-        </FileOptios>
+        <FileName>$(IRFDIR)lib\kxcjk1013.h</FileName>
        </File.19>
        <File.2>
-        <FileName>C:\PortableApps\Cypress\PDL\2.1.0\devices\fm4\s6e2ccxj\common\system_s6e2cc.c</FileName>
+        <FileName>$(IRFDIR)lib\analog.c</FileName>
         <FileOptios>
          <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.2>
        <File.20>
-        <FileName>\PortableApps\Cypress\PDL\2.1.0\utilities\printf_scanf\uart_io.h</FileName>
+        <FileName>$(IRFDIR)lib\kxcjk1013.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
        </File.20>
-       <File.21>
-        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\dma\dma.c</FileName>
-        <FileOptios>
-         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
-        </FileOptios>
-       </File.21>
-       <File.22>
-        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\dma\dma.h</FileName>
-       </File.22>
-       <File.23>
-        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\mfs\mfs.c</FileName>
-        <FileOptios>
-         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
-        </FileOptios>
-       </File.23>
-       <File.24>
-        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\mfs\mfs.h</FileName>
-       </File.24>
-       <File.25>
-        <FileName>$(IRFDIR)lib\init.h</FileName>
-       </File.25>
-       <File.26>
-        <FileName>$(IRFDIR)lib\init.c</FileName>
-        <FileOptios>
-         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
-        </FileOptios>
-       </File.26>
        <File.3>
-        <FileName>$(IRFDIR)lib\delay.h</FileName>
+        <FileName>$(IRFDIR)lib\analog.h</FileName>
        </File.3>
        <File.4>
-        <FileName>$(IRFDIR)lib\delay.c</FileName>
+        <FileName>$(IRFDIR)lib\gfx.c</FileName>
         <FileOptios>
          <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.4>
        <File.5>
-        <FileName>$(IRFDIR)lib\analog.c</FileName>
-        <FileOptios>
-         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
-        </FileOptios>
+        <FileName>$(IRFDIR)lib\gfx.h</FileName>
        </File.5>
        <File.6>
-        <FileName>$(IRFDIR)lib\analog.h</FileName>
+        <FileName>$(IRFDIR)lib\glcdfont.h</FileName>
        </File.6>
        <File.7>
-        <FileName>$(IRFDIR)lib\gfx.c</FileName>
+        <FileName>$(IRFDIR)lib\lcd.c</FileName>
         <FileOptios>
          <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.7>
        <File.8>
-        <FileName>$(IRFDIR)lib\gfx.h</FileName>
+        <FileName>$(IRFDIR)lib\lcd.h</FileName>
        </File.8>
        <File.9>
-        <FileName>$(IRFDIR)lib\glcdfont.h</FileName>
+        <FileName>$(IRFDIR)lib\pins.h</FileName>
        </File.9>
       </LinkGroup.0>
       <LinkGroup.1>
@@ -554,6 +608,15 @@
          <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.12>
+       <File.13>
+        <FileName>$(IRFDIR)src\dht11.h</FileName>
+       </File.13>
+       <File.14>
+        <FileName>$(IRFDIR)src\dht11.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.14>
        <File.2>
         <FileName>$(IRFDIR)src\blink.h</FileName>
        </File.2>
@@ -629,7 +692,106 @@
        <File.6>
         <FileName>$(IRFDIR)solution\graphicstest.h</FileName>
        </File.6>
+       <File.7>
+        <FileName>$(IRFDIR)solution\dht11_s.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.7>
       </LinkGroup.2>
+      <LinkGroup.3>
+       <LinkGroupName>pdl</LinkGroupName>
+       <File.0>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\adc\adc.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.0>
+       <File.1>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\adc\adc.h</FileName>
+       </File.1>
+       <File.10>
+        <FileName>C:\PortableApps\Cypress\PDL\2.1.0\devices\fm4\s6e2ccxj\common\system_s6e2cc.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.10>
+       <File.11>
+        <FileName>C:\PortableApps\Cypress\PDL\2.1.0\devices\fm4\s6e2ccxj\common\system_s6e2cc.h</FileName>
+       </File.11>
+       <File.12>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\utilities\printf_scanf\uart_io.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.12>
+       <File.13>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\utilities\printf_scanf\uart_io.h</FileName>
+       </File.13>
+       <File.14>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\rtc\rtc.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.14>
+       <File.15>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\rtc\rtc.h</FileName>
+       </File.15>
+       <File.16>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\exint\exint.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.16>
+       <File.17>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\exint\exint.h</FileName>
+       </File.17>
+       <File.18>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\clk\clk.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.18>
+       <File.19>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\clk\clk.h</FileName>
+       </File.19>
+       <File.2>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\dma\dma.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.2>
+       <File.3>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\dma\dma.h</FileName>
+       </File.3>
+       <File.4>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\mfs\mfs.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.4>
+       <File.5>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\mfs\mfs.h</FileName>
+       </File.5>
+       <File.6>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\pdl.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.6>
+       <File.7>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\pdl.h</FileName>
+       </File.7>
+       <File.8>
+        <FileName>$(IRFDIR)lib\pdl_user.h</FileName>
+       </File.8>
+       <File.9>
+        <FileName>$(IRFDIR)startup_s6e2cc.s</FileName>
+        <FileOptios>
+         <AssemblerOptions>-mcpu=cortex-m4 -mthumb -g3  -o $(OUTPUTDIR)$(NOEXT).o -c $(EDNAME)</AssemblerOptions>
+        </FileOptios>
+       </File.9>
+      </LinkGroup.3>
       <TargetOptios>
        <AsmArgFile></AsmArgFile>
        <BuildOptions></BuildOptions>
@@ -660,121 +822,94 @@
       <LinkGroup.0>
        <LinkGroupName>lib</LinkGroupName>
        <File.0>
-        <FileName>$(IRFDIR)startup_s6e2cc.s</FileName>
-        <FileOptios>
-         <AssemblerOptions>-mcpu=cortex-m4 -mthumb -g3  -o $(OUTPUTDIR)$(NOEXT).o -c $(EDNAME)</AssemblerOptions>
-        </FileOptios>
+        <FileName>$(IRFDIR)lib\delay.h</FileName>
        </File.0>
        <File.1>
-        <FileName>C:\PortableApps\Cypress\PDL\2.1.0\devices\fm4\s6e2ccxj\common\system_s6e2cc.h</FileName>
-       </File.1>
-       <File.10>
-        <FileName>$(IRFDIR)lib\lcd.c</FileName>
+        <FileName>$(IRFDIR)lib\delay.c</FileName>
         <FileOptios>
          <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
+       </File.1>
+       <File.10>
+        <FileName>$(IRFDIR)lib\registers.h</FileName>
        </File.10>
        <File.11>
-        <FileName>$(IRFDIR)lib\lcd.h</FileName>
+        <FileName>$(IRFDIR)lib\init.h</FileName>
        </File.11>
        <File.12>
-        <FileName>$(IRFDIR)lib\pins.h</FileName>
+        <FileName>$(IRFDIR)lib\init.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
        </File.12>
        <File.13>
-        <FileName>$(IRFDIR)lib\registers.h</FileName>
+        <FileName>$(IRFDIR)lib\uart_usb.h</FileName>
        </File.13>
        <File.14>
-        <FileName>$(IRFDIR)lib\pdl_user.h</FileName>
+        <FileName>$(IRFDIR)lib\uart_multicon.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
        </File.14>
        <File.15>
-        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\pdl.h</FileName>
+        <FileName>$(IRFDIR)lib\uart_multicon.h</FileName>
        </File.15>
        <File.16>
-        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\pdl.c</FileName>
+        <FileName>$(IRFDIR)lib\uart_usb.c</FileName>
         <FileOptios>
          <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.16>
        <File.17>
-        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\adc\adc.c</FileName>
+        <FileName>$(IRFDIR)lib\debug.c</FileName>
         <FileOptios>
          <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.17>
        <File.18>
-        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\adc\adc.h</FileName>
+        <FileName>$(IRFDIR)lib\debug.h</FileName>
        </File.18>
        <File.19>
-        <FileName>\PortableApps\Cypress\PDL\2.1.0\utilities\printf_scanf\uart_io.c</FileName>
-        <FileOptios>
-         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
-        </FileOptios>
+        <FileName>$(IRFDIR)lib\kxcjk1013.h</FileName>
        </File.19>
        <File.2>
-        <FileName>C:\PortableApps\Cypress\PDL\2.1.0\devices\fm4\s6e2ccxj\common\system_s6e2cc.c</FileName>
+        <FileName>$(IRFDIR)lib\analog.c</FileName>
         <FileOptios>
          <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.2>
        <File.20>
-        <FileName>\PortableApps\Cypress\PDL\2.1.0\utilities\printf_scanf\uart_io.h</FileName>
+        <FileName>$(IRFDIR)lib\kxcjk1013.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
        </File.20>
-       <File.21>
-        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\dma\dma.c</FileName>
-        <FileOptios>
-         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
-        </FileOptios>
-       </File.21>
-       <File.22>
-        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\dma\dma.h</FileName>
-       </File.22>
-       <File.23>
-        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\mfs\mfs.c</FileName>
-        <FileOptios>
-         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
-        </FileOptios>
-       </File.23>
-       <File.24>
-        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\mfs\mfs.h</FileName>
-       </File.24>
-       <File.25>
-        <FileName>$(IRFDIR)lib\init.h</FileName>
-       </File.25>
-       <File.26>
-        <FileName>$(IRFDIR)lib\init.c</FileName>
-        <FileOptios>
-         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
-        </FileOptios>
-       </File.26>
        <File.3>
-        <FileName>$(IRFDIR)lib\delay.h</FileName>
+        <FileName>$(IRFDIR)lib\analog.h</FileName>
        </File.3>
        <File.4>
-        <FileName>$(IRFDIR)lib\delay.c</FileName>
+        <FileName>$(IRFDIR)lib\gfx.c</FileName>
         <FileOptios>
          <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.4>
        <File.5>
-        <FileName>$(IRFDIR)lib\analog.c</FileName>
-        <FileOptios>
-         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
-        </FileOptios>
+        <FileName>$(IRFDIR)lib\gfx.h</FileName>
        </File.5>
        <File.6>
-        <FileName>$(IRFDIR)lib\analog.h</FileName>
+        <FileName>$(IRFDIR)lib\glcdfont.h</FileName>
        </File.6>
        <File.7>
-        <FileName>$(IRFDIR)lib\gfx.c</FileName>
+        <FileName>$(IRFDIR)lib\lcd.c</FileName>
         <FileOptios>
          <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.7>
        <File.8>
-        <FileName>$(IRFDIR)lib\gfx.h</FileName>
+        <FileName>$(IRFDIR)lib\lcd.h</FileName>
        </File.8>
        <File.9>
-        <FileName>$(IRFDIR)lib\glcdfont.h</FileName>
+        <FileName>$(IRFDIR)lib\pins.h</FileName>
        </File.9>
       </LinkGroup.0>
       <LinkGroup.1>
@@ -806,6 +941,15 @@
          <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.12>
+       <File.13>
+        <FileName>$(IRFDIR)src\dht11.h</FileName>
+       </File.13>
+       <File.14>
+        <FileName>$(IRFDIR)src\dht11.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.14>
        <File.2>
         <FileName>$(IRFDIR)src\blink.h</FileName>
        </File.2>
@@ -881,7 +1025,106 @@
        <File.6>
         <FileName>$(IRFDIR)solution\graphicstest.h</FileName>
        </File.6>
+       <File.7>
+        <FileName>$(IRFDIR)solution\dht11_s.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.7>
       </LinkGroup.2>
+      <LinkGroup.3>
+       <LinkGroupName>pdl</LinkGroupName>
+       <File.0>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\adc\adc.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.0>
+       <File.1>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\adc\adc.h</FileName>
+       </File.1>
+       <File.10>
+        <FileName>C:\PortableApps\Cypress\PDL\2.1.0\devices\fm4\s6e2ccxj\common\system_s6e2cc.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.10>
+       <File.11>
+        <FileName>C:\PortableApps\Cypress\PDL\2.1.0\devices\fm4\s6e2ccxj\common\system_s6e2cc.h</FileName>
+       </File.11>
+       <File.12>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\utilities\printf_scanf\uart_io.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.12>
+       <File.13>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\utilities\printf_scanf\uart_io.h</FileName>
+       </File.13>
+       <File.14>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\rtc\rtc.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.14>
+       <File.15>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\rtc\rtc.h</FileName>
+       </File.15>
+       <File.16>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\exint\exint.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.16>
+       <File.17>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\exint\exint.h</FileName>
+       </File.17>
+       <File.18>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\clk\clk.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.18>
+       <File.19>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\clk\clk.h</FileName>
+       </File.19>
+       <File.2>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\dma\dma.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.2>
+       <File.3>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\dma\dma.h</FileName>
+       </File.3>
+       <File.4>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\mfs\mfs.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.4>
+       <File.5>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\mfs\mfs.h</FileName>
+       </File.5>
+       <File.6>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\pdl.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.6>
+       <File.7>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\pdl.h</FileName>
+       </File.7>
+       <File.8>
+        <FileName>$(IRFDIR)lib\pdl_user.h</FileName>
+       </File.8>
+       <File.9>
+        <FileName>$(IRFDIR)startup_s6e2cc.s</FileName>
+        <FileOptios>
+         <AssemblerOptions>-mcpu=cortex-m4 -mthumb -g3  -o $(OUTPUTDIR)$(NOEXT).o -c $(EDNAME)</AssemblerOptions>
+        </FileOptios>
+       </File.9>
+      </LinkGroup.3>
       <TargetOptios>
        <AsmArgFile></AsmArgFile>
        <BuildOptions></BuildOptions>
@@ -912,121 +1155,94 @@
       <LinkGroup.0>
        <LinkGroupName>lib</LinkGroupName>
        <File.0>
-        <FileName>$(IRFDIR)startup_s6e2cc.s</FileName>
-        <FileOptios>
-         <AssemblerOptions>-mcpu=cortex-m4 -mthumb -g3  -o $(OUTPUTDIR)$(NOEXT).o -c $(EDNAME)</AssemblerOptions>
-        </FileOptios>
+        <FileName>$(IRFDIR)lib\delay.h</FileName>
        </File.0>
        <File.1>
-        <FileName>C:\PortableApps\Cypress\PDL\2.1.0\devices\fm4\s6e2ccxj\common\system_s6e2cc.h</FileName>
-       </File.1>
-       <File.10>
-        <FileName>$(IRFDIR)lib\lcd.c</FileName>
+        <FileName>$(IRFDIR)lib\delay.c</FileName>
         <FileOptios>
          <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
+       </File.1>
+       <File.10>
+        <FileName>$(IRFDIR)lib\registers.h</FileName>
        </File.10>
        <File.11>
-        <FileName>$(IRFDIR)lib\lcd.h</FileName>
+        <FileName>$(IRFDIR)lib\init.h</FileName>
        </File.11>
        <File.12>
-        <FileName>$(IRFDIR)lib\pins.h</FileName>
+        <FileName>$(IRFDIR)lib\init.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
        </File.12>
        <File.13>
-        <FileName>$(IRFDIR)lib\registers.h</FileName>
+        <FileName>$(IRFDIR)lib\uart_usb.h</FileName>
        </File.13>
        <File.14>
-        <FileName>$(IRFDIR)lib\pdl_user.h</FileName>
+        <FileName>$(IRFDIR)lib\uart_multicon.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
        </File.14>
        <File.15>
-        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\pdl.h</FileName>
+        <FileName>$(IRFDIR)lib\uart_multicon.h</FileName>
        </File.15>
        <File.16>
-        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\pdl.c</FileName>
+        <FileName>$(IRFDIR)lib\uart_usb.c</FileName>
         <FileOptios>
          <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.16>
        <File.17>
-        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\adc\adc.c</FileName>
+        <FileName>$(IRFDIR)lib\debug.c</FileName>
         <FileOptios>
          <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.17>
        <File.18>
-        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\adc\adc.h</FileName>
+        <FileName>$(IRFDIR)lib\debug.h</FileName>
        </File.18>
        <File.19>
-        <FileName>\PortableApps\Cypress\PDL\2.1.0\utilities\printf_scanf\uart_io.c</FileName>
-        <FileOptios>
-         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
-        </FileOptios>
+        <FileName>$(IRFDIR)lib\kxcjk1013.h</FileName>
        </File.19>
        <File.2>
-        <FileName>C:\PortableApps\Cypress\PDL\2.1.0\devices\fm4\s6e2ccxj\common\system_s6e2cc.c</FileName>
+        <FileName>$(IRFDIR)lib\analog.c</FileName>
         <FileOptios>
          <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.2>
        <File.20>
-        <FileName>\PortableApps\Cypress\PDL\2.1.0\utilities\printf_scanf\uart_io.h</FileName>
+        <FileName>$(IRFDIR)lib\kxcjk1013.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
        </File.20>
-       <File.21>
-        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\dma\dma.c</FileName>
-        <FileOptios>
-         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
-        </FileOptios>
-       </File.21>
-       <File.22>
-        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\dma\dma.h</FileName>
-       </File.22>
-       <File.23>
-        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\mfs\mfs.c</FileName>
-        <FileOptios>
-         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
-        </FileOptios>
-       </File.23>
-       <File.24>
-        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\mfs\mfs.h</FileName>
-       </File.24>
-       <File.25>
-        <FileName>$(IRFDIR)lib\init.h</FileName>
-       </File.25>
-       <File.26>
-        <FileName>$(IRFDIR)lib\init.c</FileName>
-        <FileOptios>
-         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
-        </FileOptios>
-       </File.26>
        <File.3>
-        <FileName>$(IRFDIR)lib\delay.h</FileName>
+        <FileName>$(IRFDIR)lib\analog.h</FileName>
        </File.3>
        <File.4>
-        <FileName>$(IRFDIR)lib\delay.c</FileName>
+        <FileName>$(IRFDIR)lib\gfx.c</FileName>
         <FileOptios>
          <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.4>
        <File.5>
-        <FileName>$(IRFDIR)lib\analog.c</FileName>
-        <FileOptios>
-         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
-        </FileOptios>
+        <FileName>$(IRFDIR)lib\gfx.h</FileName>
        </File.5>
        <File.6>
-        <FileName>$(IRFDIR)lib\analog.h</FileName>
+        <FileName>$(IRFDIR)lib\glcdfont.h</FileName>
        </File.6>
        <File.7>
-        <FileName>$(IRFDIR)lib\gfx.c</FileName>
+        <FileName>$(IRFDIR)lib\lcd.c</FileName>
         <FileOptios>
          <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.7>
        <File.8>
-        <FileName>$(IRFDIR)lib\gfx.h</FileName>
+        <FileName>$(IRFDIR)lib\lcd.h</FileName>
        </File.8>
        <File.9>
-        <FileName>$(IRFDIR)lib\glcdfont.h</FileName>
+        <FileName>$(IRFDIR)lib\pins.h</FileName>
        </File.9>
       </LinkGroup.0>
       <LinkGroup.1>
@@ -1058,6 +1274,15 @@
          <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.12>
+       <File.13>
+        <FileName>$(IRFDIR)src\dht11.h</FileName>
+       </File.13>
+       <File.14>
+        <FileName>$(IRFDIR)src\dht11.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.14>
        <File.2>
         <FileName>$(IRFDIR)src\blink.h</FileName>
        </File.2>
@@ -1133,7 +1358,106 @@
        <File.6>
         <FileName>$(IRFDIR)solution\graphicstest.h</FileName>
        </File.6>
+       <File.7>
+        <FileName>$(IRFDIR)solution\dht11_s.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.7>
       </LinkGroup.2>
+      <LinkGroup.3>
+       <LinkGroupName>pdl</LinkGroupName>
+       <File.0>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\adc\adc.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.0>
+       <File.1>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\adc\adc.h</FileName>
+       </File.1>
+       <File.10>
+        <FileName>C:\PortableApps\Cypress\PDL\2.1.0\devices\fm4\s6e2ccxj\common\system_s6e2cc.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.10>
+       <File.11>
+        <FileName>C:\PortableApps\Cypress\PDL\2.1.0\devices\fm4\s6e2ccxj\common\system_s6e2cc.h</FileName>
+       </File.11>
+       <File.12>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\utilities\printf_scanf\uart_io.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.12>
+       <File.13>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\utilities\printf_scanf\uart_io.h</FileName>
+       </File.13>
+       <File.14>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\rtc\rtc.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.14>
+       <File.15>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\rtc\rtc.h</FileName>
+       </File.15>
+       <File.16>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\exint\exint.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.16>
+       <File.17>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\exint\exint.h</FileName>
+       </File.17>
+       <File.18>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\clk\clk.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.18>
+       <File.19>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\clk\clk.h</FileName>
+       </File.19>
+       <File.2>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\dma\dma.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.2>
+       <File.3>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\dma\dma.h</FileName>
+       </File.3>
+       <File.4>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\mfs\mfs.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.4>
+       <File.5>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\mfs\mfs.h</FileName>
+       </File.5>
+       <File.6>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\pdl.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.6>
+       <File.7>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\pdl.h</FileName>
+       </File.7>
+       <File.8>
+        <FileName>$(IRFDIR)lib\pdl_user.h</FileName>
+       </File.8>
+       <File.9>
+        <FileName>$(IRFDIR)startup_s6e2cc.s</FileName>
+        <FileOptios>
+         <AssemblerOptions>-mcpu=cortex-m4 -mthumb -g3  -o $(OUTPUTDIR)$(NOEXT).o -c $(EDNAME)</AssemblerOptions>
+        </FileOptios>
+       </File.9>
+      </LinkGroup.3>
       <TargetOptios>
        <AsmArgFile></AsmArgFile>
        <BuildOptions></BuildOptions>
@@ -1164,121 +1488,94 @@
       <LinkGroup.0>
        <LinkGroupName>lib</LinkGroupName>
        <File.0>
-        <FileName>$(IRFDIR)startup_s6e2cc.s</FileName>
-        <FileOptios>
-         <AssemblerOptions>-mcpu=cortex-m4 -mthumb -g3  -o $(OUTPUTDIR)$(NOEXT).o -c $(EDNAME)</AssemblerOptions>
-        </FileOptios>
+        <FileName>$(IRFDIR)lib\delay.h</FileName>
        </File.0>
        <File.1>
-        <FileName>C:\PortableApps\Cypress\PDL\2.1.0\devices\fm4\s6e2ccxj\common\system_s6e2cc.h</FileName>
-       </File.1>
-       <File.10>
-        <FileName>$(IRFDIR)lib\lcd.c</FileName>
+        <FileName>$(IRFDIR)lib\delay.c</FileName>
         <FileOptios>
          <CompilerOptions>-x c  -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
+       </File.1>
+       <File.10>
+        <FileName>$(IRFDIR)lib\registers.h</FileName>
        </File.10>
        <File.11>
-        <FileName>$(IRFDIR)lib\lcd.h</FileName>
+        <FileName>$(IRFDIR)lib\init.h</FileName>
        </File.11>
        <File.12>
-        <FileName>$(IRFDIR)lib\pins.h</FileName>
+        <FileName>$(IRFDIR)lib\init.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c  -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
        </File.12>
        <File.13>
-        <FileName>$(IRFDIR)lib\registers.h</FileName>
+        <FileName>$(IRFDIR)lib\uart_usb.h</FileName>
        </File.13>
        <File.14>
-        <FileName>$(IRFDIR)lib\pdl_user.h</FileName>
+        <FileName>$(IRFDIR)lib\uart_multicon.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c  -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
        </File.14>
        <File.15>
-        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\pdl.h</FileName>
+        <FileName>$(IRFDIR)lib\uart_multicon.h</FileName>
        </File.15>
        <File.16>
-        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\pdl.c</FileName>
+        <FileName>$(IRFDIR)lib\uart_usb.c</FileName>
         <FileOptios>
          <CompilerOptions>-x c  -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.16>
        <File.17>
-        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\adc\adc.c</FileName>
+        <FileName>$(IRFDIR)lib\debug.c</FileName>
         <FileOptios>
          <CompilerOptions>-x c  -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.17>
        <File.18>
-        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\adc\adc.h</FileName>
+        <FileName>$(IRFDIR)lib\debug.h</FileName>
        </File.18>
        <File.19>
-        <FileName>\PortableApps\Cypress\PDL\2.1.0\utilities\printf_scanf\uart_io.c</FileName>
-        <FileOptios>
-         <CompilerOptions>-x c  -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
-        </FileOptios>
+        <FileName>$(IRFDIR)lib\kxcjk1013.h</FileName>
        </File.19>
        <File.2>
-        <FileName>C:\PortableApps\Cypress\PDL\2.1.0\devices\fm4\s6e2ccxj\common\system_s6e2cc.c</FileName>
+        <FileName>$(IRFDIR)lib\analog.c</FileName>
         <FileOptios>
          <CompilerOptions>-x c  -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.2>
        <File.20>
-        <FileName>\PortableApps\Cypress\PDL\2.1.0\utilities\printf_scanf\uart_io.h</FileName>
+        <FileName>$(IRFDIR)lib\kxcjk1013.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c  -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
        </File.20>
-       <File.21>
-        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\dma\dma.c</FileName>
-        <FileOptios>
-         <CompilerOptions>-x c  -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
-        </FileOptios>
-       </File.21>
-       <File.22>
-        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\dma\dma.h</FileName>
-       </File.22>
-       <File.23>
-        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\mfs\mfs.c</FileName>
-        <FileOptios>
-         <CompilerOptions>-x c  -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
-        </FileOptios>
-       </File.23>
-       <File.24>
-        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\mfs\mfs.h</FileName>
-       </File.24>
-       <File.25>
-        <FileName>$(IRFDIR)lib\init.h</FileName>
-       </File.25>
-       <File.26>
-        <FileName>$(IRFDIR)lib\init.c</FileName>
-        <FileOptios>
-         <CompilerOptions>-x c  -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
-        </FileOptios>
-       </File.26>
        <File.3>
-        <FileName>$(IRFDIR)lib\delay.h</FileName>
+        <FileName>$(IRFDIR)lib\analog.h</FileName>
        </File.3>
        <File.4>
-        <FileName>$(IRFDIR)lib\delay.c</FileName>
+        <FileName>$(IRFDIR)lib\gfx.c</FileName>
         <FileOptios>
          <CompilerOptions>-x c  -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.4>
        <File.5>
-        <FileName>$(IRFDIR)lib\analog.c</FileName>
-        <FileOptios>
-         <CompilerOptions>-x c  -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
-        </FileOptios>
+        <FileName>$(IRFDIR)lib\gfx.h</FileName>
        </File.5>
        <File.6>
-        <FileName>$(IRFDIR)lib\analog.h</FileName>
+        <FileName>$(IRFDIR)lib\glcdfont.h</FileName>
        </File.6>
        <File.7>
-        <FileName>$(IRFDIR)lib\gfx.c</FileName>
+        <FileName>$(IRFDIR)lib\lcd.c</FileName>
         <FileOptios>
          <CompilerOptions>-x c  -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.7>
        <File.8>
-        <FileName>$(IRFDIR)lib\gfx.h</FileName>
+        <FileName>$(IRFDIR)lib\lcd.h</FileName>
        </File.8>
        <File.9>
-        <FileName>$(IRFDIR)lib\glcdfont.h</FileName>
+        <FileName>$(IRFDIR)lib\pins.h</FileName>
        </File.9>
       </LinkGroup.0>
       <LinkGroup.1>
@@ -1310,6 +1607,15 @@
          <CompilerOptions>-x c  -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.12>
+       <File.13>
+        <FileName>$(IRFDIR)src\dht11.h</FileName>
+       </File.13>
+       <File.14>
+        <FileName>$(IRFDIR)src\dht11.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c  -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.14>
        <File.2>
         <FileName>$(IRFDIR)src\blink.h</FileName>
        </File.2>
@@ -1385,7 +1691,106 @@
        <File.6>
         <FileName>$(IRFDIR)solution\graphicstest.h</FileName>
        </File.6>
+       <File.7>
+        <FileName>$(IRFDIR)solution\dht11_s.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c  -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.7>
       </LinkGroup.2>
+      <LinkGroup.3>
+       <LinkGroupName>pdl</LinkGroupName>
+       <File.0>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\adc\adc.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c  -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.0>
+       <File.1>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\adc\adc.h</FileName>
+       </File.1>
+       <File.10>
+        <FileName>C:\PortableApps\Cypress\PDL\2.1.0\devices\fm4\s6e2ccxj\common\system_s6e2cc.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c  -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.10>
+       <File.11>
+        <FileName>C:\PortableApps\Cypress\PDL\2.1.0\devices\fm4\s6e2ccxj\common\system_s6e2cc.h</FileName>
+       </File.11>
+       <File.12>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\utilities\printf_scanf\uart_io.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c  -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.12>
+       <File.13>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\utilities\printf_scanf\uart_io.h</FileName>
+       </File.13>
+       <File.14>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\rtc\rtc.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c  -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.14>
+       <File.15>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\rtc\rtc.h</FileName>
+       </File.15>
+       <File.16>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\exint\exint.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c  -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.16>
+       <File.17>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\exint\exint.h</FileName>
+       </File.17>
+       <File.18>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\clk\clk.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c  -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.18>
+       <File.19>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\clk\clk.h</FileName>
+       </File.19>
+       <File.2>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\dma\dma.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c  -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.2>
+       <File.3>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\dma\dma.h</FileName>
+       </File.3>
+       <File.4>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\mfs\mfs.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c  -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.4>
+       <File.5>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\mfs\mfs.h</FileName>
+       </File.5>
+       <File.6>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\pdl.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c  -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.6>
+       <File.7>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\pdl.h</FileName>
+       </File.7>
+       <File.8>
+        <FileName>$(IRFDIR)lib\pdl_user.h</FileName>
+       </File.8>
+       <File.9>
+        <FileName>$(IRFDIR)startup_s6e2cc.s</FileName>
+        <FileOptios>
+         <AssemblerOptions>-mcpu=cortex-m4 -mthumb -g3  -o $(OUTPUTDIR)$(NOEXT).o -c $(EDNAME)</AssemblerOptions>
+        </FileOptios>
+       </File.9>
+      </LinkGroup.3>
       <TargetOptios>
        <AsmArgFile></AsmArgFile>
        <BuildOptions></BuildOptions>
@@ -1416,121 +1821,94 @@
       <LinkGroup.0>
        <LinkGroupName>lib</LinkGroupName>
        <File.0>
-        <FileName>$(IRFDIR)startup_s6e2cc.s</FileName>
-        <FileOptios>
-         <AssemblerOptions>-mcpu=cortex-m4 -mthumb -g3  -o $(OUTPUTDIR)$(NOEXT).o -c $(EDNAME)</AssemblerOptions>
-        </FileOptios>
+        <FileName>$(IRFDIR)lib\delay.h</FileName>
        </File.0>
        <File.1>
-        <FileName>C:\PortableApps\Cypress\PDL\2.1.0\devices\fm4\s6e2ccxj\common\system_s6e2cc.h</FileName>
-       </File.1>
-       <File.10>
-        <FileName>$(IRFDIR)lib\lcd.c</FileName>
+        <FileName>$(IRFDIR)lib\delay.c</FileName>
         <FileOptios>
          <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
+       </File.1>
+       <File.10>
+        <FileName>$(IRFDIR)lib\registers.h</FileName>
        </File.10>
        <File.11>
-        <FileName>$(IRFDIR)lib\lcd.h</FileName>
+        <FileName>$(IRFDIR)lib\init.h</FileName>
        </File.11>
        <File.12>
-        <FileName>$(IRFDIR)lib\pins.h</FileName>
+        <FileName>$(IRFDIR)lib\init.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
        </File.12>
        <File.13>
-        <FileName>$(IRFDIR)lib\registers.h</FileName>
+        <FileName>$(IRFDIR)lib\uart_usb.h</FileName>
        </File.13>
        <File.14>
-        <FileName>$(IRFDIR)lib\pdl_user.h</FileName>
+        <FileName>$(IRFDIR)lib\uart_multicon.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
        </File.14>
        <File.15>
-        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\pdl.h</FileName>
+        <FileName>$(IRFDIR)lib\uart_multicon.h</FileName>
        </File.15>
        <File.16>
-        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\pdl.c</FileName>
+        <FileName>$(IRFDIR)lib\uart_usb.c</FileName>
         <FileOptios>
          <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.16>
        <File.17>
-        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\adc\adc.c</FileName>
+        <FileName>$(IRFDIR)lib\debug.c</FileName>
         <FileOptios>
          <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.17>
        <File.18>
-        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\adc\adc.h</FileName>
+        <FileName>$(IRFDIR)lib\debug.h</FileName>
        </File.18>
        <File.19>
-        <FileName>\PortableApps\Cypress\PDL\2.1.0\utilities\printf_scanf\uart_io.c</FileName>
-        <FileOptios>
-         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
-        </FileOptios>
+        <FileName>$(IRFDIR)lib\kxcjk1013.h</FileName>
        </File.19>
        <File.2>
-        <FileName>C:\PortableApps\Cypress\PDL\2.1.0\devices\fm4\s6e2ccxj\common\system_s6e2cc.c</FileName>
+        <FileName>$(IRFDIR)lib\analog.c</FileName>
         <FileOptios>
          <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.2>
        <File.20>
-        <FileName>\PortableApps\Cypress\PDL\2.1.0\utilities\printf_scanf\uart_io.h</FileName>
+        <FileName>$(IRFDIR)lib\kxcjk1013.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
        </File.20>
-       <File.21>
-        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\dma\dma.c</FileName>
-        <FileOptios>
-         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
-        </FileOptios>
-       </File.21>
-       <File.22>
-        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\dma\dma.h</FileName>
-       </File.22>
-       <File.23>
-        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\mfs\mfs.c</FileName>
-        <FileOptios>
-         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
-        </FileOptios>
-       </File.23>
-       <File.24>
-        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\mfs\mfs.h</FileName>
-       </File.24>
-       <File.25>
-        <FileName>$(IRFDIR)lib\init.h</FileName>
-       </File.25>
-       <File.26>
-        <FileName>$(IRFDIR)lib\init.c</FileName>
-        <FileOptios>
-         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
-        </FileOptios>
-       </File.26>
        <File.3>
-        <FileName>$(IRFDIR)lib\delay.h</FileName>
+        <FileName>$(IRFDIR)lib\analog.h</FileName>
        </File.3>
        <File.4>
-        <FileName>$(IRFDIR)lib\delay.c</FileName>
+        <FileName>$(IRFDIR)lib\gfx.c</FileName>
         <FileOptios>
          <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.4>
        <File.5>
-        <FileName>$(IRFDIR)lib\analog.c</FileName>
-        <FileOptios>
-         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
-        </FileOptios>
+        <FileName>$(IRFDIR)lib\gfx.h</FileName>
        </File.5>
        <File.6>
-        <FileName>$(IRFDIR)lib\analog.h</FileName>
+        <FileName>$(IRFDIR)lib\glcdfont.h</FileName>
        </File.6>
        <File.7>
-        <FileName>$(IRFDIR)lib\gfx.c</FileName>
+        <FileName>$(IRFDIR)lib\lcd.c</FileName>
         <FileOptios>
          <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.7>
        <File.8>
-        <FileName>$(IRFDIR)lib\gfx.h</FileName>
+        <FileName>$(IRFDIR)lib\lcd.h</FileName>
        </File.8>
        <File.9>
-        <FileName>$(IRFDIR)lib\glcdfont.h</FileName>
+        <FileName>$(IRFDIR)lib\pins.h</FileName>
        </File.9>
       </LinkGroup.0>
       <LinkGroup.1>
@@ -1562,6 +1940,15 @@
          <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.12>
+       <File.13>
+        <FileName>$(IRFDIR)src\dht11.h</FileName>
+       </File.13>
+       <File.14>
+        <FileName>$(IRFDIR)src\dht11.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.14>
        <File.2>
         <FileName>$(IRFDIR)src\blink.h</FileName>
        </File.2>
@@ -1637,7 +2024,106 @@
        <File.6>
         <FileName>$(IRFDIR)solution\graphicstest.h</FileName>
        </File.6>
+       <File.7>
+        <FileName>$(IRFDIR)solution\dht11_s.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.7>
       </LinkGroup.2>
+      <LinkGroup.3>
+       <LinkGroupName>pdl</LinkGroupName>
+       <File.0>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\adc\adc.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.0>
+       <File.1>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\adc\adc.h</FileName>
+       </File.1>
+       <File.10>
+        <FileName>C:\PortableApps\Cypress\PDL\2.1.0\devices\fm4\s6e2ccxj\common\system_s6e2cc.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.10>
+       <File.11>
+        <FileName>C:\PortableApps\Cypress\PDL\2.1.0\devices\fm4\s6e2ccxj\common\system_s6e2cc.h</FileName>
+       </File.11>
+       <File.12>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\utilities\printf_scanf\uart_io.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.12>
+       <File.13>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\utilities\printf_scanf\uart_io.h</FileName>
+       </File.13>
+       <File.14>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\rtc\rtc.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.14>
+       <File.15>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\rtc\rtc.h</FileName>
+       </File.15>
+       <File.16>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\exint\exint.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.16>
+       <File.17>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\exint\exint.h</FileName>
+       </File.17>
+       <File.18>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\clk\clk.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.18>
+       <File.19>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\clk\clk.h</FileName>
+       </File.19>
+       <File.2>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\dma\dma.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.2>
+       <File.3>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\dma\dma.h</FileName>
+       </File.3>
+       <File.4>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\mfs\mfs.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.4>
+       <File.5>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\mfs\mfs.h</FileName>
+       </File.5>
+       <File.6>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\pdl.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.6>
+       <File.7>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\pdl.h</FileName>
+       </File.7>
+       <File.8>
+        <FileName>$(IRFDIR)lib\pdl_user.h</FileName>
+       </File.8>
+       <File.9>
+        <FileName>$(IRFDIR)startup_s6e2cc.s</FileName>
+        <FileOptios>
+         <AssemblerOptions>-mcpu=cortex-m4 -mthumb -g3  -o $(OUTPUTDIR)$(NOEXT).o -c $(EDNAME)</AssemblerOptions>
+        </FileOptios>
+       </File.9>
+      </LinkGroup.3>
       <TargetOptios>
        <AsmArgFile></AsmArgFile>
        <BuildOptions></BuildOptions>
