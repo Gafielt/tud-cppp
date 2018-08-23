@@ -49,11 +49,15 @@ void fun::task2_6_input() {
     
     //Keep asking until a valid value has been entered
     int input;
-    Direction d;
 	do {
-		std::cout << "Geben Sie die Richtung ein (0=linksbündig, 1=rechtsbündig): ";
+		std::cout << "Geben Sie die Richtung ein (" << Direction::left << "=linksbündig, " << Direction::right << "=rechtsbündig): ";
 		std::cin >> input;
 	} while (input < 0 || input > 1);
+	
+	Direction d;
+	// Alternative 1: Cast if values match.
+	d = (Direction) input;
+	// Alternative 2: Explicit if-else
 	if(input == 0) {
 	    d = left;
 	} else {
