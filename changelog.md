@@ -9,6 +9,7 @@
         Added links to cppreference.com that contain the full information.
 * p.50: building -> hbi
         Building.h -> Building.hpp
+* p.62: Insert missing do keyword in do-while loops
 * p.80: Bugfix 'int *j = &i;' violates const correctness (invalid conversion from const int* to int).
 
 ### Exercises
