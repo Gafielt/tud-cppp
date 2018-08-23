@@ -1,6 +1,13 @@
 Exercises: cppp_exercises.pdf
 Lecture: cppp_lecture.pdf
 
+## Changes on 2018-08-21
+
+### Exercises
+* Fix bug in sample solution for basic exercise
+  * PR: https://github.com/Echtzeitsysteme/tud-cppp/pull/100
+  * Issue: https://github.com/Echtzeitsysteme/tud-cppp/issues/99
+
 ## Changes in December 2017
 
 ## Lecture

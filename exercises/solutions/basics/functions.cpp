@@ -1,5 +1,8 @@
 #include "functions.hpp"
 #include <iostream>
+#include <limits>     // necessary to clear cin state (if invalid because of bad input)
+
+static void clearStandardInputErrorFlags();
 
 void fun::printSpaces(int n) {
     //Print necessary spaces to right-align the figure
@@ -35,10 +38,12 @@ void fun::printFigure(int width, Direction d) {
 }
 
 void fun::task2_6_input() {
+	std::cout << "Muster mit Sternen." << std::endl;
 	int width;
     //Keep asking until a valid value has been entered
 	do {
 		std::cout << "Geben Sie die Breite ein (zwischen 1 und 75): ";
+		clearStandardInputErrorFlags();
 		std::cin >> width;
 	} while (width < 1 || width > 75);
     
@@ -80,9 +85,11 @@ void fun::printChar(int n) {
 }
 
 void fun::printCharFigure() {
+	std::cout << "Muster mit Buchstaben." << std::endl;
 	int width;
 	do {
 		std::cout << "Geben Sie die Breite ein (zwischen 1 und 75): ";
+		clearStandardInputErrorFlags();
 		std::cin >> width;
 	} while (width < 1 || width > 75);
 	
@@ -91,5 +98,17 @@ void fun::printCharFigure() {
 	}
 	for (int i = 1; i <= width; ++i) {
 		printChar(i);
+	}
+}
+
+/**
+ * @brief Clears error flags and buffered invalid values of std::cin
+ * 
+ * Solution thanks to https://stackoverflow.com/questions/5864560#5864560
+ */
+void clearStandardInputErrorFlags() {
+	if(std::cin.fail()){ // Check validity of cin state
+		std::cin.clear(); // Clear cin internal error state, that is set if input is no int or exceeds
+		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Clear current buffer of cin
 	}
 }
