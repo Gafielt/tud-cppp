@@ -5,12 +5,16 @@
 
 ### Slides
 
+* p.45: Bugfix in "declaration vs. definition": "int x;"  is always a definition. Exception: global variables prefixed with "extern".
+        Added links to cppreference.com that contain the full information.
 * p.50: building -> hbi
         Building.h -> Building.hpp
+* p.80: Bugfix 'int *j = &i;' violates const correctness (invalid conversion from const int* to int).
 
 ### Exercises
 
 * Add archive containing project templates in *exercises/tools/codelite*
+  * See readme file for instructions on how to enable the templates in Codelite
 
 ## Changes on 2018-08-21
 
