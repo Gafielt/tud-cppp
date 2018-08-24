@@ -13,6 +13,7 @@
 ### Exercises
 * Ex 2.3: Deklaration -> Definition
 * Ex 3.1: Deklaration -> Schnittstelle
+* Ex 6.7: argv[0] -> argv[1] contains the user-defined argument
 * Ex 18.1: Deklaration -> Definition
 
 ## Changes on 2018-08-23
