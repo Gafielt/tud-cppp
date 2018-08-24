@@ -6,7 +6,8 @@ int main(){
   initBoard();
   
   // Write your code here ...
-  BlinkMain();
+  //BlinkMain();
+  debugCPPPBoard();
 
   return 0;
 }
