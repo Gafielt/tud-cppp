@@ -133,8 +133,8 @@ void ex_uebergabewerte() {
     op3(**l);
     // op3(*m); // does not work because of const
 
-    // op4(&&i);
-    // op4(*j);
+    // op4(&&i); //invalid conversion from 'int**' to 'const int**', reason is it could be a workaround to change value of 'const int**'
+    // op4(&j);  //same as above   -> see https://stackoverflow.com/a/16390371
     // op4(&k); // invalid conversion from ‘const int* const*’ to ‘const int**’ -> const correctness
     // op4(l);
     op4(&m);
