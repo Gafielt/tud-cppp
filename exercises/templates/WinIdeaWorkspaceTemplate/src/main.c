@@ -2,16 +2,13 @@
 #include "blink.h"
 #include "blinkrainbow.h"
 #include "uart_usb.h"
+#include "debug.h"
 
 int main(){
   initBoard();
   
-  UART_USB_Init();
-  UART_USB();
-  
   // Write your code here ...
-  //BlinkMain();
-  debugCPPPBoard();
+  BlinkMain();
 
   return 0;
 }

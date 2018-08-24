@@ -1,6 +1,5 @@
 #ifndef UART_USB_H
 #define UART_USB_H
-
 #include "mcu.h"
 #include "pdl_header.h"
 #include <string.h>
