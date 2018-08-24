@@ -4,7 +4,7 @@
 
 int main(){
   initBoard();
-  
+  initDebug();
   // Write your code here ...
   //BlinkMain();
   debugCPPPBoard();

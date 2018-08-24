@@ -11,7 +11,7 @@ void initDebug(){
   BUTTON_RIGHT_PCR |= (1 << BUTTON_RIGHT_PIN);
  #elif(GPIO_SETTING == GPIO_NEW)
   Gpio1pin_InitIn(GPIO1PIN_PF5, Gpio1pin_InitPullup(1u));
-  Gpio1pin_InitIn(GPIO1PIN_P42, Gpio1pin_InitPullup(1u));
+  Gpio1pin_InitIn(GPIO1PIN_PF3, Gpio1pin_InitPullup(1u));
  #endif
 }
 
@@ -84,8 +84,7 @@ void debugCPPPBoard(){
       writeText_s("X");
     }
     else
-      writeText_s(" ");
-    //microDelay(10000);
+      writeText_s("_");
     writeTextln_s("");
     
     writeTextln_s("");
@@ -101,8 +100,7 @@ void debugCPPPBoard(){
       writeText_s("X"); 
     }
     else
-      writeText_s(" ");
-    //microDelay(10000);
+      writeText_s("_");
     writeTextln_s("");
     
   }
