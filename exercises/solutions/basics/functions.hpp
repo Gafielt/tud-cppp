@@ -7,10 +7,12 @@
  * @brief Contains necessary functions of ex02_basics
  */
 
+/**
+ * @brief This namespace encapsulates all functions for printing patterns
+ */
 namespace fun {
 
     /**
-     * @name enum Direction
      * @author cppp
      * @brief This enum defines the possible directions of the figure.
      */
@@ -21,7 +23,6 @@ namespace fun {
       right };
 
     /**
-     * @name printSpaces(int n);
      * @author cppp
      * @brief Prints a given number of spaces (' ').
      * @param n defines the number of printed spaces.
@@ -30,7 +31,6 @@ namespace fun {
     void printSpaces(int n);
 
     /**
-     * @name printStars(int n);
      * @author cppp
      * @brief Prints a given number of stars ('*') and ends with a new line.
      * @param n Defines the number of printed stars.
@@ -39,17 +39,15 @@ namespace fun {
 	void printStars(int n);
     
     /**
-     * @name printFigure(Direction d);
      * @author cppp
      * @brief Prints the required star form depending on the given direction.
-     * @param The width of the figure.
-     * @param The direction how to align the figure.
+     * @param width The width of the figure.
+     * @param d The direction how to align the figure.
      * @return void
      */
 	void printFigure(int width, Direction d);
     
     /**
-     * @name task2_6_input();
      * @author cppp
      * @brief Captures user input (figure width and figure direction).
      * @return void
@@ -57,7 +55,6 @@ namespace fun {
 	void task2_6_input();
     
     /**
-     * @name nextChar();
      * @author cppp
      * @brief Calculates the next char based on a static one.
      * @return void
@@ -65,7 +62,6 @@ namespace fun {
 	char nextChar();
     
     /**
-     * @name print_char(int n);
      * @sa print_stars(int n);
      * @author cppp
      * @brief Prints a given number of letters. Ends with a new line.
@@ -75,7 +71,6 @@ namespace fun {
 	void printChar(int n);
     
     /**
-     * @name printCharFigure();
      * @author cppp
      * @brief Asks for the width and prints the figure of alphabet characters.
      * @return void
