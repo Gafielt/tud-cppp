@@ -1,5 +1,8 @@
 % !TeX spellcheck = de_DE
 \section{\ExercisePrefixEmbeddedC DHT11 \optional}
+
+\optionaltextbox
+
 Der DHT11 ist ein Temperatur- und Feuchtigkeitssensor, der mithilfe des Steckplatine an den Microcontroller angeschlossen werden kann.
 Der DHT11 hat 4 Anschlüsse (Pins), von denen im Rahmen des Praktikums 3 verwendet werden.
 Zwei Pins werden für Masse (\lstinline|GND|) und Versorgungsspannung (\lstinline|VCC|) genutzt und ein Pin für die digitale Datenübertragung zwischen dem DHT11 und dem Microcontroller.
@@ -47,7 +50,9 @@ Lese mit \lstinline|Gpio1pin_Get(GPIO1PIN_PF52)| den aktuellen Wert des digitale
 Ist der Pin länger als \SI{30}{\micro\second} auf \lstinline|HIGH| gesetzt $t_{HIGH} > \SI{30}{\micro\second}$, dann interpretiere dieses Signal als eine 1 und im umgekehrten Fall $t_{HIGH} < \SI{30}{\micro\second}$ als eine 0.
 Nachdem alle 40 Bits empfangen wurden, bilde die Checksumme, welche die Summe der ersten 32 Bits darstellt. 
 Ist der folgende Pseudocode erfüllt, dann ist die Übertragung der Daten erfolgreich gewesen.
+%
 \cpppInputListing{05_c/listings/dht11_checksum.c}
+%
 Beende die Methode  \lstinline|readDHT11readDHT11|, sofern die Checksumme nicht stimmt. 
 Ist die Checksumme richtig, speichere die aktuelle Temperatur und Feuchtigkeit in den übergebenen Parametern \lstinline|humidity| und \lstinline|temperature|.
 \begin{figure}[!htb]
@@ -57,11 +62,11 @@ Ist die Checksumme richtig, speichere die aktuelle Temperatur und Feuchtigkeit i
 	\label{fig:dht11Package}
 \end{figure} 
 \hints{
-	\item Bei der Abfrage des Pins mithilfe von \lstinline|Gpio1pin_Get(GPIO1PIN_PF7)|, kann es dazu kommen, dass fehlerhafte Signale dauerhaft auf \lstinline|HIGH| oder \lstinline|LOW| bleiben.
+	\item Bei der Abfrage des Pins mithilfe von \lstinline|Gpio1pin_Get(GPIO1PIN_P52)|, kann es dazu kommen, dass fehlerhafte Signale dauerhaft auf \lstinline|HIGH| oder \lstinline|LOW| bleiben.
 	Um diesen Fall zu filtern, verwende folgende Art der Abfrage.
 	\cpppInputListing{05_c/listings/dht11.c}
 	
-	\item Um einen Delay auf dem Microcontroller ausführen, kannst du die Methode \lstinline|microDelay(uint32_t timeInMicroseconds)| verwenden. Zum Beispiel wird beim Aufruf  \lstinline|microDelay(20)| der Microcontroller 20µs pausiert.
+	\item Um einen Delay auf dem Microcontroller ausführen, kannst du die Methode \lstinline|microDelay(uint32_t timeInMicroseconds)| verwenden. Zum Beispiel wird beim Aufruf  \lstinline|microDelay(20)| der Microcontroller \SI{20}{\micro\second} pausiert.
 }
 
 \item 
@@ -69,7 +74,7 @@ Nutze die Methoden \lstinline|writeTextln| und \lstinline|writeNumberOnDisplay| 
 
 \hints{
 	\item 
-	Falls du die Methoden writeTextln() und writeNumberOnDisplay() noch nicht implementiert hast, kannst du die Methoden der Musterlösung mit der Konkatenation des Suffix \lstinline|_s| nutzen.
+	Falls du die Funktionen \lstinline|writeTextln| und \lstinline|writeNumberOnDisplay| noch nicht implementiert hast, kannst du die Methoden der Musterlösung mit der Konkatenation des Suffix \lstinline|_s| nutzen (also \lstinline|writeTextln_s|).
 }
 
 \end{enumerate}
