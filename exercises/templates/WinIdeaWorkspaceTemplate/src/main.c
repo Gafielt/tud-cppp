@@ -10,7 +10,8 @@ int main(){
   UART_USB();
   
   // Write your code here ...
-  BlinkMain();
+  //BlinkMain();
+  debugCPPPBoard();
 
   return 0;
 }
