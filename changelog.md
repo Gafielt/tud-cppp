@@ -1,6 +1,15 @@
 1. Exercises: cppp_exercises.pdf
 2. Slides: cppp_lecture.pdf
 
+## Changes on 2018-08-24
+
+### Slides
+
+* p. 73: Clarify that int *iP; is a definition.
+* p. 77: Fix formatting of pointer type: int* -> int *
+* p.119: Destroying floor [1] -> Destroying floor [0]
+
+
 ## Changes on 2018-08-23
 
 ### Slides
