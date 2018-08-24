@@ -70,7 +70,7 @@ Das Resultat soll am Ende jeweils folgendermaßen aussehen:
 \cpppInputNoPageBreakListing{01_basics/problems/listings/basics_starpattern_alignment.cpp} 
 
 \subsection{Auslagern der Datei}
-Erstelle eine neue Header-Datei \textbf{\filename{functions.h}} und eine neue
+Erstelle eine neue Header-Datei \textbf{\filename{functions.hpp}} und eine neue
 Sourcedatei \textbf{\filename{functions.cpp}}.
 Klicke hierzu mit der \textbf{rechten Maustaste} auf den Ordner \textbf{\filename{src}} und wähle \textbf{Add a New File}, wähle den Dateitypen \texttt{Header File} und gebe der Datei den Namen \filename{functions}. 
 Bestätige den Dialog mit \textbf{OK}.
@@ -79,14 +79,14 @@ Füge in der Headerdatei die folgenden Include Guards hinzu.
 
 \cpppInputListing{01_basics/problems/listings/basics_hpp_guards.hpp}
 
-Binde danach \filename{functions.h} in beide Sourcedateien (\filename{functions.cpp} und \filename{main.cpp}) ein, indem du
+Binde danach \filename{functions.hpp} in beide Sourcedateien (\filename{functions.cpp} und \filename{main.cpp}) ein, indem du
 
 \cpppInputListing{01_basics/problems/listings/basics_hpp_include.hpp}
 
 verwendest.
 \textbf{Verschiebe} die beiden zuvor erstellten Funktionen nach \filename{functions.cpp}.
 
-Schreibe nun in \filename{functions.h} \textbf{Funktionsprototypen} für die Funktionen, die sich nun in \filename{functions.cpp} befinden.
+Schreibe nun in \filename{functions.hpp} \textbf{Funktionsprototypen} für die Funktionen, die sich nun in \filename{functions.cpp} befinden.
 Funktionsprototypen dienen dazu, dem Compiler mitzuteilen, dass eine Funktion mit bestimmtem Namen, Parametern und Rückgabewert existiert.
 Ein Prototyp ist eine mit \textbf{;} abgeschlossene Signatur der Funktion ohne Funktionsrumpf.
 Der Prototyp von \lstinline{printStars(int n)} lautet 
