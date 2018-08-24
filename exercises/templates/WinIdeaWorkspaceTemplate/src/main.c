@@ -4,9 +4,10 @@
 #include "uart_usb.h"
 #include "debug.h"
 
+
 int main(){
   initBoard();
-  
+
   // Write your code here ...
   BlinkMain();
 

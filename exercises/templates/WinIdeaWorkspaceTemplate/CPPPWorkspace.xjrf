@@ -44,14 +44,14 @@
       </History>
       <PI.0>
        <Bookmarks_num_>0</Bookmarks_num_>
-       <C>29</C>
-       <L>98</L>
-       <P>lib\pins.h</P>
+       <C>19</C>
+       <L>19</L>
+       <P>lib\debug.h</P>
       </PI.0>
       <PI.1>
        <Bookmarks_num_>0</Bookmarks_num_>
-       <C>14</C>
-       <L>6</L>
+       <C>35</C>
+       <L>9</L>
        <P>src\main.c</P>
       </PI.1>
       <PI.10>
@@ -115,9 +115,9 @@
       </PI.19>
       <PI.2>
        <Bookmarks_num_>0</Bookmarks_num_>
-       <C>14</C>
-       <L>2</L>
-       <P>lib\debug.c</P>
+       <C>29</C>
+       <L>98</L>
+       <P>lib\pins.h</P>
       </PI.2>
       <PI.20>
        <Bookmarks_num_>0</Bookmarks_num_>
@@ -184,7 +184,9 @@
       </PI.29>
       <PI.3>
        <Bookmarks_num_>0</Bookmarks_num_>
-       <P>src\dht11.h</P>
+       <C>14</C>
+       <L>2</L>
+       <P>lib\debug.c</P>
       </PI.3>
       <PI.30>
        <Bookmarks_num_>0</Bookmarks_num_>
@@ -251,9 +253,7 @@
       </PI.39>
       <PI.4>
        <Bookmarks_num_>0</Bookmarks_num_>
-       <C>6</C>
-       <L>44</L>
-       <P>src\dht11.c</P>
+       <P>src\dht11.h</P>
       </PI.4>
       <PI.40>
        <Bookmarks_num_>0</Bookmarks_num_>
@@ -318,37 +318,37 @@
       </PI.49>
       <PI.5>
        <Bookmarks_num_>0</Bookmarks_num_>
+       <C>6</C>
+       <L>44</L>
+       <P>src\dht11.c</P>
+      </PI.5>
+      <PI.6>
+       <Bookmarks_num_>0</Bookmarks_num_>
        <C>12</C>
        <L>54</L>
        <P>src\button.c</P>
        <VL>18</VL>
-      </PI.5>
-      <PI.6>
+      </PI.6>
+      <PI.7>
        <Bookmarks_num_>0</Bookmarks_num_>
        <C>55</C>
        <L>13</L>
        <P>solution\dht11_s.c</P>
        <VL>15</VL>
-      </PI.6>
-      <PI.7>
+      </PI.7>
+      <PI.8>
        <Bookmarks_num_>0</Bookmarks_num_>
        <C>2</C>
        <L>9</L>
        <P>lib\uart_usb.c</P>
        <VL>15</VL>
-      </PI.7>
-      <PI.8>
+      </PI.8>
+      <PI.9>
        <Bookmarks_num_>0</Bookmarks_num_>
        <C>57</C>
        <L>65</L>
        <P>lib\uart_multicon.c</P>
        <VL>55</VL>
-      </PI.8>
-      <PI.9>
-       <Bookmarks_num_>0</Bookmarks_num_>
-       <C>29</C>
-       <L>6</L>
-       <P>lib\debug.h</P>
       </PI.9>
      </REG_ROOT>
     </EditorOptions>
@@ -823,7 +823,7 @@
        <RelativeFileName>src\main.c</RelativeFileName>
       </ActiveDocument>
       <Editor.0>
-       <FileBarIndex>2</FileBarIndex>
+       <FileBarIndex>3</FileBarIndex>
        <RectPosBottom>690</RectPosBottom>
        <RectPosLeft>49</RectPosLeft>
        <RectPosRight>1639</RectPosRight>
@@ -832,20 +832,28 @@
       </Editor.0>
       <Editor.1>
        <FileBarIndex>0</FileBarIndex>
+       <RectPosBottom>859</RectPosBottom>
+       <RectPosLeft>147</RectPosLeft>
+       <RectPosRight>1688</RectPosRight>
+       <RectPosTop>147</RectPosTop>
+       <RelativeFileName>lib\debug.h</RelativeFileName>
+      </Editor.1>
+      <Editor.2>
+       <FileBarIndex>1</FileBarIndex>
        <RectPosBottom>712</RectPosBottom>
        <RectPosLeft>0</RectPosLeft>
        <RectPosRight>1541</RectPosRight>
        <RectPosTop>0</RectPosTop>
        <RelativeFileName>lib\pins.h</RelativeFileName>
-      </Editor.1>
-      <Editor.2>
-       <FileBarIndex>1</FileBarIndex>
+      </Editor.2>
+      <Editor.3>
+       <FileBarIndex>2</FileBarIndex>
        <RectPosBottom>1055</RectPosBottom>
        <RectPosLeft>343</RectPosLeft>
        <RectPosRight>1884</RectPosRight>
        <RectPosTop>343</RectPosTop>
        <RelativeFileName>src\main.c</RelativeFileName>
-      </Editor.2>
+      </Editor.3>
       <EditorHistoryFile.0>
        <RelativeFileName>src\button.c</RelativeFileName>
       </EditorHistoryFile.0>
@@ -860,10 +868,10 @@
       </EditorHistoryFile.3>
      </Documents.0>
      <Progress>
-      <b>832</b>
-      <l>1247</l>
-      <r>2248</r>
-      <t>136</t>
+      <b>1108</b>
+      <l>779</l>
+      <r>1780</r>
+      <t>412</t>
      </Progress>
      <Watches>
       <ActiveWatchPane>2</ActiveWatchPane>
@@ -1662,7 +1670,7 @@
        </Items.0>
       </OSWindow>
       <ProjectWindow>
-       <Selected>pins.h</Selected>
+       <Selected>debug.h</Selected>
        <Items.0>
         <__>
          <Name>Files</Name>
