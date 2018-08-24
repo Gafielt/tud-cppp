@@ -7,7 +7,7 @@ void UART_USB_Init(){
   SetPinFunc_SIN0_0();
   SetPinFunc_SOT0_0();
   stcUartConfig.enMode = UartNormal;
-  stcUartConfig.u32BaudRate = 115200u;
+  stcUartConfig.u32BaudRate = Cppp_DefaultBaudRate;
   stcUartConfig.enParity = UartParityNone; // No parity 
   stcUartConfig.enStopBit = UartOneStopBit; // 1 Stop bit 
   stcUartConfig.enDataLength = UartEightBits; // 8 Bit Character Length 

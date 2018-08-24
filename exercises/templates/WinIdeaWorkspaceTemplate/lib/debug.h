@@ -1,6 +1,11 @@
 #ifndef DEBUG_H
 #define DEBUG_H
 
+#define GPIO_CLASSIC 0x00
+#define GPIO_NEW 0x01
+
+#define GPIO_SETTING GPIO_NEW
+
 #include <stdint.h>
 #include "gfx.h"
 #include "lcd.h"

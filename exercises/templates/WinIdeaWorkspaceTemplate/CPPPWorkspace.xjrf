@@ -44,310 +44,311 @@
       </History>
       <PI.0>
        <Bookmarks_num_>0</Bookmarks_num_>
-       <C>29</C>
-       <L>3</L>
-       <P>src\main.c</P>
+       <C>19</C>
+       <L>19</L>
+       <P>lib\debug.h</P>
       </PI.0>
       <PI.1>
        <Bookmarks_num_>0</Bookmarks_num_>
-       <P>src\dht11.h</P>
+       <C>35</C>
+       <L>9</L>
+       <P>src\main.c</P>
       </PI.1>
       <PI.10>
        <Bookmarks_num_>0</Bookmarks_num_>
-       <C>47</C>
-       <L>21</L>
-       <P>src\button.h</P>
-       <VL>3</VL>
+       <L>113</L>
+       <P>solution\display_s.c</P>
+       <VL>95</VL>
       </PI.10>
       <PI.11>
        <Bookmarks_num_>0</Bookmarks_num_>
-       <C>10</C>
-       <P>solution\button_s.c</P>
-       <VL>45</VL>
+       <L>7</L>
+       <P>lib\analog.h</P>
+       <VL>24</VL>
       </PI.11>
       <PI.12>
        <Bookmarks_num_>0</Bookmarks_num_>
        <C>2</C>
        <L>74</L>
        <P>solution\joystick_s.c</P>
-       <VL>57</VL>
+       <VL>78</VL>
       </PI.12>
       <PI.13>
        <Bookmarks_num_>0</Bookmarks_num_>
-       <C>29</C>
-       <L>74</L>
-       <P>lib\pins.h</P>
-       <VL>48</VL>
+       <C>26</C>
+       <L>36</L>
+       <P>solution\button_s.c</P>
+       <VL>12</VL>
       </PI.13>
       <PI.14>
+       <Bookmarks_num_>0</Bookmarks_num_>
+       <L>2</L>
+       <P>lib\uart_usb.h</P>
+       <VL>2</VL>
+      </PI.14>
+      <PI.15>
+       <Bookmarks_num_>0</Bookmarks_num_>
+       <L>4</L>
+       <P>src\testAcceleration.h</P>
+      </PI.15>
+      <PI.16>
+       <Bookmarks_num_>0</Bookmarks_num_>
+       <C>29</C>
+       <P>src\testAcceleration.c</P>
+      </PI.16>
+      <PI.17>
+       <Bookmarks_num_>0</Bookmarks_num_>
+       <C>47</C>
+       <L>21</L>
+       <P>src\button.h</P>
+       <VL>3</VL>
+      </PI.17>
+      <PI.18>
        <Bookmarks_num_>0</Bookmarks_num_>
        <C>1</C>
        <L>26</L>
        <P>lib\delay.c</P>
-      </PI.14>
-      <PI.15>
+      </PI.18>
+      <PI.19>
        <Bookmarks_num_>0</Bookmarks_num_>
        <P>C:\PortableApps\Cypress\PDL\2.1.0\drivers\rtc\rtc.c</P>
-      </PI.15>
-      <PI.16>
+      </PI.19>
+      <PI.2>
+       <Bookmarks_num_>0</Bookmarks_num_>
+       <C>29</C>
+       <L>98</L>
+       <P>lib\pins.h</P>
+      </PI.2>
+      <PI.20>
        <Bookmarks_num_>0</Bookmarks_num_>
        <C>15</C>
        <L>12</L>
        <P>src\display.c</P>
        <VL>39</VL>
-      </PI.16>
-      <PI.17>
+      </PI.20>
+      <PI.21>
        <Bookmarks_num_>0</Bookmarks_num_>
        <C>24</C>
        <L>455</L>
        <P>lib\gfx.c</P>
        <VL>506</VL>
-      </PI.17>
-      <PI.18>
+      </PI.21>
+      <PI.22>
        <Bookmarks_num_>0</Bookmarks_num_>
        <C>28</C>
        <P>solution\blinkrainbow_s.c</P>
        <VL>6</VL>
-      </PI.18>
-      <PI.19>
+      </PI.22>
+      <PI.23>
        <Bookmarks_num_>0</Bookmarks_num_>
        <C>5</C>
        <L>30</L>
        <P>lib\uart_multicon.h</P>
-      </PI.19>
-      <PI.2>
-       <Bookmarks_num_>0</Bookmarks_num_>
-       <C>6</C>
-       <L>44</L>
-       <P>src\dht11.c</P>
-      </PI.2>
-      <PI.20>
+      </PI.23>
+      <PI.24>
        <Bookmarks_num_>0</Bookmarks_num_>
        <C>8</C>
        <L>40</L>
        <P>src\blinkrainbow.c</P>
        <VL>12</VL>
-      </PI.20>
-      <PI.21>
+      </PI.24>
+      <PI.25>
        <Bookmarks_num_>0</Bookmarks_num_>
        <L>2</L>
        <P>lib\init.h</P>
-      </PI.21>
-      <PI.22>
+      </PI.25>
+      <PI.26>
        <Bookmarks_num_>0</Bookmarks_num_>
        <C>12</C>
        <L>188</L>
        <P>lib\pdl_user.h</P>
        <VL>168</VL>
-      </PI.22>
-      <PI.23>
+      </PI.26>
+      <PI.27>
        <Bookmarks_num_>0</Bookmarks_num_>
        <L>63</L>
        <P>C:\PortableApps\Cypress\PDL\2.1.0\drivers\pdl.c</P>
        <VL>33</VL>
-      </PI.23>
-      <PI.24>
+      </PI.27>
+      <PI.28>
        <Bookmarks_num_>0</Bookmarks_num_>
        <L>1458</L>
        <P>C:\PortableApps\Cypress\PDL\2.1.0\drivers\mfs\mfs.c</P>
        <VL>1443</VL>
-      </PI.24>
-      <PI.25>
+      </PI.28>
+      <PI.29>
        <Bookmarks_num_>0</Bookmarks_num_>
        <C>3</C>
        <L>2</L>
        <P>solution\graphicstest.h</P>
-      </PI.25>
-      <PI.26>
+      </PI.29>
+      <PI.3>
+       <Bookmarks_num_>0</Bookmarks_num_>
+       <C>14</C>
+       <L>2</L>
+       <P>lib\debug.c</P>
+      </PI.3>
+      <PI.30>
        <Bookmarks_num_>0</Bookmarks_num_>
        <C>29</C>
        <L>16</L>
        <P>solution\touch_s.c</P>
-      </PI.26>
-      <PI.27>
+      </PI.30>
+      <PI.31>
        <Bookmarks_num_>0</Bookmarks_num_>
        <C>4</C>
        <L>204</L>
        <P>lib\analog.c</P>
        <VL>197</VL>
-      </PI.27>
-      <PI.28>
+      </PI.31>
+      <PI.32>
        <Bookmarks_num_>0</Bookmarks_num_>
        <C>21</C>
        <L>67</L>
        <P>solution\graphicstest.c</P>
        <VL>52</VL>
-      </PI.28>
-      <PI.29>
+      </PI.32>
+      <PI.33>
        <Bookmarks_num_>0</Bookmarks_num_>
        <C>6</C>
        <L>195</L>
        <P>lib\lcd.c</P>
        <VL>159</VL>
-      </PI.29>
-      <PI.3>
-       <Bookmarks_num_>0</Bookmarks_num_>
-       <C>12</C>
-       <L>54</L>
-       <P>src\button.c</P>
-      </PI.3>
-      <PI.30>
+      </PI.33>
+      <PI.34>
        <Bookmarks_num_>0</Bookmarks_num_>
        <C>12</C>
        <L>57</L>
        <P>src\touch.c</P>
        <VL>41</VL>
-      </PI.30>
-      <PI.31>
+      </PI.34>
+      <PI.35>
        <Bookmarks_num_>0</Bookmarks_num_>
        <C>24</C>
        <L>2</L>
        <P>lib\init.c</P>
-      </PI.31>
-      <PI.32>
+      </PI.35>
+      <PI.36>
        <Bookmarks_num_>0</Bookmarks_num_>
        <L>33</L>
        <P>lib\gfx.h</P>
        <VL>12</VL>
-      </PI.32>
-      <PI.33>
+      </PI.36>
+      <PI.37>
        <Bookmarks_num_>0</Bookmarks_num_>
        <C>10</C>
        <L>6</L>
        <P>lib\delay.h</P>
-      </PI.33>
-      <PI.34>
+      </PI.37>
+      <PI.38>
        <Bookmarks_num_>0</Bookmarks_num_>
        <C>3</C>
        <L>4</L>
        <P>src\blink.h</P>
-      </PI.34>
-      <PI.35>
+      </PI.38>
+      <PI.39>
        <Bookmarks_num_>0</Bookmarks_num_>
        <L>14</L>
        <P>src\touch.h</P>
-      </PI.35>
-      <PI.36>
+      </PI.39>
+      <PI.4>
+       <Bookmarks_num_>0</Bookmarks_num_>
+       <P>src\dht11.h</P>
+      </PI.4>
+      <PI.40>
        <Bookmarks_num_>0</Bookmarks_num_>
        <C>3</C>
        <L>5</L>
        <P>src\joystick.h</P>
-      </PI.36>
-      <PI.37>
+      </PI.40>
+      <PI.41>
        <Bookmarks_num_>0</Bookmarks_num_>
        <C>53</C>
        <L>90</L>
        <P>src\display.h</P>
        <VL>27</VL>
-      </PI.37>
-      <PI.38>
+      </PI.41>
+      <PI.42>
        <Bookmarks_num_>0</Bookmarks_num_>
        <C>8</C>
        <L>1</L>
        <P>src\blinkrainbow.h</P>
-      </PI.38>
-      <PI.39>
+      </PI.42>
+      <PI.43>
        <Bookmarks_num_>0</Bookmarks_num_>
        <C>12</C>
        <L>16</L>
        <P>src\blink.c</P>
        <VL>3</VL>
-      </PI.39>
-      <PI.4>
-       <Bookmarks_num_>0</Bookmarks_num_>
-       <C>10</C>
-       <L>48</L>
-       <P>solution\dht11_s.c</P>
-       <VL>51</VL>
-      </PI.4>
-      <PI.40>
+      </PI.43>
+      <PI.44>
        <Bookmarks_num_>0</Bookmarks_num_>
        <C>20</C>
        <L>7</L>
        <P>src\joystick.c</P>
        <VL>27</VL>
-      </PI.40>
-      <PI.41>
-       <Bookmarks_num_>0</Bookmarks_num_>
-       <L>7</L>
-       <P>lib\analog.h</P>
-       <VL>24</VL>
-      </PI.41>
-      <PI.42>
+      </PI.44>
+      <PI.45>
        <Bookmarks_num_>0</Bookmarks_num_>
        <L>1</L>
        <P>solution\touch_s.h</P>
-      </PI.42>
-      <PI.43>
+      </PI.45>
+      <PI.46>
        <Bookmarks_num_>0</Bookmarks_num_>
        <C>19</C>
        <L>11</L>
        <P>lib\lcd.h</P>
        <VL>9</VL>
-      </PI.43>
-      <PI.44>
+      </PI.46>
+      <PI.47>
        <Bookmarks_num_>0</Bookmarks_num_>
        <L>14</L>
        <P>solution\joystick_s.h</P>
-      </PI.44>
-      <PI.45>
+      </PI.47>
+      <PI.48>
        <Bookmarks_num_>0</Bookmarks_num_>
        <L>8</L>
        <P>lib\glcdfont.h</P>
-      </PI.45>
-      <PI.46>
+      </PI.48>
+      <PI.49>
        <Bookmarks_num_>0</Bookmarks_num_>
        <C>13</C>
        <L>9</L>
        <P>graphicstest.h</P>
-      </PI.46>
-      <PI.47>
-       <Bookmarks_num_>0</Bookmarks_num_>
-       <C>26</C>
-       <L>1408</L>
-       <P>C:\PortableApps\Cypress\PDL\2.1.0\cmsis\include\core_cm4.h</P>
-       <VL>1405</VL>
-      </PI.47>
-      <PI.48>
-       <Bookmarks_num_>0</Bookmarks_num_>
-       <C>3</C>
-       <L>9</L>
-       <P>solution\display_s.h</P>
-      </PI.48>
-      <PI.49>
-       <Bookmarks_num_>0</Bookmarks_num_>
-       <L>3</L>
-       <P>solution\blinkrainbow_s.h</P>
       </PI.49>
       <PI.5>
        <Bookmarks_num_>0</Bookmarks_num_>
-       <C>23</C>
-       <L>1</L>
-       <P>lib\uart_usb.c</P>
+       <C>6</C>
+       <L>44</L>
+       <P>src\dht11.c</P>
       </PI.5>
       <PI.6>
+       <Bookmarks_num_>0</Bookmarks_num_>
+       <C>12</C>
+       <L>54</L>
+       <P>src\button.c</P>
+       <VL>18</VL>
+      </PI.6>
+      <PI.7>
+       <Bookmarks_num_>0</Bookmarks_num_>
+       <C>55</C>
+       <L>13</L>
+       <P>solution\dht11_s.c</P>
+       <VL>15</VL>
+      </PI.7>
+      <PI.8>
+       <Bookmarks_num_>0</Bookmarks_num_>
+       <C>2</C>
+       <L>9</L>
+       <P>lib\uart_usb.c</P>
+       <VL>15</VL>
+      </PI.8>
+      <PI.9>
        <Bookmarks_num_>0</Bookmarks_num_>
        <C>57</C>
        <L>65</L>
        <P>lib\uart_multicon.c</P>
        <VL>55</VL>
-      </PI.6>
-      <PI.7>
-       <Bookmarks_num_>0</Bookmarks_num_>
-       <L>4</L>
-       <P>src\testAcceleration.h</P>
-      </PI.7>
-      <PI.8>
-       <Bookmarks_num_>0</Bookmarks_num_>
-       <C>29</C>
-       <P>src\testAcceleration.c</P>
-      </PI.8>
-      <PI.9>
-       <Bookmarks_num_>0</Bookmarks_num_>
-       <C>36</C>
-       <L>135</L>
-       <P>solution\display_s.c</P>
-       <VL>42</VL>
       </PI.9>
      </REG_ROOT>
     </EditorOptions>
@@ -822,79 +823,55 @@
        <RelativeFileName>src\main.c</RelativeFileName>
       </ActiveDocument>
       <Editor.0>
-       <FileBarIndex>0</FileBarIndex>
-       <RectPosBottom>1141</RectPosBottom>
-       <RectPosLeft>245</RectPosLeft>
-       <RectPosRight>2634</RectPosRight>
-       <RectPosTop>245</RectPosTop>
-       <RelativeFileName>lib\uart_multicon.c</RelativeFileName>
+       <FileBarIndex>3</FileBarIndex>
+       <RectPosBottom>690</RectPosBottom>
+       <RectPosLeft>49</RectPosLeft>
+       <RectPosRight>1639</RectPosRight>
+       <RectPosTop>49</RectPosTop>
+       <RelativeFileName>lib\debug.c</RelativeFileName>
       </Editor.0>
       <Editor.1>
-       <FileBarIndex>1</FileBarIndex>
-       <RectPosBottom>1190</RectPosBottom>
-       <RectPosLeft>294</RectPosLeft>
-       <RectPosRight>2683</RectPosRight>
-       <RectPosTop>294</RectPosTop>
-       <RelativeFileName>lib\uart_usb.c</RelativeFileName>
+       <FileBarIndex>0</FileBarIndex>
+       <RectPosBottom>859</RectPosBottom>
+       <RectPosLeft>147</RectPosLeft>
+       <RectPosRight>1688</RectPosRight>
+       <RectPosTop>147</RectPosTop>
+       <RelativeFileName>lib\debug.h</RelativeFileName>
       </Editor.1>
       <Editor.2>
-       <FileBarIndex>2</FileBarIndex>
-       <RectPosBottom>1239</RectPosBottom>
-       <RectPosLeft>343</RectPosLeft>
-       <RectPosRight>2732</RectPosRight>
-       <RectPosTop>343</RectPosTop>
-       <RelativeFileName>solution\dht11_s.c</RelativeFileName>
+       <FileBarIndex>1</FileBarIndex>
+       <RectPosBottom>712</RectPosBottom>
+       <RectPosLeft>0</RectPosLeft>
+       <RectPosRight>1541</RectPosRight>
+       <RectPosTop>0</RectPosTop>
+       <RelativeFileName>lib\pins.h</RelativeFileName>
       </Editor.2>
       <Editor.3>
-       <FileBarIndex>3</FileBarIndex>
-       <RectPosBottom>1239</RectPosBottom>
+       <FileBarIndex>2</FileBarIndex>
+       <RectPosBottom>1055</RectPosBottom>
        <RectPosLeft>343</RectPosLeft>
-       <RectPosRight>2732</RectPosRight>
+       <RectPosRight>1884</RectPosRight>
        <RectPosTop>343</RectPosTop>
-       <RelativeFileName>src\button.c</RelativeFileName>
-      </Editor.3>
-      <Editor.4>
-       <FileBarIndex>4</FileBarIndex>
-       <RectPosBottom>1190</RectPosBottom>
-       <RectPosLeft>294</RectPosLeft>
-       <RectPosRight>2683</RectPosRight>
-       <RectPosTop>294</RectPosTop>
-       <RelativeFileName>src\dht11.c</RelativeFileName>
-      </Editor.4>
-      <Editor.5>
-       <FileBarIndex>5</FileBarIndex>
-       <RectPosBottom>1092</RectPosBottom>
-       <RectPosLeft>196</RectPosLeft>
-       <RectPosRight>2585</RectPosRight>
-       <RectPosTop>196</RectPosTop>
-       <RelativeFileName>src\dht11.h</RelativeFileName>
-      </Editor.5>
-      <Editor.6>
-       <FileBarIndex>6</FileBarIndex>
-       <RectPosBottom>1043</RectPosBottom>
-       <RectPosLeft>147</RectPosLeft>
-       <RectPosRight>2536</RectPosRight>
-       <RectPosTop>147</RectPosTop>
        <RelativeFileName>src\main.c</RelativeFileName>
-      </Editor.6>
+      </Editor.3>
       <EditorHistoryFile.0>
-       <RelativeFileName>src\testAcceleration.c</RelativeFileName>
+       <RelativeFileName>src\button.c</RelativeFileName>
       </EditorHistoryFile.0>
       <EditorHistoryFile.1>
-       <RelativeFileName>src\button.h</RelativeFileName>
+       <RelativeFileName>src\dht11.c</RelativeFileName>
       </EditorHistoryFile.1>
       <EditorHistoryFile.2>
-       <RelativeFileName>src\main.c</RelativeFileName>
+       <RelativeFileName>src\dht11.h</RelativeFileName>
       </EditorHistoryFile.2>
       <EditorHistoryFile.3>
-       <RelativeFileName>solution\display_s.c</RelativeFileName>
+       <RelativeFileName>src\main.c</RelativeFileName>
       </EditorHistoryFile.3>
      </Documents.0>
      <Progress>
-      <b>1388</b>
-      <l>-2421</l>
-      <r>-1420</r>
-      <t>692</t>
+      <b>1108</b>
+      <l>779</l>
+      <r>1780</r>
+      <t>412</t>
      </Progress>
      <Watches>
       <ActiveWatchPane>2</ActiveWatchPane>
@@ -1042,7 +1019,7 @@
       </DockRect.1>
       <DockRect.2>
        <AreHorz>0</AreHorz>
-       <Percent>1370</Percent>
+       <Percent>1088</Percent>
        <Type>0</Type>
        <TypeOfWnd>-1</TypeOfWnd>
        <DockRect.0>
@@ -1079,7 +1056,7 @@
       </DockRect.3>
       <DockRect.4>
        <AreHorz>0</AreHorz>
-       <Percent>541</Percent>
+       <Percent>263</Percent>
        <Type>0</Type>
        <TypeOfWnd>-1</TypeOfWnd>
        <DockRect.0>
@@ -1693,33 +1670,27 @@
        </Items.0>
       </OSWindow>
       <ProjectWindow>
-       <Selected></Selected>
+       <Selected>debug.h</Selected>
        <Items.0>
         <__>
          <Name>Files</Name>
-         <Options>1</Options>
+         <Options>5</Options>
          <Items.0>
           <__>
            <Name>lib</Name>
-           <Options>1</Options>
-          </__>
-         </Items.0>
-         <Items.1>
-          <__>
-           <Name>pdl</Name>
-           <Options>1</Options>
+           <Options>5</Options>
            <Items.0>
             <__>
-             <Name>dma.c</Name>
+             <Name>analog.c</Name>
              <Options>4</Options>
             </__>
            </Items.0>
           </__>
-         </Items.1>
-         <Items.2>
+         </Items.0>
+         <Items.1>
           <__>
            <Name>solution</Name>
-           <Options>5</Options>
+           <Options>1</Options>
            <Items.0>
             <__>
              <Name>blinkrainbow_s.c</Name>
@@ -1727,19 +1698,13 @@
             </__>
            </Items.0>
           </__>
-         </Items.2>
-         <Items.3>
+         </Items.1>
+         <Items.2>
           <__>
            <Name>src</Name>
            <Options>1</Options>
-           <Items.0>
-            <__>
-             <Name>blink.c</Name>
-             <Options>4</Options>
-            </__>
-           </Items.0>
           </__>
-         </Items.3>
+         </Items.2>
         </__>
        </Items.0>
       </ProjectWindow>

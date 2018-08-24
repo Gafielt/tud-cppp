@@ -1,3 +1,4 @@
+% !TeX spellcheck = de_DE
 \section{\ExercisePrefixBasics Klassen}
 \cpppSolutionName{classes}{classes}
 Ziel dieser Aufgabe ist es, die vorherige Aufgabe objektorientiert zu lösen. Schreibe hierfür manuell eine Klasse, die das aktuelle Zeichen als Attribut enthält und durch Methoden ausgelesen und inkrementiert werden kann.
@@ -7,7 +8,7 @@ Ziel dieser Aufgabe ist es, die vorherige Aufgabe objektorientiert zu lösen. Sc
 }
 
 \subsection{Definition}
-Eine Klasse wird üblicherweise analog zu der vorherigen Aufgabe in Deklaration (Headerdatei) und Implementation (Sourcedatei) aufgeteilt.
+Eine Klasse wird üblicherweise analog zu der vorherigen Aufgabe in Schnittstelle (Headerdatei) und Implementation (Sourcedatei) aufgeteilt.
 Die Struktur der Klasse mit allen Attributen und Funktionsprototypen wird im Header beschrieben, während die Sourcedatei nur die Implementation der Funktionen und Initialisierungen statischer Variablen enthält.
 Standardmäßig sind alle Elemente einer Klasse privat.
 Im Gegensatz zu Java werden in C++ die Access-Modifier \lstinline{public}/\lstinline{private}/\lstinline{protected} nicht bei jedem Element einzeln, sondern blockweise angegeben.
@@ -41,7 +42,7 @@ Implementiere den Konstruktor, indem du \lstinline{nextChar} mit \lstinline{'a'}
 Implementiere zudem \lstinline{generateNextChar()}, indem du \lstinline{nextChar} zurückgibst.
 
 \hints{
-	\item Die Reihenfolge der Initialisierungsliste sollte der Deklarationsreihenfolge entsprechen.
+	\item Die Reihenfolge der Initialisierungsliste sollte der Deklarationsreihenfolge der Attribute entsprechen.
 	\item Konstanten \textbf{müssen} in der Initialisierungsliste zugewiesen werden, damit diese zur Laufzeit bekannt sind.
 }
 

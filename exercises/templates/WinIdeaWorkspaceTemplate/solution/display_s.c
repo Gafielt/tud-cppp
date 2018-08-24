@@ -21,19 +21,15 @@ uint16_t color565_s(const uint8_t r, const uint8_t g, const uint8_t b){
 }
 
 void printPattern_s(const uint16_t backgroundColor, const uint16_t foregroundColor) {
-  
+  int j;
+  uint8_t blocksize = 4;
   fillScreen(backgroundColor);
-  
-  const uint8_t blockSize = 4;
-  uint16_t x;
-  for(x = 0; x < 480; x += 2 * blockSize) {
-    
-    uint16_t y;
-    for(y = 0;y < 320; y += 2 * blockSize) {
-      fillRect(x, y, blockSize, blockSize, foregroundColor);
+  for(int i=0; i<480;i+=blocksize){
+    if(i%(blocksize*2)==0) j=0;
+    else  j=blocksize;
+    for( j;j<320;j+=blocksize*2)
+      fillRect(i,j,blocksize,blocksize,foregroundColor);
     }
-    
-  }
 }
 
 void initCursor_s(){

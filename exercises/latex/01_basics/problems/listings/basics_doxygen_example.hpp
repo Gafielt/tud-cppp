@@ -9,7 +9,6 @@
  */
 
  /**
-  * @name enum Fruit
   * @author Your Name
   * @brief A short description of this enum
   */
@@ -23,7 +22,6 @@
  };
 
 /**
- * @name first_func(int a);
  * @author Your Name
  * @brief A showcase function.
  * @param a Used for important stuff.
@@ -32,7 +30,6 @@
 void first_func(int a);
 
 /**
- * @name second_func(int a, char b, double d);
  * @author Your Name
  * @brief A showcase function.
  * @param a Used for important stuff.
