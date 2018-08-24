@@ -2,12 +2,11 @@
 #include "blink.h"
 #include "blinkrainbow.h"
 
+
 int main(){
   initBoard();
-  initDebug();
-  // Write your code here ...
-  //BlinkMain();
-  debugCPPPBoard();
+  //initDebug();
+  //debugCPPPBoard();
 
   return 0;
 }
