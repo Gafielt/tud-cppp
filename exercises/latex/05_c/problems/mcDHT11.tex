@@ -55,8 +55,10 @@ Ist die Checksumme richtig, speichere die aktuelle Temperatur und Feuchtigkeit i
 \hints{
 	\item Bei der Abfrage des Pins mithilfe von \lstinline|Gpio1pin_Get(GPIO1PIN_PF7)|, kann es dazu kommen, dass fehlerhafte Signale dauerhaft auf \lstinline|HIGH| oder \lstinline|LOW| bleiben.
 	Um diesen Fall zu filtern, verwende folgende Art der Abfrage.
+	\cpppInputListing{05_c/listings/dht11.c}
+	
+	\item Um einen Delay auf dem µController ausführen, kannst du die Methode \lstinline|microDelay(uint32_t timeInMicroseconds)| verwenden. Zum Beispiel wird beim Aufruf  \lstinline|microDelay(20)| der µController 20µs pausiert.
 }
-\cpppInputListing{05_c/listings/dht11.c}
 
 \item 
 Nutze die Methoden \lstinline|writeTextln| und \lstinline|writeNumberOnDisplay| der Display-Library, um die Sensorenwerte auf dem Display auszugeben.
