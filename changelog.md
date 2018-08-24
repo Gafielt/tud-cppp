@@ -9,6 +9,10 @@
 * p. 77: Fix formatting of pointer type: int* -> int *
 * p.119: Destroying floor [1] -> Destroying floor [0]
 
+### Exercises
+* Ex 2.3: Deklaration -> Definition
+* Ex 3.1: Deklaration -> Schnittstelle
+* Ex 18.1: Deklaration -> Definition
 
 ## Changes on 2018-08-23
 
