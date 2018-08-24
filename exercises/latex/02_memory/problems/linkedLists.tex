@@ -138,11 +138,11 @@ Genauer gesagt: Es sollte konsistent mit dem Wert sein, den \lstinline{operator+
 Höchstwahrscheinlich wirst du Probleme bei der Kompilierung haben.
 Dies liegt an der zirkulären Abhängigkeit zwischen \lstinline{List} und \lstinline{ListIterator}.
 Gehe dazu folgendermaßen vor:
-Verschieben die \lstinline{#include}-Anweisungen für die Header von \lstinline{List} und \lstinline{ListItem} aus \filename{ListIterator.h} nach \filename{ListIterator.cpp} und füge in \filename{ListIterator.h} folgendes hinzu
+Verschieben die \lstinline{#include}-Anweisungen für die Header von \lstinline{List} und \lstinline{ListItem} aus \filename{ListIterator.hpp} nach \filename{ListIterator.cpp} und füge in \filename{ListIterator.hpp} folgendes hinzu
 
 \cpppInputListing{02_memory/problems/listings/linkedLists_listiterator_forward.hpp}
 
-Dies sind Vorwärtsdeklarationen (\textbf{Forward Declaration}), die dem Compiler sagen, dass die Klassen existieren, aber später definiert werden. Nun kannst du problemlos \filename{ListIterator.h} in \filename{List.h} einbinden.
+Dies sind Vorwärtsdeklarationen (\textbf{Forward Declaration}), die dem Compiler sagen, dass die Klassen existieren, aber später definiert werden. Nun kannst du problemlos \filename{ListIterator.hpp} in \filename{List.hpp} einbinden.
 
 \subsection{Liste mit ListIterator testen}
 Teste deine Implementation.
