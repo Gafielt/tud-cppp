@@ -3,13 +3,14 @@
 #include "blinkrainbow.h"
 #include "uart_usb.h"
 #include "debug.h"
+#include "dht11.h"
 
 
 int main(){
   initBoard();
 
   // Write your code here ...
-  BlinkMain();
+  //BlinkMain();
 
   return 0;
 }

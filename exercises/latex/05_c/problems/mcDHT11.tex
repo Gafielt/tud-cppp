@@ -1,9 +1,11 @@
+% !TeX spellcheck = de_DE
 \section{\ExercisePrefixEmbeddedC DHT11 \optional}
-Der DHT11 ist ein Temperatur- und Feuchtigkeitssensor, der mithilfe des Breadboards an den µController angeschlossen werden kann.
-Als Anschlüsse hat der DHT11 4 Pins von denen im Rahmen des Praktikums  3 verwendet werden.
-Zwei Pins werden für \lstinline|GND| und \lstinline|VCC| genutzt und ein Pin für die digitale Datenübertragung zwischen dem DHT11 und dem µController.
+Der DHT11 ist ein Temperatur- und Feuchtigkeitssensor, der mithilfe des Steckplatine an den Microcontroller angeschlossen werden kann.
+Der DHT11 hat 4 Anschlüsse (Pins), von denen im Rahmen des Praktikums 3 verwendet werden.
+Zwei Pins werden für Masse (\lstinline|GND|) und Versorgungsspannung (\lstinline|VCC|) genutzt und ein Pin für die digitale Datenübertragung zwischen dem DHT11 und dem Microcontroller.
 Abbildung \ref{fig:dht11Pins} zeigt die Pin-Belegung des DHT11.
-Pin 1 wird mit \lstinline|VCC| verbunden und Pin 4 mit \lstinline|GND|. Pin 2 ist ein I/O Pin zur digitalen Datenübertragung.
+Pin 1 wird mit \lstinline|VCC| verbunden und Pin 4 mit \lstinline|GND|.
+Pin 2 ist ein I/O-Pin zur digitalen Datenübertragung.
 In dieser Aufgabe ist es das Ziel die Temperatur- und Feuchtigkeitswerte des Sensors kontinuierlich auszulesen und diese auf dem Display darzustellen.
 \begin{figure}[!htb]
 	\centering
@@ -14,12 +16,12 @@ In dieser Aufgabe ist es das Ziel die Temperatur- und Feuchtigkeitswerte des Sen
 
 \begin{enumerate}
 \item 
-Zunächst trenne den µController von der Stromzufuhr und stelle sicher, dass dieser ausgeschaltet ist.
-Verbinde gemäß Abbildung \ref{fig:dht11Schematics} den DHT11 mit dem µController.
-Der DHT11 wird, von links gezählt, an den dritten Pin des CN9 Steckers des µControllers angeschlossen.
-Nutze als Untersützung Abbildung \ref{fig:cpppWiring}, die schematisch die GPIO-Verbindungen des µControllers darstellt.
-Bevor der µController wieder an den Computer angeschlossen wird, lasse die Verkabelung von einem Tutor überprüfen.
-
+Zunächst trenne den Microcontroller von der Stromzufuhr und stelle sicher, dass dieser ausgeschaltet ist.
+Verbinde gemäß Abbildung \ref{fig:dht11Schematics} den DHT11 mit dem Microcontroller.
+Der DHT11 wird, von links gezählt, an den dritten Pin des CN17 Steckers des Microcontrollers angeschlossen (Port 5, Pin 2, Präprozessorkonstante \lstinline|GPIO1PIN_PF52|).
+Nutze als Unterstützung Abbildung~\ref{fig:cpppWiring}, die schematisch die GPIO-Verbindungen des Microcontrollers darstellt.
+Bevor der Microcontroller wieder an den Computer angeschlossen wird, lasse die Verkabelung von einem Tutor überprüfen.
+%
 \begin{figure}[!htb]
 	\centering
 	\includegraphics[width=0.35\textwidth]{./05_c/figures/DHT11-Schematics.pdf}
@@ -32,15 +34,17 @@ Bevor der µController wieder an den Computer angeschlossen wird, lasse die Verk
 	\caption{Verkabelung des DHT11}
 	\label{fig:cpppWiring}
 \end{figure} 
+
 \item 
-In der Funktion \lstinline|readDHT11(uint8_t* humidity, uint8_t* temperature)| wird zunächst eine Präambel vom DHT11 an den µController gesendet.
-Hierdurch wird die Verbindung zwischen dem DHT11 und dem µController synchronisiert. 
-Nach der Präambel beginnt der DHT11 40 Bits an den µController zu senden.
+In der Funktion \lstinline|readDHT11(uint8_t* humidity, uint8_t* temperature)| in der Datei \filename{dht11.c} wird zunächst eine Präambel vom DHT11 an den Microcontroller gesendet.
+Hierdurch wird die Verbindung zwischen dem DHT11 und dem Microcontroller synchronisiert. 
+Nach der Präambel beginnt der DHT11 40 Bits an den Microcontroller zu senden.
 Abbildung \ref{fig:dht11Package} zeigt die Aufteilung der Bitgruppen.
-Implementiere die fehlenden Stellen der Funktion \lstinline|readDHT11(uint8_t* humidity, uint8_t* temperature)|, indem folgende Teilschritte umgesetzt werden.
-Nach der Präambel müssen zunächst die ankommenden Signale als 40 Bits interpretiert und in einem Array mit 5 Einträgen je 8 Bits gespeichert werden.
-Lese mit \lstinline|Gpio1pin_Get(GPIO1PIN_PF7)| den aktuellen Wert des digitalen Pins aus und entscheide entsprechend der folgenden Logik, ob es sich um eine 1 oder 0 handelt.
-Ist der Pin länger als 30µs auf \lstinline|HIGH| gesetzt $t_{HIGH} > 30$µs, dann interpretiere dieses Signal als eine 1 und im umgekehrten Fall $t_{HIGH} < 30$µs als eine 0.
+
+Implementiere die fehlenden Stellen der Funktion \lstinline|readDHT11(uint8_t* humidity, uint8_t* temperature)|, indem du folgende Teilschritte umsetzt.
+Nach der Präambel müssen zunächst die ankommenden Signale als 40~Bits interpretiert und in einem Array mit 5~Einträgen je 8~Bits gespeichert werden.
+Lese mit \lstinline|Gpio1pin_Get(GPIO1PIN_PF52)| den aktuellen Wert des digitalen Pins aus und entscheide entsprechend der folgenden Logik, ob es sich um eine 1 oder 0 handelt.
+Ist der Pin länger als \SI{30}{\micro\second} auf \lstinline|HIGH| gesetzt $t_{HIGH} > \SI{30}{\micro\second}$, dann interpretiere dieses Signal als eine 1 und im umgekehrten Fall $t_{HIGH} < \SI{30}{\micro\second}$ als eine 0.
 Nachdem alle 40 Bits empfangen wurden, bilde die Checksumme, welche die Summe der ersten 32 Bits darstellt. 
 Ist der folgende Pseudocode erfüllt, dann ist die Übertragung der Daten erfolgreich gewesen.
 \cpppInputListing{05_c/listings/dht11_checksum.c}
@@ -57,7 +61,7 @@ Ist die Checksumme richtig, speichere die aktuelle Temperatur und Feuchtigkeit i
 	Um diesen Fall zu filtern, verwende folgende Art der Abfrage.
 	\cpppInputListing{05_c/listings/dht11.c}
 	
-	\item Um einen Delay auf dem µController ausführen, kannst du die Methode \lstinline|microDelay(uint32_t timeInMicroseconds)| verwenden. Zum Beispiel wird beim Aufruf  \lstinline|microDelay(20)| der µController 20µs pausiert.
+	\item Um einen Delay auf dem Microcontroller ausführen, kannst du die Methode \lstinline|microDelay(uint32_t timeInMicroseconds)| verwenden. Zum Beispiel wird beim Aufruf  \lstinline|microDelay(20)| der Microcontroller 20µs pausiert.
 }
 
 \item 
