@@ -27,7 +27,7 @@ int isRightJoystickButtonPressed(){
  #if (GPIO_SETTING == GPIO_CLASSIC)
   return !(BUTTON_RIGHT_DIR & (1 << BUTTON_RIGHT_PIN)); 
  #elif (GPIO_SETTING == GPIO_NEW)
-  return !Gpio1pin_Get(GPIO1PIN_P42);
+  return !Gpio1pin_Get(GPIO1PIN_PF3);
  #endif
 }
 
@@ -79,11 +79,13 @@ void debugCPPPBoard(){
     writeText_s("  Joystick 1 Y-Achse: ");
     writeNumberOnDisplayRight_s(&analog19);
     writeTextln_s("");
-    if(isLeftJoystickButtonPressed())
-      writeText_s("  Joystick 1 Button: X");
+    writeText_s("  Joystick 1 Button: ");
+    if(isLeftJoystickButtonPressed()){
+      writeText_s("X");
+    }
     else
-      writeText_s("  Joystick 1 Button:   ");
-    microDelay(10000);
+      writeText_s(" ");
+    //microDelay(10000);
     writeTextln_s("");
     
     writeTextln_s("");
@@ -94,12 +96,13 @@ void debugCPPPBoard(){
     writeText_s("  Joystick 2 Y-Achse: ");
     writeNumberOnDisplayRight_s(&analog23);
     writeTextln_s("");
-    
-    if(isRightJoystickButtonPressed())
-      writeText_s("  Joystick 2 Button: X"); 
+    writeText_s("  Joystick 2 Button: "); 
+    if(isRightJoystickButtonPressed()){
+      writeText_s("X"); 
+    }
     else
-      writeText_s("  Joystick 2 Button:   ");
-    microDelay(10000);
+      writeText_s(" ");
+    //microDelay(10000);
     writeTextln_s("");
     
   }
