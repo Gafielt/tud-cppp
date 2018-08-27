@@ -3,6 +3,14 @@
 
 \optionaltextbox
 
+Für die folgende Aufgabe musst du dir folgendes zusätzliches Material bei den Betreuern beschaffen:
+\begin{itemize}
+\item DHT11 Temperatur- und Feuchtigkeitssensor
+\item 3 Steckbrücken Pin-Pin 20cm (jeweils ein verbundenes Steckbrückenpaar und eine einzelne Steckbrücke)
+\item 1 Steckbrücke Pin-Buchse 20cm
+\item 1 Widerstand \SI{10}{\kilo\ohm} (oder höher)
+\end{itemize}
+
 Der DHT11 ist ein Temperatur- und Feuchtigkeitssensor, der mithilfe des Steckplatine an den Microcontroller angeschlossen werden kann.
 Der DHT11 hat 4 Anschlüsse (Pins), von denen im Rahmen des Praktikums 3 verwendet werden.
 Zwei Pins werden für Masse (\lstinline|GND|) und Versorgungsspannung (\lstinline|VCC|) genutzt und ein Pin für die digitale Datenübertragung zwischen dem DHT11 und dem Microcontroller.
@@ -46,7 +54,7 @@ Abbildung \ref{fig:dht11Package} zeigt die Aufteilung der Bitgruppen.
 
 Implementiere die fehlenden Stellen der Funktion \lstinline|readDHT11(uint8_t* humidity, uint8_t* temperature)|, indem du folgende Teilschritte umsetzt.
 Nach der Präambel müssen zunächst die ankommenden Signale als 40~Bits interpretiert und in einem Array mit 5~Einträgen je 8~Bits gespeichert werden.
-Lese mit \lstinline|Gpio1pin_Get(GPIO1PIN_PF52)| den aktuellen Wert des digitalen Pins aus und entscheide entsprechend der folgenden Logik, ob es sich um eine 1 oder 0 handelt.
+Lese mit \lstinline|Gpio1pin_Get(GPIO1PIN_P52)| den aktuellen Wert des digitalen Pins aus und entscheide entsprechend der folgenden Logik, ob es sich um eine 1 oder 0 handelt.
 Ist der Pin länger als \SI{30}{\micro\second} auf \lstinline|HIGH| gesetzt $t_{HIGH} > \SI{30}{\micro\second}$, dann interpretiere dieses Signal als eine 1 und im umgekehrten Fall $t_{HIGH} < \SI{30}{\micro\second}$ als eine 0.
 Nachdem alle 40 Bits empfangen wurden, bilde die Checksumme, welche die Summe der ersten 32 Bits darstellt. 
 Ist der folgende Pseudocode erfüllt, dann ist die Übertragung der Daten erfolgreich gewesen.
@@ -67,6 +75,8 @@ Ist die Checksumme richtig, speichere die aktuelle Temperatur und Feuchtigkeit i
 	\cpppInputListing{05_c/listings/dht11.c}
 	
 	\item Um einen Delay auf dem Microcontroller ausführen, kannst du die Methode \lstinline|microDelay(uint32_t timeInMicroseconds)| verwenden. Zum Beispiel wird beim Aufruf  \lstinline|microDelay(20)| der Microcontroller \SI{20}{\micro\second} pausiert.
+	
+	\item Der DHT11 sendet immer seine Daten geordnet nach dem höchsten Bit, sodass der höchstwertigste Bit zuerst gesendet wird.
 }
 
 \item 
@@ -74,7 +84,7 @@ Nutze die Methoden \lstinline|writeTextln| und \lstinline|writeNumberOnDisplay| 
 
 \hints{
 	\item 
-	Falls du die Funktionen \lstinline|writeTextln| und \lstinline|writeNumberOnDisplay| noch nicht implementiert hast, kannst du die Methoden der Musterlösung mit der Konkatenation des Suffix \lstinline|_s| nutzen (also \lstinline|writeTextln_s|).
+	Falls du die Funktionen \lstinline|writeTextln| und \lstinline|writeNumberOnDisplay| noch nicht implementiert hast, kannst du die Methoden der Musterlösung mit der Konkatenation des Suffix \lstinline|_s| nutzen (also bspw. \lstinline|writeTextln_s| und \lstinline|writeNumberOnDisplay_s|).
 }
 
 \end{enumerate}

@@ -41,7 +41,7 @@ uint8_t readDHT11(uint8_t *feuchtigkeit, uint8_t *temperatur) {
 
 
 void rauminformationen(){
-      setCursor(480,320);
+      setCursor(0,319);
       char freeSpace[] = " ";
       char headlineText[] = "      Umgebungssensoren";
       writeTextln(freeSpace);

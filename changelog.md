@@ -1,6 +1,17 @@
 1. Exercises: cppp_exercises.pdf
 2. Slides: cppp_lecture.pdf
 
+## Changes on 2018-08-27
+
+### Slides
+
+Fix minor typo
+
+### Exercises
+
+Ex 25: Improvements
+Ex 26: Added
+
 ## Changes on 2018-08-24
 
 ### Slides
