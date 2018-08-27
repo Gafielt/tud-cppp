@@ -32,7 +32,7 @@ Der Smart Pointer für die Rückgabe wird mit einem Zeiger auf ein \lstinline{Tr
 \cpppInputListing{02_memory/problems/listings/smartPointers_createnode.cpp}
 
 \hints{
-	\item Über \lstinline{std::make_shared(<Konstruktorparameter>)} kann man auch einen Smart Pointer erhalten.
+	\item Über \lstinline{std::make_shared(<Konstruktorparameter>)} kann man auch einen Smart Pointer erhalten. Allerdings funktioniert dies in dieser Aufgabe nicht, da dazu der Konstruktor aufgerufen wird, welcher hier als private deklariert ist.
 	\item Zur Dokumentation von \lstinline{typedef} kannst du den Tag \lstinline{@typedef} verwenden.
           Sonst verhält es sich mit dem Dokumentieren so wie immer.
 }
