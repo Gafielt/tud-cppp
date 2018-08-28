@@ -1,9 +1,5 @@
 #include "init.h"
-#include "blink.h"
-#include "blinkrainbow.h"
-#include "uart_usb.h"
-#include "debug.h"
-#include "dht11.h"
+#include "gfx.h"
 
 
 int main(){
@@ -11,6 +7,7 @@ int main(){
 
   // Write your code here ...
   //BlinkMain();
+  fillScreen(YELLOW);
 
   return 0;
 }
