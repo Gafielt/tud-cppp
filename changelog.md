@@ -15,8 +15,10 @@
 
 ### Exercises
 
-* Ex 18.4: Add missing cast to 'char *'. 
-* Ex 18.4: Also, remove bullet that claims that something nasty will happen. In fact, the memory returned by malloc is zeroed, so printf will not show anything.
+* Ex 18: Add casts for malloc (necessary only if C++ compiler is used).
+         Also add a note about the different behavior of C++ and C compilers
+* Ex 18.4: Remove bullet that claims that something nasty will happen. 
+           In fact, the memory returned by malloc is zeroed, so printf will not show anything.
 
 ## Changes on 2018-08-27
 
