@@ -152,29 +152,10 @@ Lege erneut einen Puffer auf dem Heap an:
 
 \begin{minipage}{.96\textwidth}
 \begin{lstlisting}
-char *buffer = malloc(100 * sizeof(char));
+char *buffer = (char*) malloc(100 * sizeof(char));
 \end{lstlisting}
 \end{minipage}
 
-\item 
-Gib den Puffer direkt mittels \lstinline|printf| aus:
-
-\begin{minipage}{.96\textwidth}
-\begin{lstlisting}
-printf(buffer);
-\end{lstlisting}
-\end{minipage}
-
-Dies zeigt, dass es sehr gefährlich ist, mit uninitialisierten C-Strings zu hantieren.
-Sicherer wäre es, direkt nach der Allokation ein Null-Byte an Index 0 des Puffers zu platzieren:
-
-\begin{minipage}{.96\textwidth}
-\begin{lstlisting}
-buffer[0] = '\0';
-\end{lstlisting}
-\end{minipage}
-
-Wenn du anschließend erneut \lstinline|printf| aufrufst, sollte die Ausgabe leer bleiben.
 \item 
 Verwende den folgenden Aufruf, um einen Gruß mittels \lstinline|sprintf| zusammenzusetzen.
 Lege dazu im Vorfeld eine Variable \lstinline|name| an.

@@ -1,6 +1,23 @@
 1. Exercises: cppp_exercises.pdf
 2. Slides: cppp_lecture.pdf
 
+## Changes on 2018-08-28
+
+### Slides
+
+* Exchange order of "Fortgeschrittene Themen" and "Embedded C" parts in lecture slides.
+* p.59: Move "Ganzzahlliterale" into C++ part 
+* p.78: Bugfix: Array intialization requires square brackets (not *). Assignment to pointer is possible.  
+        int myArray[] = {1, 1, 2, 3, 5, 8};
+        int *myArray2 = myArray;
+* p.86: Same bugfix as on p.78
+* p.211: Improve example and explanations regarding Rule of Three
+
+### Exercises
+
+* Ex 18.4: Add missing cast to 'char *'. 
+* Ex 18.4: Also, remove bullet that claims that something nasty will happen. In fact, the memory returned by malloc is zeroed, so printf will not show anything.
+
 ## Changes on 2018-08-27
 
 ### Slides
