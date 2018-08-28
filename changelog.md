@@ -1,6 +1,14 @@
 1. Exercises: cppp_exercises.pdf
 2. Slides: cppp_lecture.pdf
 
+## Changes on 2018-08-28
+
+### Slides
+
+* Exchange order of "Fortgeschrittene Themen" and "Embedded C" parts in lecture slides.
+* p.211: Improve example and explanations regarding Rule of Three
+* p.59: Move "Ganzzahlliterale" into C++ part 
+
 ## Changes on 2018-08-27
 
 ### Slides
