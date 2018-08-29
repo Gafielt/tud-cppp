@@ -1,13 +1,13 @@
 #include "init.h"
-#include "gfx.h"
+#include "uart_usb.h"
 
 
 int main(){
   initBoard();
 
-  // Write your code here ...
-  //BlinkMain();
-  fillScreen(YELLOW);
+  UART_USB_Init();
+
+  UART_USB();
 
   return 0;
 }

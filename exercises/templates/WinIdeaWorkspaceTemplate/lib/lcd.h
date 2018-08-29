@@ -5,13 +5,12 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+
 #include "mcu.h"
 #include "pdl_header.h"
 #include "registers.h"
 #include "pins.h"
 #include "analog.h"
-
-
 
 #define	BLACK   0x0000
 #define	BLUE    0x001F
