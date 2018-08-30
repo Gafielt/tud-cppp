@@ -13,9 +13,9 @@ int io_example(void)
 	Register (DOR). This turns the LED off.
 	*/
 	LED_BLUE_DOR |= (1 << LED_BLUE_PIN);
-  
+
 	/*
-	Configure the pin of the blue LED as output by clearing the corresponding
+	Configure the pin of the left Joystick Button as output by clearing the corresponding
 	bit in the Data Direction Register (DDR).
 	*/
 	BUTTON_LEFT_DDR &= ~(1 << BUTTON_LEFT_PIN);
@@ -24,7 +24,7 @@ int io_example(void)
 	in the Pullup Configuration Register (PCR).
 	*/
 	BUTTON_LEFT_PCR |= (1 << BUTTON_LEFT_PIN);
-  
+
 	/*
 	Check the pin status by combining the Data Input Register (DIR) with the
 	corresponding bitmask.
