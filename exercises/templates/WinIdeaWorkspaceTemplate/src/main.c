@@ -1,13 +1,11 @@
 #include "init.h"
-#include "uart_usb.h"
-
+#include "blink.h"
 
 int main(){
   initBoard();
 
-  UART_USB_Init();
-
-  UART_USB();
+  // Write your code here ...
+  //BlinkMain();
 
   return 0;
 }
