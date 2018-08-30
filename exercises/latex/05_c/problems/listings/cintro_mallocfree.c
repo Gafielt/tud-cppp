@@ -1,4 +1,6 @@
 #include <stdlib.h>
-Point *points = malloc(10 * sizeof(Point)); // reserve memory for 10 points
+
+// reserve memory for 10 points
+Point *points = (Point*) malloc(10 * sizeof(Point)); 
 // ...
 free(points);

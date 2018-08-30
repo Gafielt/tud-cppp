@@ -57,6 +57,9 @@ Anstelle von \lstinline{new} und \lstinline{delete} werden die Funktionen \lstin
 Diese sind im Header \filename{stdlib.h} deklariert.
 
   \cpppInputListing{05_c/problems/listings/cintro_mallocfree.c}
+  
+Der Cast des Ergebnisses von \lstinline|malloc| zu \lstinline|Point*| ist streng genommen nur notwendig, wenn du den gezeigten Code mit einem C++-Compiler kompilierst.
+Der C-Compiler nimmt die Konvertierung stillschweigend vor.
 
 \subsection{Ausgabe auf Konsole per \lstinline{printf}}
 \cpppSolutionName{microcontroller_c_basics}{micro\-con\-troller\_c\_bas\-ics}
@@ -79,7 +82,7 @@ Beginne mit einer leeren \lstinline|main|-Funktion.
 \item 
 Lege einen Puffer der Größe 8 an:
 \begin{lstlisting}
-char *buffer = malloc(8 * sizeof(char));
+char *buffer = (char*) malloc(8 * sizeof(char));
 \end{lstlisting}
 \item 
 Kopiere mittels \lstinline|strcpy| (aus dem Header \lstinline|string.h|) den String \lstinline|"Hello!!"| in den Puffer:
@@ -108,7 +111,7 @@ Du wirst allerdings nur das neu eingefügte Zeichen (\lstinline|'+'|) zusätzlic
 Um einen beeindruckenderen Effekt zu sehen, musst du selber dafür sorgen, dass der Speicher \enquote{sinnvolle} Daten enthält.
 Füge dazu den folgenden Code vor dem \lstinline|malloc|-Aufruf von \lstinline|buffer| ein.
 \begin{lstlisting}
-char *dummyBuffer = malloc(19 * sizeof(char));
+char *dummyBuffer = (char*) malloc(19 * sizeof(char));
 strcpy(dummyBuffer, "AlterTextAlterText");
 free(dummyBuffer);
 \end{lstlisting}
@@ -152,29 +155,10 @@ Lege erneut einen Puffer auf dem Heap an:
 
 \begin{minipage}{.96\textwidth}
 \begin{lstlisting}
-char *buffer = malloc(100 * sizeof(char));
+char *buffer = (char*) malloc(100 * sizeof(char));
 \end{lstlisting}
 \end{minipage}
 
-\item 
-Gib den Puffer direkt mittels \lstinline|printf| aus:
-
-\begin{minipage}{.96\textwidth}
-\begin{lstlisting}
-printf(buffer);
-\end{lstlisting}
-\end{minipage}
-
-Dies zeigt, dass es sehr gefährlich ist, mit uninitialisierten C-Strings zu hantieren.
-Sicherer wäre es, direkt nach der Allokation ein Null-Byte an Index 0 des Puffers zu platzieren:
-
-\begin{minipage}{.96\textwidth}
-\begin{lstlisting}
-buffer[0] = '\0';
-\end{lstlisting}
-\end{minipage}
-
-Wenn du anschließend erneut \lstinline|printf| aufrufst, sollte die Ausgabe leer bleiben.
 \item 
 Verwende den folgenden Aufruf, um einen Gruß mittels \lstinline|sprintf| zusammenzusetzen.
 Lege dazu im Vorfeld eine Variable \lstinline|name| an.

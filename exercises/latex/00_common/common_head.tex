@@ -47,7 +47,10 @@
 \newcommand{\xmark}{\ding{55}\xspace}%
 
 \usepackage{todonotes}
-%\usepackage[disable]{todonotes} % Use this line to hide all todos
+
+\crefname{figure}{Abbildung}{Abbildungen}
+\Crefname{figure}{Abbildung}{Abbildungen}
+
 
 \definecolor{commentgreen}{RGB}{50,127,50}
 \lstloadlanguages{C++,[gnu]make,bash}
@@ -134,10 +137,15 @@ Wir empfehlen aber trotzdem sie zu bearbeiten.
 \newcommand{\ExercisePrefixEmbeddedC}{\ExercisePrefix{C}}
 \newcommand{\ExercisePrefixElevator}{\ExercisePrefix{Z}}
 
+% Creates a a link to a sample solution project.
+% #1 is the name of the folder in exercises/solutions that contains the solution (e.g., linked_list)
+% #2 is similar to #1, but should be valid LaTeX code in text mode (e.g., linked\_list)
+\newcommand{\cpppLinkToSampleSolution}[2]{\href{./exercises/solutions/#1/.}{\texttt{./exercises/solutions/#2}}\xspace}
+
 % Displays a hint at the sample solution.
 % #1 is the name of the folder in exercises/solutions that contains the solution (e.g., linked_list)
 % #2 is similar to #1, but should be valid LaTeX code in text mode (e.g., linked\_list)
-\newcommand{\cpppSolutionName}[2]{Ein Lösungsvorschlag für diese Aufgabe liegt im Ordner \href{./exercises/solutions/#1/.}{\texttt{./exercises/solutions/#2}}.}
+\newcommand{\cpppSolutionName}[2]{Ein Lösungsvorschlag für diese Aufgabe liegt im Ordner \cpppLinkToSampleSolution{#1}{#2}.}
 
 \newcommand{\cclicense}{
 \begin{center}
