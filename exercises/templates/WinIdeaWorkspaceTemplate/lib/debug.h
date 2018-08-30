@@ -15,9 +15,9 @@
 #include "pins.h"
 
 void initDebug();
+void debugCPPPBoard();
 int isLeftJoystickButtonPressed();
 int isRightJoystickButtonPressed();
-void debugCPPPBoard();
 
 
 #endif

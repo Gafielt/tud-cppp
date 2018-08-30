@@ -7,11 +7,31 @@
 #include "pdl_header.h"
 #include "glcdfont.h"
 
-#define WIDTH   480
-#define HEIGHT  320
+/*
+ * Dimensions of the touchsreen display
+ */
+#define WIDTH   480 // pixel
+#define HEIGHT  320 // pixel
 
 
+/**
+ * Fills the screen with a given color
+ * @param color as defined in lcd.h
+ * 
+ * Minimal example
+
+#include "init.h"
+#include "gfx.h"
+
+
+int main(){
+  initBoard();
+  fillScreen(RED);
+  return 0;
+}
+ */ 
 void fillScreen(int16_t color);
+
 void drawFastHLine(int x, int y, int length, int16_t color);
 void drawFastVLine(int x, int y, int length, int16_t color);
 void drawRect(int16_t x, int16_t y, int16_t w, int16_t h, uint16_t color);
