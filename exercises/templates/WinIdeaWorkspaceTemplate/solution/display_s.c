@@ -74,10 +74,10 @@ void drawChar_s(int x, int y,  char c,  int color,  int bg, char size) {
     for(j=0; j<8; j++, line >>= 1) { // Draw in y-direction
       if(line & 0x1) {
         if(size == 1) drawPixel(x + i, y - j, color);
-        else          fillRect(x + (i * size), y - (j * size), size, size, color);
+        else          fillRect(x + (i * size), y - ((j+1) * size)+1, size, size, color); //keep in mind fillRect wants the lower left corner 
       } else if(bg != color) {
         if(size == 1) drawPixel(x + i, y - j, bg);
-        else          fillRect(x + (i * size), y - (j * size), size, size, bg);
+        else          fillRect(x + (i * size), y - ((j+1) * size)+1, size, size, bg);
       }
     }
   }

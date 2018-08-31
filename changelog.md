@@ -1,6 +1,17 @@
 1. Exercises: cppp_exercises.pdf
 2. Slides: cppp_lecture.pdf
 
+## Changes on 2018-08-31
+
+### Slides
+
+* p.153 Improve explanation of type casting
+
+### Exercises
+
+* Insert debugging exercise (new exercise 8)
+* Ex 11.3: minor edit (remove const in hint because pass-by-pointer is relevant here)
+
 ## Changes on 2018-08-28
 
 ### Slides
