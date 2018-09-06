@@ -12,17 +12,17 @@ Importiere dazu das Projekt unter folgendem Pfad: \cpppLinkToSampleSolution{debu
 Diese setzt du in CodeLite mit einem Linksklick der Zeile in welcher der Ablauf stoppen soll wie in den Zeilen~8 und~12 in \Cref{fig:breakpoints}. 
 Nutze für diese Aufgabe die Vorlage für das Debugging von \ref{sec:linked_list}. Starte den Debugger über \menuPath{Debugger \menuSep Start/Continue Debugger}.
 Du wirst sehen, dass die Ausführung in Zeile 8 stoppt, was durch den grünen Pfeil markiert wird. 
-Mit einem Klick auf den Continue-Button \includegraphics[height=1.5ex]{02_memory/figures/continueButton.png} lässt sich der Programmablauf fortsetzen.
-Mit dem Next-Button  \includegraphics[height=1.5ex]{02_memory/figures/stepOverButton.png} wird die aktuelle Zeile ausgeführt und der Programmzeiger springt in die nächste Zeile.
-Der Step-In-Button \includegraphics[height=1.5ex]{02_memory/figures/stepInButton.png} bewirkt, dass in die erste Zeile der aufgerufenen Funktion gesprungen wird.
-Der Step-Out-Button  \includegraphics[height=1.5ex]{02_memory/figures/stepOutButton.png} führt den Code bis zum \lstinline|return|-Statement aus und springt zurück und setzt den Programmzeiger hinter die aufgerufene Funktion.
+Mit einem Klick auf den Continue-Button \cpppInsertToolbarIcon{continueButton.png} lässt sich der Programmablauf fortsetzen.
+Mit dem Next-Button  \cpppInsertToolbarIcon{stepOverButton.png} wird die aktuelle Zeile ausgeführt und der Programmzeiger springt in die nächste Zeile.
+Der Step-In-Button \cpppInsertToolbarIcon{stepInButton.png} bewirkt, dass in die erste Zeile der aufgerufenen Funktion gesprungen wird.
+Der Step-Out-Button  \cpppInsertToolbarIcon{stepOutButton.png} führt den Code bis zum \lstinline|return|-Statement aus und springt zurück und setzt den Programmzeiger hinter die aufgerufene Funktion.
 Im Fenster rechts unten (\Cref{fig:locals_view}) kannst du die Werte der Variablen inspizieren und solltest sehen, dass \lstinline|current_size| beim ersten Breakpoint den Wert 2 besitzt.
-Gegebenenfalls musst du die Ansicht mithilfe der blauen Schaltfläche \includegraphics[height=1.5ex]{02_memory/figures/updateLocalsButton.png} aktualisieren.
+Gegebenenfalls musst du die Ansicht mithilfe der blauen Schaltfläche \cpppInsertToolbarIcon{updateLocalsButton.png} aktualisieren.
 Zudem kannst du während dem Debugging über einen Rechtsklick auf eine Zeile und den Menüeintrag \enquote{Run to here} den Code bis zu dieser Zeile ausführen.
  
 %Beispiel: linked list != Operator fehler einbauen und finden lassen. dabei vorgeben wo Breakpoint gesetzt werden soll und dann inspizieren lassen...
  
-Setze nun in Zeile 25 von \lstinline{main.cpp} einen Breakpoint und versuche mit Hilfe des Debuggers herauszufinden, warum die Liste nicht ausgegeben wird.
+Setze nun in Zeile 25 von \filename{main.cpp} einen Breakpoint und versuche mit Hilfe des Debuggers herauszufinden, warum die Liste nicht ausgegeben wird.
 %
 \begin{figure}
 	\centering
@@ -54,6 +54,6 @@ Setze nun in Zeile 25 von \lstinline{main.cpp} einen Breakpoint und versuche mit
 %\end{figure}
 
 \hints{
-	\item Mit dem Step-In-Button  \includegraphics[height=1.5ex]{02_memory/figures/stepInButton.png} kannst du auch die Aufrufe sehen, welche im \lstinline|for|-Schleifenkopf gemacht werden.
+	\item Mit dem Step-In-Button  \cpppInsertToolbarIcon{stepInButton.png} kannst du auch die Aufrufe sehen, welche im \lstinline|for|-Schleifenkopf gemacht werden.
     \item Überprüfe die Rückgabe von \lstinline|operator!=|.
 }
