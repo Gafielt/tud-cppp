@@ -18,14 +18,16 @@ int main(void)
 {
 	union Color c;
 	c.argb = 0xFF;
-	// blau: 0000000 00000000 00000000 11111111
+	// blue: 0000000 00000000 00000000 11111111
 	c.channels.g = 0xF0;
-	// grün und blau: 00000000 00000000 11110000 11111111
-	printf("sizeof(Union): %d Bytes\n", sizeof(union Color));
-	printf("content according to argb: %x \n", c.argb);
-	printf("content according to channels: %x %x %x %x  \n", c.channels.a, c.channels.r, c.channels.g, c.channels.b);
-	printf("address of argb: %u \n",&c.argb);
-	printf("addres of channels.a: %u \n channels.r: %u \n channels.g: %u \n channels.b:%u \n ",&c.channels.a,&c.channels.r,&c.channels.g,&c.channels.b);
+	// green and blue mixed: 00000000 00000000 11110000 11111111
+	
+	printf("sizeof(union Color): %d byte\n", sizeof(union Color));
+	printf("content according to argb: 0x%08x\n", c.argb);
+	printf("content according to channels: 0x%02x 0x%02x 0x%02x 0x%02x\n", 
+	    c.channels.a, c.channels.r, c.channels.g, c.channels.b);
+	printf("addresses of\nargb: %p\nchannels.a: %p\nchannels.r: %p\nchannels.g: %p\nchannels.b:%p\n",
+        &c.argb, &c.channels.a,&c.channels.r,&c.channels.g,&c.channels.b);
 	
 	return 0;
 }
