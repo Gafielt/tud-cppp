@@ -1,6 +1,18 @@
 1. Exercises: cppp_exercises.pdf
 2. Slides: cppp_lecture.pdf
 
+## Changes on 2018-09-07
+
+### Slides
+
+* p. 63: Fix bug in iterator-based loop: *v -> *iter
+* p.101>108: Move "Most Vexing Parse" slide to section on function pointers
+
+
+### Exercises
+
+* Various locations: Clarify formulations, insert toolbar icons of Codelite
+
 ## Changes on 2018-08-31
 
 ### Slides

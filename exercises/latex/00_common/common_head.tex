@@ -147,6 +147,10 @@ Wir empfehlen aber trotzdem sie zu bearbeiten.
 % #2 is similar to #1, but should be valid LaTeX code in text mode (e.g., linked\_list)
 \newcommand{\cpppSolutionName}[2]{Ein Lösungsvorschlag für diese Aufgabe liegt im Ordner \cpppLinkToSampleSolution{#1}{#2}.}
 
+% Intext insertion of toolbar icon
+% #1: Name of icon file in folder exercises/latex/codeliteIcons
+\newcommand{\cpppInsertToolbarIcon}[1]{\includegraphics[height=1.5ex]{codeliteIcons/#1}\xspace}
+
 \newcommand{\cclicense}{
 \begin{center}
     \fbox{
