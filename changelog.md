@@ -12,6 +12,7 @@
 ### Exercises
 
 * Various locations: Clarify formulations, insert toolbar icons of Codelite
+* Ex 19.7: Add optional exercise that shows the usage of unions
 
 ## Changes on 2018-08-31
 
