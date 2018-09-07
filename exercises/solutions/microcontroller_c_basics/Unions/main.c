@@ -23,7 +23,7 @@ int main(void)
 	// grün und blau: 00000000 00000000 11110000 11111111
 	printf("sizeof(Union): %d Bytes\n", sizeof(union Color));
 	printf("content according to argb: %x \n", c.argb);
-	printf("content according to channels: %x %x %x %x  \n", c.channels.b, c.channels.g, c.channels.r, c.channels.a);
+	printf("content according to channels: %x %x %x %x  \n", c.channels.a, c.channels.r, c.channels.g, c.channels.b);
 	printf("address of argb: %u \n",&c.argb);
 	printf("addres of channels.a: %u \n channels.r: %u \n channels.g: %u \n channels.b:%u \n ",&c.channels.a,&c.channels.r,&c.channels.g,&c.channels.b);
 	
