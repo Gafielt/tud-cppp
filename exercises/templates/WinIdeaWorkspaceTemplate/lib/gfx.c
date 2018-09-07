@@ -555,3 +555,17 @@ void write16BitDigit(const uint16_t *value, uint8_t mode){
     writeText_s(buffer);
   }
 }
+
+void writeFloat(float number, uint8_t precision, uint8_t width){
+  char buffer[width];
+  
+  char settings[4];
+  strcpy(settings, "%.");
+  char widthBuffer[1];
+  itoa(precision, widthBuffer, 10);
+  strcat(settings, widthBuffer);
+  strcat(settings, "f");
+
+  int test = sprintf(buffer, settings, number);
+  writeText_s(buffer);
+}

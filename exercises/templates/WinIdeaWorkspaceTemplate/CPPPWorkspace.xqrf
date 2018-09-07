@@ -71,51 +71,55 @@
       <__></__>
      </Env.1>
      <IncludePath.0>
-      <Path>$(IRFDIR)solution</Path>
-      <SubDir>0</SubDir>
+      <Path>C:\iSYSTEM\winIDEAOpen9\gcc\arm\arm-none-eabi\include</Path>
+      <SubDir>1</SubDir>
      </IncludePath.0>
      <IncludePath.1>
-      <Path>C:\PortableApps\Cypress\PDL\2.1.0\drivers\mfs\</Path>
+      <Path>$(IRFDIR)solution</Path>
       <SubDir>0</SubDir>
      </IncludePath.1>
      <IncludePath.10>
-      <Path>C:\PortableApps\Cypress\PDL\2.1.0\devices\fm4\s6e2ccxj\common</Path>
+      <Path>$(IRFDIR)lib</Path>
       <SubDir>0</SubDir>
      </IncludePath.10>
      <IncludePath.11>
-      <Path>C:\PortableApps\Cypress\PDL\2.1.0\cmsis\include</Path>
+      <Path>C:\PortableApps\Cypress\PDL\2.1.0\devices\fm4\s6e2ccxj\common</Path>
       <SubDir>0</SubDir>
      </IncludePath.11>
+     <IncludePath.12>
+      <Path>C:\PortableApps\Cypress\PDL\2.1.0\cmsis\include</Path>
+      <SubDir>0</SubDir>
+     </IncludePath.12>
      <IncludePath.2>
-      <Path>C:\PortableApps\Cypress\PDL\2.1.0\drivers\dma\</Path>
+      <Path>C:\PortableApps\Cypress\PDL\2.1.0\drivers\mfs\</Path>
       <SubDir>0</SubDir>
      </IncludePath.2>
      <IncludePath.3>
-      <Path>C:\PortableApps\Cypress\PDL\2.1.0\utilities\</Path>
+      <Path>C:\PortableApps\Cypress\PDL\2.1.0\drivers\dma\</Path>
       <SubDir>0</SubDir>
      </IncludePath.3>
      <IncludePath.4>
-      <Path>C:\PortableApps\Cypress\PDL\2.1.0\utilities\printf_scanf\</Path>
+      <Path>C:\PortableApps\Cypress\PDL\2.1.0\utilities\</Path>
       <SubDir>0</SubDir>
      </IncludePath.4>
      <IncludePath.5>
-      <Path>C:\PortableApps\Cypress\PDL\2.1.0\drivers\adc\</Path>
+      <Path>C:\PortableApps\Cypress\PDL\2.1.0\utilities\printf_scanf\</Path>
       <SubDir>0</SubDir>
      </IncludePath.5>
      <IncludePath.6>
-      <Path>C:\PortableApps\Cypress\PDL\2.1.0\drivers\</Path>
+      <Path>C:\PortableApps\Cypress\PDL\2.1.0\drivers\adc\</Path>
       <SubDir>0</SubDir>
      </IncludePath.6>
      <IncludePath.7>
-      <Path>$(IRFDIR)..\..\..\..\..\cmsis\include</Path>
+      <Path>C:\PortableApps\Cypress\PDL\2.1.0\drivers\</Path>
       <SubDir>0</SubDir>
      </IncludePath.7>
      <IncludePath.8>
-      <Path>$(IRFDIR)..\..\common</Path>
+      <Path>$(IRFDIR)..\..\..\..\..\cmsis\include</Path>
       <SubDir>0</SubDir>
      </IncludePath.8>
      <IncludePath.9>
-      <Path>$(IRFDIR)lib</Path>
+      <Path>$(IRFDIR)..\..\common</Path>
       <SubDir>0</SubDir>
      </IncludePath.9>
      <mbBuild>
@@ -218,6 +222,15 @@
          <CompilerOptions>-x c -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME) -Wall</CompilerOptions>
         </FileOptios>
        </File.20>
+       <File.21>
+        <FileName>$(IRFDIR)lib\kxcjk1013_debug.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME) -Wall</CompilerOptions>
+        </FileOptios>
+       </File.21>
+       <File.22>
+        <FileName>$(IRFDIR)lib\kxcjk1013_debug.h</FileName>
+       </File.22>
        <File.3>
         <FileName>$(IRFDIR)lib\analog.h</FileName>
        </File.3>
@@ -428,6 +441,18 @@
          <CompilerOptions>-x c -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME) -Wall</CompilerOptions>
         </FileOptios>
        </File.2>
+       <File.20>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\interrupts.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME) -Wall</CompilerOptions>
+        </FileOptios>
+       </File.20>
+       <File.21>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\vbat\vbat.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME) -Wall</CompilerOptions>
+        </FileOptios>
+       </File.21>
        <File.3>
         <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\dma\dma.h</FileName>
        </File.3>
@@ -551,6 +576,15 @@
          <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.20>
+       <File.21>
+        <FileName>$(IRFDIR)lib\kxcjk1013_debug.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.21>
+       <File.22>
+        <FileName>$(IRFDIR)lib\kxcjk1013_debug.h</FileName>
+       </File.22>
        <File.3>
         <FileName>$(IRFDIR)lib\analog.h</FileName>
        </File.3>
@@ -761,6 +795,18 @@
          <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.2>
+       <File.20>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\interrupts.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.20>
+       <File.21>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\vbat\vbat.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.21>
        <File.3>
         <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\dma\dma.h</FileName>
        </File.3>
@@ -884,6 +930,15 @@
          <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.20>
+       <File.21>
+        <FileName>$(IRFDIR)lib\kxcjk1013_debug.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.21>
+       <File.22>
+        <FileName>$(IRFDIR)lib\kxcjk1013_debug.h</FileName>
+       </File.22>
        <File.3>
         <FileName>$(IRFDIR)lib\analog.h</FileName>
        </File.3>
@@ -1094,6 +1149,18 @@
          <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.2>
+       <File.20>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\interrupts.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.20>
+       <File.21>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\vbat\vbat.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.21>
        <File.3>
         <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\dma\dma.h</FileName>
        </File.3>
@@ -1217,6 +1284,15 @@
          <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.20>
+       <File.21>
+        <FileName>$(IRFDIR)lib\kxcjk1013_debug.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.21>
+       <File.22>
+        <FileName>$(IRFDIR)lib\kxcjk1013_debug.h</FileName>
+       </File.22>
        <File.3>
         <FileName>$(IRFDIR)lib\analog.h</FileName>
        </File.3>
@@ -1427,6 +1503,18 @@
          <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.2>
+       <File.20>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\interrupts.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.20>
+       <File.21>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\vbat\vbat.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.21>
        <File.3>
         <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\dma\dma.h</FileName>
        </File.3>
@@ -1550,6 +1638,15 @@
          <CompilerOptions>-x c  -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.20>
+       <File.21>
+        <FileName>$(IRFDIR)lib\kxcjk1013_debug.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c  -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.21>
+       <File.22>
+        <FileName>$(IRFDIR)lib\kxcjk1013_debug.h</FileName>
+       </File.22>
        <File.3>
         <FileName>$(IRFDIR)lib\analog.h</FileName>
        </File.3>
@@ -1760,6 +1857,18 @@
          <CompilerOptions>-x c  -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.2>
+       <File.20>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\interrupts.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c  -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.20>
+       <File.21>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\vbat\vbat.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c  -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.21>
        <File.3>
         <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\dma\dma.h</FileName>
        </File.3>
@@ -1799,7 +1908,7 @@
        <ExternalMakeFileParameters></ExternalMakeFileParameters>
        <IndFileLocation>2</IndFileLocation>
        <IndirectionFile>$(IRFDIR)\linker\s6e2cca_rom.ld</IndirectionFile>
-       <LinkerOptions>-mthumb -mcpu=cortex-m4  -nostartfiles  -Xlinker --output=$(OUTPUTFILE)  -Xlinker  -Map=$(OUTPUTNOEXT).map  -Xlinker  --script=$(INDPATH)  -Xlinker  -n  -nostdlib  -nodefaultlibs  -fno-exceptions --specs=nano.specs -lc -lnosys -Xlinker --gc-sections</LinkerOptions>
+       <LinkerOptions>-mthumb -mcpu=cortex-m4  -nostartfiles  -Xlinker --output=$(OUTPUTFILE)  -Xlinker  -Map=$(OUTPUTNOEXT).map  -Xlinker  --script=$(INDPATH)  -Xlinker  -n -lm  -nostdlib  -nodefaultlibs  -fno-exceptions --specs=nano.specs -lc -lnosys -Xlinker --gc-sections</LinkerOptions>
        <MakeOptions></MakeOptions>
        <RunAfterLinkParam>-O srec $(OUTPUTPATH) $(OUTPUTNOEXT).srec</RunAfterLinkParam>
        <SkipObjectCheck>False</SkipObjectCheck>
@@ -1883,6 +1992,15 @@
          <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.20>
+       <File.21>
+        <FileName>$(IRFDIR)lib\kxcjk1013_debug.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.21>
+       <File.22>
+        <FileName>$(IRFDIR)lib\kxcjk1013_debug.h</FileName>
+       </File.22>
        <File.3>
         <FileName>$(IRFDIR)lib\analog.h</FileName>
        </File.3>
@@ -2093,6 +2211,18 @@
          <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.2>
+       <File.20>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\interrupts.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.20>
+       <File.21>
+        <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\vbat\vbat.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.21>
        <File.3>
         <FileName>\PortableApps\Cypress\PDL\2.1.0\drivers\dma\dma.h</FileName>
        </File.3>

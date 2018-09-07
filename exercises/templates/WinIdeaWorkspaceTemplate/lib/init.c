@@ -22,4 +22,9 @@ void initBoard(){
   bFM4_GPIO_ADE_AN08 = 0; // Disable analog-digital channel 08
   bFM4_GPIO_ADE_AN10 = 0; // Disable analog-digital channel 10
   bFM4_GPIO_ADE_AN18 = 0; // Disable analog-digital channel 18
+  /*
+  bFM4_GPIO_ADE_AN20 = 0;
+  bFM4_GPIO_ADE_AN21 = 0;
+  bFM4_GPIO_ADE_AN22 = 0;
+  */
 }

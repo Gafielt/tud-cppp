@@ -17,8 +17,8 @@
 * MERCHANTABILITY, NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR
 * PURPOSE.
 *******************************************************************************/
-#ifndef __PDL_USER_H__
-#define __PDL_USER_H__
+#ifndef __PDL_USER_H_
+#define __PDL_USER_H_
 
 #include "pdl.h"
 
@@ -308,9 +308,9 @@
 #define PDL_INTERRUPT_ENABLE_ADC2              PDL_OFF
 
 // Base Timers
-#define PDL_INTERRUPT_ENABLE_BT0               PDL_OFF
-#define PDL_INTERRUPT_ENABLE_BT1               PDL_OFF
-#define PDL_INTERRUPT_ENABLE_BT2               PDL_OFF
+#define PDL_INTERRUPT_ENABLE_BT0               PDL_ON
+#define PDL_INTERRUPT_ENABLE_BT1               PDL_ON
+#define PDL_INTERRUPT_ENABLE_BT2               PDL_ON
 #define PDL_INTERRUPT_ENABLE_BT3               PDL_OFF
 #define PDL_INTERRUPT_ENABLE_BT4               PDL_OFF
 #define PDL_INTERRUPT_ENABLE_BT5               PDL_OFF
@@ -1642,7 +1642,7 @@
  ******************************************************************************/
 #define DEBUG_PRINT
 
-#endif // __PDL_USER_H__
+#endif // __PDL_USER_H_
 
 /******************************************************************************/
 /* EOF (not truncated)                                                        */

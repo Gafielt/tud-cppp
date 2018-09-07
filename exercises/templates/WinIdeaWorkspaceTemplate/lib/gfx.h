@@ -54,4 +54,5 @@ void write32BitValueOnLCD(const uint32_t *value);
 void write3Digits8Bit(const uint8_t *value);
 void write3Digits16Bit(const uint16_t *value);
 void write16BitDigit(const uint16_t *value, uint8_t mode);
+void writeFloat(float number, uint8_t precision, uint8_t width);
 #endif
