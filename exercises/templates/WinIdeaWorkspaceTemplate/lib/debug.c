@@ -43,12 +43,13 @@ void debugCPPPBoard(){
   while(1u){
     getAnalogValues(&analog11, &analog12, &analog13, &analog16, &analog17, &analog19, &analog23);
   
-    setCursor_s(480,320); 
+    setCursor_s(0,319); 
     char freeSpace[] = " ";
-    char headlineText[] = "  DEBUG";
-    writeTextln_s(freeSpace);
+    char headlineText[] = "  *** DEBUG ***";
+    setTextColor_s(YELLOW);
     writeTextln_s(freeSpace);
     writeTextln_s(headlineText);
+    setTextColor_s(WHITE);
     writeTextln_s(freeSpace);
     
     // Get analog values of the touchscreen

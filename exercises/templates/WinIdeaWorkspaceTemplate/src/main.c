@@ -10,9 +10,12 @@ int main(){
 
   // Write your code here ...
   //BlinkMain();
-  
+  initDebug();
+  debugCPPPBoard();
+  /*
   cppp_initLEDs();
   cppp_redLEDOn();
   cppp_debugAccelerationSensor();
+  */
   return 0;
 }
