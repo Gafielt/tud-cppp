@@ -25,7 +25,7 @@ int main(void)
 	printf("content according to argb: %x \n", c.argb);
 	printf("content according to channels: %x %x %x %x  \n", c.channels.b, c.channels.g, c.channels.r, c.channels.a);
 	printf("address of argb: %u \n",&c.argb);
-	printf("addres of channels.a: %u \n channels.r: %u \n channels.g: %u \nchannels.b:%u \n ",&c.channels.a,&c.channels.r,&channels.g,&c.channels.b);
+	printf("addres of channels.a: %u \n channels.r: %u \n channels.g: %u \n channels.b:%u \n ",&c.channels.a,&c.channels.r,&c.channels.g,&c.channels.b);
 	
 	return 0;
 }
