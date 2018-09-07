@@ -6,6 +6,8 @@
 #include "src\display.h"
 #include "gfx.h"
 
+#include "rgb_led.h"
+
 
 
 int InitAccelerometer(void)
