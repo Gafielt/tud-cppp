@@ -1,28 +1,7 @@
-/*******************************************************************************
-* \file             kxcjk1013.c
-* 
-* \version          1.00
-*
-* \brief            This file provides source code to the API for the KXCJK1013 
-*                   accelerometer driver.
-*
-********************************************************************************
-* \copyright
-* Copyright 2016, Cypress Semiconductor Corporation. All rights reserved.
-* You may use this file only in accordance with the license, terms, conditions,
-* disclaimers, and limitations in the end user license agreement accompanying
-* the software package with which this file was provided.
-* CYPRESS PROVIDES THIS SOFTWARE "AS IS" AND MAKES NO WARRANTY
-* OF ANY KIND, EXPRESS OR IMPLIED, WITH REGARD TO THIS SOFTWARE,
-* INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
-* MERCHANTABILITY, NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR
-* PURPOSE.
-*******************************************************************************/
-
 /******************************************************************************/
 /* Include files                                                              */
 /******************************************************************************/
-#include "kxcjk1013.h"
+#include "acceleration_core.h"
 
 /******************************************************************************/
 /* Local pre-processor symbols/macros ('#define')                             */

@@ -1,5 +1,8 @@
+#ifndef ACCELERATION_APP_H
+#define ACCELERATION_APP_H
+
 #include "mcu.h"
-#include "kxcjk1013.h"
+#include "acceleration_core.h"
 
 unsigned long delayAccelerationSensor;
 unsigned int counter;
@@ -28,18 +31,17 @@ unsigned int counter;
 /******************************************************************************/
 /* Local variable definitions ('static')                                      */
 /******************************************************************************/
-static int16_t AccelerationData[NUM_OF_AXIS];
-static int16_t Sensitivity[NUM_OF_AXIS];
-static uint8_t ResolutionShifter;
+int16_t AccelerationData[NUM_OF_AXIS];
+int16_t Sensitivity[NUM_OF_AXIS];
+uint8_t ResolutionShifter;
 
-static uint8_t data_available = 0;
-static uint8_t operation_mode = NORMAL_OPERATION_MODE;
-static uint8_t display_accelerations = 0;
+uint8_t data_available;
+uint8_t operation_mode;
+uint8_t display_accelerations;
 
 /******************************************************************************/
 /* Function implementation - global ('extern') and local ('static')           */
 /******************************************************************************/
-void interrupt_callback(en_kxcjk1013_interrupt_source_t src);
 
 /**
  ******************************************************************************
@@ -70,23 +72,6 @@ void Main_NmiCallback(void);
  ******************************************************************************/
 int InitNMI(void);
 
-/*******************************************************************************
-* Function Name: SampleRtcHalfSecondCb
-*******************************************************************************/
-static void SampleRtcHalfSecondCb(void);
-
-/**
- ******************************************************************************
- ** InitSubClock
- ******************************************************************************/
-int InitSubClock(void);
-
-/**
- ******************************************************************************
- ** InitRTC function
- ******************************************************************************/
-int InitRTC(void);
-
 /**
  ******************************************************************************
  ** DisplayAccelerations function
@@ -102,12 +87,22 @@ int DisplayPositionMap(float x_deg, float y_deg, float z_deg);
 
 /**
  ******************************************************************************
+ ** DisplayAccelerations function
+ ******************************************************************************/
+void cppp_initAcceleration();
+
+
+/**
+ ******************************************************************************
  ** DisplayAccelerations on CPPP Board LCD
  ******************************************************************************/
 void cppp_printAccelerationSensorOnLCD(float x_out, float y_out, float z_out);
 
 /**
  ******************************************************************************
- ** Debug X,Y,Z values of the acceleration sensor and calibrate the sensor through a serialport terminal
+ ** Prints X,Y,Z values of the acceleration sensor and calibrate the sensor through a serialport terminal
  ******************************************************************************/
-int cppp_debugAccelerationSensor(void);
+int cppp_testAccelerationSensor(void);
+
+
+#endif

@@ -1,4 +1,4 @@
-#include "kxcjk1013_debug.h"
+#include "acceleration_app.h"
 #include "pdl_header.h"
 #include <stdio.h> 
 #include <string.h> 
@@ -101,8 +101,7 @@ int GetAcceleration( int16_t *data )
 }
 
 
-void interrupt_callback(en_kxcjk1013_interrupt_source_t src)
-{
+void interrupt_callback(en_kxcjk1013_interrupt_source_t src){
     data_available = 1;
     if( 0 != GetAcceleration( AccelerationData ) ){
         // Register read error
@@ -157,103 +156,7 @@ int InitNMI(void)
     SetPinFunc_NMIX(0u);                      /* Pin Function: NMIX */
     
     return 0;
-}
-                                                                                
-
-static void SampleRtcHalfSecondCb(void)
-{
-    display_accelerations = 1;
-}
-
-int InitSubClock(void)
-{
-    stc_vbat_config_t stcVbatConfig;
-    
-    PDL_ZERO_STRUCT(stcVbatConfig);
-    stcVbatConfig.u8ClkDiv = 0x6E;
-    stcVbatConfig.bLinkSubClk = TRUE; /* Connect sub clock with clock control module */
-    stcVbatConfig.bVbatClkEn = TRUE;  /* Enable sub clock supply to VBAT domain */
-    //stcVbatConfig.enSustainCurrent = ClkStandard;  // Type B
-    stcVbatConfig.enSustainCurrent = Clk445nA; // Type A
-    //stcVbatConfig.enBoostCurrent = ClkStandard; // Type B
-    stcVbatConfig.enBoostCurrent = Clk510nA; // Type A
-    stcVbatConfig.enClkBoostTime = ClkBoost250ms;
-    
-    while(Ok != Vbat_Init(&stcVbatConfig))
-    {
-    }
-    
-    //Vbat_SetPinFunc_X0A_X1A (); 
-    
-    return 0;
-}
-                                                                  
-int InitRTC(void)
-{
-    static stc_rtc_time_t   stcTimeDate;
-
-    en_result_t enResult;
-    stc_rtc_config_t stcRtcConfig;
-    stc_rtc_irq_en_t stcIrqEn;
-    stc_rtc_irq_cb_t stcIrqCb;
-    stc_rtc_timer_t  stcTimer;
-
-    /* Clear structures */
-    PDL_ZERO_STRUCT(stcRtcConfig);
-    PDL_ZERO_STRUCT(stcTimeDate);
-    PDL_ZERO_STRUCT(stcIrqEn);
-    PDL_ZERO_STRUCT(stcIrqCb);
-
-    /* Time setting (23:59:00 1st of January 2014) */
-    stcTimeDate.u8Second = 0;                    /* Second      : 00 */
-    stcTimeDate.u8Minute = 59;                   /* Minutes     : 59 */
-    stcTimeDate.u8Hour   = 23;                   /* Hour        : 23 */
-    stcTimeDate.u8Day    = 30;                   /* Date        : 30th */
-    stcTimeDate.u8Month  = RtcNovember;          /* Month       : November */
-    stcTimeDate.u16Year   = 2014;                /* Year        : 2014 */
-    (void)Rtc_SetDayOfWeek(&stcTimeDate);        /* Set Day of the Week in stcRtcTime */
-        
-    /* Intialize RTC timer */ // Added by HOWE
-    stcTimer.enMode = RtcTimerPeriod;
-    stcTimer.u32TimerCycle = 1; /* Generate interrupt every 5s */
-    
-    /* Initialize interrupts */
-    stcIrqEn.bHalfSecondIrq  = 1u;
-    stcIrqCb.pfnHalfSecondIrqCb  = SampleRtcHalfSecondCb;
-    
-    /* Set time, alarm and interrupt structure pointer */
-#if (PDL_RTC_TYPE == PDL_RTC_WITHOUT_VBAT_TYPEA) || (PDL_RTC_TYPE == PDL_RTC_WITHOUT_VBAT_TYPEB)      
-    stcRtcConfig.enClkSel = RtcUseSubClk;
-    stcRtcConfig.u32ClkPrescaler = 32768;
-#endif    
-    stcRtcConfig.pstcTimeDate = &stcTimeDate;
-    stcRtcConfig.pstcTimer = &stcTimer;
-    stcRtcConfig.pstcIrqEn = &stcIrqEn;
-    stcRtcConfig.pstcIrqCb = &stcIrqCb;
-    
-    stcRtcConfig.bRunNotInit = FALSE;
-    stcRtcConfig.bTouchNvic = TRUE;
-    
-    /* Initialize the RTC */
-    enResult = Rtc_Init(&RTC0, &stcRtcConfig);
-
-    if (Ok != enResult)
-    {
-		// Error
-        while(1)
-        {
-            
-        }
-    } 
-	
-    /* Start RTC counting */
-    Rtc_EnableFunc(&RTC0, RtcCount);
-    
-    /* Start RTC timer */
-    Rtc_EnableFunc(&RTC0, RtcTimer);
-    
-    return 0;
-}
+}                                                              
 
 int DisplayAccelerations(float x_out, float y_out, float z_out)
 {
@@ -309,6 +212,27 @@ int DisplayPositionMap(float x_deg, float y_deg, float z_deg)
     return 0;
 }
 
+void cppp_initAcceleration(){
+  
+    data_available = 0;
+    operation_mode = NORMAL_OPERATION_MODE;
+    display_accelerations = 0;
+
+    /* Initializatio of the UART unit and GPIO used in the communication */
+    Uart_Io_Init();
+    printf("\r\n Acceleration Sensor Debug ... \r\n");
+    
+    // Init Accelerometer
+    InitAccelerometer();
+
+    // Init NMI for Push Button
+    InitNMI();
+    
+    __enable_irq();
+    
+    printf("\x1b[?25l\n");
+}
+
 void cppp_printAccelerationSensorOnLCD(float x_out, float y_out, float z_out){ 
     setCursor_s(0, 319);
     char freeSpace[] = " ";
@@ -339,74 +263,36 @@ void cppp_printAccelerationSensorOnLCD(float x_out, float y_out, float z_out){
     write16BitDigit(&loopNumber, 2);
 }
 
-int cppp_debugAccelerationSensor(void)
+int cppp_testAccelerationSensor(void)
 {   
     float x_out, y_out, z_out;
     float x_deg, y_deg, z_deg;
     
-    /* Enable the SUB, it is necessary for the RTC in this example */
-    InitSubClock(); // needed for S6E2C (VBAT Type B)
-    Clk_EnableSubClock(TRUE);
-    
-    /* Initializatio of the UART unit and GPIO used in the communication */
-    Uart_Io_Init();
-    
-    printf("\r\nHello World\r\n");
-    
-    // Init Accelerometer
-    InitAccelerometer();
-
-    // Init NMI for Push Button
-    InitNMI();
-    
-    __enable_irq();
-    
-    // Init RTC for periodical reports via UART
-    //InitRTC();
-    
-    /* Start to read Acceleration data */
-//    printf("\x1b[2 q\n");
-    printf("\x1b[?25l\n");
     while(1)
     {
-        if( data_available == 1 ){
-  		    x_out = ((float)((AccelerationData[ACCELERATION_AXIS_X]))) / (float)Sensitivity[ACCELERATION_AXIS_X];
-  		    y_out = ((float)((AccelerationData[ACCELERATION_AXIS_Y]))) / (float)Sensitivity[ACCELERATION_AXIS_Y];
-  		    z_out = ((float)((AccelerationData[ACCELERATION_AXIS_Z]))) / (float)Sensitivity[ACCELERATION_AXIS_Z];
-  		    
-  		    x_deg = (x_out>1.0f?1.0f:(x_out<-1.0f?-1.0f:x_out));
-  		    y_deg = (y_out>1.0f?1.0f:(y_out<-1.0f?-1.0f:y_out));
-  		    z_deg = (z_out>1.0f?1.0f:(z_out<-1.0f?-1.0f:z_out));
-  		    x_deg = asin(x_deg)/(3.141592f/2.0f);
-  		    y_deg = asin(y_deg)/(3.141592f/2.0f);
-  		    z_deg = asin(z_deg)/(3.141592f/2.0f);
-  		    DisplayPositionMap(x_deg, y_deg, z_deg);
-          data_available = 0;
-        }
-
-          /*
-          if( display_accelerations == 1 ){
-      			DisplayAccelerations(x_out, y_out, z_out);
-            printf("Loop#%05d",counter++);
-              display_accelerations = 0;
-          }
-          */
-          
-             
-          
-          delayAccelerationSensor = delayAccelerationSensor + 1;
-          if (delayAccelerationSensor > 1000000L)
-          {
-      			DisplayAccelerations(x_out, y_out, z_out);
-            printf("Loop#%05d",counter++);
-            delayAccelerationSensor = 0;
-            #ifdef PRINT_ACCELERATION_SENSOR_ON_LCD
-              cppp_printAccelerationSensorOnLCD(x_out, y_out, z_out);
-            #endif
-          }
-          
-          
+      if( data_available == 1 ){
+  	    x_out = ((float)((AccelerationData[ACCELERATION_AXIS_X]))) / (float)Sensitivity[ACCELERATION_AXIS_X];
+  	    y_out = ((float)((AccelerationData[ACCELERATION_AXIS_Y]))) / (float)Sensitivity[ACCELERATION_AXIS_Y];
+  	    z_out = ((float)((AccelerationData[ACCELERATION_AXIS_Z]))) / (float)Sensitivity[ACCELERATION_AXIS_Z];
+  	    
+  	    x_deg = (x_out>1.0f?1.0f:(x_out<-1.0f?-1.0f:x_out));
+  	    y_deg = (y_out>1.0f?1.0f:(y_out<-1.0f?-1.0f:y_out));
+  	    z_deg = (z_out>1.0f?1.0f:(z_out<-1.0f?-1.0f:z_out));
+  	    x_deg = asin(x_deg)/(3.141592f/2.0f);
+  	    y_deg = asin(y_deg)/(3.141592f/2.0f);
+  	    z_deg = asin(z_deg)/(3.141592f/2.0f);
+  	    DisplayPositionMap(x_deg, y_deg, z_deg);
+        data_available = 0;
+      }
+      delayAccelerationSensor = delayAccelerationSensor + 1;
+      if (delayAccelerationSensor > 1000000L)
+      {
+  			DisplayAccelerations(x_out, y_out, z_out);
+        printf("Loop#%05d",counter++);
+        delayAccelerationSensor = 0;
+        #ifdef PRINT_ACCELERATION_SENSOR_ON_LCD
+          cppp_printAccelerationSensorOnLCD(x_out, y_out, z_out);
+        #endif
+      }        
     } 
 }
-
-/* [] END OF FILE */

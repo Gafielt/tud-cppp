@@ -2,22 +2,22 @@
 #include "blink.h"
 
 
-#include "kxcjk1013_debug.h"
+#include "acceleration_app.h"
 #include "rgb_led.h"
+
+#include "board_test.h"
 
 int main(){
   initBoard();
 
   // Write your code here ...
-  //BlinkMain();
+  //BlinkMain();   
+  
   /*
-  initDebug();
-  debugCPPPBoard();
-  */
-  
   cppp_initLEDs();
-  cppp_redLEDOn();
-  cppp_debugAccelerationSensor();
-  
+  cppp_testAccelerationSensor();
+  */
+  cppp_initBoardTest();
+  cppp_boardTest();
   return 0;
 }

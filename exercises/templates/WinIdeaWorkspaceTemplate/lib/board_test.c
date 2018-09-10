@@ -1,6 +1,8 @@
-#include "debug.h"
+#include "board_test.h"
+#include "acceleration_app.h"
+#include <math.h>
 
-void initDebug(){
+void cppp_initBoardTest(){
   #if (GPIO_SETTING == GPIO_CLASSIC)
   // Initialize left button as input and activate pullup resistor
   BUTTON_LEFT_DDR &= ~(1 << BUTTON_LEFT_PIN);
@@ -15,7 +17,7 @@ void initDebug(){
  #endif
 }
 
-int isLeftJoystickButtonPressed(){
+int cppp_isLeftJoystickButtonPressed(){
 #if (GPIO_SETTING == GPIO_CLASSIC)
   return !(BUTTON_LEFT_DIR & (1 << BUTTON_LEFT_PIN)); 
 #elif (GPIO_SETTING == GPIO_NEW)
@@ -23,7 +25,7 @@ int isLeftJoystickButtonPressed(){
 #endif
 }
 
-int isRightJoystickButtonPressed(){
+int cppp_isRightJoystickButtonPressed(){
  #if (GPIO_SETTING == GPIO_CLASSIC)
   return !(BUTTON_RIGHT_DIR & (1 << BUTTON_RIGHT_PIN)); 
  #elif (GPIO_SETTING == GPIO_NEW)
@@ -31,7 +33,24 @@ int isRightJoystickButtonPressed(){
  #endif
 }
 
-void debugCPPPBoard(){
+uint8_t cppp_accelerationGetValues(){
+  float x_out, y_out, z_out;
+  float x_deg, y_deg, z_deg;
+  
+  if( data_available == 1 ){
+    x_out = ((float)((AccelerationData[ACCELERATION_AXIS_X]))) / (float)Sensitivity[ACCELERATION_AXIS_X];
+    y_out = ((float)((AccelerationData[ACCELERATION_AXIS_Y]))) / (float)Sensitivity[ACCELERATION_AXIS_Y];
+    z_out = ((float)((AccelerationData[ACCELERATION_AXIS_Z]))) / (float)Sensitivity[ACCELERATION_AXIS_Z];
+    accelerationValues[0] = x_out;
+    accelerationValues[1] = y_out;
+    accelerationValues[2] = z_out;
+    data_available = 0;
+    return 1;
+  }
+  return 0;           
+}
+
+void cppp_boardTest(){
   uint8_t analog11;
   uint8_t analog12;
   uint8_t analog13;
@@ -41,6 +60,7 @@ void debugCPPPBoard(){
   uint8_t analog17;
   
   while(1u){
+    //fillScreen(BLACK);
     getAnalogValues(&analog11, &analog12, &analog13, &analog16, &analog17, &analog19, &analog23);
   
     setCursor_s(0,319); 
@@ -61,8 +81,14 @@ void debugCPPPBoard(){
     char touchXText[] = "  Touch X: ";
     char touchYText[] = "  Touch Y: ";
     char touchZText[] = "  Touch Z: ";
+    
+    // Write brightness sensor on the screen
+    char lightSensor[] = "    Brightness: "; 
+    
     writeText_s(touchXText);
     write3Digits16Bit(&touchX);
+    writeText_s(lightSensor);
+    writeNumberOnDisplayRight_s(&analog17);
     writeTextln_s("");
     writeText_s(touchYText);
     write3Digits16Bit(&touchY);
@@ -81,7 +107,7 @@ void debugCPPPBoard(){
     writeNumberOnDisplayRight_s(&analog19);
     writeTextln_s("");
     writeText_s("  Joystick 1 Button: ");
-    if(isLeftJoystickButtonPressed()){
+    if(cppp_isLeftJoystickButtonPressed()){
       writeText_s("X");
     }
     else
@@ -97,12 +123,27 @@ void debugCPPPBoard(){
     writeNumberOnDisplayRight_s(&analog23);
     writeTextln_s("");
     writeText_s("  Joystick 2 Button: "); 
-    if(isRightJoystickButtonPressed()){
+    if(cppp_isRightJoystickButtonPressed()){
       writeText_s("X"); 
     }
     else
       writeText_s("_");
     writeTextln_s("");
-    
+    writeTextln_s("");
+    if(cppp_accelerationGetValues() == 1){
+      writeText_s("  Acceleration X: ");
+      writeFloat(accelerationValues[0], 4, 10);
+      writeTextln_s(freeSpace);
+      writeText_s("  Acceleration Y: ");
+      writeFloat(accelerationValues[1], 4, 10);
+      writeTextln_s(freeSpace);
+      writeText_s("  Acceleration Z: ");
+      writeFloat(accelerationValues[2], 4, 10);
+    }
   }
+}
+
+
+void dummyMethod(){
+  cppp_testAccelerationSensor();
 }

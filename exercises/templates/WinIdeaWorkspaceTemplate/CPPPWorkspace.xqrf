@@ -199,16 +199,16 @@
         </FileOptios>
        </File.16>
        <File.17>
-        <FileName>$(IRFDIR)lib\debug.c</FileName>
+        <FileName>$(IRFDIR)lib\rgb_led.c</FileName>
         <FileOptios>
          <CompilerOptions>-x c -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME) -Wall</CompilerOptions>
         </FileOptios>
        </File.17>
        <File.18>
-        <FileName>$(IRFDIR)lib\debug.h</FileName>
+        <FileName>$(IRFDIR)lib\rgb_led.h</FileName>
        </File.18>
        <File.19>
-        <FileName>$(IRFDIR)lib\kxcjk1013.h</FileName>
+        <FileName>$(IRFDIR)lib\board_test.h</FileName>
        </File.19>
        <File.2>
         <FileName>$(IRFDIR)lib\analog.c</FileName>
@@ -217,28 +217,28 @@
         </FileOptios>
        </File.2>
        <File.20>
-        <FileName>$(IRFDIR)lib\kxcjk1013.c</FileName>
+        <FileName>$(IRFDIR)lib\board_test.c</FileName>
         <FileOptios>
          <CompilerOptions>-x c -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME) -Wall</CompilerOptions>
         </FileOptios>
        </File.20>
        <File.21>
-        <FileName>$(IRFDIR)lib\kxcjk1013_debug.c</FileName>
-        <FileOptios>
-         <CompilerOptions>-x c -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME) -Wall</CompilerOptions>
-        </FileOptios>
+        <FileName>$(IRFDIR)lib\acceleration_core.h</FileName>
        </File.21>
        <File.22>
-        <FileName>$(IRFDIR)lib\kxcjk1013_debug.h</FileName>
-       </File.22>
-       <File.23>
-        <FileName>$(IRFDIR)lib\rgb_led.c</FileName>
+        <FileName>$(IRFDIR)lib\acceleration_app.c</FileName>
         <FileOptios>
          <CompilerOptions>-x c -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME) -Wall</CompilerOptions>
         </FileOptios>
+       </File.22>
+       <File.23>
+        <FileName>$(IRFDIR)lib\acceleration_app.h</FileName>
        </File.23>
        <File.24>
-        <FileName>$(IRFDIR)lib\rgb_led.h</FileName>
+        <FileName>$(IRFDIR)lib\acceleration_core.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME) -Wall</CompilerOptions>
+        </FileOptios>
        </File.24>
        <File.3>
         <FileName>$(IRFDIR)lib\analog.h</FileName>
@@ -562,16 +562,16 @@
         </FileOptios>
        </File.16>
        <File.17>
-        <FileName>$(IRFDIR)lib\debug.c</FileName>
+        <FileName>$(IRFDIR)lib\rgb_led.c</FileName>
         <FileOptios>
          <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.17>
        <File.18>
-        <FileName>$(IRFDIR)lib\debug.h</FileName>
+        <FileName>$(IRFDIR)lib\rgb_led.h</FileName>
        </File.18>
        <File.19>
-        <FileName>$(IRFDIR)lib\kxcjk1013.h</FileName>
+        <FileName>$(IRFDIR)lib\board_test.h</FileName>
        </File.19>
        <File.2>
         <FileName>$(IRFDIR)lib\analog.c</FileName>
@@ -580,28 +580,28 @@
         </FileOptios>
        </File.2>
        <File.20>
-        <FileName>$(IRFDIR)lib\kxcjk1013.c</FileName>
+        <FileName>$(IRFDIR)lib\board_test.c</FileName>
         <FileOptios>
          <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.20>
        <File.21>
-        <FileName>$(IRFDIR)lib\kxcjk1013_debug.c</FileName>
-        <FileOptios>
-         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
-        </FileOptios>
+        <FileName>$(IRFDIR)lib\acceleration_core.h</FileName>
        </File.21>
        <File.22>
-        <FileName>$(IRFDIR)lib\kxcjk1013_debug.h</FileName>
-       </File.22>
-       <File.23>
-        <FileName>$(IRFDIR)lib\rgb_led.c</FileName>
+        <FileName>$(IRFDIR)lib\acceleration_app.c</FileName>
         <FileOptios>
          <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
+       </File.22>
+       <File.23>
+        <FileName>$(IRFDIR)lib\acceleration_app.h</FileName>
        </File.23>
        <File.24>
-        <FileName>$(IRFDIR)lib\rgb_led.h</FileName>
+        <FileName>$(IRFDIR)lib\acceleration_core.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
        </File.24>
        <File.3>
         <FileName>$(IRFDIR)lib\analog.h</FileName>
@@ -925,16 +925,16 @@
         </FileOptios>
        </File.16>
        <File.17>
-        <FileName>$(IRFDIR)lib\debug.c</FileName>
+        <FileName>$(IRFDIR)lib\rgb_led.c</FileName>
         <FileOptios>
          <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.17>
        <File.18>
-        <FileName>$(IRFDIR)lib\debug.h</FileName>
+        <FileName>$(IRFDIR)lib\rgb_led.h</FileName>
        </File.18>
        <File.19>
-        <FileName>$(IRFDIR)lib\kxcjk1013.h</FileName>
+        <FileName>$(IRFDIR)lib\board_test.h</FileName>
        </File.19>
        <File.2>
         <FileName>$(IRFDIR)lib\analog.c</FileName>
@@ -943,28 +943,28 @@
         </FileOptios>
        </File.2>
        <File.20>
-        <FileName>$(IRFDIR)lib\kxcjk1013.c</FileName>
+        <FileName>$(IRFDIR)lib\board_test.c</FileName>
         <FileOptios>
          <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.20>
        <File.21>
-        <FileName>$(IRFDIR)lib\kxcjk1013_debug.c</FileName>
-        <FileOptios>
-         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
-        </FileOptios>
+        <FileName>$(IRFDIR)lib\acceleration_core.h</FileName>
        </File.21>
        <File.22>
-        <FileName>$(IRFDIR)lib\kxcjk1013_debug.h</FileName>
-       </File.22>
-       <File.23>
-        <FileName>$(IRFDIR)lib\rgb_led.c</FileName>
+        <FileName>$(IRFDIR)lib\acceleration_app.c</FileName>
         <FileOptios>
          <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
+       </File.22>
+       <File.23>
+        <FileName>$(IRFDIR)lib\acceleration_app.h</FileName>
        </File.23>
        <File.24>
-        <FileName>$(IRFDIR)lib\rgb_led.h</FileName>
+        <FileName>$(IRFDIR)lib\acceleration_core.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
        </File.24>
        <File.3>
         <FileName>$(IRFDIR)lib\analog.h</FileName>
@@ -1288,16 +1288,16 @@
         </FileOptios>
        </File.16>
        <File.17>
-        <FileName>$(IRFDIR)lib\debug.c</FileName>
+        <FileName>$(IRFDIR)lib\rgb_led.c</FileName>
         <FileOptios>
          <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.17>
        <File.18>
-        <FileName>$(IRFDIR)lib\debug.h</FileName>
+        <FileName>$(IRFDIR)lib\rgb_led.h</FileName>
        </File.18>
        <File.19>
-        <FileName>$(IRFDIR)lib\kxcjk1013.h</FileName>
+        <FileName>$(IRFDIR)lib\board_test.h</FileName>
        </File.19>
        <File.2>
         <FileName>$(IRFDIR)lib\analog.c</FileName>
@@ -1306,28 +1306,28 @@
         </FileOptios>
        </File.2>
        <File.20>
-        <FileName>$(IRFDIR)lib\kxcjk1013.c</FileName>
+        <FileName>$(IRFDIR)lib\board_test.c</FileName>
         <FileOptios>
          <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.20>
        <File.21>
-        <FileName>$(IRFDIR)lib\kxcjk1013_debug.c</FileName>
-        <FileOptios>
-         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
-        </FileOptios>
+        <FileName>$(IRFDIR)lib\acceleration_core.h</FileName>
        </File.21>
        <File.22>
-        <FileName>$(IRFDIR)lib\kxcjk1013_debug.h</FileName>
-       </File.22>
-       <File.23>
-        <FileName>$(IRFDIR)lib\rgb_led.c</FileName>
+        <FileName>$(IRFDIR)lib\acceleration_app.c</FileName>
         <FileOptios>
          <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
+       </File.22>
+       <File.23>
+        <FileName>$(IRFDIR)lib\acceleration_app.h</FileName>
        </File.23>
        <File.24>
-        <FileName>$(IRFDIR)lib\rgb_led.h</FileName>
+        <FileName>$(IRFDIR)lib\acceleration_core.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
        </File.24>
        <File.3>
         <FileName>$(IRFDIR)lib\analog.h</FileName>
@@ -1651,16 +1651,16 @@
         </FileOptios>
        </File.16>
        <File.17>
-        <FileName>$(IRFDIR)lib\debug.c</FileName>
+        <FileName>$(IRFDIR)lib\rgb_led.c</FileName>
         <FileOptios>
          <CompilerOptions>-x c  -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.17>
        <File.18>
-        <FileName>$(IRFDIR)lib\debug.h</FileName>
+        <FileName>$(IRFDIR)lib\rgb_led.h</FileName>
        </File.18>
        <File.19>
-        <FileName>$(IRFDIR)lib\kxcjk1013.h</FileName>
+        <FileName>$(IRFDIR)lib\board_test.h</FileName>
        </File.19>
        <File.2>
         <FileName>$(IRFDIR)lib\analog.c</FileName>
@@ -1669,28 +1669,28 @@
         </FileOptios>
        </File.2>
        <File.20>
-        <FileName>$(IRFDIR)lib\kxcjk1013.c</FileName>
+        <FileName>$(IRFDIR)lib\board_test.c</FileName>
         <FileOptios>
          <CompilerOptions>-x c  -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.20>
        <File.21>
-        <FileName>$(IRFDIR)lib\kxcjk1013_debug.c</FileName>
-        <FileOptios>
-         <CompilerOptions>-x c  -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
-        </FileOptios>
+        <FileName>$(IRFDIR)lib\acceleration_core.h</FileName>
        </File.21>
        <File.22>
-        <FileName>$(IRFDIR)lib\kxcjk1013_debug.h</FileName>
-       </File.22>
-       <File.23>
-        <FileName>$(IRFDIR)lib\rgb_led.c</FileName>
+        <FileName>$(IRFDIR)lib\acceleration_app.c</FileName>
         <FileOptios>
          <CompilerOptions>-x c  -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
+       </File.22>
+       <File.23>
+        <FileName>$(IRFDIR)lib\acceleration_app.h</FileName>
        </File.23>
        <File.24>
-        <FileName>$(IRFDIR)lib\rgb_led.h</FileName>
+        <FileName>$(IRFDIR)lib\acceleration_core.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c  -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
        </File.24>
        <File.3>
         <FileName>$(IRFDIR)lib\analog.h</FileName>
@@ -2014,16 +2014,16 @@
         </FileOptios>
        </File.16>
        <File.17>
-        <FileName>$(IRFDIR)lib\debug.c</FileName>
+        <FileName>$(IRFDIR)lib\rgb_led.c</FileName>
         <FileOptios>
          <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.17>
        <File.18>
-        <FileName>$(IRFDIR)lib\debug.h</FileName>
+        <FileName>$(IRFDIR)lib\rgb_led.h</FileName>
        </File.18>
        <File.19>
-        <FileName>$(IRFDIR)lib\kxcjk1013.h</FileName>
+        <FileName>$(IRFDIR)lib\board_test.h</FileName>
        </File.19>
        <File.2>
         <FileName>$(IRFDIR)lib\analog.c</FileName>
@@ -2032,28 +2032,28 @@
         </FileOptios>
        </File.2>
        <File.20>
-        <FileName>$(IRFDIR)lib\kxcjk1013.c</FileName>
+        <FileName>$(IRFDIR)lib\board_test.c</FileName>
         <FileOptios>
          <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.20>
        <File.21>
-        <FileName>$(IRFDIR)lib\kxcjk1013_debug.c</FileName>
-        <FileOptios>
-         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
-        </FileOptios>
+        <FileName>$(IRFDIR)lib\acceleration_core.h</FileName>
        </File.21>
        <File.22>
-        <FileName>$(IRFDIR)lib\kxcjk1013_debug.h</FileName>
-       </File.22>
-       <File.23>
-        <FileName>$(IRFDIR)lib\rgb_led.c</FileName>
+        <FileName>$(IRFDIR)lib\acceleration_app.c</FileName>
         <FileOptios>
          <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
+       </File.22>
+       <File.23>
+        <FileName>$(IRFDIR)lib\acceleration_app.h</FileName>
        </File.23>
        <File.24>
-        <FileName>$(IRFDIR)lib\rgb_led.h</FileName>
+        <FileName>$(IRFDIR)lib\acceleration_core.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
        </File.24>
        <File.3>
         <FileName>$(IRFDIR)lib\analog.h</FileName>
