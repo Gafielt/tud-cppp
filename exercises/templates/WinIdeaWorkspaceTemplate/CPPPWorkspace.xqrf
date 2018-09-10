@@ -306,6 +306,15 @@
          <CompilerOptions>-x c -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME) -Wall</CompilerOptions>
         </FileOptios>
        </File.14>
+       <File.15>
+        <FileName>$(IRFDIR)src\acceleration.h</FileName>
+       </File.15>
+       <File.16>
+        <FileName>$(IRFDIR)src\acceleration.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME) -Wall</CompilerOptions>
+        </FileOptios>
+       </File.16>
        <File.2>
         <FileName>$(IRFDIR)src\blink.h</FileName>
        </File.2>
@@ -669,6 +678,15 @@
          <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.14>
+       <File.15>
+        <FileName>$(IRFDIR)src\acceleration.h</FileName>
+       </File.15>
+       <File.16>
+        <FileName>$(IRFDIR)src\acceleration.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.16>
        <File.2>
         <FileName>$(IRFDIR)src\blink.h</FileName>
        </File.2>
@@ -1032,6 +1050,15 @@
          <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.14>
+       <File.15>
+        <FileName>$(IRFDIR)src\acceleration.h</FileName>
+       </File.15>
+       <File.16>
+        <FileName>$(IRFDIR)src\acceleration.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.16>
        <File.2>
         <FileName>$(IRFDIR)src\blink.h</FileName>
        </File.2>
@@ -1395,6 +1422,15 @@
          <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.14>
+       <File.15>
+        <FileName>$(IRFDIR)src\acceleration.h</FileName>
+       </File.15>
+       <File.16>
+        <FileName>$(IRFDIR)src\acceleration.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.16>
        <File.2>
         <FileName>$(IRFDIR)src\blink.h</FileName>
        </File.2>
@@ -1758,6 +1794,15 @@
          <CompilerOptions>-x c  -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.14>
+       <File.15>
+        <FileName>$(IRFDIR)src\acceleration.h</FileName>
+       </File.15>
+       <File.16>
+        <FileName>$(IRFDIR)src\acceleration.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c  -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.16>
        <File.2>
         <FileName>$(IRFDIR)src\blink.h</FileName>
        </File.2>
@@ -2121,6 +2166,15 @@
          <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.14>
+       <File.15>
+        <FileName>$(IRFDIR)src\acceleration.h</FileName>
+       </File.15>
+       <File.16>
+        <FileName>$(IRFDIR)src\acceleration.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.16>
        <File.2>
         <FileName>$(IRFDIR)src\blink.h</FileName>
        </File.2>

@@ -20,7 +20,7 @@ void cppp_redLEDOn(){
 }
 
 void cppp_redLEDOff(){
-  LED_GREEN_DOR |= (1 << LED_GREEN_PIN);
+  LED_RED_DOR |= (1 << LED_RED_PIN);
 }
 
 void cppp_greenLEDOn(){
