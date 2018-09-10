@@ -6,3 +6,5 @@
 !cppp_lecture.pdf
 !cppp_exercises.pdf
 *.tmp
+/exercises/latex/*.bbl
+/exercises/latex/*.blg

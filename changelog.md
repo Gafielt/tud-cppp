@@ -1,6 +1,27 @@
 1. Exercises: cppp_exercises.pdf
 2. Slides: cppp_lecture.pdf
 
+## Changes on 2018-09-10
+
+### Slides
+* p.202: Fix typo regarding "volatile int*"
+
+### Exercises
+* Ex 14.1: Clarification in hints
+
+## Changes on 2018-09-07
+
+### Slides
+
+* p. 63: Fix bug in iterator-based loop: *v -> *iter
+* p.101>108: Move "Most Vexing Parse" slide to section on function pointers
+
+
+### Exercises
+
+* Various locations: Clarify formulations, insert toolbar icons of Codelite
+* Ex 19.7: Add optional exercise that shows the usage of unions
+
 ## Changes on 2018-08-31
 
 ### Slides

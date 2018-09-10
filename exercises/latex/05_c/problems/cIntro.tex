@@ -258,6 +258,45 @@ Ein Shift um einen negativen Wert ist \enquote{Undefined Behavior}.
 Welche Ergebnisse sind demnach erlaubt?
 \end{itemize}
 
+\subsection{structs und unions \optional}
+
+\optionaltextbox
+
+In diesem Aufgabenteil sehen wir uns an, wie sich die Datentypen \lstinline|struct| und \lstinline|union| kombinieren lassen, um zwei Perspektiven auf ein Farbojekt einzunehmen: einmal kanalweise und einmal als gesamter 32-Bit-Farbwert.
+Lege zunächst eine \lstinline|struct| mit Namen \lstinline|Channels| an, welche die vier Farbkanäle der ARGB-Farbkodierung darstellt (mit alpha-, rot-, grün- und blauem Farbkanal). 
+
+\cpppInputListing{05_c/problems/listings/channels_struct.c}
+
+%union color beispiel interaktiv gestalten. Folien Willert 02b seite 9-11
+
+Neben dem Datentyp \lstinline|struct| gibt es auch \lstinline|union|, welcher syntaktisch ähnlich ist.
+Der Unterschied ist, dass hier die einzelnen Felder vereint werden und sich den gleichen Speicherplatz teilen. 
+Verändert man also eine der Variable, ändert sich der gemeinschaftlich genutzte Speicherplatz und der Wert der anderen Variablen entsprechend. 
+Demnach ist eine \lstinline|union| dann sinnvoll, wenn der Wert einer Variablen unabhängig vom Typ gleichviel Speicherplatz benötigt und im selben Speicherbereich abgelegt werden soll.
+
+Die ARGB-Farbcodierung lässt sich statt in vier einzelnen Variablen auch als eine einzige 32-Bit-Integer-Variable darstellen.
+Lege nun eine \lstinline|union| mit Namen \lstinline|Color| an, die eine \lstinline|uint32_t|-Variable (Header \filename{stdint.h}) und eine Variable channels vom Typ \lstinline|Channels| enthält.
+Lege nun ein \lstinline|Color|-Objekt \lstinline|c| an, das die Farbe blau repräsentiert und setze danach den Grün-Kanal auf den Wert \lstinline|0xF0| (wie im folgenden Quelltext dargestellt).
+
+\cpppInputListing{05_c/problems/listings/union.c}
+
+Um ein besseres Verständnis der Speicherverteilung in einem \lstinline|Color|-Objekt zu erhalten, lasse dir nun die Größe und Inhalt des Attributs \lstinline|argb| und der einzelnen Farbkanäle ausgeben.
+Nutze dazu \lstinline{printf} wie zuvor. 
+Was stellst du fest? 
+Die Darstellung des Speichers in Abbildung \ref{fig:color_channels} sollte dir weiterhelfen.
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[width=0.6\textwidth]{./05_c/figures/Color_Channels.pdf}
+	\caption{Skizze der Speicherverteilung eines \lstinline|Color|-Objekts mit Farbwert \lstinline|0xFFAABBCC|}
+	\label{fig:color_channels}
+\end{figure} 
+
+\hints{
+	\item Mit \lstinline{\%x} kannst du eine Ganzzahl in Hexadezimaldarstellung formatieren.
+	\item Mit \lstinline{\%p} kannst du eine Adresse formatieren.
+}
+
 \subsection{C++-Aufgaben nachprogrammieren \optional}
 
 \optionaltextbox

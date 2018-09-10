@@ -1,3 +1,4 @@
+% !TeX spellcheck = de_DE
 \section{\ExercisePrefixAdvanced Generische Funktionen (Templates)}
 \cpppSolutionName{templates}{templates}
 \subsection{Templatefunktionen implementieren}
@@ -15,12 +16,16 @@ Wie sieht diese Schnittstelle in diesem Fall aus?
 Welche Gründe gibt es, den Rückgabewert der Funktion \lstinline{maximum} als konstante Referenz festzulegen?
 
 \hints{
-    \item In den meisten Fällen kann anstelle von \lstinline{typename} auch \lstinline{class} in der Template-Deklaration verwendet werden.
+\item In den meisten Fällen kann anstelle von \lstinline{typename} auch \lstinline{class} in der Template-Deklaration verwendet werden.
     
-    \item In der Regel muss die Definition von Template-Funktionen und -Methoden im Header erfolgen.
-    Allgemeiner: zur Compilezeit in der gleichen \filename{cpp}-Datei wie ihre Verwendung. 
-    Das hängt damit zusammen, dass Templates sprichwörtlich nur Vorlagen sind, deren Typparameter zur Compilezeit mit den konkret verwendeten Typen ersetzt werden.
-    Würde man Templates in separaten \filename{cpp}-Dateien implementieren, dann könnte die Verbindung zwischen der Verwendungsstelle und der Definition erst zur Linkzeit hergestellt werden -- also zu spät.
+\item
+In der Regel muss die Definition von Template-Funktionen und -Methoden im Header erfolgen, damit der Compiler das auszufüllende Template \enquote{textuell} vorliegen hat.
+Dies ist der sicherere Weg und immer dann notwendig, wenn man nicht weiß, welche Spezialisierungen des Templates in Zukunft benötigt werden (\bspw bei der Entwicklung von Bibliotheken wie der STL).
+
+Alternativ kann man die Definition der Methoden einer Templateklasse auch in einer \filename{cpp}-Datei angeben.
+In diesem Fall muss man dafür sorgen, dass die benötigten Spezialisierungen auch in der \filename{cpp}-Datei eingefordert werden (\bspw durch ein \lstinline|typedef|).
+Weitere Spezialisierungen in anderen \filename{cpp}-Dateien sind dann aber nicht mehr möglich.
+Diese Option ist eher in Sonderanwendungsfällen sinnvoll und hat den Vorteil, dass man die Implementierung weiterhin vom Header getrennt hält.
 }
 
 \subsection{Explizite Angabe der Typparameter}

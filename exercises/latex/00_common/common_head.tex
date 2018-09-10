@@ -130,12 +130,12 @@ Wir empfehlen aber trotzdem sie zu bearbeiten.
 \newcommand{\RKi}[1]{\todo[inline]{\textbf{RK:} #1}}
 
 \newcommand{\ExercisePrefix}[1]{\makebox{\texttt{[#1]}}\xspace}
-\newcommand{\ExercisePrefixBasics}{\ExercisePrefix{G}}
-\newcommand{\ExercisePrefixMemory}{\ExercisePrefix{S}}
-\newcommand{\ExercisePrefixObjectOrientation}{\ExercisePrefix{O}}
-\newcommand{\ExercisePrefixAdvanced}{\ExercisePrefix{F}}
-\newcommand{\ExercisePrefixEmbeddedC}{\ExercisePrefix{C}}
-\newcommand{\ExercisePrefixElevator}{\ExercisePrefix{Z}}
+\newcommand{\ExercisePrefixBasics}[0]{\ExercisePrefix{G}}
+\newcommand{\ExercisePrefixMemory}[0]{\ExercisePrefix{S}}
+\newcommand{\ExercisePrefixObjectOrientation}[0]{\ExercisePrefix{O}}
+\newcommand{\ExercisePrefixAdvanced}[0]{\ExercisePrefix{F}}
+\newcommand{\ExercisePrefixEmbeddedC}[0]{\ExercisePrefix{C}}
+\newcommand{\ExercisePrefixElevator}[0]{\ExercisePrefix{Z}}
 
 % Creates a a link to a sample solution project.
 % #1 is the name of the folder in exercises/solutions that contains the solution (e.g., linked_list)
@@ -146,6 +146,10 @@ Wir empfehlen aber trotzdem sie zu bearbeiten.
 % #1 is the name of the folder in exercises/solutions that contains the solution (e.g., linked_list)
 % #2 is similar to #1, but should be valid LaTeX code in text mode (e.g., linked\_list)
 \newcommand{\cpppSolutionName}[2]{Ein Lösungsvorschlag für diese Aufgabe liegt im Ordner \cpppLinkToSampleSolution{#1}{#2}.}
+
+% Intext insertion of toolbar icon
+% #1: Name of icon file in folder exercises/latex/codeliteIcons
+\newcommand{\cpppInsertToolbarIcon}[1]{\includegraphics[height=1.5ex]{codeliteIcons/#1}\xspace}
 
 \newcommand{\cclicense}{
 \begin{center}

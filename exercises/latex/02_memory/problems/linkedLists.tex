@@ -87,7 +87,7 @@ Implementiere Vergleichsoperator \lstinline{operator!=} sowie den Dereferenzieru
 Der Dereferenzierungsoperator sollte den Inhalt des aktuellen Items zurückgeben.
 Du brauchst nicht zu prüfen, ob \lstinline{item} tatsächlich auf ein gültiges Element zeigt (Das machen/können Iteratoren aus der Standardbibliothek übrigens auch nicht!).
 Zum Vergleichen zweier Iteratoren prüfe, ob die \lstinline{item} und \lstinline{list} Zeiger identisch sind.
-Vergleiche nicht den Inhalt der Items, da der Vergleich auch dann funktionieren soll, wenn \lstinline{item} \lstinline{NULL} ist, wenn der Iterator also auf kein Element zeigt.
+Vergleiche nicht den Inhalt der Items, da der Vergleich auch dann funktionieren soll, wenn \lstinline{item} den Wert \lstinline{NULL} trägt, wenn der Iterator also auf kein Element zeigt.
 
 \cpppInputListing{02_memory/problems/listings/linkedLists_listiterator.hpp}
 

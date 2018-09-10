@@ -90,11 +90,11 @@ void writeAuto_s(const char c) {
     } else if(c == '\r') {
       // nop
     } else {
-        if(((cursorX + textSize * 6) >= 480)) { // Heading off edge
+        if(((cursorX + textSize * 6) > 480)) { // Heading off edge
             cursorX  = 0;            // Reset x to zero
             cursorY -= textSize * 8; // Advance y one line
         }
-        if(((cursorY - textSize * 6) <= 0)) { // Heading off edge
+        if(((cursorY - textSize * 6) < 0)) { // Heading off edge
             cursorY  = 319;            // Advance y one line
             cursorX  = 0;              // Reset x to zero
         }

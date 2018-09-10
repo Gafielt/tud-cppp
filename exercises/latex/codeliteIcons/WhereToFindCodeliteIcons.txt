@@ -1,0 +1,8 @@
+The icons of the Codelite IDE can be found here:
+
+https://github.com/eranif/codelite/tree/master/bitmaps
+
+Additional icons are here:
+https://github.com/eranif/codelite/tree/master/codelite-icons-dark
+https://github.com/eranif/codelite/tree/master/codelite-icons-fresh-farm
+https://github.com/eranif/codelite/tree/master/codelite-icons
