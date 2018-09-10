@@ -3,8 +3,12 @@
 
 ## Changes on 2018-09-10
 
+### Slides
+* p.202: Fix typo regarding "volatile int*"
+
 ### Exercises
 * Ex 14.1: Clarification in hints
+
 ## Changes on 2018-09-07
 
 ### Slides
