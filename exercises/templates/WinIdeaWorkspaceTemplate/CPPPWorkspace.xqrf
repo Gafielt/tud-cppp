@@ -396,6 +396,12 @@
          <CompilerOptions>-x c -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME) -Wall</CompilerOptions>
         </FileOptios>
        </File.7>
+       <File.8>
+        <FileName>$(IRFDIR)solution\acceleration_s.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME) -Wall</CompilerOptions>
+        </FileOptios>
+       </File.8>
       </LinkGroup.2>
       <LinkGroup.3>
        <LinkGroupName>pdl</LinkGroupName>
@@ -768,6 +774,12 @@
          <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.7>
+       <File.8>
+        <FileName>$(IRFDIR)solution\acceleration_s.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.8>
       </LinkGroup.2>
       <LinkGroup.3>
        <LinkGroupName>pdl</LinkGroupName>
@@ -1140,6 +1152,12 @@
          <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.7>
+       <File.8>
+        <FileName>$(IRFDIR)solution\acceleration_s.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.8>
       </LinkGroup.2>
       <LinkGroup.3>
        <LinkGroupName>pdl</LinkGroupName>
@@ -1512,6 +1530,12 @@
          <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.7>
+       <File.8>
+        <FileName>$(IRFDIR)solution\acceleration_s.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.8>
       </LinkGroup.2>
       <LinkGroup.3>
        <LinkGroupName>pdl</LinkGroupName>
@@ -1884,6 +1908,12 @@
          <CompilerOptions>-x c  -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.7>
+       <File.8>
+        <FileName>$(IRFDIR)solution\acceleration_s.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c  -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.8>
       </LinkGroup.2>
       <LinkGroup.3>
        <LinkGroupName>pdl</LinkGroupName>
@@ -2256,6 +2286,12 @@
          <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.7>
+       <File.8>
+        <FileName>$(IRFDIR)solution\acceleration_s.c</FileName>
+        <FileOptios>
+         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
+        </FileOptios>
+       </File.8>
       </LinkGroup.2>
       <LinkGroup.3>
        <LinkGroupName>pdl</LinkGroupName>
