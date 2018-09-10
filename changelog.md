@@ -1,6 +1,10 @@
 1. Exercises: cppp_exercises.pdf
 2. Slides: cppp_lecture.pdf
 
+## Changes on 2018-09-10
+
+### Exercises
+* Ex 14.1: Clarification in hints
 ## Changes on 2018-09-07
 
 ### Slides
