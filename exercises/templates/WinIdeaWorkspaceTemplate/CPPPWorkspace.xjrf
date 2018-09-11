@@ -44,13 +44,11 @@
       </History>
       <PI.0>
        <Bookmarks_num_>0</Bookmarks_num_>
-       <C>18</C>
-       <L>1</L>
+       <L>14</L>
        <P>src\main.c</P>
       </PI.0>
       <PI.1>
        <Bookmarks_num_>0</Bookmarks_num_>
-       <C>28</C>
        <L>9</L>
        <P>src\acceleration.h</P>
       </PI.1>
@@ -114,7 +112,6 @@
       </PI.19>
       <PI.2>
        <Bookmarks_num_>0</Bookmarks_num_>
-       <C>21</C>
        <L>5</L>
        <P>src\acceleration.c</P>
       </PI.2>
@@ -867,10 +864,10 @@
       </EditorHistoryFile.3>
      </Documents.0>
      <Progress>
-      <b>1108</b>
-      <l>779</l>
-      <r>1780</r>
-      <t>412</t>
+      <b>764</b>
+      <l>267</l>
+      <r>1268</r>
+      <t>68</t>
      </Progress>
      <Watches>
       <ActiveWatchPane>2</ActiveWatchPane>
@@ -1707,7 +1704,7 @@
        </Items.0>
       </OSWindow>
       <ProjectWindow>
-       <Selected>acceleration_s.c</Selected>
+       <Selected></Selected>
        <Items.0>
         <__>
          <Name>Files</Name>
@@ -1718,7 +1715,7 @@
            <Options>1</Options>
            <Items.0>
             <__>
-             <Name>gfx.c</Name>
+             <Name>rgb_led.c</Name>
              <Options>4</Options>
             </__>
            </Items.0>
@@ -1727,31 +1724,25 @@
          <Items.1>
           <__>
            <Name>pdl</Name>
-           <Options>4</Options>
+           <Options>5</Options>
+           <Items.0>
+            <__>
+             <Name>adc.c</Name>
+             <Options>4</Options>
+            </__>
+           </Items.0>
           </__>
          </Items.1>
          <Items.2>
           <__>
            <Name>solution</Name>
            <Options>1</Options>
-           <Items.0>
-            <__>
-             <Name>acceleration_s.c</Name>
-             <Options>4</Options>
-            </__>
-           </Items.0>
           </__>
          </Items.2>
          <Items.3>
           <__>
            <Name>src</Name>
            <Options>1</Options>
-           <Items.0>
-            <__>
-             <Name>acceleration.c</Name>
-             <Options>4</Options>
-            </__>
-           </Items.0>
           </__>
          </Items.3>
         </__>

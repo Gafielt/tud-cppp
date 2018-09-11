@@ -6,7 +6,7 @@
 # delete the default suffixes (disable implicit rules)
 .SUFFIXES:
 # PHONY targets (targets that do not represent a file)
-.PHONY: clean all doxygen clean_doxygen clean_all
+.PHONY: clean all doxygen clean_doxygen clean_all run
 
 # compiler options
 CC		:= g++
@@ -17,7 +17,8 @@ CC		:= g++
 # -MMD -MP		generate dependencies to header files so that make recognizes changes to header files,
 #				which otherwise do not appear explicitly in any rule
 # -std=c++11	enable C++11
-CFLAGS	:= -g -O0 -Wall -Wextra -MMD -MP -std=c++11
+CFLAGS := -g -O0 -Wall -Wextra -MMD -MP -std=c++11
+LFLAGS :=
 # build directory (to store the executable the .o and .d files)
 BUILD	:= build
 
@@ -30,12 +31,16 @@ DEPEND	:= $(patsubst %.cpp, $(BUILD)/%.d, $(SOURCES))
 # default target (create the binary executable file)
 all: $(BINARY)
 
+run: $(BINARY)
+	@echo "Running $(BINARY)..."
+	@$(BINARY)
+
 # include dependencies to detect header file changes (this creates new targets!)
 -include $(DEPEND)
 
 # create the binary executable file
 $(BINARY): $(OBJECTS)
-	$(CC) -o $(BINARY) $^
+	$(CC) -o $(BINARY) $^  $(LFLAGS)
 
 # create an object file from a source file
 $(BUILD)/%.o: %.cpp
