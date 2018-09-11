@@ -2,14 +2,15 @@
  *  This code is based on:  https://github.com/adafruit/Adafruit-GFX-Library &  https://github.com/adafruit/TFTLCD-Library
  *  The code is converted by Puria Izady for the Cypress FM4  microcontroller
  */
+#include <stdlib.h>
+
 #include "gfx.h"
 #include "lcd.h"
 #include "src/display.h"
-#include <stdlib.h>
 
 static const char *WHITESPACE = " ";
 
-// Fix for the missing declaration of ito in stdlib.h.
+// Fix for the missing declaration of itoa in stdlib.h.
 char* itoa(int, char* , int);
 
 /**

@@ -24,9 +24,15 @@
 #define WIDTH   480
 #define HEIGHT  320
 
+/**
+ * Represents a point where the touchscreen was touched
+ */
 struct TouchPoint{
+  /** The x coordinate ("column") */
   uint16_t x;
+  /** The y coordinate ("row")*/
   uint16_t y;
+  /** The z coordinate ("preasure")*/
   uint16_t z;
 } touchPoint;  
 

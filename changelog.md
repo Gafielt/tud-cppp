@@ -1,6 +1,14 @@
 1. Exercises: cppp_exercises.pdf
 2. Slides: cppp_lecture.pdf
 
+## Changes on 2018-09-11
+
+### Slides
+* pp.201,202: Clarification on volatile: Not useful for inter-thread communication
+
+## Exercises
+* Extend pins.h with constants for user button (SW2)
+
 ## Changes on 2018-09-10
 
 ### Slides
