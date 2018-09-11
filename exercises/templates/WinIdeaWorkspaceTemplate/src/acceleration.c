@@ -7,13 +7,16 @@
 void cppp_rgbLEDAcceleration(){
   cppp_initLEDs();
   while(1u){
-    if( data_available == 1 ){
+    if( cppp_accelerationDataAvailable == 1 ){
       cppp_orientationValues[0] = ((float)((AccelerationData[ACCELERATION_AXIS_X]))) / (float)Sensitivity[ACCELERATION_AXIS_X];
       cppp_orientationValues[1] = ((float)((AccelerationData[ACCELERATION_AXIS_Y]))) / (float)Sensitivity[ACCELERATION_AXIS_Y];
       cppp_orientationValues[2] = ((float)((AccelerationData[ACCELERATION_AXIS_Z]))) / (float)Sensitivity[ACCELERATION_AXIS_Z];
-      data_available = 0;
-      
-      setCursor_s(0,319); 
+      cppp_accelerationDataAvailable = 0;
+
+
+      // Write your code here ...
+      // Exercise a) print actual sensor values on the LCD
+      setCursor_s(0,319);
       char freeSpace[] = " ";
       char headlineText[] = "  *** Beschleunigungssensor ***";
       setTextSize_s(2);
@@ -32,7 +35,9 @@ void cppp_rgbLEDAcceleration(){
       writeFloat(cppp_orientationValues[2], 4, 10);
       writeTextln_s("");
       writeTextln_s("");
-      
+
+      // Exercise b) use the orientation of the board to check if the board is on a leveled surface
+      // change the LED color if the board is leveled to green and write a text on the screen
       if(cppp_orientationValues[0] > 0 && cppp_orientationValues[1] > 0 && cppp_orientationValues[2] >= 1
          && cppp_orientationValues[0] < 0.04 && cppp_orientationValues[1] < 0.04){
         cppp_redLEDOff();
@@ -50,6 +55,6 @@ void cppp_rgbLEDAcceleration(){
         setTextSize_s(2);
         writeText_s("  Die Ebene ist nicht waagrecht.");
       }
-    } 
+    }
   }
 }
