@@ -6,7 +6,7 @@
 # delete the default suffixes (disable implicit rules)
 .SUFFIXES:
 # PHONY targets (targets that do not represent a file)
-.PHONY: clean all doxygen clean_doxygen clean_all
+.PHONY: clean all doxygen clean_doxygen clean_all run
 
 # compiler options
 CC		:= g++
@@ -31,12 +31,16 @@ DEPEND	:= $(patsubst %.cpp, $(BUILD)/%.d, $(SOURCES))
 # default target (create the binary executable file)
 all: $(BINARY)
 
+run: $(BINARY)
+	@echo "Running $(BINARY)..."
+	@$(BINARY)
+
 # include dependencies to detect header file changes (this creates new targets!)
 -include $(DEPEND)
 
 # create the binary executable file
 $(BINARY): $(OBJECTS)
-	$(CC) $(LFLAGS) -o $(BINARY) $^
+	$(CC) -o $(BINARY) $^  $(LFLAGS)
 
 # create an object file from a source file
 $(BUILD)/%.o: %.cpp
