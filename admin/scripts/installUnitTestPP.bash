@@ -6,7 +6,8 @@
 # Author: Roland Kluge
 # Date: 2018-09-11
 #
-apt install --yes --force-yes cmake
+apt-get update
+apt-get install --yes --force-yes cmake
 git clone https://github.com/unittest-cpp/unittest-cpp.git
 cd unittest-cpp
 mkdir build-release
