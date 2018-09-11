@@ -7,6 +7,7 @@
 * pp.201,202: Clarification on volatile: Not useful for inter-thread communication
 
 ## Exercises
+* Ex 27: New exercise for acceleration sensor
 * Extend pins.h with constants for user button (SW2)
 
 ## Changes on 2018-09-10
