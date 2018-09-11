@@ -555,3 +555,34 @@ void write16BitDigit(const uint16_t *value, uint8_t mode){
     writeText_s(buffer);
   }
 }
+
+void write8BitDigit(const uint8_t *value){
+  const uint8_t base = 10;
+    uint8_t numberOfDigits = 0;
+    if (*value < 1000) {
+      numberOfDigits = 3;
+      if (*value < 100) {
+        numberOfDigits = 2;
+        if (*value < 10) {
+         numberOfDigits = 1;
+        }
+      }
+    }
+    char buffer[numberOfDigits];
+    itoa(*value, buffer, base);
+    writeText_s(buffer);  
+}
+
+void writeFloat(float number, uint8_t precision, uint8_t width){
+  char buffer[width];
+  
+  char settings[4];
+  strcpy(settings, "%.");
+  char widthBuffer[1];
+  itoa(precision, widthBuffer, 10);
+  strcat(settings, widthBuffer);
+  strcat(settings, "f");
+
+  int test = sprintf(buffer, settings, number);
+  writeText_s(buffer);
+}

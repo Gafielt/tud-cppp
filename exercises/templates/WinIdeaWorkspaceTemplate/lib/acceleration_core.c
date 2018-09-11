@@ -1,28 +1,7 @@
-/*******************************************************************************
-* \file             kxcjk1013.c
-* 
-* \version          1.00
-*
-* \brief            This file provides source code to the API for the KXCJK1013 
-*                   accelerometer driver.
-*
-********************************************************************************
-* \copyright
-* Copyright 2016, Cypress Semiconductor Corporation. All rights reserved.
-* You may use this file only in accordance with the license, terms, conditions,
-* disclaimers, and limitations in the end user license agreement accompanying
-* the software package with which this file was provided.
-* CYPRESS PROVIDES THIS SOFTWARE "AS IS" AND MAKES NO WARRANTY
-* OF ANY KIND, EXPRESS OR IMPLIED, WITH REGARD TO THIS SOFTWARE,
-* INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
-* MERCHANTABILITY, NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR
-* PURPOSE.
-*******************************************************************************/
-
 /******************************************************************************/
 /* Include files                                                              */
 /******************************************************************************/
-#include "kxcjk1013.h"
+#include "acceleration_core.h"
 
 /******************************************************************************/
 /* Local pre-processor symbols/macros ('#define')                             */
@@ -424,7 +403,8 @@ uint8_t Kxcjk1013_Init(stc_kxcjk1013_output_performance_config_t *config)
             return KXCJK1013_RET_ERROR;
         }
         
-        SetPinFunc_INT11_1(0u);
+        //SetPinFunc_INT11_1(0u); // S6E2GM
+        SetPinFunc_INT10_1(0u); // S6E2CC
 		
         /* Configure interrupt ch.11 */
         PDL_ZERO_STRUCT(stcExintConfig);
@@ -433,9 +413,15 @@ uint8_t Kxcjk1013_Init(stc_kxcjk1013_output_performance_config_t *config)
         * PDL_PERIPHERAL_ENABLE_EXINT11 is set to PDL_ON in pdl_user.h
         * If external interrupt ch.11 is not used, set PDL_PERIPHERAL_ENABLE_EXINT11 
         * to PDL_OFF !! Otherwise, the external interrupt ch.11 may be mis-enabled. */
-        stcExintConfig.abEnable[ExintInstanceIndexExint11] = 1u;
-        stcExintConfig.aenLevel[ExintInstanceIndexExint11] = ExIntRisingEdge;
-        stcExintConfig.apfnExintCallback[ExintInstanceIndexExint11] = KXCJK1013_ExtInt11Callback;
+//        HOWE S6E2CC uses INT10_1, S6E2GM uses INT11_1
+//        stcExintConfig.abEnable[ExintInstanceIndexExint11] = 1u;
+//        stcExintConfig.aenLevel[ExintInstanceIndexExint11] = ExIntRisingEdge;
+//        stcExintConfig.apfnExintCallback[ExintInstanceIndexExint11] = KXCJK1013_ExtInt11Callback;
+        
+        stcExintConfig.abEnable[ExintInstanceIndexExint10] = 1u;
+        stcExintConfig.aenLevel[ExintInstanceIndexExint10] = ExIntRisingEdge;
+        stcExintConfig.apfnExintCallback[ExintInstanceIndexExint10] = KXCJK1013_ExtInt11Callback;
+
         stcExintConfig.bTouchNvic = TRUE;
         
         Exint_Init(&stcExintConfig);
