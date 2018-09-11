@@ -15,4 +15,9 @@ do
   echo "----------- $file ----------"
   echo "---"
   make -C $(dirname $file) $@
+  if [ "$?" != "0" ];
+  then
+    echo "Execution of Makefile $file failed."
+    exit 1;
+  fi
 done
