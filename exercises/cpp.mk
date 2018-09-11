@@ -17,7 +17,8 @@ CC		:= g++
 # -MMD -MP		generate dependencies to header files so that make recognizes changes to header files,
 #				which otherwise do not appear explicitly in any rule
 # -std=c++11	enable C++11
-CFLAGS	:= -g -O0 -Wall -Wextra -MMD -MP -std=c++11
+CFLAGS := -g -O0 -Wall -Wextra -MMD -MP -std=c++11
+LFLAGS :=
 # build directory (to store the executable the .o and .d files)
 BUILD	:= build
 
@@ -35,7 +36,7 @@ all: $(BINARY)
 
 # create the binary executable file
 $(BINARY): $(OBJECTS)
-	$(CC) -o $(BINARY) $^
+	$(CC) $(LFLAGS) -o $(BINARY) $^
 
 # create an object file from a source file
 $(BUILD)/%.o: %.cpp
