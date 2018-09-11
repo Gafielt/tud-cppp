@@ -17,8 +17,8 @@
 * MERCHANTABILITY, NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR
 * PURPOSE.
 *******************************************************************************/
-#ifndef __PDL_USER_H_
-#define __PDL_USER_H_
+#ifndef __PDL_USER_H__
+#define __PDL_USER_H__
 
 #include "pdl.h"
 
@@ -118,7 +118,7 @@
 #define PDL_PERIPHERAL_ENABLE_EXINT7            PDL_OFF
 #define PDL_PERIPHERAL_ENABLE_EXINT8            PDL_OFF
 #define PDL_PERIPHERAL_ENABLE_EXINT9            PDL_OFF
-#define PDL_PERIPHERAL_ENABLE_EXINT10           PDL_OFF
+#define PDL_PERIPHERAL_ENABLE_EXINT10           PDL_ON
 #define PDL_PERIPHERAL_ENABLE_EXINT11           PDL_ON
 #define PDL_PERIPHERAL_ENABLE_EXINT12           PDL_OFF
 #define PDL_PERIPHERAL_ENABLE_EXINT13           PDL_OFF
@@ -286,7 +286,7 @@
 #define PDL_USBHOSTMASSSTORAGE_ENABLED          PDL_OFF
 
 // VBAT domain
-#define PDL_PERIPHERAL_ENABLE_VBAT              PDL_OFF
+#define PDL_PERIPHERAL_ENABLE_VBAT              PDL_ON
 
 // Watch Counter
 #define PDL_PERIPHERAL_ENABLE_WC0               PDL_OFF
@@ -308,9 +308,9 @@
 #define PDL_INTERRUPT_ENABLE_ADC2              PDL_OFF
 
 // Base Timers
-#define PDL_INTERRUPT_ENABLE_BT0               PDL_ON
-#define PDL_INTERRUPT_ENABLE_BT1               PDL_ON
-#define PDL_INTERRUPT_ENABLE_BT2               PDL_ON
+#define PDL_INTERRUPT_ENABLE_BT0               PDL_OFF
+#define PDL_INTERRUPT_ENABLE_BT1               PDL_OFF
+#define PDL_INTERRUPT_ENABLE_BT2               PDL_OFF
 #define PDL_INTERRUPT_ENABLE_BT3               PDL_OFF
 #define PDL_INTERRUPT_ENABLE_BT4               PDL_OFF
 #define PDL_INTERRUPT_ENABLE_BT5               PDL_OFF
@@ -1642,7 +1642,7 @@
  ******************************************************************************/
 #define DEBUG_PRINT
 
-#endif // __PDL_USER_H_
+#endif // __PDL_USER_H__
 
 /******************************************************************************/
 /* EOF (not truncated)                                                        */

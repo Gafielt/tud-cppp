@@ -74,6 +74,30 @@
 #define DHT11_SIGNAL_IO      FM4_GPIO->DDRF_f.P7        // PF7 PIN 75
 #define DHT11_SIGNAL_IN      FM4_GPIO->PDIRF_f.P7       // PF7 PIN 75
 
+// User button (SW2 User, connected to Pin 128 of FM4)
+
+/**
+ * The port that is connected to the user button
+ */
+#define USER_BUTTON_PORT 2
+
+/**
+ * The pin within USER_BUTTON_PORT that is connected to the user button
+ */
+#define USER_BUTTON_PIN 0
+
+/**
+ * Data-direction register of user button.
+ * Set to 0 at program start to configure as input pin.
+ */
+#define USER_BUTTON_IO FM4_GPIO->DDR2_f.P0
+
+/**
+ * Data input register of user button
+ * Contains 0 if button is pressed and 1 if button is not pressed.
+ */
+#define USER_BUTTON_DATA FM4_GPIO->PDIR2_f.P0
+
 // RGB LED pins
 #define LED_RED_DDR FM4_GPIO->DDR1   // Data direction register.
 #define LED_RED_DOR FM4_GPIO->PDOR1  // Data output register.
