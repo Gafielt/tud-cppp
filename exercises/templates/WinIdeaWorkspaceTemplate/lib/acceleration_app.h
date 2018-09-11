@@ -31,13 +31,13 @@ unsigned int counter;
 /******************************************************************************/
 /* Local variable definitions ('static')                                      */
 /******************************************************************************/
-int16_t AccelerationData[NUM_OF_AXIS];
-int16_t Sensitivity[NUM_OF_AXIS];
-uint8_t ResolutionShifter;
+int16_t cppp_accelerationData[NUM_OF_AXIS];
+int16_t cppp_sensitivity[NUM_OF_AXIS];
+uint8_t cppp_resolutionShifter;
 
-uint8_t data_available;
-uint8_t operation_mode;
-uint8_t display_accelerations;
+uint8_t cppp_accelerationDataAvailable;
+uint8_t cppp_operationMode;
+uint8_t cppp_displayAccelerations;
 
 /******************************************************************************/
 /* Function implementation - global ('extern') and local ('static')           */

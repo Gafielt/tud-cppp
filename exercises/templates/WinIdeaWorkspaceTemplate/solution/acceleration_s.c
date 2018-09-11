@@ -4,14 +4,16 @@
 #include "src\display.h"
 #include "lib\gfx.h"
 
+static float cppp_orientationValues[3];
+
 void cppp_rgbLEDAcceleration_s(){
   cppp_initLEDs();
   while(1u){
-    if( data_available == 1 ){
-      cppp_orientationValues[0] = ((float)((AccelerationData[ACCELERATION_AXIS_X]))) / (float)Sensitivity[ACCELERATION_AXIS_X];
-      cppp_orientationValues[1] = ((float)((AccelerationData[ACCELERATION_AXIS_Y]))) / (float)Sensitivity[ACCELERATION_AXIS_Y];
-      cppp_orientationValues[2] = ((float)((AccelerationData[ACCELERATION_AXIS_Z]))) / (float)Sensitivity[ACCELERATION_AXIS_Z];
-      data_available = 0;
+    if( cppp_accelerationDataAvailable == 1 ){
+      cppp_orientationValues[0] = ((float)((cppp_accelerationData[ACCELERATION_AXIS_X]))) / (float)cppp_sensitivity[ACCELERATION_AXIS_X];
+      cppp_orientationValues[1] = ((float)((cppp_accelerationData[ACCELERATION_AXIS_Y]))) / (float)cppp_sensitivity[ACCELERATION_AXIS_Y];
+      cppp_orientationValues[2] = ((float)((cppp_accelerationData[ACCELERATION_AXIS_Z]))) / (float)cppp_sensitivity[ACCELERATION_AXIS_Z];
+      cppp_accelerationDataAvailable = 0;
       
       setCursor_s(0,319); 
       char freeSpace[] = " ";

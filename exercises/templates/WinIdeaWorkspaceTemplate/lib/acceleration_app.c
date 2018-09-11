@@ -26,41 +26,41 @@ int InitAccelerometer(void)
     
     // Set Default Sensitivity (counts per g)
     if(config.res == Kxcjk1013Resolution12Bit){
-        ResolutionShifter = 4;
+        cppp_resolutionShifter = 4;
         switch(config.range){
             case Kxcjk1013Acceleration2g:
-                Sensitivity[ACCELERATION_AXIS_X] = 0x7FF>>1;
-                Sensitivity[ACCELERATION_AXIS_Y] = 0x7FF>>1;
-                Sensitivity[ACCELERATION_AXIS_Z] = 0x7FF>>1;
+                cppp_sensitivity[ACCELERATION_AXIS_X] = 0x7FF>>1;
+                cppp_sensitivity[ACCELERATION_AXIS_Y] = 0x7FF>>1;
+                cppp_sensitivity[ACCELERATION_AXIS_Z] = 0x7FF>>1;
                 break;
             case Kxcjk1013Acceleration4g:
-                Sensitivity[ACCELERATION_AXIS_X] = 0x7FF>>2;
-                Sensitivity[ACCELERATION_AXIS_Y] = 0x7FF>>2;
-                Sensitivity[ACCELERATION_AXIS_Z] = 0x7FF>>2;
+                cppp_sensitivity[ACCELERATION_AXIS_X] = 0x7FF>>2;
+                cppp_sensitivity[ACCELERATION_AXIS_Y] = 0x7FF>>2;
+                cppp_sensitivity[ACCELERATION_AXIS_Z] = 0x7FF>>2;
                 break;
             case Kxcjk1013Acceleration8g:
-                Sensitivity[ACCELERATION_AXIS_X] = 0x7FF>>3;
-                Sensitivity[ACCELERATION_AXIS_Y] = 0x7FF>>3;
-                Sensitivity[ACCELERATION_AXIS_Z] = 0x7FF>>3;
+                cppp_sensitivity[ACCELERATION_AXIS_X] = 0x7FF>>3;
+                cppp_sensitivity[ACCELERATION_AXIS_Y] = 0x7FF>>3;
+                cppp_sensitivity[ACCELERATION_AXIS_Z] = 0x7FF>>3;
                 break;
         }
-    }else{
-        ResolutionShifter = 8;
+    } else{
+        cppp_resolutionShifter = 8;
         switch(config.range){
             case Kxcjk1013Acceleration2g:
-                Sensitivity[ACCELERATION_AXIS_X] = 0x7F>>1;
-                Sensitivity[ACCELERATION_AXIS_Y] = 0x7F>>1;
-                Sensitivity[ACCELERATION_AXIS_Z] = 0x7F>>1;
+                cppp_sensitivity[ACCELERATION_AXIS_X] = 0x7F>>1;
+                cppp_sensitivity[ACCELERATION_AXIS_Y] = 0x7F>>1;
+                cppp_sensitivity[ACCELERATION_AXIS_Z] = 0x7F>>1;
                 break;
             case Kxcjk1013Acceleration4g:
-                Sensitivity[ACCELERATION_AXIS_X] = 0x7F>>2;
-                Sensitivity[ACCELERATION_AXIS_Y] = 0x7F>>2;
-                Sensitivity[ACCELERATION_AXIS_Z] = 0x7F>>2;
+                cppp_sensitivity[ACCELERATION_AXIS_X] = 0x7F>>2;
+                cppp_sensitivity[ACCELERATION_AXIS_Y] = 0x7F>>2;
+                cppp_sensitivity[ACCELERATION_AXIS_Z] = 0x7F>>2;
                 break;
             case Kxcjk1013Acceleration8g:
-                Sensitivity[ACCELERATION_AXIS_X] = 0x7F>>3;
-                Sensitivity[ACCELERATION_AXIS_Y] = 0x7F>>3;
-                Sensitivity[ACCELERATION_AXIS_Z] = 0x7F>>3;
+                cppp_sensitivity[ACCELERATION_AXIS_X] = 0x7F>>3;
+                cppp_sensitivity[ACCELERATION_AXIS_Y] = 0x7F>>3;
+                cppp_sensitivity[ACCELERATION_AXIS_Z] = 0x7F>>3;
                 break;
         }
     }
@@ -93,17 +93,17 @@ int GetAcceleration( int16_t *data )
     }
 
     // Raw data
-    data[ACCELERATION_AXIS_X] = xout>>ResolutionShifter;
-    data[ACCELERATION_AXIS_Y] = yout>>ResolutionShifter;
-    data[ACCELERATION_AXIS_Z] = zout>>ResolutionShifter;
+    data[ACCELERATION_AXIS_X] = xout >> cppp_resolutionShifter;
+    data[ACCELERATION_AXIS_Y] = yout >> cppp_resolutionShifter;
+    data[ACCELERATION_AXIS_Z] = zout >> cppp_resolutionShifter;
             
     return 0;
 }
 
 
 void interrupt_callback(en_kxcjk1013_interrupt_source_t src){
-    data_available = 1;
-    if( 0 != GetAcceleration( AccelerationData ) ){
+    cppp_accelerationDataAvailable = 1;
+    if( 0 != GetAcceleration( cppp_accelerationData ) ){
         // Register read error
         while(1);
     }
@@ -114,33 +114,33 @@ void Main_NmiCallback(void)
 {
     static int16_t temp;
     
-    switch(operation_mode){
+    switch(cppp_operationMode){
         case NORMAL_OPERATION_MODE:
-            operation_mode = CALIBRATION_READ_POSITIVE_X_MODE;
+            cppp_operationMode = CALIBRATION_READ_POSITIVE_X_MODE;
             break;
         case CALIBRATION_READ_POSITIVE_X_MODE:
-            operation_mode = CALIBRATION_READ_NEGATIVE_X_MODE;
-            temp = AccelerationData[ACCELERATION_AXIS_X];
+            cppp_operationMode = CALIBRATION_READ_NEGATIVE_X_MODE;
+            temp = cppp_accelerationData[ACCELERATION_AXIS_X];
             break;
         case CALIBRATION_READ_NEGATIVE_X_MODE:
-            operation_mode = CALIBRATION_READ_POSITIVE_Y_MODE;
-            Sensitivity[ACCELERATION_AXIS_X] = (temp - AccelerationData[ACCELERATION_AXIS_X])>>1;
+            cppp_operationMode = CALIBRATION_READ_POSITIVE_Y_MODE;
+            cppp_sensitivity[ACCELERATION_AXIS_X] = (temp - cppp_accelerationData[ACCELERATION_AXIS_X])>>1;
             break;
         case CALIBRATION_READ_POSITIVE_Y_MODE:
-            operation_mode = CALIBRATION_READ_NEGATIVE_Y_MODE;
-            temp = AccelerationData[ACCELERATION_AXIS_Y];
+            cppp_operationMode = CALIBRATION_READ_NEGATIVE_Y_MODE;
+            temp = cppp_accelerationData[ACCELERATION_AXIS_Y];
             break;
         case CALIBRATION_READ_NEGATIVE_Y_MODE:
-            operation_mode = CALIBRATION_READ_POSITIVE_Z_MODE;
-            Sensitivity[ACCELERATION_AXIS_Y] = (temp - AccelerationData[ACCELERATION_AXIS_Y])>>1;
+            cppp_operationMode = CALIBRATION_READ_POSITIVE_Z_MODE;
+            cppp_sensitivity[ACCELERATION_AXIS_Y] = (temp - cppp_accelerationData[ACCELERATION_AXIS_Y])>>1;
             break;
         case CALIBRATION_READ_POSITIVE_Z_MODE:
-            operation_mode = CALIBRATION_READ_NEGATIVE_Z_MODE;
-            temp = AccelerationData[ACCELERATION_AXIS_Z];
+            cppp_operationMode = CALIBRATION_READ_NEGATIVE_Z_MODE;
+            temp = cppp_accelerationData[ACCELERATION_AXIS_Z];
             break;
         case CALIBRATION_READ_NEGATIVE_Z_MODE:
-            operation_mode = NORMAL_OPERATION_MODE;
-            Sensitivity[ACCELERATION_AXIS_Z] = (temp - AccelerationData[ACCELERATION_AXIS_Z])>>1;
+            cppp_operationMode = NORMAL_OPERATION_MODE;
+            cppp_sensitivity[ACCELERATION_AXIS_Z] = (temp - cppp_accelerationData[ACCELERATION_AXIS_Z])>>1;
             break;      
     }
 }
@@ -161,7 +161,7 @@ int InitNMI(void)
 int DisplayAccelerations(float x_out, float y_out, float z_out)
 {
     printf("\x1b[1;1H");
-    switch(operation_mode){
+    switch(cppp_operationMode){
         case NORMAL_OPERATION_MODE:
             printf("\x1b[2K");
             printf("Push User Button to calibrate accleration output.\n");
@@ -214,9 +214,9 @@ int DisplayPositionMap(float x_deg, float y_deg, float z_deg)
 
 void cppp_initAcceleration(){
   
-    data_available = 0;
-    operation_mode = NORMAL_OPERATION_MODE;
-    display_accelerations = 0;
+    cppp_accelerationDataAvailable = 0;
+    cppp_operationMode = NORMAL_OPERATION_MODE;
+    cppp_displayAccelerations = 0;
 
     /* Initializatio of the UART unit and GPIO used in the communication */
     Uart_Io_Init();
@@ -270,10 +270,10 @@ int cppp_testAccelerationSensor(void)
     
     while(1)
     {
-      if( data_available == 1 ){
-  	    x_out = ((float)((AccelerationData[ACCELERATION_AXIS_X]))) / (float)Sensitivity[ACCELERATION_AXIS_X];
-  	    y_out = ((float)((AccelerationData[ACCELERATION_AXIS_Y]))) / (float)Sensitivity[ACCELERATION_AXIS_Y];
-  	    z_out = ((float)((AccelerationData[ACCELERATION_AXIS_Z]))) / (float)Sensitivity[ACCELERATION_AXIS_Z];
+      if( cppp_accelerationDataAvailable == 1 ){
+  	    x_out = ((float)((cppp_accelerationData[ACCELERATION_AXIS_X]))) / (float)cppp_sensitivity[ACCELERATION_AXIS_X];
+  	    y_out = ((float)((cppp_accelerationData[ACCELERATION_AXIS_Y]))) / (float)cppp_sensitivity[ACCELERATION_AXIS_Y];
+  	    z_out = ((float)((cppp_accelerationData[ACCELERATION_AXIS_Z]))) / (float)cppp_sensitivity[ACCELERATION_AXIS_Z];
   	    
   	    x_deg = (x_out>1.0f?1.0f:(x_out<-1.0f?-1.0f:x_out));
   	    y_deg = (y_out>1.0f?1.0f:(y_out<-1.0f?-1.0f:y_out));
@@ -282,7 +282,7 @@ int cppp_testAccelerationSensor(void)
   	    y_deg = asin(y_deg)/(3.141592f/2.0f);
   	    z_deg = asin(z_deg)/(3.141592f/2.0f);
   	    DisplayPositionMap(x_deg, y_deg, z_deg);
-        data_available = 0;
+        cppp_accelerationDataAvailable = 0;
       }
       delayAccelerationSensor = delayAccelerationSensor + 1;
       if (delayAccelerationSensor > 1000000L)

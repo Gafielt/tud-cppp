@@ -37,14 +37,14 @@ uint8_t cppp_accelerationGetValues(){
   float x_out, y_out, z_out;
   float x_deg, y_deg, z_deg;
   
-  if( data_available == 1 ){
-    x_out = ((float)((AccelerationData[ACCELERATION_AXIS_X]))) / (float)Sensitivity[ACCELERATION_AXIS_X];
-    y_out = ((float)((AccelerationData[ACCELERATION_AXIS_Y]))) / (float)Sensitivity[ACCELERATION_AXIS_Y];
-    z_out = ((float)((AccelerationData[ACCELERATION_AXIS_Z]))) / (float)Sensitivity[ACCELERATION_AXIS_Z];
+  if( cppp_accelerationDataAvailable == 1 ){
+    x_out = ((float)((cppp_accelerationData[ACCELERATION_AXIS_X]))) / (float)cppp_sensitivity[ACCELERATION_AXIS_X];
+    y_out = ((float)((cppp_accelerationData[ACCELERATION_AXIS_Y]))) / (float)cppp_sensitivity[ACCELERATION_AXIS_Y];
+    z_out = ((float)((cppp_accelerationData[ACCELERATION_AXIS_Z]))) / (float)cppp_sensitivity[ACCELERATION_AXIS_Z];
     accelerationValues[0] = x_out;
     accelerationValues[1] = y_out;
     accelerationValues[2] = z_out;
-    data_available = 0;
+    cppp_accelerationDataAvailable = 0;
     return 1;
   }
   return 0;           
