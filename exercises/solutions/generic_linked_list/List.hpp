@@ -5,6 +5,7 @@
 #include "ListItem.hpp"
 #include "ListIterator.hpp"
 #include <iostream>
+#include <stdexcept>
 
 /**
  * @name List;

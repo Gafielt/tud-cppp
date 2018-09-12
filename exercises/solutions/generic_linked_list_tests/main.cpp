@@ -47,6 +47,14 @@ TEST(ListIteratorTest)
 	}
 }
 
+TEST(ExceptionsTest)
+{
+	List<std::string> testList;
+	CHECK_THROW(testList.deleteAt(2),std::out_of_range);
+	CHECK_THROW(testList.insertElementAt("new Element",1),std::out_of_range);
+	CHECK_THROW(testList.getNthElement(10),std::out_of_range);
+}
+
 int main(int,char **)
 {
 	return UnitTest::RunAllTests();

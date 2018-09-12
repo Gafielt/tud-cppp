@@ -43,7 +43,11 @@ void List<T>::prependElement(const T& i) {
 
 template<typename T>
 void List<T>::insertElementAt(const T& i, size_t pos) {
-	if (pos == 0) {
+	if(pos > getSize()) {
+		//Will also be true for negative values of pos, because of the wrap-around.
+		throw std::out_of_range("List::insertElementAt() out of range");
+	} 
+	else if (pos == 0) {
 		prependElement(i);
 	}
 	else if (pos >= getSize()) {
@@ -67,6 +71,10 @@ size_t List<T>::getSize() const {
 
 template<typename T>
 T& List<T>::getNthElement(size_t n) {
+	if (n >= getSize()) {
+		throw std::out_of_range("List::getNthElement() out of range");
+	}
+	
 	ListItem<T>* p = first;
 	// iterate over elements
 	while (n-- > 0) {
@@ -116,7 +124,10 @@ void List<T>::deleteLast() {
 /** delete element at given position. delete first/last if pos outside of range */
 template<typename T>
 void List<T>::deleteAt(size_t pos) {
-	if (pos <= 0) {
+	if (pos >= getSize()) {
+		throw std::out_of_range("List::deleteAt() out of range");
+	} 
+	else if (pos <= 0) {
 		return deleteFirst();
 	}
 	else if (pos >= currentSize - 1) {
