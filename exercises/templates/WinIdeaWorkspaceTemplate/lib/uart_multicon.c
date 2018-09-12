@@ -180,7 +180,7 @@ void uartSendJoystick1XValue(){
   uint8_t analog19;
   uint8_t analog23;
   uint8_t analog17;
-  getAnalogValues(&analog11, &analog12, &analog13, &analog16, &analog17, &analog19, &analog23);
+  cppp_getAnalogValues(&analog11, &analog12, &analog13, &analog16, &analog17, &analog19, &analog23);
   setCursor_s(0, 319); // set to top-left corner
   char freeSpace[] = " ";
   char headlineText[] = "  UART DEBUG";

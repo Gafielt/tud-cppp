@@ -1,19 +1,25 @@
 #include "delay.h"
-
 #include "s6e2ccxj.h"
 
+/**
+* @brief  Initialise the BT RLT mode, One-Shot mode, No IRQ
+* @param  u32us Delay time in microseconds
+* @return void
+*/
 static void InitBtRLT_Reg(uint32_t u32us);
-static void BtRLT_Delay();
 
-void microDelay(uint32_t timeInMicroseconds) {
+/**
+* @brief  Wait the number of microseconds what has previously setup by function InitBtRLT_Reg()
+* @param  void
+* @return void
+*/
+static void BtRLT_Delay(void);
+
+void cppp_microDelay(uint32_t timeInMicroseconds) {
       InitBtRLT_Reg(timeInMicroseconds);
       BtRLT_Delay();
 }
 
-/**
- * \brief   Initialise the BT RLT mode, One-Shot mode, No IRQ
- * \param   [in] uint32_t Delay time in microseconds
- */
 static void InitBtRLT_Reg(uint32_t timeInMicroseconds) {
   FM_BT0_RT->TMCR  = 0x0000; // Stop BT0
   FM_BT0_RT->TMCR  = 0x10b4; // PCLK/4, 32bit reload timer mode, one-shot
@@ -25,10 +31,7 @@ static void InitBtRLT_Reg(uint32_t timeInMicroseconds) {
   FM_BT1_RT->PCSR = (u32ticks & 0xffff0000) >> 16; // Set duration (Upper) 
   FM_BT0_RT->PCSR = u32ticks & 0x0000ffff;         // Set duration (Lower) 
 }
- 
-/**
- * \brief Wait the number of µs what has previously setup by function InitBtRLT_Reg()
- */
+
 static void BtRLT_Delay()   {
   // Wait for the number of µs
   FM_BT0_RT->TMCR |= 0x0003;    // Start Base Timer

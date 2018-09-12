@@ -29,7 +29,7 @@ void debugTouch_s(){
   uint8_t analog19;
   uint8_t analog23;
   uint8_t analog17;
-  getAnalogValues(&analog11, &analog12, &analog13, &analog16, &analog17, &analog19, &analog23);
+  cppp_getAnalogValues(&analog11, &analog12, &analog13, &analog16, &analog17, &analog19, &analog23);
   // Write headline on the display
   setCursor_s(480,320);
   char freeSpace[] = " ";
@@ -41,9 +41,9 @@ void debugTouch_s(){
   writeTextln_s(freeSpace);
   
   // Get analog values of the touchscreen
-  const uint16_t touchZ = readTouchZ();
-  const uint16_t touchX = touchZ != 0 ? readTouchX() : 0;
-  const uint16_t touchY = touchZ != 0 ? readTouchY() : 0;
+  const uint16_t touchZ = cppp_readTouchZ();
+  const uint16_t touchX = touchZ != 0 ? cppp_readTouchX() : 0;
+  const uint16_t touchY = touchZ != 0 ? cppp_readTouchY() : 0;
   
   // Write x,y, and z-values on the screen
   char touchXText[] = "  Touch X: ";
@@ -86,9 +86,9 @@ static void initPaintTouch() {
 }
 
 static void loopPaintTouch() {
-  touchPoint.x = readTouchX();
-  touchPoint.y = readTouchY();
-  touchPoint.z = readTouchZ();
+  touchPoint.x = cppp_readTouchX();
+  touchPoint.y = cppp_readTouchY();
+  touchPoint.z = cppp_readTouchZ();
 
   if (touchPoint.z > TOUCHZMIN && touchPoint.z < TOUCHZMAX) {
     // Erase

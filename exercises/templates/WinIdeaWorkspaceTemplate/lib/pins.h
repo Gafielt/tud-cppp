@@ -4,40 +4,25 @@
 //
 //  @author Puria Izady
 //
-//
-
 #ifndef pins_h
 #define pins_h
-
-#define OLD_DESIGN 0x00
-#define NEW_DESIGN 0x01
-
-#define LCD_DESIGN NEW_DESIGN
 
 #define LCD_DATA FM4_GPIO->PDOR1LL  // LCD_DATA
 
 
 #define LCD_DATA_IO FM4_GPIO->DDR1 // LCD_DATA_IO
                        
-#if (LCD_DESIGN == OLD_DESIGN)
-  #define LCD_RD   FM4_GPIO->PDOR4_f.P1  // LCD_RD => P41
-  #define LCD_RS   FM4_GPIO->PDOR4_f.P0  // LCD_RS => P40
-#elif (LCD_DESIGN == NEW_DESIGN)
-  #define LCD_RD   FM4_GPIO->PDOR4_f.P4  // LCD_RD => P44
-  #define LCD_RS   FM4_GPIO->PDOR4_f.P5  // LCD_RS => P45
-#endif
+
+#define LCD_RD   FM4_GPIO->PDOR4_f.P4  // LCD_RD => P44
+#define LCD_RS   FM4_GPIO->PDOR4_f.P5  // LCD_RS => P45
+
 
 #define LCD_WR   FM4_GPIO->PDORF_f.P0  // LCD_WR => PF0
 #define LCD_CD   FM4_GPIO->PDORF_f.P1  // LCD_CD => PF1    
 #define LCD_CS   FM4_GPIO->PDOR7_f.PD  // LCD_CS => P7D
 
-#if (LCD_DESIGN == OLD_DESIGN)
-  #define LCD_RD_IO   FM4_GPIO->DDR4_f.P1  // LCD_RD => P41
-  #define LCD_RS_IO   FM4_GPIO->DDR4_f.P0  // LCD_RS => P40
-#elif (LCD_DESIGN == NEW_DESIGN)
-  #define LCD_RD_IO   FM4_GPIO->DDR4_f.P4  // LCD_RD => P44
-  #define LCD_RS_IO   FM4_GPIO->DDR4_f.P5  // LCD_RS => P45
-#endif
+#define LCD_RD_IO   FM4_GPIO->DDR4_f.P4  // LCD_RD => P44
+#define LCD_RS_IO   FM4_GPIO->DDR4_f.P5  // LCD_RS => P45
 
 #define LCD_WR_IO   FM4_GPIO->DDRF_f.P0  // LCD_WR => PF0    
 #define LCD_CD_IO   FM4_GPIO->DDRF_f.P1  // LCD_CD => PF1
@@ -127,4 +112,4 @@
 #define TEST_PIN_MULTICON_DIR FM4_GPIO->PDIR3
 #define TEST_PIN_MULTICON_PIN 0x02
 
-#endif /* pins_h */
+#endif

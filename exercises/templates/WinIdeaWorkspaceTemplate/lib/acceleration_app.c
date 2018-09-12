@@ -1,23 +1,21 @@
-#include "acceleration_app.h"
-#include "pdl_header.h"
-#include <stdio.h> 
-#include <string.h> 
+/**
+* @file acceleration_app.c
+*/
 #include <math.h>
+#include "acceleration_app.h"
 #include "src\display.h"
 #include "gfx.h"
 
-#include "rgb_led.h"
 
 
-
-int InitAccelerometer(void)
+int cppp_initAccelerometer(void)
 {
     stc_kxcjk1013_interrupt_config_t            int_config;
     stc_kxcjk1013_output_performance_config_t   config;
 
     /* Init the Accelerometer KXCJK-1013 */
     int_config.src      = Kxcjk1013IntSource_DataReady;
-    int_config.callback = interrupt_callback;
+    int_config.callback = cppp_AccelerationInterruptCallback;
     
     config.res		= Kxcjk1013Resolution12Bit;
     config.range	= Kxcjk1013Acceleration2g;
@@ -81,7 +79,7 @@ int InitAccelerometer(void)
 }
 
 
-int GetAcceleration( int16_t *data )
+int cppp_getAcceleration( int16_t *data )
 {   
     int16_t xout, yout, zout;
     
@@ -89,7 +87,8 @@ int GetAcceleration( int16_t *data )
     
     if( KXCJK1013_RET_OK != Kxcjk1013_GetAccelerations( &xout, &yout, &zout ) ){
         // Register read error
-        while(1);
+        // Original code was: while(1)
+        Kxcjk1013_Reset();
     }
 
     // Raw data
@@ -101,16 +100,17 @@ int GetAcceleration( int16_t *data )
 }
 
 
-void interrupt_callback(en_kxcjk1013_interrupt_source_t src){
+void cppp_AccelerationInterruptCallback(en_kxcjk1013_interrupt_source_t src){
     cppp_accelerationDataAvailable = 1;
-    if( 0 != GetAcceleration( cppp_accelerationData ) ){
+    if( 0 != cppp_getAcceleration( cppp_accelerationData ) ){
         // Register read error
-        while(1);
+        // Original code was: while(1)
+        Kxcjk1013_Reset();
     }
 }
 
 
-void Main_NmiCallback(void)
+void cppp_accelerationNmiCallback(void)
 {
     static int16_t temp;
     
@@ -145,20 +145,20 @@ void Main_NmiCallback(void)
     }
 }
 
-int InitNMI(void)
+int cppp_accelerationInitNmi(void)
 {
     stc_exint_nmi_config_t                      stcNmiConfig;
 
-    /* Congfigure NMI for "User" Button */
+    //Congfigure NMI for "User" Button
     PDL_ZERO_STRUCT(stcNmiConfig);
-    stcNmiConfig.pfnNmiCallback = Main_NmiCallback;
+    stcNmiConfig.pfnNmiCallback = cppp_accelerationNmiCallback;
     Exint_Nmi_Init(&stcNmiConfig);
-    SetPinFunc_NMIX(0u);                      /* Pin Function: NMIX */
+    SetPinFunc_NMIX(0u); // Pin Function: NMIX
     
     return 0;
 }                                                              
 
-int DisplayAccelerations(float x_out, float y_out, float z_out)
+int cppp_displayAccelerationsSerialInterface(float x_out, float y_out, float z_out)
 {
     printf("\x1b[1;1H");
     switch(cppp_operationMode){
@@ -199,7 +199,7 @@ int DisplayAccelerations(float x_out, float y_out, float z_out)
     
 }
 
-int DisplayPositionMap(float x_deg, float y_deg, float z_deg)
+int cppp_displayPositionMap(float x_deg, float y_deg, float z_deg)
 {
     static int prev_x, prev_y;
     
@@ -212,31 +212,27 @@ int DisplayPositionMap(float x_deg, float y_deg, float z_deg)
     return 0;
 }
 
-void cppp_initAcceleration(){
-  
+void cppp_initAccelerometerPrequisites(void){
     cppp_accelerationDataAvailable = 0;
     cppp_operationMode = NORMAL_OPERATION_MODE;
     cppp_displayAccelerations = 0;
 
-    /* Initializatio of the UART unit and GPIO used in the communication */
     Uart_Io_Init();
-    printf("\r\n Acceleration Sensor Debug ... \r\n");
+    printf("\r\n Acceleration Sensor Test ... \r\n");
     
-    // Init Accelerometer
-    InitAccelerometer();
+    cppp_initAccelerometer();
 
-    // Init NMI for Push Button
-    InitNMI();
+    cppp_accelerationInitNmi();
     
     __enable_irq();
     
     printf("\x1b[?25l\n");
 }
 
-void cppp_printAccelerationSensorOnLCD(float x_out, float y_out, float z_out){ 
+void cppp_printAccelerationsLcd(float x_out, float y_out, float z_out){ 
     setCursor_s(0, 319);
     char freeSpace[] = " ";
-    char headlineText[] = "   *** ACCELERATION SENSOR DEBUG ***";
+    char headlineText[] = "   *** ACCELERATION SENSOR TEST ***";
     
     writeTextln_s(freeSpace);
     writeTextln_s(freeSpace);
@@ -259,7 +255,7 @@ void cppp_printAccelerationSensorOnLCD(float x_out, float y_out, float z_out){
     writeTextln_s(freeSpace);
     writeTextln_s(freeSpace);
     writeText_s("      Loop #");
-    uint16_t loopNumber = (uint16_t) counter;
+    uint16_t loopNumber = (uint16_t) cppp_counter;
     write16BitDigit(&loopNumber, 2);
 }
 
@@ -275,23 +271,26 @@ int cppp_testAccelerationSensor(void)
   	    y_out = ((float)((cppp_accelerationData[ACCELERATION_AXIS_Y]))) / (float)cppp_sensitivity[ACCELERATION_AXIS_Y];
   	    z_out = ((float)((cppp_accelerationData[ACCELERATION_AXIS_Z]))) / (float)cppp_sensitivity[ACCELERATION_AXIS_Z];
   	    
+        //Can be activated to print degrees
+        /*
   	    x_deg = (x_out>1.0f?1.0f:(x_out<-1.0f?-1.0f:x_out));
   	    y_deg = (y_out>1.0f?1.0f:(y_out<-1.0f?-1.0f:y_out));
   	    z_deg = (z_out>1.0f?1.0f:(z_out<-1.0f?-1.0f:z_out));
   	    x_deg = asin(x_deg)/(3.141592f/2.0f);
   	    y_deg = asin(y_deg)/(3.141592f/2.0f);
   	    z_deg = asin(z_deg)/(3.141592f/2.0f);
-  	    DisplayPositionMap(x_deg, y_deg, z_deg);
+  	    cppp_displayPositionMap(x_deg, y_deg, z_deg);
+        */
         cppp_accelerationDataAvailable = 0;
       }
-      delayAccelerationSensor = delayAccelerationSensor + 1;
-      if (delayAccelerationSensor > 1000000L)
+      cppp_delayAccelerationSensor = cppp_delayAccelerationSensor + 1;
+      if (cppp_delayAccelerationSensor > 1000000L)
       {
-  			DisplayAccelerations(x_out, y_out, z_out);
-        printf("Loop#%05d",counter++);
-        delayAccelerationSensor = 0;
+  			cppp_displayAccelerationsSerialInterface(x_out, y_out, z_out);
+        printf("Loop#%05d",cppp_counter++);
+        cppp_delayAccelerationSensor = 0;
         #ifdef PRINT_ACCELERATION_SENSOR_ON_LCD
-          cppp_printAccelerationSensorOnLCD(x_out, y_out, z_out);
+          cppp_printAccelerationsLcd(x_out, y_out, z_out);
         #endif
       }        
     } 

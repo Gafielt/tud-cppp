@@ -3,13 +3,15 @@
 #include "src/display.h"
 #include "gfx.h"
 #include "acceleration_app.h"
-
+#include "pdl.h"
+#include  "interrupts_fm4_type_b.c"
+#define   __INTERRUPTS_FM4_TYPE_B_C__
 void initBoard(){
   init();
   reset();
   setupLCD();
   initCursor_s();
-  InitAdc();
+  cppp_initAdc();
   fillScreen(BLACK);
   setCursor_s(0,319);
   
@@ -25,5 +27,5 @@ void initBoard(){
   bFM4_GPIO_ADE_AN18 = 0; // Disable analog-digital channel 18
 
   
-  cppp_initAcceleration();
+  cppp_initAccelerometerPrequisites();
 }
