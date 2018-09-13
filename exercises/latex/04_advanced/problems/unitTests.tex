@@ -1,20 +1,57 @@
+% !TeX spellcheck = de_DE
 \section{\ExercisePrefixAdvanced UnitTest++ \optional}\label{sec:unit_test}
 \optionaltextbox
-\cpppSolutionName{generic_linked_list_test}{generic\_linked\_list\_test}
+\cpppSolutionName{generic_linked_list_tests}{generic\_linked\_list\_tests}
 
-In dieser Aufgabe wollen wir UnitTest++ benutzen um das Testen unseres Codes zu automatisieren.
-Zuerst musst du dafür UnitTest++ herunterladen und wie in \url{http://codelite.org/LiteEditor/UnitTestPP } beschrieben bauen.
-Nun sollst du deine Lösung zu Aufgabe \ref{sec:genericLinkedList} Generische Verkettete Liste testen. 
-Notfalls kannst du auch die Lösung unter folgendem Pfad benutzen: \cpppLinkToSampleSolution{generic_linked_list}{generic\_linked\_list}. 
-Erstelle nun ein neues UnitTest-Projekt. 
-Füge zum Include Pfad unter den Project Settings -> Compiler den Pfad zu deinem generic\_linked\_ ist-Projekt ein. 
-Falls du Funktionen aus cpp-Dateien testen möchtest, ist es in CodeLite am einfachsten, einen virtuellen Ordner im TestProjekt zu erstellen und mit Rechtsklick auf diesem die existierenden cpp-Dateien Dateien hinzuzufügen.
+Bisher hast du vermutlich durch \enquote{scharfes Draufschauen} und Debuggen sichergestellt, dass deine Implementierungen richtig funktionieren.
+In dieser Aufgabe wollen wir das Testframework \emph{UnitTest++}\footnote{Webseite: \url{https://unittest-cpp.github.io/}} benutzen um das Testen des Codes zu automatisieren.
 
-Erstelle nun 4 Tests indem du CHECK\_EQUAL( , ) und CHECK\_THROW(Funtionsaufruf , erwarteter ExceptionTyp) verwendest. Dazu erzeugst du dir für jeden Test ein passendes List-Objekt.
+In der virtuellen Maschine des Praktikums ist UnitTest++ bereits vorinstalliert.
+Falls du dein eigenes System nutzen willst, kannst du UnitTest++ wie unter folgender URL beschrieben einrichten: \url{http://codelite.org/LiteEditor/UnitTestPP } .
+
+Als Grundlage dieser Aufgabe kannst du deine eigene Implementierung der verketteten Liste nutzen (siehe \ref{sec:genericLinkedList}) oder die entsprechende Musterlösung aus folgendem Verzeichnis in CodeLite importieren: \cpppLinkToSampleSolution{generic_linked_list_test}{generic\_linked\_list\_test}.
+
+Gehe nun wie folgt vor:
+\begin{enumerate}
+\item 
+Erstelle in deinem Workspace ein neues \textbf{UnitTest++-Projekt} (\menuPath{Rechtsklick \menuSep New \menuSep New Project \menuSep UnitTest++/UnitTest++}). 
+
+\item 
+Wähle wie üblich einen \textbf{Namen} und den \textbf{Compiler} des Projekts aus.
+
+\item 
+Damit du auf die Header des zu testenden Projekts zugreifen kannst, füge zum Include-Pfad des Projekts den Pfad zum Projekt generic\_linked\_list hinzu (bspw. den relativen Pfad \filename{../generic\_linked\_list} oder den absoluten Pfad \filename{/home/cppp/Repos/tud-cppp/exercises/solutions/generic\_linked\_list}):
+\menuPath{Rechtsklick \menuSep Settings \menuSep Compiler/Include Path}.
+
+\item 
+Falls du Funktionen aus \filename{.cpp}-Dateien testen möchtest, ist es in CodeLite am einfachsten, einen virtuellen Ordner im TestProjekt (also generic\_linked\_list\_tests) zu erstellen (\menuPath{Rechtsklick \menuSep New Virtual Folder}) und per \menuPath{Rechtsklick \menuSep Add an Existing File} die entsprechenden \filename{.cpp}-Dateien hinzuzufügen.
+
+\item 
+Um sicherzustellen, dass das zu testende Projekt immer vor dem Testprojekt compiliert wird, verwendest du die \emph{Build Order} von CodeLite.
+Navigiere wie folgt \menuPath{Rechtsklick auf generic\_linked\_list\_tests \menuSep Build Order\dots} und wähle das Projekt \emph{generic\_linked\_list} aus. 
+
+\item 
+Erstelle nun wie im folgenden Codeausschnitt skizziert 4 Unit-Tests mithilfe der Makros \lstinline|CHECK_EQUAL| und \lstinline|CHECK_THROW|.
+Dazu erzeugst du dir für jeden Test ein passendes \lstinline|List|-Objekt.
+Hierzu zwei Beispiele:
+\begin{itemize}
+\item
+\lstinline|CHECK_EQUAL(3, someFunction());| testet, dass ein Aufruf von \lstinline|someFunction| den Wert 3 ergibt.
+\item 
+\lstinline|CHECK_THROW(f(), std::out_of_range);| testet, dass beim Aufruf der Funktion \lstinline|f| Exception von Typ \lstinline|std::out_of_range| geworfen wird.
+\end{itemize}
+\href{https://github.com/unittest-cpp/unittest-cpp/wiki/Macro-and-Parameter-Reference}{Hier} findest du weitere Informationen zu den von UnitTest++ bereitgestellten Makros.
  
 \cpppInputListing{04_advanced/problems/listings/unittests.cpp} 
+
+\item
+Achte insbesondere darauf, dass der Include für UnitTest++ wie folgt lautet: \lstinline|#include <UnitTest++/UnitTest++.h>|.
+Die standardmäßig von CodeLite generierte Datei enthält hier eine falsche Groß- und Kleinschreibung.
+
+\item 
+Compiliere und linke das Projekt wie gewohnt und führe das Programm aus.
+Du erhältst im Reiter UnitTest++ eine grafische Ausgabe des Testlaufs und, falls Tests fehlschlagen, eine aussagekräftige Fehlermeldung.
+\end{enumerate}
+
  
 
-\hints{
-	\item Unter \url{https://github.com/unittest-cpp/unittest-cpp/wiki/Macro-and-Parameter-Reference} kannst du weitere Makros für die Testerstellung finden.
-}
