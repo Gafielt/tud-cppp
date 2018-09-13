@@ -47,12 +47,18 @@ TEST(ListIteratorTest)
 	}
 }
 
+
 TEST(ExceptionsTest)
 {
 	List<std::string> testList;
 	CHECK_THROW(testList.deleteAt(2),std::out_of_range);
 	CHECK_THROW(testList.insertElementAt("new Element",1),std::out_of_range);
 	CHECK_THROW(testList.getNthElement(10),std::out_of_range);
+}
+
+TEST(dummy) // not part of solution, just a test for a non-template function
+{
+	CHECK_EQUAL(3, dummy());
 }
 
 int main(int,char **)

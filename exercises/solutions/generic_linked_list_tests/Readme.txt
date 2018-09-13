@@ -8,6 +8,7 @@ Remarks:
   * In the projec settings, 
 	* the UnitTest++ headers and the project folder of generic_linked_list were added to the include path, and 
 	* libUnitTest++.a was added to the linker search path.
+  * To force that the subject under test project (here: generic_linked_list) is built first, use the Build Order (context menu of generic_linked_list_test)
 
 # Short reference for UnitTest++
 

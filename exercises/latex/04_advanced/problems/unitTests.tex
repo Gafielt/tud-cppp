@@ -1,0 +1,18 @@
+\section{\ExercisePrefixAdvanced UnitTest++ \optional}\label{sec:unit_test}
+\optionaltextbox
+\cpppSolutionName{generic_linked_list_test}{generic\_linked\_list\_test}
+
+In dieser Aufgabe wollen wir UnitTest++ benutzen um das Testen unseres Codes zu automatisieren.
+Zuerst musst du dafür UnitTest++ herunterladen und wie in \url{http://codelite.org/LiteEditor/UnitTestPP } beschrieben bauen.
+Nun sollst du deine Lösung zu Aufgabe \ref{sec:genericLinkedList} Generische Verkettete Liste testen. 
+Notfalls kannst du auch die Lösung unter folgendem Pfad benutzen: \cpppLinkToSampleSolution{generic_linked_list}{generic\_linked\_list}. 
+Erstelle nun ein neues UnitTest-Projekt. Füge zum Include Pfad unter Project/Settings den Ordner zu generic linked list ein. Falls du Funktionen aus cpp-Dateien testen möchtest, ist es in CodeLite am einfachsten, einen virtuellen Ordner im TestProjekt zu erstellen und mit Rechtsklick auf diesem die existierenden cpp-Dateien Dateien hinzuzufügen.
+
+Erstelle nun 4 Tests indem du CHECK\_EQUAL und CHECK\_THROW (für Exceptions) verwendest. Dazu erzeugst du dir für jeden Test ein passendes List-Objekt.
+ 
+\cpppInputListing{04_advanced/problems/listings/unittests.cpp} 
+ 
+
+\hints{
+	\item Unter \url{https://github.com/unittest-cpp/unittest-cpp/wiki/Macro-and-Parameter-Reference} kannst du weitere Makros für die Testerstellung finden.
+}
