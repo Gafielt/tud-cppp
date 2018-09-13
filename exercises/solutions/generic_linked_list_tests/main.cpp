@@ -47,6 +47,10 @@ TEST(ListIteratorTest)
 	}
 }
 
+TEST(dummy) {
+	CHECK_EQUAL(3, dummy());
+}
+
 int main(int,char **)
 {
 	return UnitTest::RunAllTests();

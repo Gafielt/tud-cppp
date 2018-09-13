@@ -125,4 +125,6 @@ private:
 
 #include "List.tpp"
 
+int dummy();
+
 #endif /* LIST_HPP_ */

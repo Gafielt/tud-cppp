@@ -18,7 +18,12 @@ CC		:= g++
 #				which otherwise do not appear explicitly in any rule
 # -std=c++11	enable C++11
 CFLAGS := -g -O0 -Wall -Wextra -MMD -MP -std=c++11
+
+# Linker flags
+# -lMyLibrary     for additional library libMyLibrary.a
+# -LMyPath         for additional library search path
 LFLAGS :=
+
 # build directory (to store the executable the .o and .d files)
 BUILD	:= build
 
@@ -27,6 +32,9 @@ BINARY	:= $(BUILD)/main.exe
 SOURCES	:= $(wildcard *.cpp)
 OBJECTS	:= $(patsubst %.cpp, $(BUILD)/%.o, $(SOURCES))
 DEPEND	:= $(patsubst %.cpp, $(BUILD)/%.d, $(SOURCES))
+
+# With this constant, you can provide a space-separated list of additional existing object files
+ADDITIONAL_OBJECTS:=
 
 # default target (create the binary executable file)
 all: $(BINARY)
@@ -40,7 +48,7 @@ run: $(BINARY)
 
 # create the binary executable file
 $(BINARY): $(OBJECTS)
-	$(CC) -o $(BINARY) $^  $(LFLAGS)
+	$(CC) -o $(BINARY) $^  $(ADDITIONAL_OBJECTS) $(LFLAGS)
 
 # create an object file from a source file
 $(BUILD)/%.o: %.cpp
