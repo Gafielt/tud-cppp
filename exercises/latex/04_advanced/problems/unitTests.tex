@@ -6,9 +6,11 @@ In dieser Aufgabe wollen wir UnitTest++ benutzen um das Testen unseres Codes zu 
 Zuerst musst du dafür UnitTest++ herunterladen und wie in \url{http://codelite.org/LiteEditor/UnitTestPP } beschrieben bauen.
 Nun sollst du deine Lösung zu Aufgabe \ref{sec:genericLinkedList} Generische Verkettete Liste testen. 
 Notfalls kannst du auch die Lösung unter folgendem Pfad benutzen: \cpppLinkToSampleSolution{generic_linked_list}{generic\_linked\_list}. 
-Erstelle nun ein neues UnitTest-Projekt. Füge zum Include Pfad unter Project/Settings den Ordner zu generic linked list ein. Falls du Funktionen aus cpp-Dateien testen möchtest, ist es in CodeLite am einfachsten, einen virtuellen Ordner im TestProjekt zu erstellen und mit Rechtsklick auf diesem die existierenden cpp-Dateien Dateien hinzuzufügen.
+Erstelle nun ein neues UnitTest-Projekt. 
+Füge zum Include Pfad unter den Project Settings -> Compiler den Pfad zu deinem generic\_linked\_ ist-Projekt ein. 
+Falls du Funktionen aus cpp-Dateien testen möchtest, ist es in CodeLite am einfachsten, einen virtuellen Ordner im TestProjekt zu erstellen und mit Rechtsklick auf diesem die existierenden cpp-Dateien Dateien hinzuzufügen.
 
-Erstelle nun 4 Tests indem du CHECK\_EQUAL und CHECK\_THROW (für Exceptions) verwendest. Dazu erzeugst du dir für jeden Test ein passendes List-Objekt.
+Erstelle nun 4 Tests indem du CHECK\_EQUAL( , ) und CHECK\_THROW(Funtionsaufruf , erwarteter ExceptionTyp) verwendest. Dazu erzeugst du dir für jeden Test ein passendes List-Objekt.
  
 \cpppInputListing{04_advanced/problems/listings/unittests.cpp} 
  
