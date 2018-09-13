@@ -15,10 +15,12 @@ build:
    pull: true
    
   ci:
+    - bash ./admin/scripts/installUnitTestPP.bash
+    # ---
     - 7z x 'admin/tudfontsEncrypted.zip' -p"$TUFONTS_DECRYPT_PASSWORD" # The contained files are decompressed into to the repo's root
     - dpkg -i 't1-tudfonts_0.0.20090806_all.deb'
     - dpkg -i 'tex-tudfonts_0.0.20090806_all.deb'
-    - apt-get install --yes --force-yes latex-tuddesign 
+    - apt install --yes --force-yes latex-tuddesign 
     # ---
     - bash ./exercises/make_all.sh
     - make -C 'exercises/latex' all
