@@ -58,15 +58,15 @@ void testGraphics(void) {
 }
 
 void testFillScreen(void){
-  fillScreen(BLACK);
-  fillScreen(RED);
-  fillScreen(GREEN);
-  fillScreen(BLUE);
-  fillScreen(BLACK);
+  cppp_fillScreen(BLACK);
+  cppp_fillScreen(RED);
+  cppp_fillScreen(GREEN);
+  cppp_fillScreen(BLUE);
+  cppp_fillScreen(BLACK);
 }
 
 void testText(void) {
-  fillScreen(BLACK);
+  cppp_fillScreen(BLACK);
   setCursor_s(480, 320);
   setTextColor_s(WHITE);
   setTextSize_s(1);
@@ -98,7 +98,7 @@ void testLines(uint16_t color) {
                 w = 480,
                 h = 320;
 
-  fillScreen(BLACK);
+  cppp_fillScreen(BLACK);
 
   x1 = y1 = 0;
   y2    = h - 1;
@@ -108,7 +108,7 @@ void testLines(uint16_t color) {
   for(y2=0; y2<h; y2+=6) drawLine(x1, y1, x2, y2, color);
   
 
-  fillScreen(BLACK);
+  cppp_fillScreen(BLACK);
 
   x1    = w - 1;
   y1    = 0;
@@ -119,7 +119,7 @@ void testLines(uint16_t color) {
   for(y2=0; y2<h; y2+=6) drawLine(x1, y1, x2, y2, color);
 
 
-  fillScreen(BLACK);
+  cppp_fillScreen(BLACK);
 
   x1    = 0;
   y1    = h - 1;
@@ -130,7 +130,7 @@ void testLines(uint16_t color) {
   for(y2=0; y2<h; y2+=6) drawLine(x1, y1, x2, y2, color);
  
 
- fillScreen(BLACK);
+ cppp_fillScreen(BLACK);
 
   x1    = w - 1;
   y1    = h - 1;
@@ -146,7 +146,7 @@ void testFastLines(uint16_t color1, uint16_t color2) {
   
   int           x, y, w = 480, h = 320;
 
-  fillScreen(BLACK);
+  cppp_fillScreen(BLACK);
   
   for(y=0; y<h; y+=5) drawFastHLine(0, y, w, color1);
   for(x=0; x<w; x+=5) drawFastVLine(x, 0, h, color2);
@@ -158,7 +158,7 @@ void testRects(uint16_t color) {
                 cx = 480  / 2,
                 cy = 320 / 2;
 
-  fillScreen(BLACK);
+  cppp_fillScreen(BLACK);
   n     = 320;
   for(i=2; i<n; i+=6) {
     i2 = i / 2;
@@ -171,7 +171,7 @@ void testFilledRects(uint16_t color1, uint16_t color2) {
                 cx = 480  / 2 - 1,
                 cy = 320 / 2 - 1;
 
- fillScreen(BLACK);
+ cppp_fillScreen(BLACK);
   n = 320;
   for(i=n; i>0; i-=6) {
     i2    = i / 2;
@@ -185,7 +185,7 @@ void testFilledRects(uint16_t color1, uint16_t color2) {
 void testFilledCircles(uint8_t radius, uint16_t color) {
   int x, y, w = 480, h = 320, r2 = radius * 2;
 
-  fillScreen(BLACK);
+  cppp_fillScreen(BLACK);
   for(x=radius; x<w; x+=r2) {
     for(y=radius; y<h; y+=r2) {
       fillCircle(x, y, radius, color);
@@ -211,7 +211,7 @@ void testTriangles(void) {
   int           n, i, cx = 480  / 2 - 1,
                       cy = 320 / 2 - 1;
 
-  fillScreen(BLACK);
+  cppp_fillScreen(BLACK);
   n     = 320;
   for(i=0; i<n; i+=5) {
     drawTriangle(
@@ -226,7 +226,7 @@ void testFilledTriangles(void) {
   int           i, cx = 480  / 2 - 1,
                    cy = 320 / 2 - 1;
 
-  fillScreen(BLACK);
+  cppp_fillScreen(BLACK);
   for(i=320; i>10; i-=5) {
     fillTriangle(cx, cy - i, cx - i, cy + i, cx + i, cy + i,
       color565(0, i, i));
@@ -240,7 +240,7 @@ void testRoundRects(void) {
                 cx = 480  / 2 - 1,
                 cy = 320 / 2 - 1;
 
-  fillScreen(BLACK);
+  cppp_fillScreen(BLACK);
   w     = 320;
   for(i=0; i<w; i+=6) {
     i2 = i / 2;
@@ -253,7 +253,7 @@ void testFilledRoundRects(void) {
                 cx = 480  / 2 - 1,
                 cy = 320 / 2 - 1;
 
-  fillScreen(BLACK);
+  cppp_fillScreen(BLACK);
 
   for(i=320; i>20; i-=6) {
     i2 = i / 2;

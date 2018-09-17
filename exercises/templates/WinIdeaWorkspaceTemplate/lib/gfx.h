@@ -1,36 +1,39 @@
 #ifndef GFX_H
 #define GFX_H
+/**
+* @brief This code is based on:  https://github.com/adafruit/Adafruit-GFX-Library &  
+* https://github.com/adafruit/TFTLCD-Library
+* The code is converted by the cppp team for the Cypress FM4  microcontroller. In the comments of every function there are code examples. 
+*/
+#include "mcu.h"
 
-#include <stdlib.h>
-#include <stdio.h>
-#include "pins.h"
-#include "pdl_header.h"
-#include "glcdfont.h"
 
 /*
- * Dimensions of the touchsreen display
+ * @brief X dimension of the lc display: 480 pixels.
  */
 #define WIDTH   480 // pixel
+/*
+ * @brief Y dimension of the lc display: 320 pixels.
+ */
 #define HEIGHT  320 // pixel
 
-
 /**
- * Fills the screen with a given color
- * @param color as defined in lcd.h
- * 
- * Minimal example
-
+ * @brief Fills the screen with a given color.
+  * Minimal example
+<pre>
 #include "init.h"
 #include "gfx.h"
-
 
 int main(){
   initBoard();
   fillScreen(RED);
   return 0;
 }
- */ 
-void fillScreen(int16_t color);
+<pre>
+ * @param color the new background color of the screen
+ * @return void
+ */
+void cppp_fillScreen(int16_t color);
 
 void drawFastHLine(int x, int y, int length, int16_t color);
 void drawFastVLine(int x, int y, int length, int16_t color);
@@ -46,7 +49,8 @@ void fillRoundRect(int x, int y, int w, int h, int r, unsigned color);
 void drawLine(int16_t x0, int16_t y0, int16_t x1, int16_t y1, uint16_t color);
 void drawTriangle(int16_t x0, int16_t y0, int16_t x1, int16_t y1, int16_t x2, int16_t y2, uint16_t color);
 void fillTriangle(int16_t x0, int16_t y0, int16_t x1, int16_t y1, int16_t x2, int16_t y2, uint16_t color);
-
+char cppp_565to8BitColor(int color);
+int cppp_8BitColorTo565(char color);
 
 void write8BitValueOnLCD(const uint8_t *value);
 void write16BitValueOnLCD(const uint16_t *value);

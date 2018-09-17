@@ -35,7 +35,7 @@ void paintTouch(){
  * Initializes the paint studio.
  */
 static void initPaintTouch(){
-  fillScreen(BLACK);
+  cppp_fillScreen(BLACK);
   fillRect(0, 0, BOXSIZE, BOXSIZE, RED);
   fillRect(BOXSIZE, 0, BOXSIZE, BOXSIZE, YELLOW);
   fillRect(BOXSIZE*2, 0, BOXSIZE, BOXSIZE, GREEN);

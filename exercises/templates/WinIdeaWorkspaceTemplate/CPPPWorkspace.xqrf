@@ -240,12 +240,6 @@
          <CompilerOptions>-x c -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME) -Wall</CompilerOptions>
         </FileOptios>
        </File.24>
-       <File.25>
-        <FileName>$(IRFDIR)lib\cppp_interrupts.c</FileName>
-        <FileOptios>
-         <CompilerOptions>-x c -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME) -Wall</CompilerOptions>
-        </FileOptios>
-       </File.25>
        <File.3>
         <FileName>$(IRFDIR)lib\analog.h</FileName>
        </File.3>
@@ -618,12 +612,6 @@
          <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.24>
-       <File.25>
-        <FileName>$(IRFDIR)lib\cppp_interrupts.c</FileName>
-        <FileOptios>
-         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
-        </FileOptios>
-       </File.25>
        <File.3>
         <FileName>$(IRFDIR)lib\analog.h</FileName>
        </File.3>
@@ -996,12 +984,6 @@
          <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.24>
-       <File.25>
-        <FileName>$(IRFDIR)lib\cppp_interrupts.c</FileName>
-        <FileOptios>
-         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
-        </FileOptios>
-       </File.25>
        <File.3>
         <FileName>$(IRFDIR)lib\analog.h</FileName>
        </File.3>
@@ -1374,12 +1356,6 @@
          <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.24>
-       <File.25>
-        <FileName>$(IRFDIR)lib\cppp_interrupts.c</FileName>
-        <FileOptios>
-         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
-        </FileOptios>
-       </File.25>
        <File.3>
         <FileName>$(IRFDIR)lib\analog.h</FileName>
        </File.3>
@@ -1752,12 +1728,6 @@
          <CompilerOptions>-x c  -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.24>
-       <File.25>
-        <FileName>$(IRFDIR)lib\cppp_interrupts.c</FileName>
-        <FileOptios>
-         <CompilerOptions>-x c  -std=c11 -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
-        </FileOptios>
-       </File.25>
        <File.3>
         <FileName>$(IRFDIR)lib\analog.h</FileName>
        </File.3>
@@ -2130,12 +2100,6 @@
          <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
         </FileOptios>
        </File.24>
-       <File.25>
-        <FileName>$(IRFDIR)lib\cppp_interrupts.c</FileName>
-        <FileOptios>
-         <CompilerOptions>-x c   -mcpu=cortex-m4  -mthumb $(DEFINES) $(INCLUDES)  -g3 -c -I $(IRFDIR) -o $(NOEXT).o $(EDNAME)</CompilerOptions>
-        </FileOptios>
-       </File.25>
        <File.3>
         <FileName>$(IRFDIR)lib\analog.h</FileName>
        </File.3>

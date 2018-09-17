@@ -3,18 +3,18 @@
 
 /**
 * @file board_test.h
-* @author Puria Izady
-* @brief You can use board_test.h to print all the periphery of the cppp board on the lc display. <br>
-* Just create the following code inside the main.c  <br>
-* 
-* #include "init.h"
-* #include "board_test.h"
-* int main(){
-*   initBoard();
-*   cppp_initBoardTest();
-*   cppp_boardTest();
-*   return 0;
-* }
+* @brief <strong> You can use board_test.h to print all the periphery of the cppp board on the lc display.
+* Just create the following code inside the main.c.</strong>
+* <pre>
+  #include "init.h"
+  #include "board_test.h"
+  int main(){
+   initBoard();
+   cppp_initBoardTest();
+   cppp_boardTest();
+   return 0;
+  }
+* </pre>
 */
 
 #include "mcu.h"

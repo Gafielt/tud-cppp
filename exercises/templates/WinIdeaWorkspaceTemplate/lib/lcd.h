@@ -21,8 +21,8 @@
 #define YELLOW  0xFFE0
 #define WHITE   0xFFFF
 
-#define WIDTH   480
-#define HEIGHT  320
+
+uint8_t testArray[480][320];
 
 /**
  * Represents a point where the touchscreen was touched
@@ -48,5 +48,6 @@ void reset();
 void setupLCD();
 void setLR(void);
 void flood(int color, long len);
+void writeGRAM();
 
 #endif /* LCD_H */

@@ -3,7 +3,9 @@
 
 /**
 * @file acceleration_core.h
-* @brief Core function for KXCJK1013 accelerometer chip. These functions are used by the acceleration_app.h header file.
+* @brief <strong>Core function for KXCJK1013 accelerometer chip. These functions are used by acceleration_app.h and
+* acceleration.c to implement the accelerometer. If you want to test the accelerometer you should use the function
+* cppp_testAccelerationSensor from acceleration_app.h. </strong>
 */
 #include "pdl_header.h"
 

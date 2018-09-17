@@ -12,7 +12,7 @@ void initBoard(){
   setupLCD();
   initCursor_s();
   cppp_initAdc();
-  fillScreen(BLACK);
+  cppp_fillScreen(BLACK);
   setCursor_s(0,319);
   
   // Configure all used ports as inputs.

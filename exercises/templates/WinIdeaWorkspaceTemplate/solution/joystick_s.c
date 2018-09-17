@@ -58,7 +58,7 @@ void controlLeds_s(){
       FM4_GPIO->PDOR1_f.P8 = 1u; // blue off
       FM4_GPIO->PDOR1_f.PA = 0u; // red on
   }
-  microDelay(sleepTime); 
+  cppp_microDelay(sleepTime); 
 }
 
 void printValues_s(){

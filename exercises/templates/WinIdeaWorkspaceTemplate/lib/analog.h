@@ -2,8 +2,30 @@
 #define ANALOG_H
 /**
 * @file analog.h
-* @brief This header file initializes the analog digtal changer (ADC) of the fm4 chip 
-  and reads out the analog values of the light sensor, the analog joysticks and the touch surface of the lcd.
+* @brief <strong>This header file initializes the analog digtal changer (ADC) of the fm4 chip 
+* and reads out the analog values of the light sensor, the analog joysticks and the touch surface of the lcd.
+* cppp_initAdc is already called in init.c, so you only have to call cppp_getAnalogValues, if you want to 
+* get the analog values. If you want to read out the analog values you can use the following code example. </strong>
+* <pre>
+#include "init.h"
+#include "acceleration_app.h"
+int main(){
+  initBoard();
+  uint8_t analog11;
+  uint8_t analog12;
+  uint8_t analog13;
+  uint8_t analog16;
+  uint8_t analog19;
+  uint8_t analog23;
+  uint8_t analog17;
+  
+  while(1u){
+    cppp_getAnalogValues(&analog11, &analog12, &analog13, &analog16, &analog17, &analog19, &analog23);
+  }
+  return 0;
+}
+* </pre>
+* 
 */
 #include "mcu.h"
 

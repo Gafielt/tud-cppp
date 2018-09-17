@@ -3,9 +3,19 @@
 
 /**
 * @file acceleration_app.h
-* @brief Initializes communication via I2C to the KXCJK1013 accelerometer chip and prints data on the lc display.
-  UART is used to print data on the serial port terminal and NMI is used for the user button.
-  For more informations about the accelerometer chip read here: http://kionixfs.kionix.com/en/datasheet/KXCJK-1013%20Specifications%20Rev%202.pdf
+* @brief <strong> Initializes communication via I2C to the KXCJK1013 accelerometer chip and prints data on the lc display.
+* UART is used to print data on the serial port terminal and NMI is used for the user button.
+* For more informations about the accelerometer chip read here: http://kionixfs.kionix.com/en/datasheet/KXCJK-1013%20Specifications%20Rev%202.pdf
+* If you want to the the accelerometer just use the following code example. </strong>  
+* <pre>
+#include "init.h"
+#include "acceleration_app.h"
+int main(){
+ initBoard();
+ cppp_testAccelerationSensor();
+ return 0;
+}
+* </pre>
 */
 #include "mcu.h"
 #include "acceleration_core.h"

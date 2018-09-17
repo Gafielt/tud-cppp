@@ -1,9 +1,7 @@
-//
-//  pins.h
-//  Makros for the MCU pins
-//
-//  @author Puria Izady
-//
+/**
+ * @file pins.h
+ * @brief Makros for the MCU pins
+ */
 #ifndef pins_h
 #define pins_h
 

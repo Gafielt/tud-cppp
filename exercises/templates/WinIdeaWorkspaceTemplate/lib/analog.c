@@ -237,6 +237,5 @@ uint16_t cppp_readTouchZ(void){
   cppp_getAnalogValues(&analog11, &analog12, &analog13, &analog16, &analog17, &analog19, &analog23);
   uint8_t z1 = analog11; // z1 = Xm = analog6
   uint8_t z2 = analog12; // z2 = Ym = analog7 
-  
   return (255-(z2-z1));
 }

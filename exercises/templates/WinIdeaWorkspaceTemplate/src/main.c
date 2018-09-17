@@ -3,6 +3,8 @@
 
 #include "board_test.h"
 #include "acceleration_app.h"
+#include "delay.h"
+#include "gfx.h"
 
 int main(){
   initBoard();
@@ -10,10 +12,16 @@ int main(){
   // Write your code here ...
   //BlinkMain();
   
-  cppp_initBoardTest();
-  cppp_boardTest();
+  //scppp_initBoardTest();
+  //cppp_boardTest();
   
   //cppp_testAccelerationSensor();
+  
+  //testGraphics();
+  
+
+  writeGRAM();
+  
   
   return 0;
 }

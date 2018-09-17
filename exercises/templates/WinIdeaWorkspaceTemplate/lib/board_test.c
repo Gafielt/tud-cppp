@@ -75,9 +75,15 @@ void cppp_boardTest(void){
     writeTextln_s(freeSpace);
     
     // Get analog values of the touchscreen
-    const uint16_t touchZ = cppp_readTouchZ();
-    const uint16_t touchX = touchZ != 0 ? cppp_readTouchX() : 0;
-    const uint16_t touchY = touchZ != 0 ? cppp_readTouchY() : 0;
+    uint16_t touchZ = cppp_readTouchZ();
+    uint16_t touchX = touchZ != 0 ? cppp_readTouchX() : 0;
+    uint16_t touchY = touchZ != 0 ? cppp_readTouchY() : 0;
+    
+    if(touchX > 480 || touchY>320){
+       touchX = 0;
+       touchY = 0;
+       touchZ = 0;
+    }
     
     // Write x,y, and z-values on the screen
     char touchXText[] = "  Touch X: ";
@@ -102,10 +108,10 @@ void cppp_boardTest(void){
     writeTextln_s(freeSpace);
     
     // Display joystick values
-    writeText_s("  Joystick 1 X-Achse: ");
+    writeText_s("  Joystick 1 X: ");
     writeNumberOnDisplayRight_s(&analog16);
     writeTextln_s("");
-    writeText_s("  Joystick 1 Y-Achse: ");
+    writeText_s("  Joystick 1 Y: ");
     writeNumberOnDisplayRight_s(&analog19);
     writeTextln_s("");
     writeText_s("  Joystick 1 Button: ");
@@ -118,10 +124,10 @@ void cppp_boardTest(void){
     
     writeTextln_s("");
     
-    writeText_s("  Joystick 2 X-Achse: ");
+    writeText_s("  Joystick 2 X: ");
     writeNumberOnDisplayRight_s(&analog13);
     writeTextln_s("");
-    writeText_s("  Joystick 2 Y-Achse: ");
+    writeText_s("  Joystick 2 Y: ");
     writeNumberOnDisplayRight_s(&analog23);
     writeTextln_s("");
     writeText_s("  Joystick 2 Button: "); 
