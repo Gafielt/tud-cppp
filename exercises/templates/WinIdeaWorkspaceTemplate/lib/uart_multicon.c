@@ -299,7 +299,7 @@ void cppp_uartSendBoardTest(){
       writeText_s("Receiving Brightness [Value:");
       writeNumberOnDisplayRight_s(&tmp);
       writeTextln_s("] ...");
-      if(tmp>100)
+      if(tmp==1)
         cppp_redLEDOn();
       else
         cppp_redLEDOff();
