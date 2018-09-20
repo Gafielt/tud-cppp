@@ -27,5 +27,5 @@ void initBoard(){
   bFM4_GPIO_ADE_AN18 = 0; // Disable analog-digital channel 18
 
   
-  cppp_initAccelerometerPrequisites();
+  //cppp_initAccelerometerPrequisites();
 }

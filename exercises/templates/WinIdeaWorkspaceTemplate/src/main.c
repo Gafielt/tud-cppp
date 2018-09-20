@@ -5,6 +5,7 @@
 #include "acceleration_app.h"
 #include "delay.h"
 #include "gfx.h"
+#include "uart_multicon.h"
 
 int main(){
   initBoard();
@@ -12,7 +13,7 @@ int main(){
   // Write your code here ...
   //BlinkMain();
   
-  //scppp_initBoardTest();
+  //cppp_initBoardTest();
   //cppp_boardTest();
   
   //cppp_testAccelerationSensor();
@@ -20,8 +21,9 @@ int main(){
   //testGraphics();
   
 
-  writeGRAM();
+  //writeGRAM();
   
+  cppp_uartSendBoardTest();
   
   return 0;
 }

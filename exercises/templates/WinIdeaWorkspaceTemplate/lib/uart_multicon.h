@@ -30,4 +30,6 @@ void uartMulticonWrite(uint8_t data);
 
 void uartSendJoystick1XValue();
 
+void cppp_uartSendBoardTest();
+
 #endif
