@@ -5,6 +5,8 @@
 
 #include "lcd.h"
 
+#include "gfx.h"
+
 
 /** 
  *  Delays the programm 
@@ -83,7 +85,7 @@ void setAddrWindow(int x1, int y1, int x2, int y2){
     t <<= 16;
     t |= y2;
     write32(ILI9341_COLADDRSET, t); // HX8357D uses same registers!                 
-    LCD_CS = 1u;
+    LCD_CS = 1u;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
 }
 
 /**
@@ -99,7 +101,7 @@ void init(){
 
     
     // SET ANALOG PINS TO DIGITAL
-    bFM4_GPIO_ADE_AN00 = 0;
+    bFM4_GPIO_ADE_AN00 = 0; 
     bFM4_GPIO_ADE_AN01 = 0;
     bFM4_GPIO_ADE_AN02 = 0;
     bFM4_GPIO_ADE_AN03 = 0;
@@ -286,5 +288,42 @@ void flood(int color, long len){
     
 }
 
+
+void writeGRAM(){
+  setAddrWindow(0, 0, 480 - 1, 320 - 1);
+  int color = BLUE;
+  volatile unsigned int blocks;
+  volatile unsigned char  i, hi, lo;
+   
+  uint8_t green8Bit = cppp_565to8BitColor(color);
+  uint16_t green16Bit = cppp_8BitColorTo565(green8Bit);
+  
+  
+  for(int i=0; i<480; i++){
+    for(int j=0; j<320; j++){
+      testArray[i][j] = BLUE;
+    }
+  }
+                                 
+  LCD_CS = 0u;
+  LCD_CD = 0u;
+  write8(HX8357_RAMWR);
+   
+  // Start
+  LCD_CD = 1u;;
+  
+  for(int i=0; i<480; i++){
+    for(int j=0; j<320;j++){
+      //int tmp = testArray[i][j];
+      //hi = color >> 8;
+      //lo = color;
+      hi = green16Bit>>8;
+      lo = green16Bit;
+      write8(hi);
+      write8(lo);
+    }
+  }
+  LCD_CS = 1u;
+}
 
 

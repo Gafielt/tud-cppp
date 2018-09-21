@@ -7,6 +7,7 @@
 #include "gfx.h"
 #include "src/display.h"
 #include "lib/uart_usb.h"
+#include "rgb_led.h"
 #include <string.h>
 
 
@@ -29,5 +30,7 @@ void uartMulticonWriteTest();
 void uartMulticonWrite(uint8_t data);
 
 void uartSendJoystick1XValue();
+
+void cppp_uartSendBoardTest();
 
 #endif

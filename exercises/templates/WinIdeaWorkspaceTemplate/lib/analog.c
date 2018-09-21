@@ -1,7 +1,9 @@
+#include "pdl_header.h"
+#include "pins.h"
 #include "analog.h"
 
-void InitAdc()
-{
+
+void cppp_initAdc(void){
   // declare configuration structures
   stc_adc_config_t stcConfig;   // ADC configuration
   stc_adc_scan_t   stcScanCfg;  // Scan configuration
@@ -66,7 +68,7 @@ void InitAdc()
   return;
 }
 
-void pollData(uint32_t *u32Data){
+void cppp_adcPollData(uint32_t *u32Data){
   // Wait for ADC data to receive.
   do
   {
@@ -78,7 +80,7 @@ void pollData(uint32_t *u32Data){
 }
 
 
-void getAnalogValues(uint8_t *analog11, uint8_t *analog12, uint8_t *analog13, uint8_t *analog16, uint8_t *analog17,  uint8_t *analog19, uint8_t *analog23){
+void cppp_getAnalogValues(uint8_t *analog11, uint8_t *analog12, uint8_t *analog13, uint8_t *analog16, uint8_t *analog17,  uint8_t *analog19, uint8_t *analog23){
   uint32_t u32Data = 0u;     // 32 Bit Data buffer for measurements
   
   // Start single ADC Scan 
@@ -86,7 +88,7 @@ void getAnalogValues(uint8_t *analog11, uint8_t *analog12, uint8_t *analog13, ui
 
   uint8_t i = 0;
   for(i = 0; i<7; i++){
-    pollData(&u32Data);
+    cppp_adcPollData(&u32Data);
     // extract the ADC value from the data
     switch(i){
       case 0: *analog11 = (uint8_t)(Adc_GetScanData(&ADC0, u32Data) >> 4);
@@ -107,7 +109,7 @@ void getAnalogValues(uint8_t *analog11, uint8_t *analog12, uint8_t *analog13, ui
   }
 }
 
-uint16_t map(uint16_t x, uint16_t in_min, uint16_t in_max, uint16_t out_min, uint16_t out_max){
+uint16_t cppp_mapValueRange(uint16_t x, uint16_t in_min, uint16_t in_max, uint16_t out_min, uint16_t out_max){
   uint32_t result =  (x - in_min); // * (out_max - out_min) / (in_max - in_min) + out_min;
   result *= (out_max - out_min);
   result /= (in_max - in_min); 
@@ -115,7 +117,7 @@ uint16_t map(uint16_t x, uint16_t in_min, uint16_t in_max, uint16_t out_min, uin
   return result; 
 }
 
-uint16_t readTouchX(){
+uint16_t cppp_readTouchX(void){
   TOUCH_XP_IO = 1u;   // pinMode(_xp, OUTPUT);
   TOUCH_XM_IO = 1u;   // pinMode(_xm, OUTPUT);
   bFM4_GPIO_ADE_AN11 = 0u; // ANALOG 11 OFF
@@ -145,7 +147,7 @@ uint16_t readTouchX(){
   uint16_t i = 0;
   uint16_t samples[2];
   for(i=0; i<2; i++){
-    getAnalogValues(&analog11, &analog12, &analog13, &analog16, &analog17, &analog19, &analog23);
+    cppp_getAnalogValues(&analog11, &analog12, &analog13, &analog16, &analog17, &analog19, &analog23);
     samples[i] = analog11;
   }
   if (samples[0] - samples[1] < -4 || samples[0] - samples[1] > 4) {
@@ -154,12 +156,12 @@ uint16_t readTouchX(){
     samples[1] = (samples[0] + samples[1]) >> 1; // average 2 samples
   } 
   uint8_t xCorrected = TOUCHXMAX + TOUCHXMIN - samples[1];
-  uint16_t result = map(xCorrected, TOUCHXMIN, TOUCHXMAX, 0, 480);
+  uint16_t result = cppp_mapValueRange(xCorrected, TOUCHXMIN, TOUCHXMAX, 0, 480);
   return result;
 }
 
 
-uint16_t readTouchY(){
+uint16_t cppp_readTouchY(void){
   TOUCH_YP_IO = 1u;   //    pinMode(_yp, OUTPUT);
   TOUCH_YM_IO = 1u;   //    pinMode(_ym, OUTPUT);
   bFM4_GPIO_ADE_AN12 = 0u;  // ANALOG 12 OFF
@@ -188,7 +190,7 @@ uint16_t readTouchY(){
   uint16_t i = 0;
   uint16_t samples[2];
   for(i=0; i<2; i++){
-    getAnalogValues(&analog11, &analog12, &analog13, &analog16, &analog17, &analog19, &analog23);
+    cppp_getAnalogValues(&analog11, &analog12, &analog13, &analog16, &analog17, &analog19, &analog23);
     samples[i] = analog12;
   }
   if (samples[0] - samples[1] < -4 || samples[0] - samples[1] > 4) {
@@ -197,11 +199,11 @@ uint16_t readTouchY(){
     samples[1] = (samples[0] + samples[1]) >> 1; // average 2 samples
   } 
   uint8_t yCorrected = TOUCHYMAX + TOUCHYMIN - samples[1];
-  uint16_t result = map(yCorrected, TOUCHYMIN, TOUCHYMAX, 0, 320);
+  uint16_t result = cppp_mapValueRange(yCorrected, TOUCHYMIN, TOUCHYMAX, 0, 320);
   return result;
 }
 
-uint16_t readTouchZ(){
+uint16_t cppp_readTouchZ(void){
   //uint16_t rXPlate = 248;  // Resistance between X+ and X-
   
   // Set X+ to ground
@@ -232,9 +234,8 @@ uint16_t readTouchZ(){
   uint8_t analog19;
   uint8_t analog23;
   uint8_t analog17;
-  getAnalogValues(&analog11, &analog12, &analog13, &analog16, &analog17, &analog19, &analog23);
+  cppp_getAnalogValues(&analog11, &analog12, &analog13, &analog16, &analog17, &analog19, &analog23);
   uint8_t z1 = analog11; // z1 = Xm = analog6
   uint8_t z2 = analog12; // z2 = Ym = analog7 
-  
   return (255-(z2-z1));
 }

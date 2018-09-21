@@ -180,7 +180,7 @@ void uartSendJoystick1XValue(){
   uint8_t analog19;
   uint8_t analog23;
   uint8_t analog17;
-  getAnalogValues(&analog11, &analog12, &analog13, &analog16, &analog17, &analog19, &analog23);
+  cppp_getAnalogValues(&analog11, &analog12, &analog13, &analog16, &analog17, &analog19, &analog23);
   setCursor_s(0, 319); // set to top-left corner
   char freeSpace[] = " ";
   char headlineText[] = "  UART DEBUG";
@@ -203,4 +203,106 @@ void uartSendJoystick1XValue(){
   writeText_s("  Joystick 2 Y-Achse: ");
   writeNumberOnDisplayRight_s(&analog23);
   writeTextln_s("");
+}
+
+void cppp_uartSendBoardTest(){
+  initUART3();
+  cppp_initLEDs();
+  uint8_t analog11;
+  uint8_t analog12;
+  uint8_t analog13;
+  uint8_t analog16;
+  uint8_t analog19;
+  uint8_t analog23;
+  uint8_t analog17;
+  
+  while(1u){
+    cppp_getAnalogValues(&analog11, &analog12, &analog13, &analog16, &analog17, &analog19, &analog23);
+    
+    setCursor_s(0,319); 
+    //cppp_fillScreen(BLACK);
+    char freeSpace[] = " ";
+    char headlineText[] = "  *** UART3 SEND BOARD TEST ***";
+    setTextColor_s(YELLOW);
+    writeTextln_s(freeSpace);
+    writeTextln_s(headlineText);
+    setTextColor_s(WHITE);
+    writeTextln_s(freeSpace);
+    
+    // Get analog values of the touchscreen
+    uint16_t touchZ = cppp_readTouchZ();
+    uint16_t touchX = touchZ != 0 ? cppp_readTouchX() : 0;
+    uint16_t touchY = touchZ != 0 ? cppp_readTouchY() : 0;
+    
+    if(touchX > 480 || touchY>320){
+       touchX = 0;
+       touchY = 0;
+       touchZ = 0;
+    }
+    
+    // Write x,y, and z-values on the screen
+    char touchXText[] = "  Touch X: ";
+    char touchYText[] = "  Touch Y: ";
+    char touchZText[] = "  Touch Z: ";
+    
+    writeText_s("Sending Brightness [Value:");
+    writeNumberOnDisplayRight_s(&analog17);
+    writeTextln_s("] ...");
+    uartMulticonWrite(analog17);
+    
+    /*
+    writeText_s("Sending Joystick 1 X [Value:");
+    writeNumberOnDisplayRight_s(&analog16);
+    writeTextln_s("] ...");
+    uartMulticonWrite(analog16);
+    
+    
+    writeText_s("Sending Joystick 1 Y [Value:");
+    writeNumberOnDisplayRight_s(&analog19);
+    writeTextln_s("] ...");
+    uartMulticonWrite(analog19);
+    */
+    
+    /*
+    uint8_t counter = 0;
+    while (TRUE == Mfs_Uart_GetStatus(&UART3, UartRxFull)) {
+      uint8_t tmp = Mfs_Uart_ReceiveData(&UART3);
+      switch(counter){
+      case 0: 
+        writeText_s("Receiving Brightness [Value:");
+        writeNumberOnDisplayRight_s(&tmp);
+        writeTextln_s("] ...");
+        break;
+      case 1: 
+        writeText_s("Receiving Joystick 1 X [Value:");
+        writeNumberOnDisplayRight_s(&tmp);
+        writeTextln_s("] ...");
+        break;
+        
+      case 2:
+        writeText_s("Receiving Joystick 1 Y [Value:");
+        writeNumberOnDisplayRight_s(&tmp);
+        writeTextln_s("] ...");
+        break;
+        
+      }
+      
+      if(counter==1)
+        break;
+      counter++;
+    }
+    */
+    while(FALSE == Mfs_Uart_GetStatus(&UART3, UartRxFull)){}
+    
+    if(TRUE == Mfs_Uart_GetStatus(&UART3, UartRxFull)){
+      uint8_t tmp = Mfs_Uart_ReceiveData(&UART3);
+      writeText_s("Receiving Brightness [Value:");
+      writeNumberOnDisplayRight_s(&tmp);
+      writeTextln_s("] ...");
+      if(tmp==1)
+        cppp_redLEDOn();
+      else
+        cppp_redLEDOff();
+    }
+  }
 }

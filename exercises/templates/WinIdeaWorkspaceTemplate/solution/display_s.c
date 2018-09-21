@@ -23,7 +23,7 @@ uint16_t color565_s(const uint8_t r, const uint8_t g, const uint8_t b){
 void printPattern_s(const uint16_t backgroundColor, const uint16_t foregroundColor) {
   int j;
   uint8_t blocksize = 4;
-  fillScreen(backgroundColor);
+  cppp_fillScreen(backgroundColor);
   for(int i=0; i<480;i+=blocksize){
     if(i%(blocksize*2)==0) j=0;
     else  j=blocksize;

@@ -1,28 +1,21 @@
-/**
- *  This code is based on:  https://github.com/adafruit/Adafruit-GFX-Library &  https://github.com/adafruit/TFTLCD-Library
- *  The code is converted by Puria Izady for the Cypress FM4  microcontroller
- */
 #include <stdlib.h>
-
 #include "gfx.h"
 #include "lcd.h"
 #include "src/display.h"
+#include "glcdfont.h"
 
 static const char *WHITESPACE = " ";
 
 // Fix for the missing declaration of itoa in stdlib.h.
 char* itoa(int, char* , int);
 
-/**
- *  Fills all the Screen with the given color.
- */
-void fillScreen(int16_t color){
+void cppp_fillScreen(int16_t color){
     setAddrWindow(0, 0, 480 - 1, 320 - 1);
     flood(color, 480 * 320);
 }
 
 /**
- *  Draws a horizontal line starting at (x,y) and ending at (x+length,y)
+ * Draws a horizontal line starting at (x,y) and ending at (x+length,y)
  */
 void drawFastHLine(int x, int y, int length, int16_t color) {
     int _width = WIDTH;
@@ -586,4 +579,18 @@ void writeFloat(float number, uint8_t precision, uint8_t width){
 
   int test = sprintf(buffer, settings, number);
   writeText_s(buffer);
+}
+
+char cppp_565to8BitColor(int color){
+  uint8_t red   = (color&0xE000)>>8;
+  uint8_t green = (color&0x0700)>>6;               
+  uint8_t blue  = (color&0x0018)>>3;  
+  return (red | green | blue); 
+}
+
+int cppp_8BitColorTo565(char color){
+  uint16_t red    = (color&0xE0)<<8; 
+  uint16_t green  = (color&0x1C)<<6;
+  uint16_t blue   = (color&0x03)<<3;
+  return (red|green|blue);
 }
