@@ -1,13 +1,14 @@
 /** 
- * @brief This is the 'classic' fixed-space bitmap font for Adafruit_GFX since 1.0.
+ * @file glcdfont.h
+ * @brief <strong> This is the 'classic' fixed-space bitmap font for Adafruit_GFX since 1.0.
  * See gfxfont.h for newer custom bitmap font info.
- * See http://www.theasciicode.com.ar/american-standard-code-information-interchange/ascii-codes-table.png for table
+ * See http://www.theasciicode.com.ar/american-standard-code-information-interchange/ascii-codes-table.png for table </strong>
  */
 #ifndef FONT5X7_H
 #define FONT5X7_H
 
 /**
- * @brief ASCII 5x7 font
+ * @brief ASCII 5x7 font array.
  */
 static const unsigned char font[] = {
 	0x00, 0x00, 0x00, 0x00, 0x00,

@@ -1,5 +1,5 @@
 /**
- * @brief <strong>Register names of the lcd from Peter Barrett's Microtouch code. </strong>
+ * @brief <strong>Register names of the lcd from Peter Barrett's Microtouch code.</strong>
  */
 #define ILI932X_START_OSC          0x00
 #define ILI932X_DRIV_OUT_CTRL      0x01

@@ -6,6 +6,7 @@
 #include "delay.h"
 #include "gfx.h"
 #include "uart_multicon.h"
+#include "solution\graphicstest.h"
 
 int main(){
   initBoard();
@@ -18,12 +19,12 @@ int main(){
   
   //cppp_testAccelerationSensor();
   
-  //testGraphics();
+  testGraphics();
   
 
   //writeGRAM();
   
-  cppp_uartSendBoardTest();
+  //cppp_uartSendBoardTest();
   
   return 0;
 }

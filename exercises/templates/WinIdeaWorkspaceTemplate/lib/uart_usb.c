@@ -1,7 +1,8 @@
 #include "uart_usb.h"
 #include "src\display.h"
-
-void UART_USB_Init(){
+#include <string.h>
+         
+void cppp_uartUsbInit(void){
   pstcUart0 = &UART0; 
   PDL_ZERO_STRUCT(stcUartConfig); 
   SetPinFunc_SIN0_0();
@@ -21,7 +22,7 @@ void UART_USB_Init(){
   Mfs_Uart_EnableFunc(pstcUart0, UartTx); 
   Mfs_Uart_EnableFunc(pstcUart0, UartRx);
 }
-int UART_USB(void){
+void cppp_uartUsb(void){
   for (u8Count = 0u; u8Count < strlen((char*)&szUartTxBuf); u8Count++) {
     // wait until TX buffer empty
     while (TRUE != Mfs_Uart_GetStatus(pstcUart0, UartTxEmpty)) {}
@@ -39,7 +40,7 @@ int UART_USB(void){
   }
 }
 
-void UART_USB_Print(const char* text){
+void cppp_uartUsbPrint(const char* text){
   for (u8Count = 0u; u8Count < strlen((char*)&text); u8Count++) {
     // wait until TX buffer empty
     while (TRUE != Mfs_Uart_GetStatus(pstcUart0, UartTxEmpty)) {}

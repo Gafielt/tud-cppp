@@ -28,7 +28,7 @@ void printPattern_s(const uint16_t backgroundColor, const uint16_t foregroundCol
     if(i%(blocksize*2)==0) j=0;
     else  j=blocksize;
     for( j;j<320;j+=blocksize*2)
-      fillRect(i,j,blocksize,blocksize,foregroundColor);
+      cppp_fillRect(i,j,blocksize,blocksize,foregroundColor);
     }
 }
 
@@ -73,11 +73,11 @@ void drawChar_s(int x, int y,  char c,  int color,  int bg, char size) {
     else      line = 0x0; // Padding line toward next character
     for(j=0; j<8; j++, line >>= 1) { // Draw in y-direction
       if(line & 0x1) {
-        if(size == 1) drawPixel(x + i, y - j, color);
-        else          fillRect(x + (i * size), y - ((j+1) * size)+1, size, size, color); //keep in mind fillRect wants the lower left corner 
+        if(size == 1) cppp_drawPixel(x + i, y - j, color);
+        else          cppp_fillRect(x + (i * size), y - ((j+1) * size)+1, size, size, color); //keep in mind cppp_fillRect wants the lower left corner 
       } else if(bg != color) {
-        if(size == 1) drawPixel(x + i, y - j, bg);
-        else          fillRect(x + (i * size), y - ((j+1) * size)+1, size, size, bg);
+        if(size == 1) cppp_drawPixel(x + i, y - j, bg);
+        else          cppp_fillRect(x + (i * size), y - ((j+1) * size)+1, size, size, bg);
       }
     }
   }
