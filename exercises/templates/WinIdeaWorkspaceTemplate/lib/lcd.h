@@ -8,7 +8,7 @@
 #include "mcu.h"
 
 
-uint8_t testArray[480][320];
+uint8_t cppp_lcdArray[480][320];
 
 /**
  * @brief Represents a point where the touchscreen was touched
@@ -104,10 +104,21 @@ void cppp_setLR(void);
  * @brief Writes on the GRAM color len-times. 
  * @param color 565 rgb color 
  * @param len length of pixels of the GRAM that are going to be changed
+ * @return void
  */
 void cppp_floodLCD(int color, long len);
 
 
-void writeGRAM();
+/**
+ * @brief Fill the cppp_LCDArray with a chess pattern.
+ * @return void
+ */
+void cppp_testFillLCDArray(void);
+
+/**
+ * @brief Through this function the array cppp_LCDArray will be pushed to the GRAM of the LCD.
+ * @return void
+ */
+void cppp_writeGRAM(void);
 
 #endif /* LCD_H */

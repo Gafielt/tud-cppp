@@ -243,7 +243,7 @@ void cppp_printAccelerationsLcd(float x_out, float y_out, float z_out){
     writeTextln_s(freeSpace);
     writeTextln_s(freeSpace);
     writeText_s("      X_OUT = ");
-    writeFloat(x_out, 4, 10);
+    cppp_writeFloat(x_out, 4, 10);
     writeTextln_s(freeSpace);
     writeTextln_s(freeSpace);
     writeText_s("      y_OUT = ");
@@ -256,7 +256,7 @@ void cppp_printAccelerationsLcd(float x_out, float y_out, float z_out){
     writeTextln_s(freeSpace);
     writeText_s("      Loop #");
     uint16_t loopNumber = (uint16_t) cppp_counter;
-    write16BitDigit(&loopNumber, 2);
+    cppp_write16BitDigit(&loopNumber, 2);
 }
 
 int cppp_testAccelerationSensor(void)

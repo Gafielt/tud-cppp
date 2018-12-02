@@ -94,15 +94,15 @@ void cppp_boardTest(void){
     char lightSensor[] = "    Brightness: "; 
     
     writeText_s(touchXText);
-    write3Digits16Bit(&touchX);
+    cppp_write3Digits16Bit(&touchX);
     writeText_s(lightSensor);
     writeNumberOnDisplayRight_s(&analog17);
     writeTextln_s("");
     writeText_s(touchYText);
-    write3Digits16Bit(&touchY);
+    cppp_write3Digits16Bit(&touchY);
     writeTextln_s("");
     writeText_s(touchZText);
-    write3Digits16Bit(&touchZ);
+    cppp_write3Digits16Bit(&touchZ);
     writeTextln_s("");
     
     writeTextln_s(freeSpace);
@@ -140,13 +140,13 @@ void cppp_boardTest(void){
     writeTextln_s("");
     if(cppp_accelerationGetValues() == 1){
       writeText_s("  Acceleration X: ");
-      writeFloat(accelerationValues[0], 4, 10);
+      cppp_writeFloat(accelerationValues[0], 4, 10);
       writeTextln_s(freeSpace);
       writeText_s("  Acceleration Y: ");
-      writeFloat(accelerationValues[1], 4, 10);
+      cppp_writeFloat(accelerationValues[1], 4, 10);
       writeTextln_s(freeSpace);
       writeText_s("  Acceleration Z: ");
-      writeFloat(accelerationValues[2], 4, 10);
+      cppp_writeFloat(accelerationValues[2], 4, 10);
     }
   }
 }

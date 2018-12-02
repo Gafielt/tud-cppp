@@ -56,13 +56,13 @@ void debugTouch_s(){
   char touchYText[] = "  Touch Y: ";
   char touchZText[] = "  Touch Z: ";
   writeText_s(touchXText);
-  write3Digits16Bit(&touchX);
+  cppp_write3Digits16Bit(&touchX);
   writeTextln_s("");
   writeText_s(touchYText);
-  write3Digits16Bit(&touchY);
+  cppp_write3Digits16Bit(&touchY);
   writeTextln_s("");
   writeText_s(touchZText);
-  write3Digits16Bit(&touchZ);
+  cppp_write3Digits16Bit(&touchZ);
   writeTextln_s("");
 }
 

@@ -81,17 +81,21 @@ void writeTextln(const char *text);
 void writeTextln_s(const char *text);
 
 /**
- * Writes a 16 bit variable on the display.
+ * Writes a 8 bit variable on the display.
  */
 void writeNumberOnDisplay(const uint8_t *value);
 void writeNumberOnDisplay_s(const uint8_t *value);
 
 /**
- * Writes a 16 bit variable on the display (right-aligned).
+ * Writes a 8 bit variable on the display (right-aligned).
  * This function writes out six right-aligned digits ("65535\0").
  * 
  */
 void writeNumberOnDisplayRight(const uint8_t *value);
 void writeNumberOnDisplayRight_s(const uint8_t *value);
+
+
+void write16BitNumberOnDisplay(const uint16_t *value, uint8_t mode);
+void write16BitNumberOnDisplay_s(const uint16_t *value, uint8_t mode);
 
 #endif

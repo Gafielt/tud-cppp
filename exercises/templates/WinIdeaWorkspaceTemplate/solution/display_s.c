@@ -131,22 +131,78 @@ void writeNumberOnDisplayRight_s(const uint8_t *value){
   const uint8_t base = 10;
   char buffer[6];
   char *bufferStart = buffer;
-  if (*value < 10000) {
+  if(*value < 100000){
     *bufferStart = ' ';
     bufferStart++;
-    if (*value < 1000) {
+    if (*value < 10000) {
       *bufferStart = ' ';
       bufferStart++;
-      if (*value < 100) {
+      if (*value < 1000) {
         *bufferStart = ' ';
         bufferStart++;
-        if (*value < 10) {
+        if (*value < 100) {
           *bufferStart = ' ';
           bufferStart++;
+          if (*value < 10) {
+            *bufferStart = ' ';
+            bufferStart++;
+          }
         }
       }
     }
   }
   itoa(*value, bufferStart, base);
   writeText_s(buffer);
+}
+
+void write16BitNumberOnDisplay_s(const uint16_t *value, uint8_t mode){
+  if(mode == 1){
+    const uint8_t base = 10;
+    char buffer[6];
+    char *bufferStart = buffer;
+    if(*value < 100000){
+      *bufferStart = ' ';
+      bufferStart++;
+      if (*value < 10000) {
+        *bufferStart = ' ';
+        bufferStart++;
+        if (*value < 1000) {
+          *bufferStart = ' ';
+          bufferStart++;
+          if (*value < 100) {
+            *bufferStart = ' ';
+            bufferStart++;
+            if (*value < 10) {
+              *bufferStart = ' ';
+              bufferStart++;
+            }
+          }
+        }
+      }
+    }
+    itoa(*value, bufferStart, base);
+    writeText_s(buffer);
+  }
+  else if(mode == 2){
+  const uint8_t base = 10;
+    uint8_t numberOfDigits = 0;
+    if(*value < 100000){
+      numberOfDigits = 5;
+      if (*value < 10000) {
+       numberOfDigits = 4;
+        if (*value < 1000) {
+          numberOfDigits = 3;
+          if (*value < 100) {
+            numberOfDigits = 2;
+            if (*value < 10) {
+             numberOfDigits = 1;
+            }
+          }
+        }
+      }
+    }
+    char buffer[numberOfDigits];
+    itoa(*value, buffer, base);
+    writeText_s(buffer);
+  }  
 }

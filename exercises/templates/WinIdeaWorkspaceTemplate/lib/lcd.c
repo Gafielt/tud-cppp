@@ -235,23 +235,25 @@ void cppp_floodLCD(int color, long len){
     
 }
 
-
-void writeGRAM(){
-  cppp_setAddrWindow(0, 0, 480 - 1, 320 - 1);
-  int color = BLUE;
-  volatile unsigned int blocks;
-  volatile unsigned char  i, hi, lo;
-   
-  uint8_t green8Bit = cppp_565to8BitColor(color);
-  uint16_t green16Bit = cppp_8BitColorTo565(green8Bit);
-  
-  
-  for(int i=0; i<480; i++){
-    for(int j=0; j<320; j++){
-      testArray[i][j] = BLUE;
+void cppp_testFillLCDArray(void){
+  int j;
+  uint8_t blocksize = 2;
+  for(int i=0; i<480;i+=blocksize){
+    if(i%(blocksize*2)==0) j=0;
+    else  j=blocksize;
+    for( j;j<320;j+=blocksize*2){
+      cppp_lcdArray[i][j] = cppp_565to8BitColor(WHITE);  
     }
   }
-                                 
+}
+
+
+void cppp_writeGRAM(void){
+  cppp_setAddrWindow(0, 0, 480 - 1, 320 - 1);
+  int color = RED;
+  volatile unsigned int blocks;
+  volatile unsigned char  i, hi, lo;
+  
   LCD_CS = 0u;
   LCD_CD = 0u;
   cppp_write8(HX8357_RAMWR);
@@ -261,11 +263,10 @@ void writeGRAM(){
   
   for(int i=0; i<480; i++){
     for(int j=0; j<320;j++){
-      //int tmp = testArray[i][j];
-      //hi = color >> 8;
-      //lo = color;
-      hi = green16Bit>>8;
-      lo = green16Bit;
+      int tmp = cppp_lcdArray[i][j];
+      tmp = cppp_8BitColorTo565(tmp);
+      hi = tmp >> 8;
+      lo = tmp;
       cppp_write8(hi);
       cppp_write8(lo);
     }

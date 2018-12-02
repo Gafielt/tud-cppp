@@ -403,62 +403,46 @@ void cppp_fillTriangle(int16_t x0, int16_t y0, int16_t x1, int16_t y1, int16_t x
 }
 
 
-
-/**
- * Write a 8 bit variable on the display
- */
-void write8BitValueOnLCD(const uint8_t *value){
+void cppp_write8BitValueOnLCD(const uint8_t *value){
   char buffer[20];
   itoa(*value, buffer, 10);
   writeText_s(buffer);
 }
 
-/**
- * Write a 16 bit variable on the display
- */
-void write16BitValueOnLCD(const uint16_t *value){
+void cppp_write16BitValueOnLCD(const uint16_t *value){
   char buffer[20];
   itoa(*value, buffer, 10);
   writeText_s(buffer);
 }
 
-/**
- * Write a 32 bit variable on the display
- */
-void write32BitValueOnLCD(const uint32_t *value){
+void cppp_write32BitValueOnLCD(const uint32_t *value){
   char buffer[20];
   itoa(*value, buffer, 10);
   writeText_s(buffer);
 }
 
-/**
- * Write 3 digits long 8 bit variable on the screen with automatic freespace if number is smaller than 3 digits
- */
-void write3Digits8Bit(const uint8_t *value){
+void cppp_write3Digits8Bit(const uint8_t *value){
   if(*value < 10){
     writeText_s(WHITESPACE);
   }
   if(*value < 100){
     writeText_s(WHITESPACE);
   }
-  write8BitValueOnLCD(value);
+  cppp_write8BitValueOnLCD(value);
 }
 
-/**
- * Write 3 digits long 16 bit variable on the screen with automatic freespace if number is smaller than 3 digits
- */
-void write3Digits16Bit(const uint16_t *value){
+void cppp_write3Digits16Bit(const uint16_t *value){
   if(*value < 10){
     writeText_s(WHITESPACE);
   }
   if(*value < 100){
     writeText_s(WHITESPACE);
   }
-  write16BitValueOnLCD(value);
+  cppp_write16BitValueOnLCD(value);
 }
 
 
-void write16BitDigit(const uint16_t *value, uint8_t mode){
+void cppp_write16BitDigit(const uint16_t *value, uint8_t mode){
   if(mode == 1){
     const uint8_t base = 10;
     char buffer[6];
@@ -510,7 +494,7 @@ void write16BitDigit(const uint16_t *value, uint8_t mode){
   }
 }
 
-void write8BitDigit(const uint8_t *value){
+void cppp_write8BitDigit(const uint8_t *value){
   const uint8_t base = 10;
     uint8_t numberOfDigits = 0;
     if (*value < 1000) {
@@ -527,7 +511,7 @@ void write8BitDigit(const uint8_t *value){
     writeText_s(buffer);  
 }
 
-void writeFloat(float number, uint8_t precision, uint8_t width){
+void cppp_writeFloat(float number, uint8_t precision, uint8_t width){
   char buffer[width];
   
   char settings[4];

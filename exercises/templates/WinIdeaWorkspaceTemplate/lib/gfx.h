@@ -232,14 +232,64 @@ void cppp_drawTriangle(int16_t x0, int16_t y0, int16_t x1, int16_t y1, int16_t x
  */
 void cppp_fillTriangle(int16_t x0, int16_t y0, int16_t x1, int16_t y1, int16_t x2, int16_t y2, uint16_t color);
 
-void write8BitValueOnLCD(const uint8_t *value);
-void write16BitValueOnLCD(const uint16_t *value);
-void write32BitValueOnLCD(const uint32_t *value);
-void write3Digits8Bit(const uint8_t *value);
-void write3Digits16Bit(const uint16_t *value);
-void write16BitDigit(const uint16_t *value, uint8_t mode);
-void write8BitDigit(const uint8_t *value);
-void writeFloat(float number, uint8_t precision, uint8_t width);
+
+/**
+ * @brief Write a 8 bit variable on the display aligned to the left.
+ * @param value 8 bit number
+ * @return void
+ */
+void cppp_write8BitValueOnLCD(const uint8_t *value);
+
+/**
+ * @brief Write a 16 bit variable on the display aligned to the left.
+ * @param value 16 bit number
+ * @return void
+ */
+void cppp_write16BitValueOnLCD(const uint16_t *value);
+
+/**
+ * @brief Write a 32 bit variable on the display aligned to the left.
+ * @param value 32 bit number
+ * @return void
+ */
+void cppp_write32BitValueOnLCD(const uint32_t *value);
+
+/**
+ * @brief Write 3 digits long 8 bit variable on the screen left aligned with automatic freespace if number is smaller than 3 digits.
+ * @param value 8 bit number
+ * @return void
+ */
+void cppp_write3Digits8Bit(const uint8_t *value);
+
+/**
+ * @brief Write 3 digits long 16 bit variable on the screen left aligned with automatic freespace if number is smaller than 3 digits.
+ * @param value 16 bit number
+ * @return void
+ */
+void cppp_write3Digits16Bit(const uint16_t *value);
+
+/**
+ * @brief Write 16 bit variable on the screen left or right aligned with automatic freespace if number is smaller than 3 digits.
+ * @param value 16 bit number
+ * @param mode if 1 right aligned else if 2 left aligned
+ * @return void
+ */
+void cppp_write16BitDigit(const uint16_t *value, uint8_t mode);
+
+/**
+ * @brief Write 8 bit digit on the screen with the minimum length of the char array.
+ 
+ * @param value 8 bit number
+ */
+void cppp_write8BitDigit(const uint8_t *value);
+
+/**
+ * @brief Write a float number on the screen.
+ * @param number float number
+ * @param precision float precision
+ * @param width length of char array
+ */
+void cppp_writeFloat(float number, uint8_t precision, uint8_t width);
 
 /**
  * @brief Convert a 16 bit 565 rgb color to a 8 bit rgb color.
