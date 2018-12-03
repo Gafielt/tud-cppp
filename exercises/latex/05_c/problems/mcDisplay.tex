@@ -208,10 +208,12 @@ Implementiere zur Ausgabe von Zahlen die Funktionen \lstinline|writeNumberOnDisp
 Erstere soll die per Pointer übergebene Zahl linksbündig ausgeben, Zweitere soll die Zahl rechtsbündig ausgeben.
 Rechtsbündig bedeutet hier, dass die Ausgabe immer diegleiche Breite hat, egal ob der Wert \lstinline|0| oder \lstinline|255| ist (also: 3 Ziffern).
 Verwende die Funktion \lstinline|itoa| (aus \filename{stdlib.h}\footnote{\url{http://www.cplusplus.com/reference/cstdlib/itoa/}}), um den per Zeiger übergebenen Wert in ein \lstinline|char|-Array zu schreiben und anschließend mittels \lstinline|writeText| auf dem Display aus.
-\end{enumerate}
 
 \item 
 Implementiere die Funktion \lstinline|write16BitNumberOnDisplay(const uint8_t 16, uint8_t mode)| die eine 16 Bit Zahl auf dem Display ausgeben soll. Hierbei soll zwischen linksbündige und rechtsbündige Schreibweise unterschieden werden. Gilt \lstinline|mode == 0|, dann soll die Zahl linksbündig angezeigt werden, sonst rechtsbündig. 
+\end{enumerate}
+
+
 
 \hints {
     \item Falls du Sonderzeichen darstellen möchtest, kannst du dich an folgender Tabelle orientieren: \url{http://www.theasciicode.com.ar/american-standard-code-information-interchange/ascii-codes-table.png}.
