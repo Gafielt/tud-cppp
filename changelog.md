@@ -1,6 +1,12 @@
 1. Exercises: cppp_exercises.pdf
 2. Slides: cppp_lecture.pdf
 
+## Changes on 2018-09-12
+
+### Exercises
+
+* Ex 19: Bugfix in sample solution of LXOR
+
 ## Changes on 2018-09-11
 
 ### Slides

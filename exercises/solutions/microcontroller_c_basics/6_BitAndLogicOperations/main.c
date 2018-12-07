@@ -66,7 +66,8 @@ int main()
   printf("    NOT a:  %d\n", !a);
   printf("a  LAND b:  %d\n", a && b);
   printf("a   LOR b:  %d\n", a || b);
-  printf("a  LXOR b:  %d\n", a != b);
+  // The negation is necessary to enforce that the left- and right-hand side are either 0 or 1
+  printf("a  LXOR b:  %d\n", !a != !b); 
   printf("a   IMP b:  %d\n", !a || b);
   printf("a BIIMP b:  %d\n", a == b);
   

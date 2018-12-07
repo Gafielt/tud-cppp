@@ -3,7 +3,6 @@
 int main(){
     initBoard();
     while(1) {
-        printValues();
-        delay(1000);
+        cppp_microDelay(1000);
     }
 }

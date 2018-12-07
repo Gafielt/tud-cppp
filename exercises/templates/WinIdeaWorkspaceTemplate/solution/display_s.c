@@ -23,12 +23,12 @@ uint16_t color565_s(const uint8_t r, const uint8_t g, const uint8_t b){
 void printPattern_s(const uint16_t backgroundColor, const uint16_t foregroundColor) {
   int j;
   uint8_t blocksize = 4;
-  fillScreen(backgroundColor);
+  cppp_fillScreen(backgroundColor);
   for(int i=0; i<480;i+=blocksize){
     if(i%(blocksize*2)==0) j=0;
     else  j=blocksize;
     for( j;j<320;j+=blocksize*2)
-      fillRect(i,j,blocksize,blocksize,foregroundColor);
+      cppp_fillRect(i,j,blocksize,blocksize,foregroundColor);
     }
 }
 
@@ -73,11 +73,11 @@ void drawChar_s(int x, int y,  char c,  int color,  int bg, char size) {
     else      line = 0x0; // Padding line toward next character
     for(j=0; j<8; j++, line >>= 1) { // Draw in y-direction
       if(line & 0x1) {
-        if(size == 1) drawPixel(x + i, y - j, color);
-        else          fillRect(x + (i * size), y - ((j+1) * size)+1, size, size, color); //keep in mind fillRect wants the lower left corner 
+        if(size == 1) cppp_drawPixel(x + i, y - j, color);
+        else          cppp_fillRect(x + (i * size), y - ((j+1) * size)+1, size, size, color); //keep in mind cppp_fillRect wants the lower left corner 
       } else if(bg != color) {
-        if(size == 1) drawPixel(x + i, y - j, bg);
-        else          fillRect(x + (i * size), y - ((j+1) * size)+1, size, size, bg);
+        if(size == 1) cppp_drawPixel(x + i, y - j, bg);
+        else          cppp_fillRect(x + (i * size), y - ((j+1) * size)+1, size, size, bg);
       }
     }
   }
@@ -131,22 +131,78 @@ void writeNumberOnDisplayRight_s(const uint8_t *value){
   const uint8_t base = 10;
   char buffer[6];
   char *bufferStart = buffer;
-  if (*value < 10000) {
+  if(*value < 100000){
     *bufferStart = ' ';
     bufferStart++;
-    if (*value < 1000) {
+    if (*value < 10000) {
       *bufferStart = ' ';
       bufferStart++;
-      if (*value < 100) {
+      if (*value < 1000) {
         *bufferStart = ' ';
         bufferStart++;
-        if (*value < 10) {
+        if (*value < 100) {
           *bufferStart = ' ';
           bufferStart++;
+          if (*value < 10) {
+            *bufferStart = ' ';
+            bufferStart++;
+          }
         }
       }
     }
   }
   itoa(*value, bufferStart, base);
   writeText_s(buffer);
+}
+
+void write16BitNumberOnDisplay_s(const uint16_t *value, uint8_t mode){
+  if(mode == 1){
+    const uint8_t base = 10;
+    char buffer[6];
+    char *bufferStart = buffer;
+    if(*value < 100000){
+      *bufferStart = ' ';
+      bufferStart++;
+      if (*value < 10000) {
+        *bufferStart = ' ';
+        bufferStart++;
+        if (*value < 1000) {
+          *bufferStart = ' ';
+          bufferStart++;
+          if (*value < 100) {
+            *bufferStart = ' ';
+            bufferStart++;
+            if (*value < 10) {
+              *bufferStart = ' ';
+              bufferStart++;
+            }
+          }
+        }
+      }
+    }
+    itoa(*value, bufferStart, base);
+    writeText_s(buffer);
+  }
+  else if(mode == 2){
+  const uint8_t base = 10;
+    uint8_t numberOfDigits = 0;
+    if(*value < 100000){
+      numberOfDigits = 5;
+      if (*value < 10000) {
+       numberOfDigits = 4;
+        if (*value < 1000) {
+          numberOfDigits = 3;
+          if (*value < 100) {
+            numberOfDigits = 2;
+            if (*value < 10) {
+             numberOfDigits = 1;
+            }
+          }
+        }
+      }
+    }
+    char buffer[numberOfDigits];
+    itoa(*value, buffer, base);
+    writeText_s(buffer);
+  }  
 }

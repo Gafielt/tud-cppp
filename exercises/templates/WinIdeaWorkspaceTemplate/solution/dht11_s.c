@@ -6,12 +6,12 @@
 uint8_t readDHT11_s(uint8_t *feuchtigkeit, uint8_t *temperatur) {
   
   Gpio1pin_Put(GPIO1PIN_P52, 1);
-  microDelay(250);
+  cppp_microDelay(250);
 	if (Gpio1pin_Get(GPIO1PIN_P52) == 0) {return 1;}									// Bus not free
   // MCU start signal (>=18ms)
   
   Gpio1pin_InitOut(GPIO1PIN_P52, Gpio1pin_InitVal(0u));
-	microDelay(20000);
+	cppp_microDelay(20000);
 
   Gpio1pin_InitIn(GPIO1PIN_P52, Gpio1pin_InitPullup(1u));
 	uint16_t timeout = 1000;
@@ -33,7 +33,7 @@ uint8_t readDHT11_s(uint8_t *feuchtigkeit, uint8_t *temperatur) {
 		{
 			timeout = 1000;
 			while(Gpio1pin_Get(GPIO1PIN_P52) == 0) {if (!timeout--) {return 7;}}		// Start to transmit 1-Bit (50 us)
-			microDelay(30);
+			cppp_microDelay(30);
 			dht11byte <<= 1;
 			if (Gpio1pin_Get(GPIO1PIN_P52) == 1)										// Hi > 30us (70 us) -> Bit=1										
 			{
@@ -82,6 +82,6 @@ void rauminformationen_s(){
       writeNumberOnDisplay_s(&feuchtigkeit); 
       writeTextln_s("");
       
-      microDelay(50000);
+      cppp_microDelay(50000);
       
 }

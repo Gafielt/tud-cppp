@@ -26,21 +26,21 @@ int BlinkRainbowMain_s() {
     // Switch red LED on
     LED_RED_DOR &= ~(1 << LED_RED_PIN);
     
-    microDelay(sleepTime);
+    cppp_microDelay(sleepTime);
     
     // Switch red LED off
     LED_RED_DOR |= (1 << LED_RED_PIN);
     // Switch green LED on
     LED_GREEN_DOR &= ~(1 << LED_GREEN_PIN);
     
-    microDelay(sleepTime);
+    cppp_microDelay(sleepTime);
     
     // Switch green LED off
     LED_GREEN_DOR |= (1 << LED_GREEN_PIN);
     // Switch blue LED on
     LED_BLUE_DOR &= ~(1 << LED_BLUE_PIN);
     
-    microDelay(sleepTime); 
+    cppp_microDelay(sleepTime); 
     
   }
 }

@@ -16,11 +16,11 @@ int BlinkMain() {
   while (1) {
     // Clear bit -> Switch LED on
     LED_BLUE_DOR &= ~(1 << LED_BLUE_PIN);
-    microDelay(sleepTime); 
+    cppp_microDelay(sleepTime); 
 		
     // Set bit -> Switch LED off
     LED_BLUE_DOR |= (1 << LED_BLUE_PIN);
-    microDelay(sleepTime);
+    cppp_microDelay(sleepTime);
   }
 }
 

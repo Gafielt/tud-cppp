@@ -39,7 +39,7 @@ void ButtonToggleBlueLED_s(){
       setBlueLED(ledStatus);
       while(isButtonPressed());
     }
-    microDelay(sleepTime);
+    cppp_microDelay(sleepTime);
   }  
 }
                           
@@ -50,11 +50,11 @@ void ButtonHoldBlueLEDOn_s() {
     
     while(isButtonPressed()){
       setBlueLED(1u); 
-      microDelay(sleepTime);
+      cppp_microDelay(sleepTime);
     }
     
     setBlueLED(0u);
-    microDelay(sleepTime);
+    cppp_microDelay(sleepTime);
     
   }
 }

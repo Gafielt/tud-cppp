@@ -11,8 +11,34 @@ for file in \
   $(find ${solutionsDirectory}/* -name "Makefile") \
   $(find ${templatesDirectory}/* -name "Makefile");
 do
+  folderName=$(dirname $file)
   echo "---"
   echo "----------- $file ----------"
   echo "---"
-  make -C $(dirname $file) $@
+  
+  make -C $folderName $@
+  
+  if [ "$?" != "0" ];
+  then
+    echo "Execution of Makefile $file failed."
+    exit 1;
+  fi
+  
+  case "$folderName" in
+  *_tests)
+      echo "Executing unit tests for $file"
+      
+      make -C $folderName run
+      
+      if [ "$?" != "0" ];
+      then
+        echo "Execution of unit tests failed for Makefile $file."
+        exit 1;
+      fi
+      ;;
+  *)
+      ;;
+  esac
+  
+  
 done

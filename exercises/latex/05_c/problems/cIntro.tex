@@ -62,7 +62,7 @@ Der Cast des Ergebnisses von \lstinline|malloc| zu \lstinline|Point*| ist streng
 Der C-Compiler nimmt die Konvertierung stillschweigend vor.
 
 \subsection{Ausgabe auf Konsole per \lstinline{printf}}
-\cpppSolutionName{microcontroller_c_basics}{micro\-con\-troller\_c\_bas\-ics}
+\cpppSolutionName{microcontroller_c_basics/3_printf}{micro\-con\-troller\_c\_bas\-ics/3\_printf}
 
 Um Daten auf der Konsole auszugeben, kann die Funktion \lstinline{printf} verwendet werden.
 \lstinline{printf} nimmt einen Format-String sowie eine beliebige Anzahl weiterer Argumente entgegen.
@@ -144,6 +144,7 @@ Bei der Ausführung sollte jetzt nur noch \texttt{He} ausgegeben werden.
 \end{itemize}
 
 \subsection{Strings zusammenbauen}
+\cpppSolutionName{microcontroller_c_basics/4_sprintf}{micro\-con\-troller\_c\_bas\-ics/4\_sprintf}
 
 Die Funktion \lstinline{sprintf} dient dazu, formatierte Strings zusammenzusetzen und ist syntaktisch eng mit der Funktion \lstinline{printf} verwandt.\footnote{Weitere mögliche Parameter etc. der Funktion \lstinline{sprintf} findest du unter \url{http://www.cplusplus.com/reference/cstdio/sprintf/}.}
 %
@@ -180,6 +181,7 @@ Beachte auch hier, dass der Puffer auf dem Heap (statt im \texttt{data}-Segment)
 Andernfalls erhältst du einen Segmentation Fault.
 
 \subsection{Zahlen formatiert ausgeben}
+\cpppSolutionName{microcontroller_c_basics/5_numbers}{micro\-con\-troller\_c\_bas\-ics/5\_numbers}
 \label{sec:CFormatNumbers}
 Schreibe ein C-Programm, welches alle geraden Zahlen von 0 bis 200 formatiert ausgibt.
 Die Formatierung soll entsprechend dem Beispiel erfolgen:
@@ -190,6 +192,7 @@ Mache die Spaltenzahl und Spaltenbreite mithilfe von Variablen konfigurierbar, s
 
 \subsection{Bit-Operatoren in C (und C++)}
 \label{task:bitops}
+\cpppSolutionName{microcontroller_c_basics/6_BitAndLogicOperations}{micro\-con\-troller\_c\_bas\-ics/6\_Bit\-And\-Logic\-Operations}
 
 In dieser Aufgabe machst du dich mit den Bit-Operatoren (\lstinline{&, |, ~, >>, <<}) in C vertraut.
 Alle Operatoren können exakt gleich in C++ verwendet werden.
@@ -258,16 +261,15 @@ Ein Shift um einen negativen Wert ist \enquote{Undefined Behavior}.
 Welche Ergebnisse sind demnach erlaubt?
 \end{itemize}
 
-\subsection{structs und unions \optional}
+\subsection{Structs und Unions \optional}
 
-\optionaltextbox
-
+\optionaltextboxC
+\cpppInputListing{05_c/problems/listings/channels_struct.c}
+\cpppSolutionName{microcontroller_c_basics/Unions}{micro\-con\-troller\_c\_bas\-ics/7\_Unions}
 In diesem Aufgabenteil sehen wir uns an, wie sich die Datentypen \lstinline|struct| und \lstinline|union| kombinieren lassen, um zwei Perspektiven auf ein Farbojekt einzunehmen: einmal kanalweise und einmal als gesamter 32-Bit-Farbwert.
 Lege zunächst eine \lstinline|struct| mit Namen \lstinline|Channels| an, welche die vier Farbkanäle der ARGB-Farbkodierung darstellt (mit alpha-, rot-, grün- und blauem Farbkanal). 
 
-\cpppInputListing{05_c/problems/listings/channels_struct.c}
 
-%union color beispiel interaktiv gestalten. Folien Willert 02b seite 9-11
 
 Neben dem Datentyp \lstinline|struct| gibt es auch \lstinline|union|, welcher syntaktisch ähnlich ist.
 Der Unterschied ist, dass hier die einzelnen Felder vereint werden und sich den gleichen Speicherplatz teilen. 
@@ -299,7 +301,7 @@ Die Darstellung des Speichers in Abbildung \ref{fig:color_channels} sollte dir w
 
 \subsection{C++-Aufgaben nachprogrammieren \optional}
 
-\optionaltextbox
+\optionaltextboxC
 
 Dies ist eine freie Aufgabe, in der du versuchst, Programme der vergangenen Tage in reinem C auszudrücken.
 Der Schwierigkeitsgrad ist dabei sehr unterschiedlich!

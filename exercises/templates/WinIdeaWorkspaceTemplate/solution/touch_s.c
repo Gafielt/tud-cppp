@@ -29,7 +29,7 @@ void debugTouch_s(){
   uint8_t analog19;
   uint8_t analog23;
   uint8_t analog17;
-  getAnalogValues(&analog11, &analog12, &analog13, &analog16, &analog17, &analog19, &analog23);
+  cppp_getAnalogValues(&analog11, &analog12, &analog13, &analog16, &analog17, &analog19, &analog23);
   // Write headline on the display
   setCursor_s(480,320);
   char freeSpace[] = " ";
@@ -41,22 +41,28 @@ void debugTouch_s(){
   writeTextln_s(freeSpace);
   
   // Get analog values of the touchscreen
-  const uint16_t touchZ = readTouchZ();
-  const uint16_t touchX = touchZ != 0 ? readTouchX() : 0;
-  const uint16_t touchY = touchZ != 0 ? readTouchY() : 0;
+  uint16_t touchZ = cppp_readTouchZ();
+  uint16_t touchX = touchZ != 0 ? cppp_readTouchX() : 0;
+  uint16_t touchY = touchZ != 0 ? cppp_readTouchY() : 0;
+  
+  if(touchX > 480 || touchY>320){
+    touchX = 0;
+    touchY = 0;
+    touchZ = 0;
+  }
   
   // Write x,y, and z-values on the screen
   char touchXText[] = "  Touch X: ";
   char touchYText[] = "  Touch Y: ";
   char touchZText[] = "  Touch Z: ";
   writeText_s(touchXText);
-  write3Digits16Bit(&touchX);
+  cppp_write3Digits16Bit(&touchX);
   writeTextln_s("");
   writeText_s(touchYText);
-  write3Digits16Bit(&touchY);
+  cppp_write3Digits16Bit(&touchY);
   writeTextln_s("");
   writeText_s(touchZText);
-  write3Digits16Bit(&touchZ);
+  cppp_write3Digits16Bit(&touchZ);
   writeTextln_s("");
 }
 
@@ -68,15 +74,15 @@ void paintTouch_s(){
 }
 
 static void initPaintTouch() {
-  fillScreen(BLACK);
-  fillRect(0, 0, BOXSIZE, BOXSIZE, RED);
-  fillRect(BOXSIZE, 0, BOXSIZE, BOXSIZE, YELLOW);
-  fillRect(BOXSIZE*2, 0, BOXSIZE, BOXSIZE, GREEN);
-  fillRect(BOXSIZE*3, 0, BOXSIZE, BOXSIZE, CYAN);
-  fillRect(BOXSIZE*4, 0, BOXSIZE, BOXSIZE, BLUE);
-  fillRect(BOXSIZE*5, 0, BOXSIZE, BOXSIZE, MAGENTA);
+  cppp_fillScreen(BLACK);
+  cppp_fillRect(0, 0, BOXSIZE, BOXSIZE, RED);
+  cppp_fillRect(BOXSIZE, 0, BOXSIZE, BOXSIZE, YELLOW);
+  cppp_fillRect(BOXSIZE*2, 0, BOXSIZE, BOXSIZE, GREEN);
+  cppp_fillRect(BOXSIZE*3, 0, BOXSIZE, BOXSIZE, CYAN);
+  cppp_fillRect(BOXSIZE*4, 0, BOXSIZE, BOXSIZE, BLUE);
+  cppp_fillRect(BOXSIZE*5, 0, BOXSIZE, BOXSIZE, MAGENTA);
   
-  drawRect(0, 0, BOXSIZE, BOXSIZE, WHITE);
+  cppp_drawRect(0, 0, BOXSIZE, BOXSIZE, WHITE);
   currentcolor = RED;
   
   setCursor_s(260, 25);
@@ -86,14 +92,14 @@ static void initPaintTouch() {
 }
 
 static void loopPaintTouch() {
-  touchPoint.x = readTouchX();
-  touchPoint.y = readTouchY();
-  touchPoint.z = readTouchZ();
+  touchPoint.x = cppp_readTouchX();
+  touchPoint.y = cppp_readTouchY();
+  touchPoint.z = cppp_readTouchZ();
 
   if (touchPoint.z > TOUCHZMIN && touchPoint.z < TOUCHZMAX) {
     // Erase
     if (touchPoint.y < BOXSIZE && touchPoint.x > BOXSIZE*7) {
-      fillRect(0, BOXSIZE, 480, 320-BOXSIZE, BLACK);
+      cppp_fillRect(0, BOXSIZE, 480, 320-BOXSIZE, BLACK);
     }
     
     // change color
@@ -102,37 +108,37 @@ static void loopPaintTouch() {
       
       if (touchPoint.x < BOXSIZE) {
         currentcolor = RED;
-        drawRect(0, 0, BOXSIZE, BOXSIZE, WHITE);
+        cppp_drawRect(0, 0, BOXSIZE, BOXSIZE, WHITE);
       } else if (touchPoint.x < BOXSIZE*2) {
         currentcolor = YELLOW;
-        drawRect(BOXSIZE, 0, BOXSIZE, BOXSIZE, WHITE);
+        cppp_drawRect(BOXSIZE, 0, BOXSIZE, BOXSIZE, WHITE);
       } else if (touchPoint.x < BOXSIZE*3) {
         currentcolor = GREEN;
-        drawRect(BOXSIZE*2, 0, BOXSIZE, BOXSIZE, WHITE);
+        cppp_drawRect(BOXSIZE*2, 0, BOXSIZE, BOXSIZE, WHITE);
       } else if (touchPoint.x < BOXSIZE*4) {
         currentcolor = CYAN;
-        drawRect(BOXSIZE*3, 0, BOXSIZE, BOXSIZE, WHITE);
+        cppp_drawRect(BOXSIZE*3, 0, BOXSIZE, BOXSIZE, WHITE);
       } else if (touchPoint.x < BOXSIZE*5) {
         currentcolor = BLUE;
-        drawRect(BOXSIZE*4, 0, BOXSIZE, BOXSIZE, WHITE);
+        cppp_drawRect(BOXSIZE*4, 0, BOXSIZE, BOXSIZE, WHITE);
       } else if (touchPoint.x < BOXSIZE*6) {
         currentcolor = MAGENTA;
-        drawRect(BOXSIZE*5, 0, BOXSIZE, BOXSIZE, WHITE);
+        cppp_drawRect(BOXSIZE*5, 0, BOXSIZE, BOXSIZE, WHITE);
       }
       
       if (oldcolor != currentcolor) {
-        if (oldcolor == RED) fillRect(0, 0, BOXSIZE, BOXSIZE, RED);
-        if (oldcolor == YELLOW) fillRect(BOXSIZE, 0, BOXSIZE, BOXSIZE, YELLOW);
-        if (oldcolor == GREEN) fillRect(BOXSIZE*2, 0, BOXSIZE, BOXSIZE, GREEN);
-        if (oldcolor == CYAN) fillRect(BOXSIZE*3, 0, BOXSIZE, BOXSIZE, CYAN);
-        if (oldcolor == BLUE) fillRect(BOXSIZE*4, 0, BOXSIZE, BOXSIZE, BLUE);
-        if (oldcolor == MAGENTA) fillRect(BOXSIZE*5, 0, BOXSIZE, BOXSIZE, MAGENTA);
+        if (oldcolor == RED) cppp_fillRect(0, 0, BOXSIZE, BOXSIZE, RED);
+        if (oldcolor == YELLOW) cppp_fillRect(BOXSIZE, 0, BOXSIZE, BOXSIZE, YELLOW);
+        if (oldcolor == GREEN) cppp_fillRect(BOXSIZE*2, 0, BOXSIZE, BOXSIZE, GREEN);
+        if (oldcolor == CYAN) cppp_fillRect(BOXSIZE*3, 0, BOXSIZE, BOXSIZE, CYAN);
+        if (oldcolor == BLUE) cppp_fillRect(BOXSIZE*4, 0, BOXSIZE, BOXSIZE, BLUE);
+        if (oldcolor == MAGENTA) cppp_fillRect(BOXSIZE*5, 0, BOXSIZE, BOXSIZE, MAGENTA);
       }
     }
     
     // draw a point on the screen
     if (((touchPoint.y-PENRADIUS) > BOXSIZE) && ((touchPoint.y+PENRADIUS) < 480)) {
-      fillCircle(touchPoint.x, touchPoint.y, PENRADIUS, currentcolor);
+      cppp_fillCircle(touchPoint.x, touchPoint.y, PENRADIUS, currentcolor);
     }
   }
 }

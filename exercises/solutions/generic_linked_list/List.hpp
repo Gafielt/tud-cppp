@@ -5,6 +5,7 @@
 #include "ListItem.hpp"
 #include "ListIterator.hpp"
 #include <iostream>
+#include <stdexcept>
 
 /**
  * @name List;
@@ -124,5 +125,7 @@ private:
 };
 
 #include "List.tpp"
+
+int dummy();
 
 #endif /* LIST_HPP_ */

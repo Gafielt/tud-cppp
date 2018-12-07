@@ -1,4 +1,6 @@
-// Register names from Peter Barrett's Microtouch code
+/**
+ * @brief <strong>Register names of the lcd from Peter Barrett's Microtouch code.</strong>
+ */
 #define ILI932X_START_OSC          0x00
 #define ILI932X_DRIV_OUT_CTRL      0x01
 #define ILI932X_DRIV_WAV_CTRL      0x02
@@ -60,8 +62,6 @@
 #define HX8347G_ROWADDREND_LO      0x09
 #define HX8347G_MEMACCESS          0x16
 
-
-
 #define ILI9341_SOFTRESET          0x01
 #define ILI9341_SLEEPIN            0x10
 #define ILI9341_SLEEPOUT           0x11
@@ -92,8 +92,6 @@
 #define ILI9341_MADCTL_RGB 0x00
 #define ILI9341_MADCTL_BGR 0x08
 #define ILI9341_MADCTL_MH  0x04
-
-
 
 #define HX8357_NOP     0x00
 #define HX8357_SWRESET 0x01

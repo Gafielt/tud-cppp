@@ -22,17 +22,15 @@ Zu Beginn jedes Themengebiets der Vortragsfolien ist vermerkt, welche Aufgaben z
 \ExercisePrefixElevator: Optionale Zusatzaufgaben (C++)).
 %
 \setcounter{tocdepth}{1}
-%\setlength\cftsectionnumwidth{10em}
 \setlength\cftsecnumwidth{10em}
 \setlength\cftbeforesecskip{.1em} % line skip between sections ("sec")
 \tableofcontents
+\addtocontents{toc}{\vspace{-2.5ex}}
 
-\vspace*{\fill}
 \cclicense
 
 \newpage
 
-%\begin{comment}
 \setHeader{Aufgaben zu C/C++-Grundlagen}
 \input{01_basics/problems/intro}
 
@@ -89,6 +87,8 @@ Zu Beginn jedes Themengebiets der Vortragsfolien ist vermerkt, welche Aufgaben z
 \input{04_advanced/problems/functional}
 \newpage
 \input{04_advanced/problems/std}
+\newpage
+\input{04_advanced/problems/unitTests}
 
 \newpage
 \setHeader{Aufgaben zu Embedded C}
