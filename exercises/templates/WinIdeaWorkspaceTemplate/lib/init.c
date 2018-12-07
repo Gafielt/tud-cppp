@@ -1,17 +1,21 @@
 #include "init.h"
 #include "lcd.h"
+#include "analog.h"
 #include "src/display.h"
 #include "gfx.h"
 #include "acceleration_app.h"
 #include "pdl.h"
+#include "pins.h"
 #include  "interrupts_fm4_type_b.c"
 #define   __INTERRUPTS_FM4_TYPE_B_C__
+
+
 void initBoard(){
-  init();
-  reset();
-  setupLCD();
-  initCursor_s();
+  cppp_initLCDPins();
+  cppp_resetLCD();
+  cppp_setupLCD();
   cppp_initAdc();
+  initCursor_s();
   cppp_fillScreen(BLACK);
   setCursor_s(0,319);
   

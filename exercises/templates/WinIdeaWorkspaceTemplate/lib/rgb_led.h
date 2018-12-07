@@ -2,44 +2,61 @@
 #define RGB_LED_H
 
 /*
- *  RGB_LED offers functions to control the RGB LED of the cppp board
- *
+ * @file rgb_led.h
+ * @brief <strong>RGB_LED offers functions to control the RGB LED of the cppp board.
+ * You can for example activate the red LED like in this example:</strong>
+ * <pre>
+#include "init.h"
+#include "rgb_led.h"
+int main(){
+ initBoard();
+ cppp_initLEDs();
+ cppp_redLEDOn();
+ return 0;
+}
+ * </pre> 
  */
 
 /*
- * This function should be called before anything is done, to initialize the pins of the RGB LED
+ * @brief This function should be called before anything is done, to initialize the pins of the RGB LED
  */
-void cppp_initLEDs();
+void cppp_initLEDs(void);
 
 /*
- * Turn RED LED on
+ * @brief Turn RED LED on
+ * @return void
  */
-void cppp_redLEDOn();
+void cppp_redLEDOn(void);
 
 /*
- * Turn RED LED off
+ * @brief Turn RED LED off
+ * @return void
  */
-void cppp_redLEDOff();
+void cppp_redLEDOff(void);
 
 /*
- * Turn GREEN LED on
+ * @brief Turn GREEN LED on
+ * @return void
  */
-void cppp_greenLEDOn();
+void cppp_greenLEDOn(void);
 
 /*
- * Turn GREEN LED off
+ * @brief Turn GREEN LED off
+ * @return void
  */
-void cppp_greenLEDOff();
+void cppp_greenLEDOff(void);
 
 /*
- * Turn BLUE LED on
+ * @brief Turn BLUE LED on
+ * @return void
  */
-void cppp_blueLEDOn();
+void cppp_blueLEDOn(void);
 
 /*
- * Turn BLUE LED off
+ * @brief Turn BLUE LED off
+ * @return void
  */
-void cppp_blueLEDOff();
+void cppp_blueLEDOff(void);
 
 
 

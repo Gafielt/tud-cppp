@@ -4,7 +4,7 @@
 #include "mcu.h"
 #include "pins.h"
 
-void cppp_initLEDs(){
+void cppp_initLEDs(void){
   LED_BLUE_DDR |= (1 << LED_BLUE_PIN); // Configure blue LED pin as output.
   LED_BLUE_DOR |= (1 << LED_BLUE_PIN); // Turn LED off.
 
@@ -15,26 +15,26 @@ void cppp_initLEDs(){
   LED_GREEN_DOR |= (1 << LED_GREEN_PIN); // Turn LED off.
 }
 
-void cppp_redLEDOn(){
+void cppp_redLEDOn(void){
   LED_RED_DOR &= ~(1 << LED_RED_PIN);
 }
 
-void cppp_redLEDOff(){
+void cppp_redLEDOff(void){
   LED_RED_DOR |= (1 << LED_RED_PIN);
 }
 
-void cppp_greenLEDOn(){
+void cppp_greenLEDOn(void){
   LED_GREEN_DOR &= ~(1 << LED_GREEN_PIN);
 }
 
-void cppp_greenLEDOff(){
+void cppp_greenLEDOff(void){
   LED_GREEN_DOR |= (1 << LED_GREEN_PIN);
 }
 
-void cppp_blueLEDOn(){
+void cppp_blueLEDOn(void){
   LED_BLUE_DOR &= ~(1 << LED_BLUE_PIN);
 }
 
-void cppp_blueLEDOff(){
+void cppp_blueLEDOff(void){
   LED_BLUE_DOR |= (1 << LED_BLUE_PIN);
 }

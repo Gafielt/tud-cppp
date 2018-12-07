@@ -78,3 +78,7 @@ void writeNumberOnDisplay(const uint8_t *value){
 void writeNumberOnDisplayRight(const uint8_t *value){
     // your code here...
 }
+
+void write16BitNumberOnDisplay(const uint16_t *value, uint8_t mode){
+    // your code here...
+}

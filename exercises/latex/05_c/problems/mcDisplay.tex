@@ -17,15 +17,15 @@ Tabelle \ref{tab:displayFunctions} dokumentiert das erwartete Verhalten der zu i
         \toprule
 		\textbf{Funktionen/Variablen} & \textbf{Beschreibung} \\
         \midrule
-        \lstinline|void drawRect(int16_t x, int16_t y, int16_t w, int16_t h, uint16_t color)|
+        \lstinline|void cppp_drawRect(int16_t x, int16_t y, int16_t w, int16_t h, uint16_t color)|
         & Zeichnet die Umrandung eines Rechtecks in der Farbe color mit der Breite w und der Höhe h an die Stelle x,y. \\ \hline
-		\lstinline|void fillRect(int x1, int y1, int w, int h, uint16_t fillcolor)|
+		\lstinline|void cppp_fillRect(int x1, int y1, int w, int h, uint16_t fillcolor)|
         & Zeichnet ein ausgefülltes Rechteck in der Farbe fillcolor mit der Breite w und der Höhe h an die Stelle x,y. \\ \hline
-		\lstinline|void drawPixel(int16_t x, int16_t y, uint16_t color)|
+		\lstinline|void cppp_drawPixel(int16_t x, int16_t y, uint16_t color)|
         & Zeichnet ein Pixel an x,y mit der Farbe color. \\ \hline
-		\lstinline|void fillScreen(uint16_t color)| 
+		\lstinline|void cppp_fillScreen(uint16_t color)| 
         & Füllt den gesamten Bildschirm mit der Farbe color. \\ \hline
-		\lstinline|uint16_t color565(uint8_t r, uint8_t g, uint8_t b)|
+		\lstinline|uint16_t cppp_color565(uint8_t r, uint8_t g, uint8_t b)|
         & Umwandlung von RGB in HEX 565. \\
         \bottomrule
 	\end{tabular}
@@ -43,7 +43,7 @@ Bei der RGB565-Codierung werden 5 Bits für Rot, 6 Bits für Grün und 5 Bits f�
     \end{centering}
 \end{figure}
 %
-Um auch eigene Farben nutzen zu können, implementierst du zunächst die Funktion \lstinline|color565(uint8_t r, uint8_t g, uint8_t b)|, welche RGB888-Farben in RGB565-Farben umwandelt.
+Um auch eigene Farben nutzen zu können, implementierst du zunächst die Funktion \lstinline|cppp_color565(uint8_t r, uint8_t g, uint8_t b)|, welche RGB888-Farben in RGB565-Farben umwandelt.
 Der Umwandlungsalgorithmus arbeitet für drei gegebene Bytes (\lstinline|uint8_t| oder \lstinline|unsigend char|) \lstinline|r, g, b| wie folgt:
 \begin{enumerate}
 \item 
@@ -137,7 +137,7 @@ Diese Funktion ordnet auf dem Display Quadrate (4 x 4 Pixel) als Schachbrettmust
 %
 \hints{
 \item 
-Nutze die Funktion \lstinline|fillScreen|, um zunächst den Bildschirm in der Farbe \lstinline|backgroundColor| zu füllen.
+Nutze die Funktion \lstinline|cppp_fillScreen|, um zunächst den Bildschirm in der Farbe \lstinline|backgroundColor| zu füllen.
 Nutze anschließend die Funktion \lstinline|fillRect|, um die einzelnen Quadrate in der Farbe \lstinline|foregroundColor| zu erzeugen.
 \item 
 Eine einfache Möglichkeit ist, zwei geschachtelte \lstinline|for|-Schleifen zu verwenden, die den Schleifenzähler in X-Richtung jeweils um die  Blockgröße und in Y-Richtung um die doppelte Blockgröße weiterschalten.
@@ -206,9 +206,14 @@ Implementiere abschließend die Funktion \lstinline|writeTextln(const char *text
 \item 
 Implementiere zur Ausgabe von Zahlen die Funktionen \lstinline|writeNumberOnDisplay(const uint8_t *value)| und \lstinline|writeNumberOnDisplayRight(const uint8_t *value)|.
 Erstere soll die per Pointer übergebene Zahl linksbündig ausgeben, Zweitere soll die Zahl rechtsbündig ausgeben.
-Rechtsbündig bedeutet hier, dass die Ausgabe immer diegleiche Breite hat, egal ob der Wert \lstinline|0| oder \lstinline|65535| ist (also: 5 Ziffern).
+Rechtsbündig bedeutet hier, dass die Ausgabe immer diegleiche Breite hat, egal ob der Wert \lstinline|0| oder \lstinline|255| ist (also: 3 Ziffern).
 Verwende die Funktion \lstinline|itoa| (aus \filename{stdlib.h}\footnote{\url{http://www.cplusplus.com/reference/cstdlib/itoa/}}), um den per Zeiger übergebenen Wert in ein \lstinline|char|-Array zu schreiben und anschließend mittels \lstinline|writeText| auf dem Display aus.
+
+\item 
+Implementiere die Funktion \lstinline|write16BitNumberOnDisplay(const uint8_t 16, uint8_t mode)| die eine 16 Bit Zahl auf dem Display ausgeben soll. Hierbei soll zwischen linksbündige und rechtsbündige Schreibweise unterschieden werden. Gilt \lstinline|mode == 0|, dann soll die Zahl linksbündig angezeigt werden, sonst rechtsbündig. 
 \end{enumerate}
+
+
 
 \hints {
     \item Falls du Sonderzeichen darstellen möchtest, kannst du dich an folgender Tabelle orientieren: \url{http://www.theasciicode.com.ar/american-standard-code-information-interchange/ascii-codes-table.png}.

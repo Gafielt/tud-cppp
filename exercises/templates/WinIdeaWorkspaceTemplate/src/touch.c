@@ -4,6 +4,7 @@
 #include "gfx.h"
 #include "lcd.h"
 #include "display.h"
+#include "analog.h"
 
 #define BOXSIZE 40
 #define PENRADIUS 3
@@ -36,14 +37,14 @@ void paintTouch(){
  */
 static void initPaintTouch(){
   cppp_fillScreen(BLACK);
-  fillRect(0, 0, BOXSIZE, BOXSIZE, RED);
-  fillRect(BOXSIZE, 0, BOXSIZE, BOXSIZE, YELLOW);
-  fillRect(BOXSIZE*2, 0, BOXSIZE, BOXSIZE, GREEN);
-  fillRect(BOXSIZE*3, 0, BOXSIZE, BOXSIZE, CYAN);
-  fillRect(BOXSIZE*4, 0, BOXSIZE, BOXSIZE, BLUE);
-  fillRect(BOXSIZE*5, 0, BOXSIZE, BOXSIZE, MAGENTA);
+  cppp_fillRect(0, 0, BOXSIZE, BOXSIZE, RED);
+  cppp_fillRect(BOXSIZE, 0, BOXSIZE, BOXSIZE, YELLOW);
+  cppp_fillRect(BOXSIZE*2, 0, BOXSIZE, BOXSIZE, GREEN);
+  cppp_fillRect(BOXSIZE*3, 0, BOXSIZE, BOXSIZE, CYAN);
+  cppp_fillRect(BOXSIZE*4, 0, BOXSIZE, BOXSIZE, BLUE);
+  cppp_fillRect(BOXSIZE*5, 0, BOXSIZE, BOXSIZE, MAGENTA);
   
-  drawRect(0, 0, BOXSIZE, BOXSIZE, WHITE);
+  cppp_drawRect(0, 0, BOXSIZE, BOXSIZE, WHITE);
   currentcolor = RED;
   
   setCursor(260, 25);
