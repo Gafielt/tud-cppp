@@ -9,7 +9,7 @@
  &*pIntVal	Wert von pIntVal (Adresse von intVal)
  **&pIntVal	Wert von intVal
  *&*&intVal	Wert von intVal
- &*&pIntVal	Adresse von pIntVal (Adresse von intVal)
+ &*&pIntVal	Adresse von pIntVal
  *&*pIntVal	Wert von intVal
  *****************************************
  Aufgabe 5.3
