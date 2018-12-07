@@ -1,7 +1,8 @@
 % !TeX spellcheck = de_DE
+\clearpage
 \section{\ExercisePrefixEmbeddedC DHT11 \optional}
 
-\optionaltextbox
+\optionaltextboxC
 
 Für die folgende Aufgabe musst du dir folgendes zusätzliches Material bei den Betreuern beschaffen:
 \begin{itemize}
@@ -29,7 +30,7 @@ In dieser Aufgabe ist es das Ziel die Temperatur- und Feuchtigkeitswerte des Sen
 \item 
 Zunächst trenne den Microcontroller von der Stromzufuhr und stelle sicher, dass dieser ausgeschaltet ist.
 Verbinde gemäß Abbildung \ref{fig:dht11Schematics} den DHT11 mit dem Microcontroller.
-Der DHT11 wird, von links gezählt, an den dritten Pin des CN17 Steckers des Microcontrollers angeschlossen (Port 5, Pin 2, Präprozessorkonstante \lstinline|GPIO1PIN_PF52|).
+Der DHT11 wird, von links gezählt, an den dritten Pin des CN17 Steckers des Microcontrollers angeschlossen (Port 5, Pin 2, siehe Prä\-pro\-zes\-sor\-kon\-stan\-te \lstinline|GPIO1PIN_PF52|).
 Nutze als Unterstützung Abbildung~\ref{fig:cpppWiring}, die schematisch die GPIO-Verbindungen des Microcontrollers darstellt.
 Bevor der Microcontroller wieder an den Computer angeschlossen wird, lasse die Verkabelung von einem Tutor überprüfen.
 %
@@ -74,7 +75,7 @@ Ist die Checksumme richtig, speichere die aktuelle Temperatur und Feuchtigkeit i
 	Um diesen Fall zu filtern, verwende folgende Art der Abfrage.
 	\cpppInputListing{05_c/listings/dht11.c}
 	
-	\item Um einen Delay auf dem Microcontroller ausführen, kannst du die Methode \lstinline|microDelay(uint32_t timeInMicroseconds)| verwenden. Zum Beispiel wird beim Aufruf  \lstinline|microDelay(20)| der Microcontroller \SI{20}{\micro\second} pausiert.
+	\item Um einen Delay auf dem Microcontroller ausführen, kannst du die Methode \lstinline|cppp_microDelay(uint32_t timeInMicroseconds)| verwenden. Zum Beispiel wird beim Aufruf  \lstinline|cppp_microDelay(20)| der Microcontroller \SI{20}{\micro\second} pausiert.
 	
 	\item Der DHT11 sendet immer seine Daten geordnet nach dem höchsten Bit, sodass der höchstwertigste Bit zuerst gesendet wird.
 }

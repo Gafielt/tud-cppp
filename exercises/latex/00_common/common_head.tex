@@ -103,17 +103,27 @@
 
 \usepackage{fancybox}
 \cornersize{.2} 
-\newcommand{\optionaltextbox}{
+
+\newcommand{\optionaltextboxInternal}[1]{
 \bigskip
 \begin{center}
 \fbox{
 \begin{minipage}{.95\textwidth}
-Die Klausur kann ohne diese Aufgabe bestanden werden.
-Wir empfehlen aber trotzdem sie zu bearbeiten.
+#1
 \end{minipage}
 }
 \end{center}
 }
+
+\newcommand{\optionaltextbox}{\optionaltextboxInternal{%
+Die Klausur kann ohne diese Aufgabe bestanden werden.
+Wir empfehlen aber trotzdem sie zu bearbeiten.}}
+
+\newcommand{\optionaltextboxCPP}{\optionaltextboxInternal{%
+Diese Aufgabe dient der Vertiefung deines Wissens in C++ und ist nicht notwendig, um die Klausur zu bestehen.}}
+
+\newcommand{\optionaltextboxC}{\optionaltextboxInternal{%
+Diese Aufgabe dient der Vertiefung deines Wissens in C und ist nicht notwendig, um die Klausur zu bestehen.}}
 
 \newcommand{\filename}[1]{\texttt{#1}\xspace}
 \newcommand{\bspw}{bspw.\xspace}

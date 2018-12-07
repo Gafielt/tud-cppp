@@ -1,3 +1,4 @@
+% !TeX spellcheck = de_DE
 \section{\ExercisePrefixElevator Aufzugsimulator -- Teil 3: Polymorphie und Fortgeschrittenes \optional}
 
 \optionaltextbox
@@ -41,15 +42,13 @@ Folgender Pseudocode kann dir als Denkhilfe dienen:
 
 Teste die einfache Aufzugstrategie
 
-\subsection{Neue Aufzugstrategien \optional}
-\optionaltextbox
+\subsection{Neue Aufzugstrategien}
 Entwickle eigene Aufzugstrategien, indem du erneut eine neue Klasse erzeugst die von \lstinline{ElevatorStrategy} erbt.
 Versuche, verschiedene Größen zu optimieren, wie z.B. die Anzahl der Stopps oder die verbrauchte Energie.
 Hierfür könnte Backtracking verwenden\footnote{Siehe \url{http://de.wikipedia.org/wiki/Backtracking}}, eine einfache Methode, um eine optimale Lösungen durch Ausprobieren zu finden.
 Beachte, dass der Aufzug auch kopiert werden kann, um verschiedene Strategien zu testen.
 
-\subsection{Schlüsselwort auto \optional}
-\optionaltextbox
+\subsection{Schlüsselwort auto}
 In der Vorlesung wurde das in C++11 neu hinzugekommene Schlüsselwort \lstinline{auto} angesprochen.
 Dieses Schlüsselwort kann überall dort anstelle eines Typbezeichners eingesetzt werden, wo der Compiler den Typ automatisch ableiten kann.
 Das ist besonders dann sinnvoll, wenn die Typbezeichnung aufgrund geschachtelter Templates oder geschachtelter Namensräume besonders lang und unleserlich wird, bspw. \lstinline{const std::vector<std::pair<const Person*, boolean (Floor, int)>>::const_iterator x;}.
