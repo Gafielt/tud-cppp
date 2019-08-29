@@ -83,7 +83,7 @@ void constCorrectnessWithVariables() {
 
 	int ** const iPcP = &iP;
 	**iPcP = 3;
-//	*iPcP = &iP; //Error
+	*iPcP = iP;
 //	iPcP = iPP; //Error
 
 }
