@@ -1,0 +1,24 @@
+digraph "lib/lcd.h"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="lib/lcd.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="This code is based on: https://github.com/adafruit/Adafruit-GFX-Library & https://github...."];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="lib/gfx.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$gfx_8c.html",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="lib/init.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$init_8h.html",tooltip="This file contains the init function, which should be used in the main.c file to initialize all perip..."];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="lib/init.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$init_8c.html",tooltip=" "];
+  Node3 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="src/main.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main_8c.html",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="lib/lcd.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$lcd_8c.html",tooltip=" "];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="solution/graphicstest.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$graphicstest_8c.html",tooltip=" "];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="solution/touch_s.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$touch__s_8c.html",tooltip=" "];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="src/touch.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$touch_8c.html",tooltip=" "];
+}

@@ -8,7 +8,7 @@
       <VersionLow>1</VersionLow>
      </REG_HEADER>
      <REG_ROOT>
-      <RegVer>1279262720</RegVer>
+      <RegVer>1259470856</RegVer>
       <ColorSyntax>
        <ASMSyntaxFile></ASMSyntaxFile>
       </ColorSyntax>
@@ -70,95 +70,93 @@
       </History>
       <PI.0>
        <Bookmarks_num_>0</Bookmarks_num_>
-       <C>21</C>
-       <L>27</L>
-       <P>solution\acceleration_s.c</P>
+       <L>2</L>
+       <P>src\main.c</P>
       </PI.0>
       <PI.1>
+       <Bookmarks_num_>0</Bookmarks_num_>
+       <C>68</C>
+       <L>157</L>
+       <P>solution\display_s.c</P>
+       <VL>171</VL>
+      </PI.1>
+      <PI.10>
        <Bookmarks_num_>0</Bookmarks_num_>
        <C>24</C>
        <L>64</L>
        <P>solution\touch_s.c</P>
        <VL>43</VL>
-      </PI.1>
-      <PI.10>
-       <Bookmarks_num_>0</Bookmarks_num_>
-       <C>20</C>
-       <L>291</L>
-       <P>lib\gfx.h</P>
-       <VL>277</VL>
       </PI.10>
       <PI.11>
        <Bookmarks_num_>0</Bookmarks_num_>
-       <C>20</C>
-       <L>513</L>
-       <P>lib\gfx.c</P>
-       <VL>493</VL>
+       <C>21</C>
+       <L>27</L>
+       <P>solution\acceleration_s.c</P>
       </PI.11>
       <PI.12>
        <Bookmarks_num_>0</Bookmarks_num_>
-       <P>src\blinkrainbow.h</P>
+       <C>4</C>
+       <L>33</L>
+       <P>lib\init.c</P>
       </PI.12>
       <PI.13>
+       <Bookmarks_num_>0</Bookmarks_num_>
+       <P>src\blinkrainbow.h</P>
+      </PI.13>
+      <PI.14>
        <Bookmarks_num_>0</Bookmarks_num_>
        <C>45</C>
        <L>9</L>
        <P>lib\uart_usb.h</P>
        <VL>21</VL>
-      </PI.13>
-      <PI.14>
+      </PI.14>
+      <PI.15>
        <Bookmarks_num_>0</Bookmarks_num_>
        <C>12</C>
        <P>lib\uart_usb.c</P>
-      </PI.14>
-      <PI.15>
+      </PI.15>
+      <PI.16>
        <Bookmarks_num_>0</Bookmarks_num_>
        <C>15</C>
        <L>12</L>
        <P>lib\uart_multicon.h</P>
-      </PI.15>
-      <PI.16>
+      </PI.16>
+      <PI.17>
        <Bookmarks_num_>0</Bookmarks_num_>
        <C>19</C>
        <L>8</L>
        <P>lib\uart_multicon.c</P>
-      </PI.16>
-      <PI.17>
+      </PI.17>
+      <PI.18>
        <Bookmarks_num_>0</Bookmarks_num_>
        <C>28</C>
        <L>9</L>
        <P>src\acceleration.h</P>
-      </PI.17>
-      <PI.18>
+      </PI.18>
+      <PI.19>
        <Bookmarks_num_>0</Bookmarks_num_>
        <L>9</L>
        <P>lib\acceleration_app.h</P>
-      </PI.18>
-      <PI.19>
+      </PI.19>
+      <PI.2>
+       <Bookmarks_num_>0</Bookmarks_num_>
+       <C>15</C>
+       <L>113</L>
+       <P>lib\lcd.h</P>
+       <VL>87</VL>
+      </PI.2>
+      <PI.20>
        <Bookmarks_num_>0</Bookmarks_num_>
        <C>45</C>
        <L>341</L>
        <P>lib\pins.h</P>
        <VL>231</VL>
-      </PI.19>
-      <PI.2>
-       <Bookmarks_num_>0</Bookmarks_num_>
-       <C>19</C>
-       <L>245</L>
-       <P>lib\acceleration_app.c</P>
-       <VL>245</VL>
-      </PI.2>
-      <PI.20>
+      </PI.20>
+      <PI.21>
        <Bookmarks_num_>0</Bookmarks_num_>
        <C>25</C>
        <L>58</L>
        <P>lib\rgb_led.h</P>
-      </PI.20>
-      <PI.21>
-       <Bookmarks_num_>0</Bookmarks_num_>
-       <C>18</C>
-       <L>13</L>
-       <P>lib\init.c</P>
       </PI.21>
       <PI.22>
        <Bookmarks_num_>0</Bookmarks_num_>
@@ -210,10 +208,10 @@
       </PI.29>
       <PI.3>
        <Bookmarks_num_>0</Bookmarks_num_>
-       <C>14</C>
-       <L>128</L>
-       <P>lib\board_test.c</P>
-       <VL>121</VL>
+       <C>3</C>
+       <L>246</L>
+       <P>lib\lcd.c</P>
+       <VL>225</VL>
       </PI.3>
       <PI.30>
        <Bookmarks_num_>0</Bookmarks_num_>
@@ -281,8 +279,10 @@
       </PI.39>
       <PI.4>
        <Bookmarks_num_>0</Bookmarks_num_>
-       <L>2</L>
-       <P>src\main.c</P>
+       <C>66</C>
+       <L>97</L>
+       <P>src\display.h</P>
+       <VL>69</VL>
       </PI.4>
       <PI.40>
        <Bookmarks_num_>0</Bookmarks_num_>
@@ -348,37 +348,37 @@
       <PI.5>
        <Bookmarks_num_>0</Bookmarks_num_>
        <C>66</C>
-       <L>97</L>
-       <P>src\display.h</P>
-       <VL>69</VL>
-      </PI.5>
-      <PI.6>
-       <Bookmarks_num_>0</Bookmarks_num_>
-       <C>66</C>
        <L>81</L>
        <P>src\display.c</P>
        <VL>56</VL>
+      </PI.5>
+      <PI.6>
+       <Bookmarks_num_>0</Bookmarks_num_>
+       <C>20</C>
+       <L>291</L>
+       <P>lib\gfx.h</P>
+       <VL>277</VL>
       </PI.6>
       <PI.7>
        <Bookmarks_num_>0</Bookmarks_num_>
-       <C>68</C>
-       <L>157</L>
-       <P>solution\display_s.c</P>
-       <VL>171</VL>
+       <C>20</C>
+       <L>513</L>
+       <P>lib\gfx.c</P>
+       <VL>493</VL>
       </PI.7>
       <PI.8>
        <Bookmarks_num_>0</Bookmarks_num_>
-       <C>15</C>
-       <L>113</L>
-       <P>lib\lcd.h</P>
-       <VL>87</VL>
+       <C>14</C>
+       <L>128</L>
+       <P>lib\board_test.c</P>
+       <VL>121</VL>
       </PI.8>
       <PI.9>
        <Bookmarks_num_>0</Bookmarks_num_>
-       <C>3</C>
-       <L>246</L>
-       <P>lib\lcd.c</P>
-       <VL>225</VL>
+       <C>19</C>
+       <L>245</L>
+       <P>lib\acceleration_app.c</P>
+       <VL>245</VL>
       </PI.9>
      </REG_ROOT>
     </EditorOptions>
@@ -391,7 +391,7 @@
       <VersionLow>1</VersionLow>
      </REG_HEADER>
      <REG_ROOT>
-      <RegVer>1279262720</RegVer>
+      <RegVer>1259470856</RegVer>
       <ANGUIData.0>
        <Filetime type="B">CCBHDLINFGDEMNAB</Filetime>
        <GUID type="B">FKNPFLDDOILOGCEGJDGOKFGNCAALLENJ</GUID>
@@ -842,7 +842,7 @@
    </REG_HEADER>
    <REG_ROOT>
     <HServer>HASYST</HServer>
-    <RegVer>1279262720</RegVer>
+    <RegVer>1259470856</RegVer>
     <Cfg_System>
     </Cfg_System>
     <Desktop>
@@ -850,115 +850,27 @@
      <Documents.0>
       <ActiveDocument>
        <Maximized>True</Maximized>
-       <RelativeFileName>lib\board_test.c</RelativeFileName>
+       <RelativeFileName>src\main.c</RelativeFileName>
       </ActiveDocument>
       <Editor.0>
-       <FileBarIndex>2</FileBarIndex>
-       <RectPosBottom>1323</RectPosBottom>
-       <RectPosLeft>441</RectPosLeft>
-       <RectPosRight>1832</RectPosRight>
-       <RectPosTop>441</RectPosTop>
-       <RelativeFileName>lib\acceleration_app.c</RelativeFileName>
-      </Editor.0>
-      <Editor.1>
-       <FileBarIndex>3</FileBarIndex>
-       <RectPosBottom>1274</RectPosBottom>
-       <RectPosLeft>392</RectPosLeft>
-       <RectPosRight>1783</RectPosRight>
-       <RectPosTop>392</RectPosTop>
-       <RelativeFileName>lib\board_test.c</RelativeFileName>
-      </Editor.1>
-      <Editor.10>
-       <FileBarIndex>7</FileBarIndex>
-       <RectPosBottom>1323</RectPosBottom>
-       <RectPosLeft>441</RectPosLeft>
-       <RectPosRight>1832</RectPosRight>
-       <RectPosTop>441</RectPosTop>
-       <RelativeFileName>src\display.h</RelativeFileName>
-      </Editor.10>
-      <Editor.11>
-       <FileBarIndex>9</FileBarIndex>
-       <RectPosBottom>1176</RectPosBottom>
-       <RectPosLeft>294</RectPosLeft>
-       <RectPosRight>1255</RectPosRight>
-       <RectPosTop>294</RectPosTop>
-       <RelativeFileName>src\main.c</RelativeFileName>
-      </Editor.11>
-      <Editor.2>
-       <FileBarIndex>5</FileBarIndex>
-       <RectPosBottom>931</RectPosBottom>
-       <RectPosLeft>49</RectPosLeft>
-       <RectPosRight>1440</RectPosRight>
-       <RectPosTop>49</RectPosTop>
-       <RelativeFileName>lib\gfx.c</RelativeFileName>
-      </Editor.2>
-      <Editor.3>
-       <FileBarIndex>4</FileBarIndex>
-       <RectPosBottom>980</RectPosBottom>
-       <RectPosLeft>98</RectPosLeft>
-       <RectPosRight>1489</RectPosRight>
-       <RectPosTop>98</RectPosTop>
-       <RelativeFileName>lib\gfx.h</RelativeFileName>
-      </Editor.3>
-      <Editor.4>
-       <FileBarIndex>8</FileBarIndex>
-       <RectPosBottom>1127</RectPosBottom>
-       <RectPosLeft>245</RectPosLeft>
-       <RectPosRight>1206</RectPosRight>
-       <RectPosTop>245</RectPosTop>
-       <RelativeFileName>lib\lcd.c</RelativeFileName>
-      </Editor.4>
-      <Editor.5>
-       <FileBarIndex>10</FileBarIndex>
-       <RectPosBottom>1078</RectPosBottom>
-       <RectPosLeft>196</RectPosLeft>
-       <RectPosRight>1157</RectPosRight>
-       <RectPosTop>196</RectPosTop>
-       <RelativeFileName>lib\lcd.h</RelativeFileName>
-      </Editor.5>
-      <Editor.6>
        <FileBarIndex>0</FileBarIndex>
-       <RectPosBottom>931</RectPosBottom>
-       <RectPosLeft>49</RectPosLeft>
-       <RectPosRight>1440</RectPosRight>
-       <RectPosTop>49</RectPosTop>
-       <RelativeFileName>solution\acceleration_s.c</RelativeFileName>
-      </Editor.6>
-      <Editor.7>
-       <FileBarIndex>11</FileBarIndex>
-       <RectPosBottom>1274</RectPosBottom>
-       <RectPosLeft>392</RectPosLeft>
-       <RectPosRight>1353</RectPosRight>
-       <RectPosTop>392</RectPosTop>
-       <RelativeFileName>solution\display_s.c</RelativeFileName>
-      </Editor.7>
-      <Editor.8>
-       <FileBarIndex>1</FileBarIndex>
-       <RectPosBottom>882</RectPosBottom>
-       <RectPosLeft>0</RectPosLeft>
-       <RectPosRight>1391</RectPosRight>
-       <RectPosTop>0</RectPosTop>
-       <RelativeFileName>solution\touch_s.c</RelativeFileName>
-      </Editor.8>
-      <Editor.9>
-       <FileBarIndex>6</FileBarIndex>
-       <RectPosBottom>882</RectPosBottom>
-       <RectPosLeft>0</RectPosLeft>
-       <RectPosRight>1391</RectPosRight>
-       <RectPosTop>0</RectPosTop>
-       <RelativeFileName>src\display.c</RelativeFileName>
-      </Editor.9>
+       <RectPosBottom>1029</RectPosBottom>
+       <RectPosLeft>147</RectPosLeft>
+       <RectPosRight>1455</RectPosRight>
+       <RectPosTop>147</RectPosTop>
+       <RelativeFileName>src\main.c</RelativeFileName>
+      </Editor.0>
       <EditorHistoryFile.0>
-       <RelativeFileName>lib\uart_usb.c</RelativeFileName>
+       <RelativeFileName>lib\lcd.c</RelativeFileName>
       </EditorHistoryFile.0>
       <EditorHistoryFile.1>
-       <RelativeFileName>lib\uart_usb.h</RelativeFileName>
+       <RelativeFileName>src\main.c</RelativeFileName>
       </EditorHistoryFile.1>
       <EditorHistoryFile.2>
-       <RelativeFileName>src\blinkrainbow.h</RelativeFileName>
+       <RelativeFileName>lib\lcd.h</RelativeFileName>
       </EditorHistoryFile.2>
       <EditorHistoryFile.3>
-       <RelativeFileName>src\display.c</RelativeFileName>
+       <RelativeFileName>solution\display_s.c</RelativeFileName>
       </EditorHistoryFile.3>
      </Documents.0>
      <Progress>
@@ -1259,6 +1171,7 @@
         <OptimizeTypeByName>0</OptimizeTypeByName>
         <OverrideMemoryArea>0</OverrideMemoryArea>
         <Path>release\cppp.elf</Path>
+        <Process>0</Process>
         <ProjectOutputFile>1</ProjectOutputFile>
         <SOffset>0</SOffset>
         <SOffsetA type="B">AAAAAAAA</SOffsetA>
@@ -1269,6 +1182,7 @@
          <CallStack>0</CallStack>
          <DumpELFHeaders>0</DumpELFHeaders>
          <GCC_ARM_double_Format>1</GCC_ARM_double_Format>
+         <IAR_78k_RegisterNumbers>0</IAR_78k_RegisterNumbers>
          <IgnoreChecksum>0</IgnoreChecksum>
          <IgnoreNonStatementLines>1</IgnoreNonStatementLines>
          <InsertInlinedFunctions>0</InsertInlinedFunctions>
@@ -1358,6 +1272,7 @@
        <IgnoreDLInfo>0</IgnoreDLInfo>
       </modeEndianLittle>
       <ProcessData>
+       <UseVirtualAccessForCurrentProcess>1</UseVirtualAccessForCurrentProcess>
        <Processes>
         <__.0>
          <Name>DEFAULT</Name>
@@ -1370,9 +1285,8 @@
        </Processes>
       </ProcessData>
       <RTOS>
-       <Imported>0</Imported>
        <OS>0</OS>
-       <PluginRTOS type="B">AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</PluginRTOS>
+       <Plugin type="B">AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</Plugin>
       </RTOS>
       <SFR>
        <ExternalFormat>0</ExternalFormat>
@@ -1390,6 +1304,15 @@
        <Start></Start>
        <Use>0</Use>
       </StackUsage>
+      <SymbolFile>
+       <Constants>True</Constants>
+       <Functions>True</Functions>
+       <Lines>True</Lines>
+       <Locals>True</Locals>
+       <Path>symbols.txt</Path>
+       <Typedefs>True</Typedefs>
+       <Variables>True</Variables>
+      </SymbolFile>
       <Symbols>
        <AddressDisplay>0</AddressDisplay>
        <ANSI>1</ANSI>
@@ -1534,7 +1457,7 @@
      <History>
      </History>
      <Info>
-      <winIDEA>Build 9.17.0</winIDEA>
+      <winIDEA>Build 9.12.288.2</winIDEA>
      </Info>
      <Options>
       <CallstackWindow>
@@ -1638,6 +1561,9 @@
       <_166>
        <Compiler>0</Compiler>
       </_166>
+      <_68k>
+       <Compiler>0</Compiler>
+      </_68k>
       <ARM>
        <ExtendReturnValues>1</ExtendReturnValues>
        <UseArmEABI>0</UseArmEABI>
@@ -1660,6 +1586,12 @@
         </CallFrameLocationSymbol>
        </CallFrameRange>
       </CallFrame>
+      <CodeWarrior>
+       <_-Cs08>1</_-Cs08>
+      </CodeWarrior>
+      <ColdFire>
+       <Compiler>0</Compiler>
+      </ColdFire>
       <PersistentVars>
        <PersistentVariables>0</PersistentVariables>
        <PersistentVariablesRange>
@@ -1676,9 +1608,15 @@
       <PPC>
        <ExtendReturnValues>0</ExtendReturnValues>
       </PPC>
+      <R8C>
+       <Compiler>0</Compiler>
+      </R8C>
       <RX>
        <Compiler>0</Compiler>
       </RX>
+      <S08>
+       <Compiler>0</Compiler>
+      </S08>
       <S12>
        <Compiler>0</Compiler>
       </S12>
@@ -1740,24 +1678,30 @@
        </Items.0>
       </OSWindow>
       <ProjectWindow>
-       <Selected>gfx.h</Selected>
+       <Selected>main.c</Selected>
        <Items.0>
         <__>
          <Name>Files</Name>
-         <Options>5</Options>
+         <Options>1</Options>
          <Items.0>
           <__>
            <Name>lib</Name>
-           <Options>5</Options>
+           <Options>1</Options>
            <Items.0>
             <__>
-             <Name>acceleration_app.c</Name>
+             <Name>analog.c</Name>
              <Options>4</Options>
             </__>
            </Items.0>
           </__>
          </Items.0>
          <Items.1>
+          <__>
+           <Name>pdl</Name>
+           <Options>4</Options>
+          </__>
+         </Items.1>
+         <Items.2>
           <__>
            <Name>src</Name>
            <Options>1</Options>
@@ -1768,7 +1712,7 @@
             </__>
            </Items.0>
           </__>
-         </Items.1>
+         </Items.2>
         </__>
        </Items.0>
       </ProjectWindow>
@@ -1802,7 +1746,7 @@
     <VersionLow>1</VersionLow>
    </REG_HEADER>
    <REG_ROOT>
-    <RegVer>1279262720</RegVer>
+    <RegVer>1259470856</RegVer>
     <Project_Local>
      <Project.0>
       <DefaultTargetName>S6E2CCA_release</DefaultTargetName>
@@ -1817,7 +1761,7 @@
     <VersionLow>1</VersionLow>
    </REG_HEADER>
    <REG_ROOT>
-    <RegVer>1279262720</RegVer>
+    <RegVer>1259470856</RegVer>
     <HServerData>
      <Data>
       <Debug>
@@ -1888,6 +1832,105 @@
         </WhenBPHits>
        </BP>
        <BPData>
+        <ARMBPs>
+         <Data>
+          <Condition>0</Condition>
+          <Size>0</Size>
+          <WP.0>
+           <Address></Address>
+           <AddressMask>-1</AddressMask>
+           <Data>0</Data>
+           <DataMask>0</DataMask>
+           <EXTERN>0</EXTERN>
+           <MAS>0</MAS>
+           <OPC>0</OPC>
+           <RW>0</RW>
+           <TRANS>0</TRANS>
+          </WP.0>
+          <WP.1>
+           <Address></Address>
+           <AddressMask>-1</AddressMask>
+           <Data>0</Data>
+           <DataMask>0</DataMask>
+           <EXTERN>0</EXTERN>
+           <MAS>0</MAS>
+           <OPC>0</OPC>
+           <RW>0</RW>
+           <TRANS>0</TRANS>
+          </WP.1>
+         </Data>
+         <ICECrusher>
+          <DataBusAbort>0</DataBusAbort>
+          <EmuIntr>0</EmuIntr>
+          <HaltOnInterconnectError>0</HaltOnInterconnectError>
+          <InstructionBusAbort>0</InstructionBusAbort>
+          <SuppressInterconnIntr>0</SuppressInterconnIntr>
+          <HWBP.0>
+           <__>
+            <Address></Address>
+            <Enabled>0</Enabled>
+            <InstData>0</InstData>
+            <Mask>0</Mask>
+            <Priv>0</Priv>
+            <RW>0</RW>
+            <TriggerMode>0</TriggerMode>
+            <UseExtern>0</UseExtern>
+            <UseRange>0</UseRange>
+           </__>
+          </HWBP.0>
+          <HWBP.1>
+           <__>
+            <Address></Address>
+            <Enabled>0</Enabled>
+            <InstData>0</InstData>
+            <Mask>0</Mask>
+            <Priv>0</Priv>
+            <RW>0</RW>
+            <TriggerMode>0</TriggerMode>
+            <UseExtern>0</UseExtern>
+            <UseRange>0</UseRange>
+           </__>
+          </HWBP.1>
+          <HWBP.2>
+           <__>
+            <Address></Address>
+            <Enabled>0</Enabled>
+            <InstData>0</InstData>
+            <Mask>0</Mask>
+            <Priv>0</Priv>
+            <RW>0</RW>
+            <TriggerMode>0</TriggerMode>
+            <UseExtern>0</UseExtern>
+            <UseRange>0</UseRange>
+           </__>
+          </HWBP.2>
+          <HWBP.3>
+           <__>
+            <Address></Address>
+            <Enabled>0</Enabled>
+            <InstData>0</InstData>
+            <Mask>0</Mask>
+            <Priv>0</Priv>
+            <RW>0</RW>
+            <TriggerMode>0</TriggerMode>
+            <UseExtern>0</UseExtern>
+            <UseRange>0</UseRange>
+           </__>
+          </HWBP.3>
+          <HWET.0>
+           <__>
+            <Enabled>0</Enabled>
+            <TriggerControl>8</TriggerControl>
+           </__>
+          </HWET.0>
+          <HWET.1>
+           <__>
+            <Enabled>0</Enabled>
+            <TriggerControl>8</TriggerControl>
+           </__>
+          </HWET.1>
+         </ICECrusher>
+        </ARMBPs>
         <CortexMBPs>
          <DWT>
           <CC_Enabled>0</CC_Enabled>
@@ -2022,6 +2065,16 @@
           </WP.1>
          </Data>
         </CortexRBPs>
+        <XscaleBPs>
+         <DB0AccessType>2</DB0AccessType>
+         <DB0Address></DB0Address>
+         <DB0AddressMask>0</DB0AddressMask>
+         <DB0Enabled>0</DB0Enabled>
+         <DB0UseMask>0</DB0UseMask>
+         <DB1AccessType>2</DB1AccessType>
+         <DB1Address></DB1Address>
+         <DB1Enabled>0</DB1Enabled>
+        </XscaleBPs>
        </BPData>
        <Emul>
         <AccessBPs_0>
@@ -2031,6 +2084,9 @@
          <Num>0</Num>
         </AccessBPs_1>
        </Emul>
+       <HC08>
+        <TrimClockkHz>16000</TrimClockkHz>
+       </HC08>
        <RH850>
         <SoC_Debug>
          <ApplyAfterDL>0</ApplyAfterDL>
@@ -3432,6 +3488,9 @@
         </File>
        </Pattern.3>
       </HILLive>
+      <INET>
+       <ReservedSBZ>0</ReservedSBZ>
+      </INET>
       <Tools>
        <Memory>
         <Address>0</Address>
@@ -3490,6 +3549,15 @@
         <AnalyzerReadMemoryOnMissingCode>64</AnalyzerReadMemoryOnMissingCode>
         <CustomTimeStamp>1 ns</CustomTimeStamp>
        </Common>
+       <ETM>
+        <BranchBroadcast>0</BranchBroadcast>
+        <Clocking>1</Clocking>
+        <ContextTracing>0</ContextTracing>
+        <CycleAccurateTracing>0</CycleAccurateTracing>
+        <MMDConfig>0</MMDConfig>
+        <Mode>0</Mode>
+        <PortWidth>0</PortWidth>
+       </ETM>
        <TriCore>
         <ProfilerTimeSource>1</ProfilerTimeSource>
        </TriCore>
@@ -3560,12 +3628,12 @@
       </UMI>
      </Data>
      <HW>
-      <V_BUILD>0</V_BUILD>
-      <V_BUILD_SUB>0</V_BUILD_SUB>
+      <V_BUILD>288</V_BUILD>
+      <V_BUILD_SUB>2</V_BUILD_SUB>
       <V_MAJOR>9</V_MAJOR>
       <V_Mfix>1</V_Mfix>
-      <V_MINOR>17</V_MINOR>
-      <Version>152109056</Version>
+      <V_MINOR>12</V_MINOR>
+      <Version>151781952</Version>
       <BDM>
        <CPU>
         <CPU1>23</CPU1>
@@ -3576,6 +3644,7 @@
         <POD>13</POD>
         <SubCPU>S6E2CCA</SubCPU>
         <ARM7>
+         <AllowFLASHWrite>0</AllowFLASHWrite>
          <bPresetPC>0</bPresetPC>
          <Cortex_DWT>1</Cortex_DWT>
          <Cortex_ETM>0</Cortex_ETM>
@@ -3586,13 +3655,56 @@
          <CortexSWOClock>0</CortexSWOClock>
          <CortexTraceProtocol>1</CortexTraceProtocol>
          <CortexTRACEWidth>2</CortexTRACEWidth>
+         <DebugHandlerBase>20</DebugHandlerBase>
          <ETMClocking>3</ETMClocking>
+         <ETMEmbeddedTraceBuffer>0</ETMEmbeddedTraceBuffer>
          <ETMPortSize>3</ETMPortSize>
+         <Exceptions>0</Exceptions>
          <ForceOddResetVectorOnThumbOnly>0</ForceOddResetVectorOnThumbOnly>
+         <ForceSupervisor>0</ForceSupervisor>
+         <HALTEDOnFFStatus>0</HALTEDOnFFStatus>
          <iMX_DisableSecurityAIPS_TZ1_2>0</iMX_DisableSecurityAIPS_TZ1_2>
+         <LPC2xxx_MEMMAP>0</LPC2xxx_MEMMAP>
+         <LPC2xxx_PresetMEMMAP>0</LPC2xxx_PresetMEMMAP>
+         <MAC72xx_BackDoorAccessKey type="IA">PPPPPPPPPPPPPPPP</MAC72xx_BackDoorAccessKey>
+         <MAC72xx_BackDoorAccessKey.0>-1</MAC72xx_BackDoorAccessKey.0>
+         <MAC72xx_BackDoorAccessKey.1>-1</MAC72xx_BackDoorAccessKey.1>
+         <MAC72xx_BlockNonUserArea>1</MAC72xx_BlockNonUserArea>
+         <MAC72xx_CacheContents>1</MAC72xx_CacheContents>
+         <MAC72xx_EraseBeforeDownload>1</MAC72xx_EraseBeforeDownload>
+         <MAC72xx_EraseShadowBlock>0</MAC72xx_EraseShadowBlock>
+         <MAC72xx_SetBackDoorAccessKey>0</MAC72xx_SetBackDoorAccessKey>
+         <MAC72xx_UnsecureShadowBlock>1</MAC72xx_UnsecureShadowBlock>
          <PresetPC>0</PresetPC>
+         <STR9_CSxMapping>0</STR9_CSxMapping>
+         <STR9_MassEraseBeforeDownload>0</STR9_MassEraseBeforeDownload>
+         <SupportRuntimeVectorChanges>1</SupportRuntimeVectorChanges>
+         <TMS470_adwFLASH_Keys type="IA">AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</TMS470_adwFLASH_Keys>
+         <TMS470_adwFLASH_Keys.0>0</TMS470_adwFLASH_Keys.0>
+         <TMS470_adwFLASH_Keys.1>0</TMS470_adwFLASH_Keys.1>
+         <TMS470_adwFLASH_Keys.2>0</TMS470_adwFLASH_Keys.2>
+         <TMS470_adwFLASH_Keys.3>0</TMS470_adwFLASH_Keys.3>
+         <TMS470_bFLASH_Keys>0</TMS470_bFLASH_Keys>
+         <TMS470_ExternalJTCKSync>0</TMS470_ExternalJTCKSync>
+         <TMS470_ExternalJTCKSyncEdge>0</TMS470_ExternalJTCKSyncEdge>
+         <TMS470_HaltOnRTPOverflow>0</TMS470_HaltOnRTPOverflow>
+         <TMS470_ICECrusherPresent>0</TMS470_ICECrusherPresent>
+         <TMS470_RTPClockPrescaller>0</TMS470_RTPClockPrescaller>
+         <TMS470_RTPEnabled>0</TMS470_RTPEnabled>
+         <TMS470_RTPPortWidth>0</TMS470_RTPPortWidth>
+         <TMS470_UseDMM>0</TMS470_UseDMM>
+         <TMS470_UseRTPShadow>0</TMS470_UseRTPShadow>
          <UseCTMCh0and1ForSyncedRunStop>0</UseCTMCh0and1ForSyncedRunStop>
          <UseCTMCh2and3ForTrace>0</UseCTMCh2and3ForTrace>
+         <UseDBGRQACK>0</UseDBGRQACK>
+         <UseDCCMonitor>0</UseDCCMonitor>
+         <UseHandshaking>0</UseHandshaking>
+         <UsenSRST>0</UsenSRST>
+         <Windsor_CFMCLKD>73</Windsor_CFMCLKD>
+         <Windsor_OSCCLK>8000</Windsor_OSCCLK>
+         <Windsor_REFDV>0</Windsor_REFDV>
+         <Windsor_SetPLL>1</Windsor_SetPLL>
+         <Windsor_SYNR>1</Windsor_SYNR>
          <ATSAM-M7>
           <PCK3_._Prescale>0</PCK3_._Prescale>
           <Trace_._clock_._PCK3_._source>0</Trace_._clock_._PCK3_._source>
@@ -3627,6 +3739,15 @@
           <TD2PEN>0</TD2PEN>
           <TD3PEN>0</TD3PEN>
          </EFM32>
+         <ETM12>
+          <BranchBroadcast>0</BranchBroadcast>
+          <Clocking>1</Clocking>
+          <ContextTracing>0</ContextTracing>
+          <CycleAccurateTracing>0</CycleAccurateTracing>
+          <MMD>0</MMD>
+          <PortMode>0</PortMode>
+          <PortWidth>0</PortWidth>
+         </ETM12>
          <Kinetis_._K>
           <Trace_._Port>0</Trace_._Port>
          </Kinetis_._K>
@@ -3647,9 +3768,18 @@
           <Buffer_._Address>0x0</Buffer_._Address>
           <Buffer_._Size>0</Buffer_._Size>
          </MTB>
-         <Traveo>
-          <Trace_._Port>0</Trace_._Port>
-         </Traveo>
+         <TMS470_RTPShadowRegion.0>
+          <Access>0</Access>
+          <Enabled>0</Enabled>
+          <End>0</End>
+          <Start>0</Start>
+         </TMS470_RTPShadowRegion.0>
+         <TMS470_RTPShadowRegion.1>
+          <Access>0</Access>
+          <Enabled>0</Enabled>
+          <End>0</End>
+          <Start>0</Start>
+         </TMS470_RTPShadowRegion.1>
          <XMC1000>
           <Boot_._Mode>0</Boot_._Mode>
          </XMC1000>
@@ -3660,9 +3790,6 @@
           <TRACE_._DATA2_._Port>0</TRACE_._DATA2_._Port>
           <TRACE_._DATA3_._Port>0</TRACE_._DATA3_._Port>
          </XMC4000>
-         <ZynqUSp>
-          <RPU_._Start_._mode>0</RPU_._Start_._mode>
-         </ZynqUSp>
         </ARM7>
        </CPU>
        <Debugging>
@@ -3705,7 +3832,6 @@
         <StopAfterReset>0</StopAfterReset>
         <SyncStartOnTargetReset>0</SyncStartOnTargetReset>
         <TargetPowerSenseDisabled>0</TargetPowerSenseDisabled>
-        <TargetResetTimeout>100</TargetResetTimeout>
         <Watchdog>0</Watchdog>
        </Debugging>
        <ExtWDT>
@@ -3732,6 +3858,28 @@
          </Item.0>
         </PeriodicService>
        </ExtWDT>
+       <FLASHRetains>
+        <Exclusion.0>
+         <Address>0</Address>
+         <Exclude>0</Exclude>
+         <Size>0</Size>
+        </Exclusion.0>
+        <Exclusion.1>
+         <Address>0</Address>
+         <Exclude>0</Exclude>
+         <Size>0</Size>
+        </Exclusion.1>
+        <Exclusion.2>
+         <Address>0</Address>
+         <Exclude>0</Exclude>
+         <Size>0</Size>
+        </Exclusion.2>
+        <Exclusion.3>
+         <Address>0</Address>
+         <Exclude>0</Exclude>
+         <Size>0</Size>
+        </Exclusion.3>
+       </FLASHRetains>
        <InitSequence>
         <File></File>
         <FromFile>0</FromFile>
@@ -3775,6 +3923,7 @@
            <UseSWBPs>0</UseSWBPs>
           </Common>
           <Cortex>
+           <UseDCCMonitor>0</UseDCCMonitor>
            <Exceptions>
             <BUSERR>0</BUSERR>
             <CHKERR>0</CHKERR>
@@ -3852,10 +4001,6 @@
          <TresholdVoltage>1700</TresholdVoltage>
         </OCTModule.3>
        </Module>
-       <Probe>
-        <APName></APName>
-        <Type>0</Type>
-       </Probe>
        <SlowRun>
         <Enabled>0</Enabled>
        </SlowRun>

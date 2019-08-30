@@ -1,0 +1,41 @@
+digraph "src/display.h"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="src/display.h",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="lib/acceleration_app.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$acceleration__app_8c.html",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="lib/board_test.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$board__test_8c.html",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="lib/gfx.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$gfx_8c.html",tooltip=" "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="lib/init.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$init_8c.html",tooltip=" "];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="lib/uart_multicon.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$uart__multicon_8c.html",tooltip=" "];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="lib/uart_usb.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$uart__usb_8c.html",tooltip=" "];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="solution/acceleration_s.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$acceleration__s_8c.html",tooltip=" "];
+  Node1 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="src/dht11.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dht11_8h.html",tooltip=" "];
+  Node9 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="solution/dht11_s.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dht11__s_8c.html",tooltip=" "];
+  Node9 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="src/dht11.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$dht11_8c.html",tooltip=" "];
+  Node1 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="solution/display_s.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$display__s_8c.html",tooltip=" "];
+  Node1 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="solution/graphicstest.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$graphicstest_8c.html",tooltip=" "];
+  Node1 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="solution/joystick_s.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$joystick__s_8c.html",tooltip=" "];
+  Node1 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="solution/touch_s.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$touch__s_8c.html",tooltip=" "];
+  Node1 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="src/acceleration.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$acceleration_8c.html",tooltip=" "];
+  Node1 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node17 [label="src/display.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$display_8c.html",tooltip=" "];
+  Node1 -> Node18 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node18 [label="src/touch.c",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$touch_8c.html",tooltip=" "];
+}
