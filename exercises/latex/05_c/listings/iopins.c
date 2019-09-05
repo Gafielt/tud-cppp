@@ -15,7 +15,7 @@ int io_example(void)
 	LED_BLUE_DOR |= (1 << LED_BLUE_PIN);
 
 	/*
-	Configure the pin of the left Joystick Button as output by clearing the corresponding
+	Configure the pin of the left Joystick Button as input by clearing the corresponding
 	bit in the Data Direction Register (DDR).
 	*/
 	BUTTON_LEFT_DDR &= ~(1 << BUTTON_LEFT_PIN);
