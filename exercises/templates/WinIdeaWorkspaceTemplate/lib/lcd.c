@@ -236,6 +236,7 @@ void cppp_floodLCD(int color, long len){
 }
 
 void cppp_testFillLCDArray(void){
+  /*
   int j;
   uint8_t blocksize = 2;
   for(int i=0; i<480;i+=blocksize){
@@ -245,10 +246,12 @@ void cppp_testFillLCDArray(void){
       cppp_lcdArray[i][j] = cppp_565to8BitColor(WHITE);  
     }
   }
+  */
 }
 
 
 void cppp_writeGRAM(void){
+  /*
   cppp_setAddrWindow(0, 0, 480 - 1, 320 - 1);
   int color = RED;
   volatile unsigned int blocks;
@@ -272,6 +275,7 @@ void cppp_writeGRAM(void){
     }
   }
   LCD_CS = 1u;
+  */
 }
 
 

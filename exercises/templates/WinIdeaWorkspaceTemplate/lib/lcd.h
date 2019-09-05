@@ -8,7 +8,7 @@
 #include "mcu.h"
 
 
-uint8_t cppp_lcdArray[480][320];
+//uint8_t cppp_lcdArray[480][320];
 
 /**
  * @brief Represents a point where the touchscreen was touched
