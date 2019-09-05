@@ -5,7 +5,6 @@ int main(){
   initBoard();
 
   // Write your code here ...
-  cppp_rgbLEDAcceleration_s();
   
   return 0;
 }
