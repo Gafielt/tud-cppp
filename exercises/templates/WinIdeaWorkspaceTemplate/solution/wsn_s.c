@@ -1,5 +1,6 @@
 #include "uart_multicon.h"
-
+#include "mcu.h"
+#include "pdl_header.h"
 
 /*
    Prints the char to the UART3
