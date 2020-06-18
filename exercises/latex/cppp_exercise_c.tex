@@ -1,0 +1,41 @@
+%!TeX spellcheck = de_DE
+
+\input{00_common/common_head.tex}
+\newcommand\Warning{%
+ \makebox[1.4em][c]{%
+ \makebox[0pt][c]{\raisebox{.1em}{\small!}}%
+ \makebox[0pt][c]{\color{red}\Large$\bigtriangleup$}}}%
+
+\title{Übung zum\linebreak[1]C/C++-Praktikum\linebreak[1] Fachgebiet Echtzeitsysteme \linebreak[1]\linebreak[1] (Embedded) C}
+
+\setcounter{section}{0}
+
+%optional parameters to speed up build (increases pdf file size)
+%\pdfcompresslevel=0
+%\pdfobjcompresslevel=0
+\begin{document}
+
+\maketitle
+
+\setcounter{tocdepth}{1}
+\setlength\cftsecnumwidth{10em}
+\setlength\cftbeforesecskip{.1em} % line skip between sections ("sec")
+
+\setHeader{Aufgaben zu Embedded C}
+
+\input{05_c/problems/cIntro}
+\optionaltextboxInternal{%
+\Warning \; Die folgendenden Aufgaben sind nur zur Bearbeitung mit dem ausleihbaren Evaluationsboard gedacht. \Warning}
+\input{05_c/problems/mcIntro}
+\input{05_c/problems/mcButton}
+\input{05_c/problems/mcDisplay}
+\input{05_c/problems/mcJoysticks}
+\input{05_c/problems/mcTouchScreen}
+\input{05_c/problems/mcGame}
+\input{05_c/problems/mcDHT11}
+\input{05_c/problems/mcAccelerometer}
+\input{05_c/problems/mcABLE}
+
+\cclicense
+
+\end{document}

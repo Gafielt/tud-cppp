@@ -1,16 +1,26 @@
-.PHONY: all publish copy-only-all clean
+.PHONY: all combined publish copy-only-all clean
 
-all: create-pdfs
+all: create-pdfs-split
+
+combined: create-pdfs
 
 create-pdfs:
 	latexmk -pdf cppp_exercises.tex
+
+create-pdfs-split:
+	latexmk -pdf cppp_exercise_basics.tex
+	latexmk -pdf cppp_exercise_memory.tex
+	latexmk -pdf cppp_exercise_oo.tex
+	latexmk -pdf cppp_exercise_advanced.tex
+	latexmk -pdf cppp_exercise_c.tex
+	latexmk -pdf cppp_exercise_elevator.tex
   
 # Build and copy PDF files
 publish: create-pdfs cp-only-all
 
 # Copying pdfs to upper directory
 cp-only-all: 
-	cp cppp_exercises.pdf ..
+	cp cppp_exercise*.pdf ..
 
 # cleaning compiled data except for PDF file
 clean:
@@ -28,5 +38,5 @@ clean:
 
 # clean all created data (incl. PDF file)
 clean_all: clean
-	rm -f cppp_exercises.pdf
+	rm -f cppp_exercise*.pdf
 

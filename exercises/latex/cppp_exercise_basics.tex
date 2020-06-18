@@ -1,0 +1,44 @@
+%!TeX spellcheck = de_DE
+
+\input{00_common/common_head.tex}
+\title{Übung zum\linebreak[1]C/C++-Praktikum \linebreak[1] Fachgebiet Echtzeitsysteme\linebreak[1]\linebreak[1] Grundlagen}
+
+\setcounter{section}{0}
+
+%optional parameters to speed up build (increases pdf file size)
+%\pdfcompresslevel=0
+%\pdfobjcompresslevel=0
+\begin{document}
+
+\maketitle
+
+\noindent Die Aufgaben für das C/C++-Praktikum sind thematisch sortiert.
+Zu Beginn jedes Themengebiets der Vortragsfolien ist vermerkt, welche Aufgaben zu diesem Themengebiet gehören (%
+\ExercisePrefixBasics: Grundlagen; 
+\ExercisePrefixMemory: Speicherverwaltung;
+\ExercisePrefixObjectOrientation: Objektorientierung;
+\ExercisePrefixAdvanced: Fortgeschrittene Themen;
+\ExercisePrefixEmbeddedC: (Embedded) C;
+\ExercisePrefixElevator: Optionale Zusatzaufgaben (C++)).
+%
+\setcounter{tocdepth}{1}
+\setlength\cftsecnumwidth{10em}
+\setlength\cftbeforesecskip{.1em} % line skip between sections ("sec")
+
+\setHeader{Aufgaben zu C/C++-Grundlagen}
+\input{01_basics/problems/intro}
+
+\input{00_common/how_to_import_solution_projects.text}
+
+\newpage
+\input{01_basics/problems/helloWorld}
+\newpage
+\input{01_basics/problems/basics}
+\newpage
+\input{01_basics/problems/classes}
+\newpage
+\input{01_basics/problems/overloading}
+
+\cclicense
+
+\end{document}
