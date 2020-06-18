@@ -23,6 +23,12 @@ int main(){
  * @return void
  */
 void cppp_initUart3(void);
+/**
+ * @brief Initialization of the UART3 interface of the multicon.
+ * @param baudrate that the interface should work at.
+ * @return void
+ */
+void cppp_initUart3Baud(uint32_t baudrate);
     
 /**
  * @brief Write 8 Bit data through UART 3.

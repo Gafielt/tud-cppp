@@ -8,3 +8,5 @@
 *.tmp
 /exercises/latex/*.bbl
 /exercises/latex/*.blg
+
+exercises/latex/tuddesign
