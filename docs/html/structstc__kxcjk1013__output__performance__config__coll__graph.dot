@@ -1,0 +1,9 @@
+digraph "stc_kxcjk1013_output_performance_config"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="stc_kxcjk1013_output\l_performance_config",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node2 -> Node1 [dir="back",color="darkorchid3",fontsize="10",style="dashed",label=" int_config" ,fontname="Helvetica"];
+  Node2 [label="stc_kxcjk1013_interrupt\l_config",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structstc__kxcjk1013__interrupt__config.html",tooltip=" "];
+}

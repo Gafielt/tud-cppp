@@ -247,11 +247,11 @@ void cppp_printAccelerationsLcd(float x_out, float y_out, float z_out){
     writeTextln_s(freeSpace);
     writeTextln_s(freeSpace);
     writeText_s("      y_OUT = ");
-    writeFloat(y_out, 4, 10);
+    cppp_writeFloat(y_out, 4, 10);
     writeTextln_s(freeSpace);
     writeTextln_s(freeSpace);
     writeText_s("      Z_OUT = ");
-    writeFloat(z_out, 4, 10);
+    cppp_writeFloat(z_out, 4, 10);
     writeTextln_s(freeSpace);
     writeTextln_s(freeSpace);
     writeText_s("      Loop #");

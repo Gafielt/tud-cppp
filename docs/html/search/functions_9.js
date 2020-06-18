@@ -1,0 +1,12 @@
+var searchData=
+[
+  ['setbackgroundcolor_1359',['setBackgroundColor',['../display_8c.html#a42121f391010b8d1721f8ddb24e80b9d',1,'setBackgroundColor(const int bg):&#160;display.c'],['../display_8h.html#a42121f391010b8d1721f8ddb24e80b9d',1,'setBackgroundColor(const int bg):&#160;display.c']]],
+  ['setbackgroundcolor_5fs_1360',['setBackgroundColor_s',['../display__s_8c.html#ae2fd2977e2f318b874fc94b41dd76f30',1,'setBackgroundColor_s(const int bg):&#160;display_s.c'],['../display_8h.html#ae2fd2977e2f318b874fc94b41dd76f30',1,'setBackgroundColor_s(const int bg):&#160;display_s.c']]],
+  ['setblueled_1361',['setBlueLED',['../button__s_8c.html#af00da7aa3f9be92abe1758f3d831ee2c',1,'setBlueLED(uint8_t status):&#160;button_s.c'],['../button_8c.html#af00da7aa3f9be92abe1758f3d831ee2c',1,'setBlueLED(uint8_t status):&#160;button.c']]],
+  ['setcursor_1362',['setCursor',['../display_8c.html#a80b162f2d82811b69933cb1d9a3d2b4d',1,'setCursor(const int16_t x, int16_t y):&#160;display.c'],['../display_8h.html#a80b162f2d82811b69933cb1d9a3d2b4d',1,'setCursor(const int16_t x, int16_t y):&#160;display.c']]],
+  ['setcursor_5fs_1363',['setCursor_s',['../display__s_8c.html#ac41ba3ebec8835686ee1be14cfb74bbd',1,'setCursor_s(const int16_t x, const int16_t y):&#160;display_s.c'],['../display_8h.html#a348c39ea4463a05d4606e7cd2aa3049b',1,'setCursor_s(const int16_t x, int16_t y):&#160;display_s.c']]],
+  ['settextcolor_1364',['setTextColor',['../display_8c.html#acaf1c5a30c9925b49527683127d02026',1,'setTextColor(const uint16_t c):&#160;display.c'],['../display_8h.html#a1be9e40dc74691ea5f3fea8560cec9cb',1,'setTextColor(const uint16_t color):&#160;display.c']]],
+  ['settextcolor_5fs_1365',['setTextColor_s',['../display__s_8c.html#aa0c083375b5c40d39ecc58b523d8f643',1,'setTextColor_s(const uint16_t c):&#160;display_s.c'],['../display_8h.html#abe77f6d93a8a4b08400adc15f26f578a',1,'setTextColor_s(const uint16_t color):&#160;display_s.c']]],
+  ['settextsize_1366',['setTextSize',['../display_8c.html#afaf004291b24b41b81182673a5b96259',1,'setTextSize(const uint8_t s):&#160;display.c'],['../display_8h.html#afaf004291b24b41b81182673a5b96259',1,'setTextSize(const uint8_t s):&#160;display.c']]],
+  ['settextsize_5fs_1367',['setTextSize_s',['../display__s_8c.html#a0813bc466c34d9366d190ac95127169e',1,'setTextSize_s(const uint8_t s):&#160;display_s.c'],['../display_8h.html#a0813bc466c34d9366d190ac95127169e',1,'setTextSize_s(const uint8_t s):&#160;display_s.c']]]
+];

@@ -1,0 +1,35 @@
+%!TeX spellcheck = de_DE
+
+\input{00_common/common_head.tex}
+\title{Übung zum\linebreak[1]C/C++-Praktikum\linebreak[1] Fachgebiet Echtzeitsysteme\linebreak[1]\linebreak[1] Speicherverwaltung}
+
+\setcounter{section}{0}
+
+%optional parameters to speed up build (increases pdf file size)
+%\pdfcompresslevel=0
+%\pdfobjcompresslevel=0
+\begin{document}
+
+\maketitle
+
+\setcounter{tocdepth}{1}
+\setlength\cftsecnumwidth{10em}
+\setlength\cftbeforesecskip{.1em} % line skip between sections ("sec")
+
+\setHeader{Aufgaben zur Speicherverwaltung in C++}
+
+\input{02_memory/problems/pointers}
+\newpage
+\input{02_memory/problems/arrays}
+\newpage
+\input{02_memory/problems/linkedLists}
+\newpage
+\input{02_memory/problems/debugging}
+\newpage
+\input{02_memory/problems/exceptions}
+\newpage
+\input{02_memory/problems/smartPointers}
+
+\cclicense
+
+\end{document}

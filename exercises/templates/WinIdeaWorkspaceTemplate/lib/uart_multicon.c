@@ -29,6 +29,29 @@ void cppp_initUart3(void){
   Mfs_Uart_EnableFunc(&UART3, UartRx);
 }
 
+void cppp_initUart3Baud(uint32_t baudrate){
+  stc_mfs_uart_config_t stcUartConfig; 
+  uint8_t u8Count; 
+  PDL_ZERO_STRUCT(stcUartConfig); 
+  SetPinFunc_SIN3_1();
+  SetPinFunc_SOT3_1();
+  stcUartConfig.enMode = UartNormal;
+  stcUartConfig.u32BaudRate = baudrate;
+  stcUartConfig.enParity = UartParityNone; // No parity 
+  stcUartConfig.enStopBit = UartOneStopBit; // 1 Stop bit 
+  stcUartConfig.enDataLength = UartEightBits; // 8 Bit Character Length 
+  stcUartConfig.enBitDirection = UartDataLsbFirst; // LSB first
+  stcUartConfig.bInvertData = FALSE; 
+  stcUartConfig.bHwFlow = FALSE; 
+  stcUartConfig.bUseExtClk = FALSE; 
+  stcUartConfig.pstcFifoConfig = NULL;
+  if(Ok != Mfs_Uart_Init(&UART3, &stcUartConfig)){
+    while(1){}
+  }
+  Mfs_Uart_EnableFunc(&UART3, UartTx); 
+  Mfs_Uart_EnableFunc(&UART3, UartRx);
+}
+
 void cppp_writeUart3(uint8_t data){
   while (TRUE != Mfs_Uart_GetStatus(&UART3, UartTxEmpty)){}
   Mfs_Uart_SendData(&UART3, data);

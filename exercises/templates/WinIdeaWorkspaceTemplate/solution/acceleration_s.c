@@ -28,10 +28,10 @@ void cppp_rgbLEDAcceleration_s(){
       cppp_writeFloat(cppp_orientationValues[0], 4, 10);
       writeTextln_s(freeSpace);
       writeText_s("  Orientierung Y: ");
-      writeFloat(cppp_orientationValues[1], 4, 10);
+      cppp_writeFloat(cppp_orientationValues[1], 4, 10);
       writeTextln_s(freeSpace);
       writeText_s("  Orientierung Z: ");
-      writeFloat(cppp_orientationValues[2], 4, 10);
+      cppp_writeFloat(cppp_orientationValues[2], 4, 10);
       writeTextln_s("");
       writeTextln_s("");
       

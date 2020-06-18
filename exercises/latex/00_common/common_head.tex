@@ -163,7 +163,8 @@ Diese Aufgabe dient der Vertiefung deines Wissens in C und ist nicht notwendig, 
 
 \newcommand{\cclicense}{
 \begin{center}
-    \fbox{
+	\begin{figure}[b]
+	\fbox{
         \parbox{0.96\textwidth}
         {
             \begin{minipage}{0.15\textwidth}
@@ -179,6 +180,7 @@ Diese Aufgabe dient der Vertiefung deines Wissens in C und ist nicht notwendig, 
             \end{minipage}
         }
     }
+    \end{figure}
 \end{center}
 }
 
@@ -188,15 +190,15 @@ Diese Aufgabe dient der Vertiefung deines Wissens in C und ist nicht notwendig, 
 % If the listing does not fit onto the page anymore, it will be put onto the next page as a whole.
 % The first paramer is optional and arguments from lstinputlisting can be provided here.
 % The second parameter is the path to the listing.
-\newcommand{\cpppInputNoPageBreakListing}[2][] { \begin{minipage}{\textwidth} \lstinputlisting[#1]{#2} \end{minipage} }
+\newcommand{\cpppInputNoPageBreakListing}[2][] { \begin{footnotesize} \begin{minipage}{\textwidth} \lstinputlisting[#1]{#2} \end{minipage} \end{footnotesize}}
 % Variant for inline-inserting code
-\newcommand{\cpppNoPageBreakListing}[2][] { \begin{minipage}{\textwidth} \begin{lstlisting}[#1]#2 \end{lstlisting}\end{minipage} }
+\newcommand{\cpppNoPageBreakListing}[2][] {\begin{footnotesize} \begin{minipage}{\textwidth} \begin{lstlisting}[#1]#2 \end{lstlisting}\end{minipage} \end{footnotesize}}
 
 % The cpppInputListing command allows a listing to continue on the next page.
 % The first paramer is optional and arguments from lstinputlisting can be provided here.
 % The second parameter is the path to the listing.
-\newcommand{\cpppInputListing}[2][] { \vspace{1.5ex} \setbox0\vbox{ \lstinputlisting[#1]{#2} } \unvbox0 }
-\newcommand{\cpppListing}[2][] { \vspace{1.5ex} \setbox0\vbox{ \begin{lstlisting}[#1]#2 \end{lstlisting} } \unvbox0 }
+\newcommand{\cpppInputListing}[2][] {\begin{footnotesize} \vspace{1.5ex} \setbox0\vbox{ \lstinputlisting[#1]{#2} } \unvbox0 \end{footnotesize} }
+\newcommand{\cpppListing}[2][] {\begin{footnotesize}\vspace{1.5ex} \setbox0\vbox{ \begin{lstlisting}[#1]#2 \end{lstlisting} } \unvbox0 \end{footnotesize} }
 
 \newcommand{\chapterstartpage}[1]{%
 	\clearpage% Clearpage first, then use pagestyle plain
