@@ -11,9 +11,9 @@ Füge allen Konstruktoren und Destruktoren eine Ausgabe auf die Konsole hinzu, u
 
 \hints{
     \item Verwende \lstinline{\#include <string>} um \lstinline{std::string} zu verwenden.
-    \item Um zwei C-String Literale, also zB. \lstinline{const char * str = "Name: "}, an einander anzuhängen, musst du zuerst aus einem der beiden ein \lstinline{std::string} Object erzeugen, welches dann über den '+'-Operator mit dem anderen konkateniert werden kann: \lstinline{std::string text = std::string(str) + "Maike";}. 
+    \item Um zwei C-String Literale, also z.B. \lstinline{const char * str = "Name: "}, an einander anzuhängen, muss zuerst aus einem der beiden ein anonymes \lstinline{std::string} Object erzeugt werden, welches dann über den '+'-Operator mit dem anderen konkateniert werden kann: \lstinline{std::string text = std::string(str) + "Maike";}. 
 	
-	Dies funktioniert, da die Klasse \lstinline{std::string} den '+'-Operator dahin gehend überladen hat, sowohl mit C-Strings als auch mit anderen \lstinline{std::string} Objekten arbeiten zu können. Ein C-String ist dazu alleine nicht in der Lage.  
+	Dies funktioniert, da die Klasse \lstinline{std::string} den '+'-Operator dahin gehend überladen hat, sowohl mit C-Strings als auch mit \lstinline{std::string} Objekten arbeiten zu können. Ein C-String ist dazu alleine nicht in der Lage.  
 }
 
 \subsection{Klasse \lstinline{Student}}
